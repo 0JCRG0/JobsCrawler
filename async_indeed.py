@@ -43,8 +43,8 @@ cur = conn.cursor()
 async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 	start_time = timeit.default_timer()
 	#Setting up options for the WebDriver
-	options = webdriver.ChromeOptions()
-	options.add_argument('--headless=new')
+	#options = webdriver.ChromeOptions()
+	#options.add_argument('--headless=new')
 	#service = Service(executable_path='/Users/juanreyesgarcia/chromedriver')
 	#service = Service()
 	#Fucking start it ffs
@@ -72,15 +72,17 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 		with ThreadPoolExecutor() as executor:
 			await loop.run_in_executor(executor, driver.get, url)
 		return driver.page_source
-
-	async def async_indeed_crawling(strategies, options):
+	
+	#async def async_indeed_crawling(strategies, options):
+	async def async_indeed_crawling(strategies):
 		#print("\n", f"Reading {file}... ", "\n")
 		print("\n", "Async INDEED has started.")
 		logging.info("Async INDEED crawler deployed!.")
 
 		#NEW DRIVER EACH ITERATION FOR SITE
 		#driver = webdriver.Chrome(options=options, service=service)
-		driver = webdriver.Chrome(options=options)
+		#driver = webdriver.Chrome(options=options)
+		driver = webdriver.Chrome()
 
 		total_titles = []
 		total_links = []
@@ -107,7 +109,7 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 		""" SET THE WAITING STRATEGIES """
 		# Add these lines before the for loop
 		driver.implicitly_wait(1.5)
-		wait = WebDriverWait(driver, 10)
+		#wait = WebDriverWait(driver, 10)
 
 		for i in range(0, pages_to_crawl * 10, 10):
 			page_print = round(i/10) + 1
@@ -121,71 +123,79 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 				print("\n", f"Crawler deployed on Indeed using {SCHEME} strategy. Currently crawling page number: {page_print}.", "\n")
 				#Make the request
 			try:
-				await fetch_indeed(url, driver) # type: ignore
+				await fetch_indeed(url, driver)
 				print(f"Crawling {url}...")
 				jobs = driver.find_elements(By.CSS_SELECTOR, elements_path["jobs_path"])
-				#jobs = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, elements_path["jobs_path"])))    
-				if jobs:
-					try:
-						default_descriptions = []
-						for job in jobs:
-							operation = f"getting elements from indeed in this link:"
-							##Get the attributes...
-							job_data = {}
-								
-							title_raw = job.find_element(By.CSS_SELECTOR, elements_path["title_path"])
-							job_data["title"] = title_raw.get_attribute("innerHTML") if title_raw else "NaN"
-								
-							#LINKS
-							link_raw = job.find_element(By.CSS_SELECTOR, elements_path["link_path"])
-							job_data["link"] = link_raw.get_attribute("href") if link_raw else "NaN"
+				
+				#jobs = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, elements_path["jobs_path"])))
+				#jobs = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, elements_path["jobs_path"])))
+				try:
+					if jobs is not None:
+						try:
+							default_descriptions = []
+							for job in jobs:
+								operation = f"getting elements from indeed in this link:"
+								##Get the attributes...
+								job_data = {}
+									
+								title_raw = job.find_element(By.CSS_SELECTOR, elements_path["title_path"])
+								job_data["title"] = title_raw.get_attribute("innerHTML") if title_raw else "NaN"
+									
+								#LINKS
+								link_raw = job.find_element(By.CSS_SELECTOR, elements_path["link_path"])
+								job_data["link"] = link_raw.get_attribute("href") if link_raw else "NaN"
 
-							""" WHETHER THE LINK IS IN THE DB """
-							if await link_exists_in_db(link=job_data["link"], cur=cur):
-								continue
-
-							#DATES
-							today = date.today()
-							job_data["pubdate"] = today
-								
-							#LOCATION    
-							location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
-							job_data["location"] = location_raw.text if location_raw else "NaN"
-
-							#TIMESTAMP
-							timestamp = datetime.now()
-							job_data["timestamp"] = timestamp
-
-							#Put it all together...
-							total_titles.append(job_data["title"])
-							total_links.append(job_data["link"])
-							total_pubdates.append(job_data["pubdate"])
-							total_locations.append(job_data["location"])
-							total_timestamps.append(job_data["timestamp"])
-
-							description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
-							default = description_raw.get_attribute("innerHTML") if description_raw else "NaN"
-							job_data["description"] = default
-							#This is a placeholder for default descriptions
-							default_descriptions.append(default)
-													
-						"""FOLLOW THE SCRAPED LINKS OUTSIDE THE FOR LOOP"""
-						if follow_link == "yes":
-							for i, link in enumerate(total_links):
-								if i < len(default_descriptions):
-										description = await async_follow_link_sel(followed_link=link, inner_link_tag=inner_link_tag, driver=driver, fetch_sel=fetch_indeed, default=default_descriptions[i])
-										total_descriptions.append(description)
-								else:
-									logging.warning(f"IndexError avoided. Index: {i} is bigger than the lenght of default descriptions: {len(default_descriptions)}")
+								""" WHETHER THE LINK IS IN THE DB """
+								if await link_exists_in_db(link=job_data["link"], cur=cur):
 									continue
-						else:
-							# Get the default descriptions
-							total_descriptions = default_descriptions
-					except (NoSuchElementException, TimeoutException, Exception) as e:
-						error_message = f"{type(e).__name__} **while** {operation} {url}. {traceback.format_exc()}"
-						print(error_message)
-						logging.error(f"{error_message}\n")
-						continue
+
+								#DATES
+								today = date.today()
+								job_data["pubdate"] = today
+									
+								#LOCATION    
+								location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+								job_data["location"] = location_raw.text if location_raw else "NaN"
+
+								#TIMESTAMP
+								timestamp = datetime.now()
+								job_data["timestamp"] = timestamp
+
+								#Put it all together...
+								total_titles.append(job_data["title"])
+								total_links.append(job_data["link"])
+								total_pubdates.append(job_data["pubdate"])
+								total_locations.append(job_data["location"])
+								total_timestamps.append(job_data["timestamp"])
+
+								description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+								default = description_raw.get_attribute("innerHTML") if description_raw else "NaN"
+								job_data["description"] = default
+								#This is a placeholder for default descriptions
+								default_descriptions.append(default)
+														
+							"""FOLLOW THE SCRAPED LINKS OUTSIDE THE FOR LOOP"""
+							if follow_link == "yes":
+								for i, link in enumerate(total_links):
+									if i < len(default_descriptions):
+											description = await async_follow_link_indeed(followed_link=link, inner_link_tag=inner_link_tag, driver=driver, fetch_sel=fetch_indeed, default=default_descriptions[i])
+											total_descriptions.append(description)
+									else:
+										logging.warning(f"IndexError avoided. Index: {i} is bigger than the lenght of default descriptions: {len(default_descriptions)}")
+										continue
+							else:
+								# Get the default descriptions
+								total_descriptions = default_descriptions
+						except (NoSuchElementException, TimeoutException, Exception) as e:
+							error_message = f"{type(e).__name__} **while** {operation} {url}. {traceback.format_exc()}"
+							print(error_message)
+							logging.error(f"{error_message}\n")
+							continue
+				except (NoSuchElementException, TimeoutException, Exception) as e:
+					error_message = f"**Jobs were not found** {type(e).__name__} {operation} {url}. {traceback.format_exc()}"
+					print(error_message)
+					logging.error(f"{error_message}\n")
+					continue
 			except (NoSuchElementException, TimeoutException, Exception) as e:
 				error_message = f"{type(e).__name__} **before** getting the elements in {url}. {traceback.format_exc()}"
 				print(error_message)
@@ -195,11 +205,13 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 		#service.stop()
 		return rows
 	
-	async def gather_tasks_indeed(options):
+	#async def gather_tasks_indeed(options):
+	async def gather_tasks_indeed():
 		with open(JSON) as f:
 			data = json.load(f)
 			strategies = [strategy for strategy in data[0]["strategies"] if strategy["strategy_name"] == SCHEME]
-			tasks = [async_indeed_crawling(strategies, options)]
+			#tasks = [async_indeed_crawling(strategies, options)]
+			tasks = [async_indeed_crawling(strategies)]
 			results = await asyncio.gather(*tasks)
 			# Combine the results
 			combined_data = {
@@ -224,7 +236,9 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 
 			clean_postgre_indeed(df=pd.DataFrame(combined_data), S=SAVE_PATH, Q=POSTGRESQL, c_code=SCHEME)
 
-	await gather_tasks_indeed(options=options)
+	#await gather_tasks_indeed(options=options)
+	await gather_tasks_indeed()
+
 	
 	#stop the timer
 	elapsed_time = timeit.default_timer() - start_time

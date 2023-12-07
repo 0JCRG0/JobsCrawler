@@ -1,0 +1,114 @@
+[
+    {
+        "urls": [
+            {
+                "name": "https://dribbble.com",
+                "url": "https://dribbble.com/jobs?anywhere=true&keyword=&page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".flushed .container-small.job-details-page-container .main-content-container .margin-t-16.job-details-description",
+                "elements_path": [
+                        {
+                        "jobs_path": ".job-list-item",
+                        "title_path": ".job-details-container .job-title-company-container .job-title.job-board-job-title",
+                        "link_path": ".job-link",
+                        "location_path": ".job-additional-details-container .job-details .location-container.job-board-job-location",
+                        "description_path": ".job-details-container .job-title-company-container .job-role"
+                    }
+                ]
+            },
+            {
+                "name": "https://www.python.org",
+                "url": "https://www.python.org/jobs/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".content-wrapper .container .main-content.with-right-sidebar .text .job-description",
+                "elements_path": [
+                        {
+                        "jobs_path": ".list-recent-jobs.list-row-container.menu li",
+                        "title_path": ".listing-company-name a",
+                        "link_path": ".listing-company-name a",
+                        "description_path": ".listing-job-type",
+                        "location_path": ".listing-location a"
+                    }
+                ]
+            },
+            {
+                "name": "https://himalayas.app",
+                "url": "https://himalayas.app/jobs?page=",
+                "pages_to_crawl": 5,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".w-full .flex.flex-col.xl\\:flex-row.justify-between.w-full .trix-content",
+                "elements_path": [
+                        {
+                        "jobs_path": "#card-group [name='card']",
+                        "title_path": ".flex.flex-row.items-start.justify-between.mb-2.w-full .flex.flex-row.items-center a .text-xl.font-medium.text-gray-900",
+                        "link_path": ".flex.flex-row.items-start.justify-between.mb-2.w-full .flex.flex-row.items-center a",
+                        "description_path": ".mb-6 div",
+                        "location_path": ".flex.flex-row.items-center.justify-between .flex.flex-row.items-center.flex-wrap.overflow-hidden"
+                    }
+                ]
+            },
+            {
+                "name": "",
+                "url": "https://www.fossjobs.net/jobs-worldwide/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".container .columns .column.is-9 .box.content .job-description",
+                "elements_path": [
+                        {
+                        "jobs_path": ".container .columns .column.is-9 .box.content .post",
+                        "title_path": "h2 a",
+                        "link_path": "h2 a",
+                        "location_path": ".media .media-content .content",
+                        "description_path": ".media .media-content .content"
+                    }
+                ]
+            },
+            {
+                "name": "https://vuejobs.com",
+                "url": "https://vuejobs.com/jobs/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "other",
+                "follow_link": "yes",
+                "inner_link_tag": ".lg\\:pb-12 .py-8.lg\\:py-12 .container .order-2.lg\\:order.lg\\:col-span-5 .prose.max-w-full.mt-6.prose-lg",
+                "elements_path": [
+                        {
+                        "jobs_path": ".grid.gap-y-4",
+                        "title_path": "a .flex.flex-col.justify-center.md\\:flex-row.md\\:justify-start.md\\:items-center .flex.items-center .ml-3",
+                        "link_path": "a",
+                        "location_path": "a .text-xs.mt-3.flex.gap-x-4.gap-y-1.flex-wrap.items-center.md\\:gap-2",
+                        "description_path": "a .text-xs.mt-3.flex.gap-x-4.gap-y-1.flex-wrap.items-center.md\\:gap-2"
+                    }
+                ]
+            },
+            {
+                "name": "https://remote.co",
+                "url": "https://remote.co/international-remote-jobs/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "other",
+                "follow_link": "yes",
+                "inner_link_tag": ".container.pt-4 .row.row-with-sidebar .col .card.mb-2 .card-body.loosen .single_job_listing .job_description",
+                "elements_path": [
+                        {
+                        "jobs_path": ".card.bg-light.mb-3.rounded-0 .card-body .card.bg-white.m-0 .card-body.p-0",
+                        "title_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0 .font-weight-bold.larger",
+                        "link_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom",
+                        "location_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary",
+                        "description_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,78 @@
+[
+    {
+        "urls": [
+            {
+                "name": "cryptojobslist.com",
+                "url": "https://cryptojobslist.com/remote?sort=recent&page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".JobView_jobView__a_zxz.container.ui.text.px-4.relative .grid.w-full.grid-cols-12.gap-8 .md\\:col-span-8.col-span-12.prose.dark\\:prose-invert.max-w-none .JobView_description__tW863",
+                "elements_path": [
+                        {
+                        "jobs_path": "section ul li",
+                        "title_path": ".JobPreviewInline_meta__tG6WQ.\\!flex.\\!flex-col h2",
+                        "link_path": ".JobPreviewInline_meta__tG6WQ.\\!flex.\\!flex-col h2 a",
+                        "location_path": ".JobPreviewInline_meta__tG6WQ.\\!flex.\\!flex-col span",
+                        "description_path": ".JobPreviewInline_meta__tG6WQ.\\!flex.\\!flex-col span"
+                    }
+                ]
+            },
+            {
+                "name": "REMOTESOME",
+                "url": "https://app.remotesome.com/jobs/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".u-ph.u-relative .container.u-pt40.u-pt16\\:sm .row.u-flex--center .col-8\\:md.u-pb40.u-pl0\\:xs.u-pr0\\:xs.u-pt24\\:xs .u-pt24\\:sm.u-pb24\\:sm.u-pl16\\:sm.u-pr16\\:sm.u-pt40.u-pl32.u-pr32.u-pb32 .u-pb40.c-content.u-color--gray-75",
+                "elements_path": [
+                    {
+                        "jobs_path": ".col-8\\:md article",
+                        "title_path": ".u-pl16 h4",
+                        "link_path": "a",
+                        "description_path": ".u-flex.u-pt8.u-flex--middle",
+                        "location_path": ".u-flex.u-relative"
+                    }
+                ]
+            },
+            {
+                "name": "https://www.remoteimpact.io",
+                "url": "https://www.remoteimpact.io/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "container",
+                "follow_link": "yes",
+                "inner_link_tag": "body",
+                "elements_path": [
+                        {
+                        "jobs_path": ".bg-gray-100.overflow-hidden.min-h-screen.flex.flex-col.relative .container.mx-auto.pt-4.mb-12.false div main",
+                        "title_path": "a div div div .lg\\:text-lg.font-bold.pr-2.line-clamp-1",
+                        "link_path": "a",
+                        "location_path": "a div div div div .text-slate-700.line-clamp-1",
+                        "description_path": "a div div div .text-lg"
+                    }
+                ]
+            },
+            {
+                "name": "https://4dayweek.io",
+                "url": "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".wrapper .content-wrapper.full-width .main-container-wrapper .job-page .row.job-content-wrapper .job-listing.row .row.job-content .col-sm-8.cols.hero-left .row.job-description-text",
+                "elements_path": [
+                        {
+                        "jobs_path": ".row.jobs-list .job-tile-wrapper",
+                        "title_path": ".row.job-tile .job-tile-left.col-sm-9 .row.job-tile-title",
+                        "link_path": ".row.job-tile .job-tile-left.col-sm-9 .row.job-tile-title h3 .btn.btn-link.dark.btn-lg",
+                        "location_path": ".row.job-tile .job-tile-left.col-sm-9 .job-tile-tags",
+                        "description_path": ".row.job-tile .job-tile-left.col-sm-9 .job-tile-tags"
+                    }
+                ]
+            }
+        ]
+    }
+]

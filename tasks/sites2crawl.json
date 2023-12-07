@@ -1,0 +1,62 @@
+[
+    {
+        "urls": [
+            {
+                "url": "https://himalayas.app",
+                "notes": "5/5 value scale"
+            },
+            {
+                "url": "https://ai-jobs.net/feed/",
+                "notes": "5/5 value scale"
+            },
+            {
+                "url": "https://infosec-jobs.com/remote-jobs/",
+                "notes":"5/5 value scale"
+            },
+            {
+                "url": "https://golangjob.xyz/jobs/all/all/remote/en",
+                "notes":"5/5 value scale"
+            },
+            {
+                "url": "https://pythonjob.xyz/remote/jobs",
+                "notes": "5/5 value scale"
+            },
+            {
+                "url": "https://developerjobboards.com/#scrollpoint02",
+                "notes": "5/5 value scale"
+            },
+            {
+                "url": "https://app.usebraintrust.com/talent/dashboard/welcome/?openProfileCompletionModal=true",
+                "notes": "5/5 value scale"
+            },
+            {
+                "url": "https://jobspresso.co",
+                "notes": "1/5 value scale"
+            },
+            {
+                "url": "https://landing.jobs",
+                "notes": "4/5 value scale"
+            },
+            {
+                "url":"https://larajobs.com/",
+                "notes": "2/5 value scale"
+            },
+            {
+                "url": "https://privacyfirstjobs.com/jobs?query=remote",
+                "notes": "2/5 value scale"
+            },
+            {
+                "url": "https://skoll.org/community/jobs/",
+                "notes": "3/5 value scale"
+            },
+            {
+                "url": "https://hasjob.co/?l=anywhere",
+                "notes": "3/5 value scale"
+            },
+            {
+                "url": "https://www.crunchboard.com/jobs/search?l=Remote&q=&remote=full",
+                "notes":"4/5 value scale"
+            }
+        ]
+    }
+]

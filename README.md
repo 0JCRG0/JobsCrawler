@@ -1,6 +1,6 @@
-# Crawler-remote-jobs
+# JobsCrawler
 
-*This project is not finished but it contains several crawlers which may be useful for anyone interested in finding a remote job without going to the hassle of actually doing all the research*
+*This is an enhanced version of the previous project https://github.com/0JCRG0/Crawler-remote-jobs*
 
 ## IMPORTANT CONSIDERATIONS
 

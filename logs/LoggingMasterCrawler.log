@@ -1,0 +1,63 @@
+2023-12-07 15:23:10,365 INFO: 
+Async API crawler deployed!.
+
+2023-12-07 15:23:11,497 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 15:23:41,957 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-07 15:23:43,207 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 15:23:43,209 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-07 15:23:43,217 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 960
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 960
+
+2023-12-07 15:23:43,217 INFO: 
+Async BS4 crawlers finished! all in: 1.26 seconds.
+
+2023-12-07 15:23:47,464 INFO: 
+Async RSS crawler deployed!
+
+2023-12-07 15:23:48,821 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 15:23:48,826 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-07 15:23:48,832 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 960
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 960
+
+2023-12-07 15:23:48,832 INFO: 
+Async RSS readers finished! all in: 1.37 seconds.
+
+2023-12-07 15:23:52,304 INFO: 
+Async Sel crawler deployed!
+
+2023-12-07 15:24:04,208 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-07 15:24:04,242 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 960
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 964
+
+2023-12-07 15:24:04,243 INFO: 
+Async Sel finished! all in: 11.94 seconds.
+
+2023-12-07 15:24:25,001 INFO: 
+Async API crawler deployed!.
+
+2023-12-07 15:24:25,839 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+

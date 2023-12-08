@@ -12,12 +12,6 @@
                 "location_tag": "region",
                 "follow_link": "yes",
                 "inner_link_tag": ".perma .content .job .listing-container"
-            },
-            {
-                "url": "https://api.cryptojobslist.com/rss/remote.xml",
-                "location_tag": "media_location",
-                "follow_link": "no",
-                "inner_link_tag": " "
             }
         ]
     }

@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 import os
 import sys
 
-#TODO: Add logging
 
 """ LOAD THE ENVIRONMENT VARIABLES """
 

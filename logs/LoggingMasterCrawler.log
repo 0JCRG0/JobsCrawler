@@ -578,3 +578,1137 @@ Current total count of jobs in PostgreSQL: 250
 2023-12-08 03:01:51,475 INFO: 
 Async APIs finished! all in: 90.75 seconds.
 
+2023-12-08 03:10:12,756 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:10:19,980 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100872004 chromedriver + 4169732
+1   chromedriver                        0x0000000100869ff8 chromedriver + 4136952
+2   chromedriver                        0x00000001004bf500 chromedriver + 292096
+3   chromedriver                        0x00000001005047a0 chromedriver + 575392
+4   chromedriver                        0x00000001004f9db4 chromedriver + 531892
+5   chromedriver                        0x000000010053f818 chromedriver + 817176
+6   chromedriver                        0x00000001004f85e8 chromedriver + 525800
+7   chromedriver                        0x00000001004f94b8 chromedriver + 529592
+8   chromedriver                        0x0000000100838334 chromedriver + 3932980
+9   chromedriver                        0x000000010083c970 chromedriver + 3950960
+10  chromedriver                        0x0000000100820774 chromedriver + 3835764
+11  chromedriver                        0x000000010083d478 chromedriver + 3953784
+12  chromedriver                        0x0000000100812ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100859914 chromedriver + 4069652
+14  chromedriver                        0x0000000100859a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100869c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:10:22,353 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100872004 chromedriver + 4169732
+1   chromedriver                        0x0000000100869ff8 chromedriver + 4136952
+2   chromedriver                        0x00000001004bf500 chromedriver + 292096
+3   chromedriver                        0x00000001005047a0 chromedriver + 575392
+4   chromedriver                        0x00000001004f9db4 chromedriver + 531892
+5   chromedriver                        0x000000010053f818 chromedriver + 817176
+6   chromedriver                        0x00000001004f85e8 chromedriver + 525800
+7   chromedriver                        0x00000001004f94b8 chromedriver + 529592
+8   chromedriver                        0x0000000100838334 chromedriver + 3932980
+9   chromedriver                        0x000000010083c970 chromedriver + 3950960
+10  chromedriver                        0x0000000100820774 chromedriver + 3835764
+11  chromedriver                        0x000000010083d478 chromedriver + 3953784
+12  chromedriver                        0x0000000100812ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100859914 chromedriver + 4069652
+14  chromedriver                        0x0000000100859a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100869c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:10:24,464 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100872004 chromedriver + 4169732
+1   chromedriver                        0x0000000100869ff8 chromedriver + 4136952
+2   chromedriver                        0x00000001004bf500 chromedriver + 292096
+3   chromedriver                        0x00000001005047a0 chromedriver + 575392
+4   chromedriver                        0x00000001004f9db4 chromedriver + 531892
+5   chromedriver                        0x000000010053f818 chromedriver + 817176
+6   chromedriver                        0x00000001004f85e8 chromedriver + 525800
+7   chromedriver                        0x00000001004f94b8 chromedriver + 529592
+8   chromedriver                        0x0000000100838334 chromedriver + 3932980
+9   chromedriver                        0x000000010083c970 chromedriver + 3950960
+10  chromedriver                        0x0000000100820774 chromedriver + 3835764
+11  chromedriver                        0x000000010083d478 chromedriver + 3953784
+12  chromedriver                        0x0000000100812ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100859914 chromedriver + 4069652
+14  chromedriver                        0x0000000100859a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100869c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:10:24,564 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-08 03:10:24,588 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-08 03:10:24,589 INFO: 
+Finished async Indeed. All in 11.83347 seconds!!!
+
+2023-12-08 03:24:15,138 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:24:23,413 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010113e004 chromedriver + 4169732
+1   chromedriver                        0x0000000101135ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100d8b500 chromedriver + 292096
+3   chromedriver                        0x0000000100dd07a0 chromedriver + 575392
+4   chromedriver                        0x0000000100dc5db4 chromedriver + 531892
+5   chromedriver                        0x0000000100e0b818 chromedriver + 817176
+6   chromedriver                        0x0000000100dc45e8 chromedriver + 525800
+7   chromedriver                        0x0000000100dc54b8 chromedriver + 529592
+8   chromedriver                        0x0000000101104334 chromedriver + 3932980
+9   chromedriver                        0x0000000101108970 chromedriver + 3950960
+10  chromedriver                        0x00000001010ec774 chromedriver + 3835764
+11  chromedriver                        0x0000000101109478 chromedriver + 3953784
+12  chromedriver                        0x00000001010deab4 chromedriver + 3779252
+13  chromedriver                        0x0000000101125914 chromedriver + 4069652
+14  chromedriver                        0x0000000101125a90 chromedriver + 4070032
+15  chromedriver                        0x0000000101135c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:24:26,057 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010113e004 chromedriver + 4169732
+1   chromedriver                        0x0000000101135ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100d8b500 chromedriver + 292096
+3   chromedriver                        0x0000000100dd07a0 chromedriver + 575392
+4   chromedriver                        0x0000000100dc5db4 chromedriver + 531892
+5   chromedriver                        0x0000000100e0b818 chromedriver + 817176
+6   chromedriver                        0x0000000100dc45e8 chromedriver + 525800
+7   chromedriver                        0x0000000100dc54b8 chromedriver + 529592
+8   chromedriver                        0x0000000101104334 chromedriver + 3932980
+9   chromedriver                        0x0000000101108970 chromedriver + 3950960
+10  chromedriver                        0x00000001010ec774 chromedriver + 3835764
+11  chromedriver                        0x0000000101109478 chromedriver + 3953784
+12  chromedriver                        0x00000001010deab4 chromedriver + 3779252
+13  chromedriver                        0x0000000101125914 chromedriver + 4069652
+14  chromedriver                        0x0000000101125a90 chromedriver + 4070032
+15  chromedriver                        0x0000000101135c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:24:28,338 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010113e004 chromedriver + 4169732
+1   chromedriver                        0x0000000101135ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100d8b500 chromedriver + 292096
+3   chromedriver                        0x0000000100dd07a0 chromedriver + 575392
+4   chromedriver                        0x0000000100dc5db4 chromedriver + 531892
+5   chromedriver                        0x0000000100e0b818 chromedriver + 817176
+6   chromedriver                        0x0000000100dc45e8 chromedriver + 525800
+7   chromedriver                        0x0000000100dc54b8 chromedriver + 529592
+8   chromedriver                        0x0000000101104334 chromedriver + 3932980
+9   chromedriver                        0x0000000101108970 chromedriver + 3950960
+10  chromedriver                        0x00000001010ec774 chromedriver + 3835764
+11  chromedriver                        0x0000000101109478 chromedriver + 3953784
+12  chromedriver                        0x00000001010deab4 chromedriver + 3779252
+13  chromedriver                        0x0000000101125914 chromedriver + 4069652
+14  chromedriver                        0x0000000101125a90 chromedriver + 4070032
+15  chromedriver                        0x0000000101135c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:24:28,486 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-08 03:24:28,511 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-08 03:24:28,512 INFO: 
+Finished async Indeed. All in 13.37418 seconds!!!
+
+2023-12-08 03:26:33,371 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:26:49,276 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100c02004 chromedriver + 4169732
+1   chromedriver                        0x0000000100bf9ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010084f500 chromedriver + 292096
+3   chromedriver                        0x00000001008947a0 chromedriver + 575392
+4   chromedriver                        0x0000000100889db4 chromedriver + 531892
+5   chromedriver                        0x00000001008cf818 chromedriver + 817176
+6   chromedriver                        0x00000001008885e8 chromedriver + 525800
+7   chromedriver                        0x00000001008894b8 chromedriver + 529592
+8   chromedriver                        0x0000000100bc8334 chromedriver + 3932980
+9   chromedriver                        0x0000000100bcc970 chromedriver + 3950960
+10  chromedriver                        0x0000000100bb0774 chromedriver + 3835764
+11  chromedriver                        0x0000000100bcd478 chromedriver + 3953784
+12  chromedriver                        0x0000000100ba2ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100be9914 chromedriver + 4069652
+14  chromedriver                        0x0000000100be9a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100bf9c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:27:00,463 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100c02004 chromedriver + 4169732
+1   chromedriver                        0x0000000100bf9ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010084f500 chromedriver + 292096
+3   chromedriver                        0x00000001008947a0 chromedriver + 575392
+4   chromedriver                        0x0000000100889db4 chromedriver + 531892
+5   chromedriver                        0x00000001008cf818 chromedriver + 817176
+6   chromedriver                        0x00000001008885e8 chromedriver + 525800
+7   chromedriver                        0x00000001008894b8 chromedriver + 529592
+8   chromedriver                        0x0000000100bc8334 chromedriver + 3932980
+9   chromedriver                        0x0000000100bcc970 chromedriver + 3950960
+10  chromedriver                        0x0000000100bb0774 chromedriver + 3835764
+11  chromedriver                        0x0000000100bcd478 chromedriver + 3953784
+12  chromedriver                        0x0000000100ba2ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100be9914 chromedriver + 4069652
+14  chromedriver                        0x0000000100be9a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100bf9c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:27:11,325 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".companyLocation"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100c02004 chromedriver + 4169732
+1   chromedriver                        0x0000000100bf9ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010084f500 chromedriver + 292096
+3   chromedriver                        0x00000001008947a0 chromedriver + 575392
+4   chromedriver                        0x0000000100889db4 chromedriver + 531892
+5   chromedriver                        0x00000001008cf818 chromedriver + 817176
+6   chromedriver                        0x00000001008885e8 chromedriver + 525800
+7   chromedriver                        0x00000001008894b8 chromedriver + 529592
+8   chromedriver                        0x0000000100bc8334 chromedriver + 3932980
+9   chromedriver                        0x0000000100bcc970 chromedriver + 3950960
+10  chromedriver                        0x0000000100bb0774 chromedriver + 3835764
+11  chromedriver                        0x0000000100bcd478 chromedriver + 3953784
+12  chromedriver                        0x0000000100ba2ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100be9914 chromedriver + 4069652
+14  chromedriver                        0x0000000100be9a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100bf9c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:27:11,498 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-08 03:27:11,613 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-08 03:27:11,613 INFO: 
+Finished async Indeed. All in 38.24389 seconds!!!
+
+2023-12-08 03:30:40,693 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:30:47,489 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".company_location.css-t4u72d.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001006fe004 chromedriver + 4169732
+1   chromedriver                        0x00000001006f5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010034b500 chromedriver + 292096
+3   chromedriver                        0x00000001003907a0 chromedriver + 575392
+4   chromedriver                        0x0000000100385db4 chromedriver + 531892
+5   chromedriver                        0x00000001003cb818 chromedriver + 817176
+6   chromedriver                        0x00000001003845e8 chromedriver + 525800
+7   chromedriver                        0x00000001003854b8 chromedriver + 529592
+8   chromedriver                        0x00000001006c4334 chromedriver + 3932980
+9   chromedriver                        0x00000001006c8970 chromedriver + 3950960
+10  chromedriver                        0x00000001006ac774 chromedriver + 3835764
+11  chromedriver                        0x00000001006c9478 chromedriver + 3953784
+12  chromedriver                        0x000000010069eab4 chromedriver + 3779252
+13  chromedriver                        0x00000001006e5914 chromedriver + 4069652
+14  chromedriver                        0x00000001006e5a90 chromedriver + 4070032
+15  chromedriver                        0x00000001006f5c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:30:49,614 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".company_location.css-t4u72d.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001006fe004 chromedriver + 4169732
+1   chromedriver                        0x00000001006f5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010034b500 chromedriver + 292096
+3   chromedriver                        0x00000001003907a0 chromedriver + 575392
+4   chromedriver                        0x0000000100385db4 chromedriver + 531892
+5   chromedriver                        0x00000001003cb818 chromedriver + 817176
+6   chromedriver                        0x00000001003845e8 chromedriver + 525800
+7   chromedriver                        0x00000001003854b8 chromedriver + 529592
+8   chromedriver                        0x00000001006c4334 chromedriver + 3932980
+9   chromedriver                        0x00000001006c8970 chromedriver + 3950960
+10  chromedriver                        0x00000001006ac774 chromedriver + 3835764
+11  chromedriver                        0x00000001006c9478 chromedriver + 3953784
+12  chromedriver                        0x000000010069eab4 chromedriver + 3779252
+13  chromedriver                        0x00000001006e5914 chromedriver + 4069652
+14  chromedriver                        0x00000001006e5a90 chromedriver + 4070032
+15  chromedriver                        0x00000001006f5c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:30:52,295 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 157, in async_indeed_crawling
+    location_raw = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".company_location.css-t4u72d.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001006fe004 chromedriver + 4169732
+1   chromedriver                        0x00000001006f5ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010034b500 chromedriver + 292096
+3   chromedriver                        0x00000001003907a0 chromedriver + 575392
+4   chromedriver                        0x0000000100385db4 chromedriver + 531892
+5   chromedriver                        0x00000001003cb818 chromedriver + 817176
+6   chromedriver                        0x00000001003845e8 chromedriver + 525800
+7   chromedriver                        0x00000001003854b8 chromedriver + 529592
+8   chromedriver                        0x00000001006c4334 chromedriver + 3932980
+9   chromedriver                        0x00000001006c8970 chromedriver + 3950960
+10  chromedriver                        0x00000001006ac774 chromedriver + 3835764
+11  chromedriver                        0x00000001006c9478 chromedriver + 3953784
+12  chromedriver                        0x000000010069eab4 chromedriver + 3779252
+13  chromedriver                        0x00000001006e5914 chromedriver + 4069652
+14  chromedriver                        0x00000001006e5a90 chromedriver + 4070032
+15  chromedriver                        0x00000001006f5c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:30:52,441 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-08 03:30:52,467 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-08 03:30:52,468 INFO: 
+Finished async Indeed. All in 11.77556 seconds!!!
+
+2023-12-08 03:33:02,092 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:33:08,699 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jobCardShelfContainer.big6_visualChanges .heading6.tapItem-gutter.result-footer"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100712004 chromedriver + 4169732
+1   chromedriver                        0x0000000100709ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010035f500 chromedriver + 292096
+3   chromedriver                        0x00000001003a47a0 chromedriver + 575392
+4   chromedriver                        0x0000000100399db4 chromedriver + 531892
+5   chromedriver                        0x00000001003df818 chromedriver + 817176
+6   chromedriver                        0x00000001003985e8 chromedriver + 525800
+7   chromedriver                        0x00000001003994b8 chromedriver + 529592
+8   chromedriver                        0x00000001006d8334 chromedriver + 3932980
+9   chromedriver                        0x00000001006dc970 chromedriver + 3950960
+10  chromedriver                        0x00000001006c0774 chromedriver + 3835764
+11  chromedriver                        0x00000001006dd478 chromedriver + 3953784
+12  chromedriver                        0x00000001006b2ab4 chromedriver + 3779252
+13  chromedriver                        0x00000001006f9914 chromedriver + 4069652
+14  chromedriver                        0x00000001006f9a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100709c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:33:11,068 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jobCardShelfContainer.big6_visualChanges .heading6.tapItem-gutter.result-footer"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100712004 chromedriver + 4169732
+1   chromedriver                        0x0000000100709ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010035f500 chromedriver + 292096
+3   chromedriver                        0x00000001003a47a0 chromedriver + 575392
+4   chromedriver                        0x0000000100399db4 chromedriver + 531892
+5   chromedriver                        0x00000001003df818 chromedriver + 817176
+6   chromedriver                        0x00000001003985e8 chromedriver + 525800
+7   chromedriver                        0x00000001003994b8 chromedriver + 529592
+8   chromedriver                        0x00000001006d8334 chromedriver + 3932980
+9   chromedriver                        0x00000001006dc970 chromedriver + 3950960
+10  chromedriver                        0x00000001006c0774 chromedriver + 3835764
+11  chromedriver                        0x00000001006dd478 chromedriver + 3953784
+12  chromedriver                        0x00000001006b2ab4 chromedriver + 3779252
+13  chromedriver                        0x00000001006f9914 chromedriver + 4069652
+14  chromedriver                        0x00000001006f9a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100709c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:33:13,399 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".jobCardShelfContainer.big6_visualChanges .heading6.tapItem-gutter.result-footer"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100712004 chromedriver + 4169732
+1   chromedriver                        0x0000000100709ff8 chromedriver + 4136952
+2   chromedriver                        0x000000010035f500 chromedriver + 292096
+3   chromedriver                        0x00000001003a47a0 chromedriver + 575392
+4   chromedriver                        0x0000000100399db4 chromedriver + 531892
+5   chromedriver                        0x00000001003df818 chromedriver + 817176
+6   chromedriver                        0x00000001003985e8 chromedriver + 525800
+7   chromedriver                        0x00000001003994b8 chromedriver + 529592
+8   chromedriver                        0x00000001006d8334 chromedriver + 3932980
+9   chromedriver                        0x00000001006dc970 chromedriver + 3950960
+10  chromedriver                        0x00000001006c0774 chromedriver + 3835764
+11  chromedriver                        0x00000001006dd478 chromedriver + 3953784
+12  chromedriver                        0x00000001006b2ab4 chromedriver + 3779252
+13  chromedriver                        0x00000001006f9914 chromedriver + 4069652
+14  chromedriver                        0x00000001006f9a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100709c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:36:08,423 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:37:38,576 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,578 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,579 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:37:38,579 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,579 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 30 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 31 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 32 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 33 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 34 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 35 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 36 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 37 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 38 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 39 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 40 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 41 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 42 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 43 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:38:17,581 WARNING: 
+IndexError avoided. Index: 44 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:47:24,599 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:48:58,734 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,736 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,736 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,736 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:48:58,737 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,851 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,851 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,851 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,851 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 30 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 31 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 32 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 33 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 34 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 35 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 36 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 37 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 38 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 39 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 40 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 41 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 42 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 43 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:36,852 WARNING: 
+IndexError avoided. Index: 44 is bigger than the lenght of default descriptions: 15
+
+2023-12-08 03:49:37,111 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-08 03:49:37,286 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 45
+Current total count of jobs in PostgreSQL: 965
+
+2023-12-08 03:49:37,287 INFO: 
+Finished async Indeed. All in 132.69274 seconds!!!
+
+2023-12-08 03:58:33,241 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 03:58:41,201 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic .underShelfFooter"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104a92004 chromedriver + 4169732
+1   chromedriver                        0x0000000104a89ff8 chromedriver + 4136952
+2   chromedriver                        0x00000001046df500 chromedriver + 292096
+3   chromedriver                        0x00000001047247a0 chromedriver + 575392
+4   chromedriver                        0x0000000104719db4 chromedriver + 531892
+5   chromedriver                        0x000000010475f818 chromedriver + 817176
+6   chromedriver                        0x00000001047185e8 chromedriver + 525800
+7   chromedriver                        0x00000001047194b8 chromedriver + 529592
+8   chromedriver                        0x0000000104a58334 chromedriver + 3932980
+9   chromedriver                        0x0000000104a5c970 chromedriver + 3950960
+10  chromedriver                        0x0000000104a40774 chromedriver + 3835764
+11  chromedriver                        0x0000000104a5d478 chromedriver + 3953784
+12  chromedriver                        0x0000000104a32ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000104a79914 chromedriver + 4069652
+14  chromedriver                        0x0000000104a79a90 chromedriver + 4070032
+15  chromedriver                        0x0000000104a89c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:58:44,135 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic .underShelfFooter"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104a92004 chromedriver + 4169732
+1   chromedriver                        0x0000000104a89ff8 chromedriver + 4136952
+2   chromedriver                        0x00000001046df500 chromedriver + 292096
+3   chromedriver                        0x00000001047247a0 chromedriver + 575392
+4   chromedriver                        0x0000000104719db4 chromedriver + 531892
+5   chromedriver                        0x000000010475f818 chromedriver + 817176
+6   chromedriver                        0x00000001047185e8 chromedriver + 525800
+7   chromedriver                        0x00000001047194b8 chromedriver + 529592
+8   chromedriver                        0x0000000104a58334 chromedriver + 3932980
+9   chromedriver                        0x0000000104a5c970 chromedriver + 3950960
+10  chromedriver                        0x0000000104a40774 chromedriver + 3835764
+11  chromedriver                        0x0000000104a5d478 chromedriver + 3953784
+12  chromedriver                        0x0000000104a32ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000104a79914 chromedriver + 4069652
+14  chromedriver                        0x0000000104a79a90 chromedriver + 4070032
+15  chromedriver                        0x0000000104a89c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 03:58:46,769 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic .underShelfFooter"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104a92004 chromedriver + 4169732
+1   chromedriver                        0x0000000104a89ff8 chromedriver + 4136952
+2   chromedriver                        0x00000001046df500 chromedriver + 292096
+3   chromedriver                        0x00000001047247a0 chromedriver + 575392
+4   chromedriver                        0x0000000104719db4 chromedriver + 531892
+5   chromedriver                        0x000000010475f818 chromedriver + 817176
+6   chromedriver                        0x00000001047185e8 chromedriver + 525800
+7   chromedriver                        0x00000001047194b8 chromedriver + 529592
+8   chromedriver                        0x0000000104a58334 chromedriver + 3932980
+9   chromedriver                        0x0000000104a5c970 chromedriver + 3950960
+10  chromedriver                        0x0000000104a40774 chromedriver + 3835764
+11  chromedriver                        0x0000000104a5d478 chromedriver + 3953784
+12  chromedriver                        0x0000000104a32ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000104a79914 chromedriver + 4069652
+14  chromedriver                        0x0000000104a79a90 chromedriver + 4070032
+15  chromedriver                        0x0000000104a89c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 04:00:21,721 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-08 04:00:29,398 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010136a004 chromedriver + 4169732
+1   chromedriver                        0x0000000101361ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100fb7500 chromedriver + 292096
+3   chromedriver                        0x0000000100ffc7a0 chromedriver + 575392
+4   chromedriver                        0x0000000100ff1db4 chromedriver + 531892
+5   chromedriver                        0x0000000101037818 chromedriver + 817176
+6   chromedriver                        0x0000000100ff05e8 chromedriver + 525800
+7   chromedriver                        0x0000000100ff14b8 chromedriver + 529592
+8   chromedriver                        0x0000000101330334 chromedriver + 3932980
+9   chromedriver                        0x0000000101334970 chromedriver + 3950960
+10  chromedriver                        0x0000000101318774 chromedriver + 3835764
+11  chromedriver                        0x0000000101335478 chromedriver + 3953784
+12  chromedriver                        0x000000010130aab4 chromedriver + 3779252
+13  chromedriver                        0x0000000101351914 chromedriver + 4069652
+14  chromedriver                        0x0000000101351a90 chromedriver + 4070032
+15  chromedriver                        0x0000000101361c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 04:00:32,313 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010136a004 chromedriver + 4169732
+1   chromedriver                        0x0000000101361ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100fb7500 chromedriver + 292096
+3   chromedriver                        0x0000000100ffc7a0 chromedriver + 575392
+4   chromedriver                        0x0000000100ff1db4 chromedriver + 531892
+5   chromedriver                        0x0000000101037818 chromedriver + 817176
+6   chromedriver                        0x0000000100ff05e8 chromedriver + 525800
+7   chromedriver                        0x0000000100ff14b8 chromedriver + 529592
+8   chromedriver                        0x0000000101330334 chromedriver + 3932980
+9   chromedriver                        0x0000000101334970 chromedriver + 3950960
+10  chromedriver                        0x0000000101318774 chromedriver + 3835764
+11  chromedriver                        0x0000000101335478 chromedriver + 3953784
+12  chromedriver                        0x000000010130aab4 chromedriver + 3779252
+13  chromedriver                        0x0000000101351914 chromedriver + 4069652
+14  chromedriver                        0x0000000101351a90 chromedriver + 4070032
+15  chromedriver                        0x0000000101361c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 04:00:34,993 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 171, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010136a004 chromedriver + 4169732
+1   chromedriver                        0x0000000101361ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100fb7500 chromedriver + 292096
+3   chromedriver                        0x0000000100ffc7a0 chromedriver + 575392
+4   chromedriver                        0x0000000100ff1db4 chromedriver + 531892
+5   chromedriver                        0x0000000101037818 chromedriver + 817176
+6   chromedriver                        0x0000000100ff05e8 chromedriver + 525800
+7   chromedriver                        0x0000000100ff14b8 chromedriver + 529592
+8   chromedriver                        0x0000000101330334 chromedriver + 3932980
+9   chromedriver                        0x0000000101334970 chromedriver + 3950960
+10  chromedriver                        0x0000000101318774 chromedriver + 3835764
+11  chromedriver                        0x0000000101335478 chromedriver + 3953784
+12  chromedriver                        0x000000010130aab4 chromedriver + 3779252
+13  chromedriver                        0x0000000101351914 chromedriver + 4069652
+14  chromedriver                        0x0000000101351a90 chromedriver + 4070032
+15  chromedriver                        0x0000000101361c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+

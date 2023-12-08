@@ -58,11 +58,6 @@ def cleansing_selenium_crawlers(s):
 	s = re.sub(r"'", '', s)
 	return s
 
-def initial_clean(s):
-	s = " ".join(s.split())
-	s = re.sub(r'n/', '', s)
-	return s
-
 	# Handy cleansing function
 
 def bye_regex(s):

@@ -46,6 +46,7 @@ conn = psycopg2.connect(database=database, user=user, password=password, host=ho
 cur = conn.cursor()
 
 async def async_selenium_template(pipeline):
+	#TODO REMOVE cryptojobslist
 	#start timer
 	start_time = timeit.default_timer()
 
@@ -289,7 +290,7 @@ async def async_selenium_template(pipeline):
 	await insert_postgre()
 
 	elapsed_time = asyncio.get_event_loop().time() - start_time
-	print(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.", "\n")
+	print(f"Async Sel crawlers finished! all in: {elapsed_time:.2f} seconds.", "\n")
 	logging.info(f"Async Sel finished! all in: {elapsed_time:.2f} seconds.")
 	
 async def main():

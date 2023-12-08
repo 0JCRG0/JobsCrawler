@@ -3,7 +3,7 @@ import requests
 import pretty_errors
 
 #Request the api...
-url = 'https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1'
+url = 'https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest'
 
 #response = requests.get(url)
 headers = {"User-Agent": "my-app"}

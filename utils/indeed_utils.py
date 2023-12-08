@@ -8,12 +8,15 @@ def clean_postgre_indeed(df: pd.DataFrame, S, Q, c_code):
 
 	for col in df.columns:
 		if col == 'description':
-			df[col] = df[col].apply(cleansing_selenium_crawlers)
-			#df[col] = ["{MX}".format(i) for i in df[col]]
+			if not df[col].empty:  # Check if the column has any rows
+				df[col] = df[col].astype(str)  # Convert the entire column to string
+				df[col] = df[col].str.replace(r'<.*?>|[{}[\]\'",]', '', regex=True) #Remove html tags & other characters
 		elif col == 'location':
 			if not df[col].empty:  # Check if the column has any rows
-				df[col] = df[col] + " " + str(c_code)
-				df[col] = df[col].str.replace(r'[{}[\]\'",]', '', regex=True)
+				df[col] = df[col].astype(str)  # Convert the entire column to string
+				df[col] = df[col] + " " + str(c_code) #Add the country code- only for this 
+				df[col] = df[col].str.replace(r'<.*?>|[{}[\]\'",]', '', regex=True) #Remove html tags & other characters
+				#df[col] = df[col].str.replace(r'[{}[\]\'",]', '', regex=True)
 				df[col] = df[col].str.replace(r'\b(\w+)\s+\1\b', r'\1', regex=True) # Removes repeated words
 				df[col] = df[col].str.replace(r'\d{4}-\d{2}-\d{2}', '', regex=True)  # Remove dates in the format "YYYY-MM-DD"
 				df[col] = df[col].str.replace(r'(USD|GBP)\d+-\d+/yr', '', regex=True)  # Remove USD\d+-\d+/yr or GBP\d+-\d+/yr.
@@ -23,6 +26,7 @@ def clean_postgre_indeed(df: pd.DataFrame, S, Q, c_code):
 				df[col] = df[col].str.replace(pattern, 'Worldwide', regex=True)
 				df[col] = df[col].replace('(?i)^remote$', 'Worldwide', regex=True) # Replace 
 				df[col] = df[col].str.strip()  # Remove trailing white space
+		
 	
 	logging.info('Finished Indeed. Results below ⬇︎')
 

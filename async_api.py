@@ -13,7 +13,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from utils.handy import *
 from utils.api_utils import clean_postgre_api
-from utils.FollowLink import async_follow_link
+from utils.FollowLink import *
 import asyncio
 import aiohttp
 
@@ -117,7 +117,10 @@ async def async_api_template(pipeline):
 										if follow_link == "yes":
 											default = job.get(elements_path["description_tag"], "NaN")
 											job_data["description"] = ""
-											job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default)									 # type: ignore
+											if name == "echojobs.io":
+												job_data["description"] = await AsyncFollowLinkEchoJobs(session=session, url_to_follow=job_data['link'], selector=inner_link_tag, default=default)
+											else:
+												job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default)									 # type: ignore
 										else:
 											job_data["description"] = job.get(elements_path["description_tag"], "NaN")
 

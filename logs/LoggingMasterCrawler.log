@@ -61,3 +61,520 @@ Async API crawler deployed!.
 2023-12-07 15:24:25,839 INFO: 
 Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
 
+2023-12-07 15:37:05,142 INFO: 
+Async API crawler deployed!.
+
+2023-12-07 15:37:06,005 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 15:37:06,008 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-07 15:37:06,017 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 964
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 965
+
+2023-12-07 15:37:06,018 INFO: 
+Async APIs finished! all in: 0.88 seconds.
+
+2023-12-07 15:51:49,916 INFO: 
+Async RSS crawler deployed!
+
+2023-12-07 15:52:50,538 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 16:06:01,262 INFO: 
+Async RSS crawler deployed!
+
+2023-12-07 16:06:58,799 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 16:06:58,855 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-07 16:06:58,983 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 289
+Current total count of jobs in PostgreSQL: 289
+
+2023-12-07 16:06:58,985 INFO: 
+Async RSS readers finished! all in: 57.72 seconds.
+
+2023-12-07 23:26:10,061 INFO: 
+Async RSS crawler deployed!
+
+2023-12-07 23:26:14,187 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 23:26:14,204 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-07 23:26:14,220 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 289
+Total number of unique jobs: 13
+Current total count of jobs in PostgreSQL: 302
+
+2023-12-07 23:26:14,220 INFO: 
+Async RSS readers finished! all in: 4.16 seconds.
+
+2023-12-07 23:26:18,428 INFO: 
+Async RSS crawler deployed!
+
+2023-12-07 23:26:19,521 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 23:26:19,524 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-07 23:26:19,529 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 302
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 302
+
+2023-12-07 23:26:19,529 INFO: 
+Async RSS readers finished! all in: 1.10 seconds.
+
+2023-12-07 23:33:44,781 INFO: 
+Async API crawler deployed!.
+
+2023-12-07 23:35:09,815 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-07 23:35:09,878 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-07 23:35:10,054 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 426
+Current total count of jobs in PostgreSQL: 426
+
+2023-12-07 23:35:10,056 INFO: 
+Async APIs finished! all in: 85.28 seconds.
+
+2023-12-08 01:33:47,183 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:07:49,388 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:07:50,329 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:07:50,689 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:07:51,098 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:07:51,406 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:07:51,713 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:07:51,755 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:07:51,764 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:07:51,793 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:07:51,793 INFO: 
+Async APIs finished! all in: 2.41 seconds.
+
+2023-12-08 02:13:06,904 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:13:07,395 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:13:07,397 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:13:07,402 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 925
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:13:07,403 INFO: 
+Async APIs finished! all in: 0.50 seconds.
+
+2023-12-08 02:13:23,135 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:13:24,008 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/revinate-senior-front-end-engineer-swmin
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:13:24,296 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:13:24,597 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:13:24,928 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:13:25,233 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:13:25,268 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:13:25,275 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:13:25,285 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:13:25,286 INFO: 
+Async APIs finished! all in: 2.15 seconds.
+
+2023-12-08 02:16:20,373 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:16:21,203 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/revinate-senior-front-end-engineer-swmin
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:16:21,476 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:16:21,752 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:16:22,045 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:16:22,312 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:16:22,344 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:16:22,364 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:16:22,381 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:16:22,381 INFO: 
+Async APIs finished! all in: 2.01 seconds.
+
+2023-12-08 02:19:33,662 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:19:34,124 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:19:34,126 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:19:34,134 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 925
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:19:34,134 INFO: 
+Async APIs finished! all in: 0.47 seconds.
+
+2023-12-08 02:20:14,963 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:20:15,643 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/revinate-senior-front-end-engineer-swmin
+ object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:20:15,937 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:20:16,280 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:20:16,584 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:20:16,886 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ object StreamReader can't be used in 'await' expression
+
+2023-12-08 02:20:16,928 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:20:16,935 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:20:16,945 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:20:16,946 INFO: 
+Async APIs finished! all in: 1.98 seconds.
+
+2023-12-08 02:21:41,660 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:21:42,121 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:21:42,122 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:21:42,127 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 925
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:21:42,128 INFO: 
+Async APIs finished! all in: 0.47 seconds.
+
+2023-12-08 02:21:59,366 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:22:00,347 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/revinate-senior-front-end-engineer-swmin
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:22:00,888 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:22:01,243 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:22:01,542 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:22:01,853 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ object ClientResponse can't be used in 'await' expression
+
+2023-12-08 02:22:01,889 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:22:01,895 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:22:01,906 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:22:01,907 INFO: 
+Async APIs finished! all in: 2.54 seconds.
+
+2023-12-08 02:23:29,943 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:23:30,877 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/revinate-senior-front-end-engineer-swmin
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:23:31,149 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:23:31,462 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:23:31,754 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:23:32,021 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ 'str' object has no attribute 'content'
+
+2023-12-08 02:23:32,054 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:23:32,062 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:23:32,072 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:23:32,072 INFO: 
+Async APIs finished! all in: 2.13 seconds.
+
+2023-12-08 02:27:43,615 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:27:45,736 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:27:46,033 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:27:46,342 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:27:46,653 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:27:46,702 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:27:46,709 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:27:46,722 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 925
+
+2023-12-08 02:27:46,723 INFO: 
+Async APIs finished! all in: 3.11 seconds.
+
+2023-12-08 02:31:56,799 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:31:57,729 INFO: 
+a_tag: None
+
+2023-12-08 02:31:57,729 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/airbnb-senior-backend-engineer-media-foundation-dtjyb
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:31:58,181 INFO: 
+a_tag: <a href="https://jobs.lever.co/lime/67bd3370-3d45-42be-8298-78d48a7ec431/apply">Apply for this job</a>
+
+2023-12-08 02:31:58,181 INFO: 
+target_url: https://jobs.lever.co/lime/67bd3370-3d45-42be-8298-78d48a7ec431
+
+2023-12-08 02:31:59,106 INFO: 
+SUCCESS on: https://jobs.lever.co/lime/67bd3370-3d45-42be-8298-78d48a7ec431
+
+2023-12-08 02:31:59,400 INFO: 
+a_tag: <a href="https://jobs.lever.co/revinate/3a4df880-8a26-4b1b-aee3-c2c2b2222e23/apply">Apply for this job</a>
+
+2023-12-08 02:31:59,400 INFO: 
+target_url: https://jobs.lever.co/revinate/3a4df880-8a26-4b1b-aee3-c2c2b2222e23
+
+2023-12-08 02:31:59,806 INFO: 
+SUCCESS on: https://jobs.lever.co/revinate/3a4df880-8a26-4b1b-aee3-c2c2b2222e23
+
+2023-12-08 02:32:00,094 INFO: 
+a_tag: None
+
+2023-12-08 02:32:00,094 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:32:00,412 INFO: 
+a_tag: None
+
+2023-12-08 02:32:00,412 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:32:00,742 INFO: 
+a_tag: None
+
+2023-12-08 02:32:00,742 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:32:01,027 INFO: 
+a_tag: None
+
+2023-12-08 02:32:01,028 INFO: 
+Exception at AsyncFollowLinkEchoJobs(). Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+ 'NoneType' object has no attribute 'get'
+
+2023-12-08 02:32:01,058 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:32:01,065 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:32:01,076 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 927
+
+2023-12-08 02:32:01,076 INFO: 
+Async APIs finished! all in: 4.28 seconds.
+
+2023-12-08 02:57:41,546 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 02:57:44,546 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 02:57:44,558 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 02:57:44,575 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 920
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 927
+
+2023-12-08 02:57:44,576 INFO: 
+Async APIs finished! all in: 3.03 seconds.
+
+2023-12-08 03:00:20,723 INFO: 
+Async API crawler deployed!.
+
+2023-12-08 03:01:51,155 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 03:01:51,222 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-08 03:01:51,473 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 250
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-08 03:01:51,475 INFO: 
+Async APIs finished! all in: 90.75 seconds.
+

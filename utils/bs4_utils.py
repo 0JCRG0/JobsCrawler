@@ -23,21 +23,22 @@ def clean_postgre_bs4(df: pd.DataFrame, S, Q):
 		#CLEANING AVOIDING DEPRECATION WARNING
 	for col in df.columns:
 		if col == 'title' or col == 'description':
-			i = df.columns.get_loc(col)
-			newvals = df.loc[:, col].astype(str).apply(cleansing_selenium_crawlers)
-			df[df.columns[i]] = newvals
+			if not df[col].empty: # Check if the column has any rows
+				df[col] = df[col].apply(lambda x: str(x).replace(r'<[^<>]*>', '', regex=True) if isinstance(x, str) else x) #Remove html tags
+				df[col] = df[col].apply(lambda x: str(x).replace(r'[{}[\]\'",]', '', regex=True) if isinstance(x, str) else x) #Remove shit
 		elif col == 'location':
-			if not df[col].empty:  # Check if the column has any rows
-				df[col] = df[col].str.replace(r'[{}[\]\'",]', '', regex=True)
-				df[col] = df[col].str.replace(r'\b(\w+)\s+\1\b', r'\1', regex=True) # Removes repeated words
-				df[col] = df[col].str.replace(r'\d{4}-\d{2}-\d{2}', '', regex=True)  # Remove dates in the format "YYYY-MM-DD"
-				df[col] = df[col].str.replace(r'(USD|GBP)\d+-\d+/yr', '', regex=True)  # Remove USD\d+-\d+/yr or GBP\d+-\d+/yr.
-				df[col] = df[col].str.replace('[-/]', ' ', regex=True)  # Remove -
-				df[col] = df[col].str.replace(r'(?<=[a-z])(?=[A-Z])', ' ', regex=True)  # Insert space between lowercase and uppercase letters
-				pattern = r'(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b'     # Define a regex patter for all outliers that use remote 
-				df[col] = df[col].str.replace(pattern, 'Worldwide', regex=True)
-				df[col] = df[col].replace('(?i)^remote$', 'Worldwide', regex=True) # Replace 
-				df[col] = df[col].str.strip()  # Remove trailing white space
+			if not df[col].empty: # Check if the column has any rows
+				df[col] = df[col].apply(lambda x: str(x).replace(r'<[^<>]*>', '', regex=True) if isinstance(x, str) else x) #Remove html tags
+				df[col] = df[col].apply(lambda x: str(x).replace(r'[{}[\]\'",]', '', regex=True) if isinstance(x, str) else x)
+				df[col] = df[col].apply(lambda x: str(x).replace(r'\b(\w+)\s+\1\b', r'\1', regex=True) if isinstance(x, str) else x) # Removes repeated words
+				df[col] = df[col].apply(lambda x: str(x).replace(r'\d{4}-\d{2}-\d{2}', '', regex=True) if isinstance(x, str) else x) # Remove dates in the format "YYYY-MM-DD"
+				df[col] = df[col].apply(lambda x: str(x).replace(r'(USD|GBP)\d+-\d+/yr', '', regex=True) if isinstance(x, str) else x) # Remove USD\d+-\d+/yr or GBP\d+-\d+/yr.
+				df[col] = df[col].apply(lambda x: str(x).replace('[-/]', ' ', regex=True) if isinstance(x, str) else x) # Remove -
+				df[col] = df[col].apply(lambda x: str(x).replace(r'(?<=[a-z])(?=[A-Z])', ' ', regex=True) if isinstance(x, str) else x) # Insert space between lowercase and uppercase letters
+				pattern = r'(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b'    # Define a regex patter for all outliers that use remote 
+				df[col] = df[col].apply(lambda x: str(x).replace(pattern, 'Worldwide', regex=True) if isinstance(x, str) else x)
+				df[col] = df[col].apply(lambda x: str(x).replace('(?i)^remote$', 'Worldwide', regex=True) if isinstance(x, str) else x) # Replace 
+				df[col] = df[col].apply(lambda x: str(x).strip() if isinstance(x, str) else x) # Remove trailing white space
 
 		
 		#Save it in local machine

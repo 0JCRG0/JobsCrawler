@@ -2,10 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-url_to_follow = "https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl"
+#url_to_follow = "https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl"
 #selector = 'div[data-qa="btn-apply-bottom"] a'
 
-#url_to_follow = "https://echojobs.io/job/airbnb-senior-backend-engineer-media-foundation-dtjyb"
+url_to_follow = "https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0&vjk=b211bd2c9a9ad19b"
+
 selector = 'job-detail mb-4'
 
 def FollowLinkEchoJobs(url_to_follow: str, selector: str) -> str:
@@ -17,42 +18,18 @@ def FollowLinkEchoJobs(url_to_follow: str, selector: str) -> str:
 
 	# Use the 'html.parser' to parse the page
 	soup = BeautifulSoup(r.content, 'html.parser')
+
+	print(soup.prettify())
 	
 	# Find the 'div' tag with the class "job-detail mb-4"
-	div_tag = soup.find('div', {'class': selector})
+	#div_tag = soup.find('div', {'class': selector})
 
 	# Get the text of the 'div' tag
-	text = div_tag.get_text()
+	#text = div_tag.get_text()
 
 	# Print the text
-	print(text)
+	#print(text)
 	
-	#text = soup.get_text()
-
-	#print(text)
-
-	# Find the 'a' tag under the 'div' with the 'data-qa' attribute of 'btn-apply-bottom'
-	#job_detail = soup.select_one(selector)
-
-	# Get the value of the 'href' attribute
-	#url = a_tag.get('href')
-
-	# Use regular expression to remove "/apply" from the URL
-	#modified_url = re.sub(r'/apply$', '', url)
-
-	# Print the URL
-	#print(modified_url)
-	# Send a GET request to the URL
-	#r = requests.get(modified_url)
-
-	# Parse the HTML content of the page with BeautifulSoup
-	#soup = BeautifulSoup(r.content, 'html.parser')
-
-	# Get the whole text of the page
-	#text = soup.get_text()
-
-	# Print the text
-	#print(text)
 
 FollowLinkEchoJobs(url_to_follow, selector)
 

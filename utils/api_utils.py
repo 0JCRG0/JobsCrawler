@@ -1,9 +1,9 @@
-import asyncio
 import logging
-from sql.clean_loc import clean_location_rows, convert_names_to_codes
 from utils.handy import *
+import pandas as pd
+from typing import Callable
 
-def clean_postgre_api(df: pd.DataFrame, csv_path:str, db):
+def clean_postgre_api(df: pd.DataFrame, save_path:str, function_postgre: Callable):
 	for col in df.columns:
 		if col == 'description':
 			if not df[col].empty:  # Check if the column has any rows
@@ -24,11 +24,11 @@ def clean_postgre_api(df: pd.DataFrame, csv_path:str, db):
 				df[col] = df[col].replace('(?i)^remote$', 'Worldwide', regex=True) # Replace 
 				df[col] = df[col].str.strip()  # Remove trailing white space
 
-	df.to_csv(csv_path, index=False)
+	df.to_csv(save_path, index=False)
 
 	#Log
 	logging.info('Finished API crawlers. Results below ⬇︎')
 
-	## PostgreSQL
-	db(df)
+	## Send to PostgreSQL
+	function_postgre(df)
 

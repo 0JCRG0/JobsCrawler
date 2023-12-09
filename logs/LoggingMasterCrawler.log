@@ -1712,3 +1712,2817 @@ Stacktrace:
 
 
 
+2023-12-08 15:27:04,062 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 15:27:23,166 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 15:27:23,289 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 965
+Total number of unique jobs: 48
+Current total count of jobs in PostgreSQL: 1013
+
+2023-12-08 15:27:23,289 INFO: 
+Async Sel finished! all in: 19.23 seconds.
+
+2023-12-08 15:28:52,369 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 19:36:59,555 INFO: 
+Async RSS crawler deployed!
+
+2023-12-08 19:37:58,062 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-08 19:37:58,198 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-08 19:37:58,344 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 389
+Current total count of jobs in PostgreSQL: 389
+
+2023-12-08 19:37:58,346 INFO: 
+Async RSS readers finished! all in: 58.79 seconds.
+
+2023-12-08 19:46:43,697 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 19:46:56,344 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 19:46:56,378 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 19:46:56,378 INFO: 
+Async Sel finished! all in: 12.68 seconds.
+
+2023-12-08 20:04:35,534 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:04:47,738 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:04:47,774 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:04:47,774 INFO: 
+Async Sel finished! all in: 12.24 seconds.
+
+2023-12-08 20:06:50,861 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:07:04,823 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:07:04,858 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:07:04,859 INFO: 
+Async Sel finished! all in: 14.00 seconds.
+
+2023-12-08 20:10:26,241 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:10:37,226 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:10:37,253 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:10:37,254 INFO: 
+Async Sel finished! all in: 11.01 seconds.
+
+2023-12-08 20:12:54,270 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:13:05,483 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:13:05,516 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:13:05,517 INFO: 
+Async Sel finished! all in: 11.25 seconds.
+
+2023-12-08 20:14:46,038 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:14:57,063 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:14:57,087 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:14:57,088 INFO: 
+Async Sel finished! all in: 11.05 seconds.
+
+2023-12-08 20:24:33,134 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:24:38,952 ERROR: 
+NoSuchElementException **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 153, in async_sel_crawler
+    location_element = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".u-flex.u-relative div:nth-child(3) div:nth-child(2) p"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100d16004 chromedriver + 4169732
+1   chromedriver                        0x0000000100d0dff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100963500 chromedriver + 292096
+3   chromedriver                        0x00000001009a87a0 chromedriver + 575392
+4   chromedriver                        0x000000010099ddb4 chromedriver + 531892
+5   chromedriver                        0x00000001009e3818 chromedriver + 817176
+6   chromedriver                        0x000000010099c5e8 chromedriver + 525800
+7   chromedriver                        0x000000010099d4b8 chromedriver + 529592
+8   chromedriver                        0x0000000100cdc334 chromedriver + 3932980
+9   chromedriver                        0x0000000100ce0970 chromedriver + 3950960
+10  chromedriver                        0x0000000100cc4774 chromedriver + 3835764
+11  chromedriver                        0x0000000100ce1478 chromedriver + 3953784
+12  chromedriver                        0x0000000100cb6ab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100cfd914 chromedriver + 4069652
+14  chromedriver                        0x0000000100cfda90 chromedriver + 4070032
+15  chromedriver                        0x0000000100d0dc70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 20:24:39,065 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:24:39,083 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 1
+
+2023-12-08 20:24:39,084 INFO: 
+Async Sel finished! all in: 5.95 seconds.
+
+2023-12-08 20:24:52,273 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:24:57,077 ERROR: 
+NoSuchElementException **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 153, in async_sel_crawler
+    location_element = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".u-flex.u-relative div:nth-child(3)"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100c3a004 chromedriver + 4169732
+1   chromedriver                        0x0000000100c31ff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100887500 chromedriver + 292096
+3   chromedriver                        0x00000001008cc7a0 chromedriver + 575392
+4   chromedriver                        0x00000001008c1db4 chromedriver + 531892
+5   chromedriver                        0x0000000100907818 chromedriver + 817176
+6   chromedriver                        0x00000001008c05e8 chromedriver + 525800
+7   chromedriver                        0x00000001008c14b8 chromedriver + 529592
+8   chromedriver                        0x0000000100c00334 chromedriver + 3932980
+9   chromedriver                        0x0000000100c04970 chromedriver + 3950960
+10  chromedriver                        0x0000000100be8774 chromedriver + 3835764
+11  chromedriver                        0x0000000100c05478 chromedriver + 3953784
+12  chromedriver                        0x0000000100bdaab4 chromedriver + 3779252
+13  chromedriver                        0x0000000100c21914 chromedriver + 4069652
+14  chromedriver                        0x0000000100c21a90 chromedriver + 4070032
+15  chromedriver                        0x0000000100c31c70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 20:24:57,165 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:24:57,174 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 1
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 1
+
+2023-12-08 20:24:57,174 INFO: 
+Async Sel finished! all in: 4.90 seconds.
+
+2023-12-08 20:25:06,549 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:25:16,310 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:25:16,331 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 1
+Total number of unique jobs: 22
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:25:16,332 INFO: 
+Async Sel finished! all in: 9.78 seconds.
+
+2023-12-08 20:28:04,738 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:28:10,231 ERROR: 
+NoSuchElementException **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 153, in async_sel_crawler
+    location_element = job.find_element(By.CSS_SELECTOR, elements_path["location_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".u-flex.u-relative div:nth-child(2) .u-flex.u-flex--middle"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104496004 chromedriver + 4169732
+1   chromedriver                        0x000000010448dff8 chromedriver + 4136952
+2   chromedriver                        0x00000001040e3500 chromedriver + 292096
+3   chromedriver                        0x00000001041287a0 chromedriver + 575392
+4   chromedriver                        0x000000010411ddb4 chromedriver + 531892
+5   chromedriver                        0x0000000104163818 chromedriver + 817176
+6   chromedriver                        0x000000010411c5e8 chromedriver + 525800
+7   chromedriver                        0x000000010411d4b8 chromedriver + 529592
+8   chromedriver                        0x000000010445c334 chromedriver + 3932980
+9   chromedriver                        0x0000000104460970 chromedriver + 3950960
+10  chromedriver                        0x0000000104444774 chromedriver + 3835764
+11  chromedriver                        0x0000000104461478 chromedriver + 3953784
+12  chromedriver                        0x0000000104436ab4 chromedriver + 3779252
+13  chromedriver                        0x000000010447d914 chromedriver + 4069652
+14  chromedriver                        0x000000010447da90 chromedriver + 4070032
+15  chromedriver                        0x000000010448dc70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000184f21034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000184f1be3c thread_start + 8
+
+
+
+
+2023-12-08 20:28:10,330 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:28:10,340 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 0
+
+2023-12-08 20:28:10,341 INFO: 
+Async Sel finished! all in: 5.60 seconds.
+
+2023-12-08 20:28:18,032 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:28:29,522 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:28:29,545 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:28:29,546 INFO: 
+Async Sel finished! all in: 11.51 seconds.
+
+2023-12-08 20:31:49,233 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:32:00,518 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:32:00,546 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:32:00,546 INFO: 
+Async Sel finished! all in: 11.31 seconds.
+
+2023-12-08 20:32:47,573 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:32:58,487 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:32:58,514 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:32:58,515 INFO: 
+Async Sel finished! all in: 10.94 seconds.
+
+2023-12-08 20:34:09,005 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:34:20,814 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:34:20,849 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:34:20,850 INFO: 
+Async Sel finished! all in: 11.85 seconds.
+
+2023-12-08 20:34:40,211 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:34:51,722 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:34:51,746 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:34:51,747 INFO: 
+Async Sel finished! all in: 11.54 seconds.
+
+2023-12-08 20:37:49,441 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:38:01,162 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:38:01,187 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:38:01,188 INFO: 
+Async Sel finished! all in: 11.75 seconds.
+
+2023-12-08 20:43:34,447 INFO: 
+Async Sel crawler deployed!
+
+2023-12-08 20:43:45,553 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-08 20:43:45,580 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 23
+
+2023-12-08 20:43:45,580 INFO: 
+Async Sel finished! all in: 11.13 seconds.
+
+2023-12-09 01:22:37,861 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 01:22:47,439 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 01:22:47,476 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 23
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 33
+
+2023-12-09 01:22:47,477 INFO: 
+Async Sel finished! all in: 9.62 seconds.
+
+2023-12-09 01:26:19,759 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 01:33:16,000 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 01:33:16,000 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 01:33:16,001 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 01:33:16,001 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 01:33:16,001 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 01:33:30,107 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-09 01:34:00,323 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 01:34:00,634 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 10
+Total number of unique jobs: 15
+Current total count of jobs in PostgreSQL: 25
+
+2023-12-09 01:34:00,635 INFO: 
+Async Sel finished! all in: 44.64 seconds.
+
+2023-12-09 01:34:04,136 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 01:34:33,727 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 01:34:33,758 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-09 01:34:33,808 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 510
+Total number of unique jobs: 100
+Current total count of jobs in PostgreSQL: 610
+
+2023-12-09 01:34:33,809 INFO: 
+Async RSS readers finished! all in: 77.82 seconds.
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,387 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:57,388 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:34:59,259 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 01:34:59,276 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 01:34:59,298 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 1034
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 1034
+
+2023-12-09 01:34:59,299 INFO: 
+Async APIs finished! all in: 103.31 seconds.
+
+2023-12-09 01:35:42,875 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,876 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,876 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 30 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 31 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 32 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 33 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 34 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 35 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 36 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,877 WARNING: 
+IndexError avoided. Index: 37 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 38 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 39 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 40 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 41 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 42 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 43 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:42,878 WARNING: 
+IndexError avoided. Index: 44 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 01:35:43,182 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-09 01:35:43,245 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 1034
+Total number of unique jobs: 45
+Current total count of jobs in PostgreSQL: 1079
+
+2023-12-09 01:35:43,245 INFO: 
+Finished async Indeed. All in 147.25790 seconds!!!
+
+2023-12-09 01:35:43,245 ERROR: 
+Exception occurred in function async_bs4_template: TypeError in str.replace() takes no keyword arguments
+NoneType: None
+
+
+2023-12-09 01:35:43,246 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.45 minutes.
+
+2023-12-09 02:01:55,330 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 02:01:56,984 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 02:01:56,987 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 02:01:56,994 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 1079
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 1079
+
+2023-12-09 02:01:56,994 INFO: 
+Async BS4 crawlers finished! all in: 1.66 seconds.
+
+2023-12-09 02:49:37,860 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 02:51:10,452 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 02:51:10,584 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 02:51:10,715 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 250
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-09 02:51:10,716 INFO: 
+Async APIs finished! all in: 92.86 seconds.
+
+2023-12-09 02:51:20,902 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 02:51:21,412 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 02:51:21,421 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 02:51:21,428 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-09 02:51:21,428 INFO: 
+Async APIs finished! all in: 0.53 seconds.
+
+2023-12-09 02:52:31,084 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 02:52:31,600 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 02:52:31,610 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 02:52:31,614 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-09 02:52:31,614 INFO: 
+Async APIs finished! all in: 0.53 seconds.
+
+2023-12-09 02:53:00,930 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 02:53:01,562 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 02:53:01,571 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 02:53:01,575 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 250
+
+2023-12-09 02:53:01,575 INFO: 
+Async APIs finished! all in: 0.65 seconds.
+
+2023-12-09 03:03:16,094 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 03:03:17,275 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:03:17,286 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 03:03:17,296 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 250
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 251
+
+2023-12-09 03:03:17,296 INFO: 
+Async APIs finished! all in: 1.20 seconds.
+
+2023-12-09 03:04:14,439 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 03:04:20,943 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:04:21,012 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 03:13:10,989 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 03:13:11,721 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:13:11,767 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 03:13:11,850 INFO: 
+MAIN_JOBS TABLE REPORT:
+Total count of jobs before crawling: 40777
+Total number of unique jobs: 138
+Current total count of jobs in PostgreSQL: 40915
+
+2023-12-09 03:13:11,851 INFO: 
+Async APIs finished! all in: 0.86 seconds.
+
+2023-12-09 03:16:42,753 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:17:12,704 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:17:12,763 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:17:12,865 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 251
+Total number of unique jobs: 196
+Current total count of jobs in PostgreSQL: 447
+
+2023-12-09 03:17:12,866 INFO: 
+Async BS4 crawlers finished! all in: 30.11 seconds.
+
+2023-12-09 03:17:40,112 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:17:41,478 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:17:41,485 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:17:41,505 INFO: 
+MAIN_JOBS TABLE REPORT:
+Total count of jobs before crawling: 40915
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 40915
+
+2023-12-09 03:17:41,505 INFO: 
+Async BS4 crawlers finished! all in: 1.39 seconds.
+
+2023-12-09 03:17:58,418 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:18:00,337 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:18:00,346 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:18:00,352 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 447
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 447
+
+2023-12-09 03:18:00,352 INFO: 
+Async BS4 crawlers finished! all in: 1.93 seconds.
+
+2023-12-09 03:19:18,030 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:23:04,125 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:23:05,040 ERROR: 
+UndefinedTable **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 131, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.UndefinedTable: relation "test" does not exist
+LINE 1: SELECT EXISTS(SELECT 1 FROM test WHERE link='https://www.pyt...
+                                    ^
+
+
+
+
+2023-12-09 03:23:05,191 ERROR: 
+InFailedSqlTransaction **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 131, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+
+
+2023-12-09 03:23:05,756 ERROR: 
+InFailedSqlTransaction **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 131, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+
+
+2023-12-09 03:23:06,135 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 03:23:06,653 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 03:23:06,654 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:23:06,663 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:23:07,439 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4399
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4399
+
+2023-12-09 03:23:07,539 INFO: 
+Async BS4 crawlers finished! all in: 3.41 seconds.
+
+2023-12-09 03:27:43,430 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:27:44,583 ERROR: 
+UndefinedTable **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.UndefinedTable: relation "test" does not exist
+LINE 1: SELECT EXISTS(SELECT 1 FROM test WHERE link='https://www.pyt...
+                                    ^
+
+
+
+
+2023-12-09 03:27:44,785 ERROR: 
+InFailedSqlTransaction **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+
+
+2023-12-09 03:27:45,101 ERROR: 
+InFailedSqlTransaction **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+
+
+2023-12-09 03:27:45,597 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 03:27:45,690 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 03:27:45,691 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:27:45,701 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:27:46,353 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4399
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4399
+
+2023-12-09 03:27:46,469 INFO: 
+Async BS4 crawlers finished! all in: 3.04 seconds.
+
+2023-12-09 03:29:05,616 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:29:06,743 ERROR: 
+UndefinedTable **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.UndefinedTable: relation "test" does not exist
+LINE 1: SELECT EXISTS(SELECT 1 FROM test WHERE link='https://www.pyt...
+                                    ^
+
+
+
+
+2023-12-09 03:29:06,860 ERROR: 
+InFailedSqlTransaction **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+
+
+2023-12-09 03:29:07,430 ERROR: 
+InFailedSqlTransaction **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 261, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+
+
+
+2023-12-09 03:29:07,597 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 03:29:07,977 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 03:29:07,977 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:29:07,987 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:29:08,721 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4399
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4399
+
+2023-12-09 03:29:08,788 INFO: 
+Async BS4 crawlers finished! all in: 3.17 seconds.
+
+2023-12-09 03:32:48,786 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:32:50,758 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 03:32:50,880 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 03:33:07,895 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:33:07,943 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:33:16,911 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4399
+Total number of unique jobs: 113
+Current total count of jobs in PostgreSQL: 4512
+
+2023-12-09 03:33:16,978 INFO: 
+Async BS4 crawlers finished! all in: 28.19 seconds.
+
+2023-12-09 03:33:49,896 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 03:33:55,304 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 03:34:00,927 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 03:34:00,927 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:34:00,938 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 03:34:01,634 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4512
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4512
+
+2023-12-09 03:34:01,705 INFO: 
+Async BS4 crawlers finished! all in: 11.81 seconds.
+
+2023-12-09 03:38:22,915 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 03:39:17,619 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:40:23,884 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 03:41:17,553 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:41:17,627 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-09 03:41:17,766 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 447
+Total number of unique jobs: 389
+Current total count of jobs in PostgreSQL: 836
+
+2023-12-09 03:41:17,767 INFO: 
+Async RSS readers finished! all in: 53.88 seconds.
+
+2023-12-09 03:47:53,843 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 03:47:55,175 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 03:47:55,181 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-09 03:47:55,188 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 836
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 836
+
+2023-12-09 03:47:55,188 INFO: 
+Async RSS readers finished! all in: 1.35 seconds.
+
+2023-12-09 03:53:42,624 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 03:53:55,516 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 03:53:55,543 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 836
+Total number of unique jobs: 15
+Current total count of jobs in PostgreSQL: 851
+
+2023-12-09 03:53:55,543 INFO: 
+Async Sel finished! all in: 12.92 seconds.
+
+2023-12-09 03:54:14,400 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 03:54:16,889 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 03:54:16,895 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 851
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 851
+
+2023-12-09 03:54:16,895 INFO: 
+Async Sel finished! all in: 2.50 seconds.
+
+2023-12-09 03:56:55,503 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-09 03:58:26,213 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,214 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,215 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:58:26,215 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 15 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 16 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 17 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 18 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 19 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 20 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 21 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,902 WARNING: 
+IndexError avoided. Index: 22 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 23 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 24 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 25 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 26 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 27 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 28 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 29 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 30 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 31 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 32 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 33 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 34 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 35 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 36 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 37 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 38 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 39 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 40 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 41 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 42 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 43 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:09,903 WARNING: 
+IndexError avoided. Index: 44 is bigger than the lenght of default descriptions: 15
+
+2023-12-09 03:59:10,084 INFO: 
+Finished Indeed. Results below ⬇︎
+
+2023-12-09 03:59:10,217 INFO: 
+TEST TABLE REPORT:
+Total count of jobs before crawling: 851
+Total number of unique jobs: 45
+Current total count of jobs in PostgreSQL: 896
+
+2023-12-09 03:59:10,217 INFO: 
+Finished async Indeed. All in 134.71852 seconds!!!
+
+2023-12-09 03:59:17,398 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-09 04:00:29,852 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-09 04:00:36,225 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 167, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001011b6004 chromedriver + 4169732
+1   chromedriver                        0x00000001011adff8 chromedriver + 4136952
+2   chromedriver                        0x0000000100e03500 chromedriver + 292096
+3   chromedriver                        0x0000000100e487a0 chromedriver + 575392
+4   chromedriver                        0x0000000100e3ddb4 chromedriver + 531892
+5   chromedriver                        0x0000000100e83818 chromedriver + 817176
+6   chromedriver                        0x0000000100e3c5e8 chromedriver + 525800
+7   chromedriver                        0x0000000100e3d4b8 chromedriver + 529592
+8   chromedriver                        0x000000010117c334 chromedriver + 3932980
+9   chromedriver                        0x0000000101180970 chromedriver + 3950960
+10  chromedriver                        0x0000000101164774 chromedriver + 3835764
+11  chromedriver                        0x0000000101181478 chromedriver + 3953784
+12  chromedriver                        0x0000000101156ab4 chromedriver + 3779252
+13  chromedriver                        0x000000010119d914 chromedriver + 4069652
+14  chromedriver                        0x000000010119da90 chromedriver + 4070032
+15  chromedriver                        0x00000001011adc70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000188109034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000188103e3c thread_start + 8
+
+
+
+
+2023-12-09 04:01:06,157 INFO: 
+Async INDEED crawler deployed!.
+
+2023-12-09 04:01:11,633 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=0. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 167, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105276004 chromedriver + 4169732
+1   chromedriver                        0x000000010526dff8 chromedriver + 4136952
+2   chromedriver                        0x0000000104ec3500 chromedriver + 292096
+3   chromedriver                        0x0000000104f087a0 chromedriver + 575392
+4   chromedriver                        0x0000000104efddb4 chromedriver + 531892
+5   chromedriver                        0x0000000104f43818 chromedriver + 817176
+6   chromedriver                        0x0000000104efc5e8 chromedriver + 525800
+7   chromedriver                        0x0000000104efd4b8 chromedriver + 529592
+8   chromedriver                        0x000000010523c334 chromedriver + 3932980
+9   chromedriver                        0x0000000105240970 chromedriver + 3950960
+10  chromedriver                        0x0000000105224774 chromedriver + 3835764
+11  chromedriver                        0x0000000105241478 chromedriver + 3953784
+12  chromedriver                        0x0000000105216ab4 chromedriver + 3779252
+13  chromedriver                        0x000000010525d914 chromedriver + 4069652
+14  chromedriver                        0x000000010525da90 chromedriver + 4070032
+15  chromedriver                        0x000000010526dc70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000188109034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000188103e3c thread_start + 8
+
+
+
+
+2023-12-09 04:01:14,273 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=10. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 167, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105276004 chromedriver + 4169732
+1   chromedriver                        0x000000010526dff8 chromedriver + 4136952
+2   chromedriver                        0x0000000104ec3500 chromedriver + 292096
+3   chromedriver                        0x0000000104f087a0 chromedriver + 575392
+4   chromedriver                        0x0000000104efddb4 chromedriver + 531892
+5   chromedriver                        0x0000000104f43818 chromedriver + 817176
+6   chromedriver                        0x0000000104efc5e8 chromedriver + 525800
+7   chromedriver                        0x0000000104efd4b8 chromedriver + 529592
+8   chromedriver                        0x000000010523c334 chromedriver + 3932980
+9   chromedriver                        0x0000000105240970 chromedriver + 3950960
+10  chromedriver                        0x0000000105224774 chromedriver + 3835764
+11  chromedriver                        0x0000000105241478 chromedriver + 3953784
+12  chromedriver                        0x0000000105216ab4 chromedriver + 3779252
+13  chromedriver                        0x000000010525d914 chromedriver + 4069652
+14  chromedriver                        0x000000010525da90 chromedriver + 4070032
+15  chromedriver                        0x000000010526dc70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000188109034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000188103e3c thread_start + 8
+
+
+
+
+2023-12-09 04:01:16,907 ERROR: 
+NoSuchElementException **while** getting elements from indeed in this link: https://www.indeed.com/jobs?l=Remote&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&vjk=5a71fcf55990467c&start=20. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_indeed.py", line 167, in async_indeed_crawling
+    description_raw = job.find_element(By.CSS_SELECTOR, elements_path["description_path"])
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 417, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".css-1u8dvic.eu4oa1w0"}
+  (Session info: chrome=119.0.6045.199); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105276004 chromedriver + 4169732
+1   chromedriver                        0x000000010526dff8 chromedriver + 4136952
+2   chromedriver                        0x0000000104ec3500 chromedriver + 292096
+3   chromedriver                        0x0000000104f087a0 chromedriver + 575392
+4   chromedriver                        0x0000000104efddb4 chromedriver + 531892
+5   chromedriver                        0x0000000104f43818 chromedriver + 817176
+6   chromedriver                        0x0000000104efc5e8 chromedriver + 525800
+7   chromedriver                        0x0000000104efd4b8 chromedriver + 529592
+8   chromedriver                        0x000000010523c334 chromedriver + 3932980
+9   chromedriver                        0x0000000105240970 chromedriver + 3950960
+10  chromedriver                        0x0000000105224774 chromedriver + 3835764
+11  chromedriver                        0x0000000105241478 chromedriver + 3953784
+12  chromedriver                        0x0000000105216ab4 chromedriver + 3779252
+13  chromedriver                        0x000000010525d914 chromedriver + 4069652
+14  chromedriver                        0x000000010525da90 chromedriver + 4070032
+15  chromedriver                        0x000000010526dc70 chromedriver + 4136048
+16  libsystem_pthread.dylib             0x0000000188109034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000188103e3c thread_start + 8
+
+
+
+
+2023-12-09 04:02:03,702 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 04:02:03,703 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 04:02:04,222 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 04:02:04,670 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 04:02:05,116 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 04:02:36,891 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/cloudflare-senior-software-engineer-networking-n2npu
+
+
+2023-12-09 04:02:37,376 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/cloudflare-senior-bdr-operations-manager-sales-tech-gy249
+
+
+2023-12-09 04:02:37,968 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/lacework-software-engineer-vulnerability-management-ozri7
+
+
+2023-12-09 04:02:38,353 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/momentive-data-engineer-cjf1b
+
+
+2023-12-09 04:02:38,878 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/momentive-data-engineer-eiibz
+
+
+2023-12-09 04:02:39,293 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/expel-director-customer-success-engineering-97r6l
+
+
+2023-12-09 04:02:39,722 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-software-engineer-access-team-grafana-cloud-remote-uk-emea-qjfrj
+
+
+2023-12-09 04:02:40,178 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/instacart-senior-android-engineer-f7dzz
+
+
+2023-12-09 04:02:40,565 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/kong-sre-senior-software-engineer-poland-dq3pw
+
+
+2023-12-09 04:02:40,922 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/kong-sre-senior-software-engineer-emea-dxcae
+
+
+2023-12-09 04:02:41,301 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tubi-software-developer-senior-engineer-distributed-systems-r3bsp
+
+
+2023-12-09 04:02:41,842 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/applovin-senior-software-engineer-platform-gahjx
+
+
+2023-12-09 04:02:42,291 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/applovin-senior-full-stack-software-engineer-d4d4h
+
+
+2023-12-09 04:02:42,846 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 04:02:47,868 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4512
+Total number of unique jobs: 45
+Current total count of jobs in PostgreSQL: 4557
+
+2023-12-09 04:02:47,938 INFO: 
+Async Sel finished! all in: 42.82 seconds.
+
+2023-12-09 04:02:47,957 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/workos-engineering-manager-product-remote-usa-timezones-ji1p9
+
+
+2023-12-09 04:02:48,356 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/discord-senior-software-engineer-leverage-engineering-duydo
+
+
+2023-12-09 04:02:48,779 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/experian-staff-software-engineer-rubyonrails-remote-us-only-hwq6u
+
+
+2023-12-09 04:02:49,190 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/twilio-staff-fullstack-software-engineer-2ycwx
+
+
+2023-12-09 04:02:49,593 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/pulumi-senior-full-stack-engineer-96ph0
+
+
+2023-12-09 04:02:50,029 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/calendly-senior-backend-engineer-vpcdd
+
+
+2023-12-09 04:02:50,417 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/cortex-senior-sales-engineer-east-coast-rqkfd
+
+
+2023-12-09 04:02:50,779 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/appcues-director-of-platform-engineering-remote-full-time-remote-qy82d
+
+
+2023-12-09 04:02:51,187 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/galileo-financial-technologies-senior-devops-engineer-9g86m
+
+
+2023-12-09 04:02:51,628 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/samsara-manager-software-engineering-bepe7
+
+
+2023-12-09 04:02:52,011 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mapbox-software-development-engineer-ii-data-platform-gyy98
+
+
+2023-12-09 04:02:52,444 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mapbox-software-development-engineer-ii-data-platform-ewz05
+
+
+2023-12-09 04:02:52,826 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-technical-lead-backend-engineer-iot-vqrks
+
+
+2023-12-09 04:02:53,268 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-senior-technical-marketing-engineer-enterprise-segment-ahx9v
+
+
+2023-12-09 04:02:53,638 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-senior-software-engineer-cloud-network-services-sase-remote-in-the-u-s-35s7d
+
+
+2023-12-09 04:02:54,010 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-senior-security-solutions-engineer-remote-yn0vn
+
+
+2023-12-09 04:02:54,494 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-senior-full-stack-software-engineer-ruby-on-rails-focused-remote-within-the-u-s-and-canada-namrd
+
+
+2023-12-09 04:02:55,634 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-senior-full-stack-engineer-inventory-planning-7cnew
+
+
+2023-12-09 04:02:56,376 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-principal-engineer-web-application-security-23gc9
+
+
+2023-12-09 04:02:56,748 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-principal-engineer-fullstack-sattq
+
+
+2023-12-09 04:02:57,106 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-manager-sre-pipelines-engineering-enablement-remote-x16rb
+
+
+2023-12-09 04:02:57,491 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/meraki-lead-full-stack-engineer-inventory-planning-yy3hq
+
+
+2023-12-09 04:02:57,938 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/classy-senior-software-engineer-frontend-t2ahe
+
+
+2023-12-09 04:02:58,441 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/zillow-sr-software-development-engineer-media-solutions-technology-8t9q1
+
+
+2023-12-09 04:02:58,794 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/motive-ex-keeptruckin-software-engineering-manager-frontend-d52uo
+
+
+2023-12-09 04:02:59,266 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/branch-ios-engineer-kaxy2
+
+
+2023-12-09 04:02:59,620 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/branch-android-engineer-1ajx4
+
+
+2023-12-09 04:03:00,087 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/securityscorecard-staff-ml-engineer-a94v0
+
+
+2023-12-09 04:03:00,499 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/securityscorecard-staff-ml-engineer-uxkdf
+
+
+2023-12-09 04:03:00,858 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/securityscorecard-staff-data-science-engineer-c7zx2
+
+
+2023-12-09 04:03:01,215 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/securityscorecard-staff-data-science-engineer-bzi1o
+
+
+2023-12-09 04:03:01,604 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/brooksource-software-engineer-java-backend-developer-3xagu
+
+
+2023-12-09 04:03:01,979 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/astyra-corporation-data-integration-engineer-remote-bhjob1435-31482-27ozm
+
+
+2023-12-09 04:03:02,443 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/hydrow-android-engineer-yst1k
+
+
+2023-12-09 04:03:02,791 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/floqast-software-engineering-manager-remote-full-time-remote-vkws6
+
+
+2023-12-09 04:03:03,264 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/accelbyte-senior-security-engineering-manager-hbppy
+
+
+2023-12-09 04:03:03,664 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/huntress-staff-software-engineer-ruby-on-rails-2094j
+
+
+2023-12-09 04:03:04,045 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/netapp-software-engineer-i82h7
+
+
+2023-12-09 04:03:04,488 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/acquia-staff-software-engineer-node-js-aws-kubernetes-juw9j
+
+
+2023-12-09 04:03:04,868 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/new-relic-senior-manager-software-engineering-kubernetes-l3qy2
+
+
+2023-12-09 04:03:05,228 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/dropbox-infrastructure-software-engineer-d3yja
+
+
+2023-12-09 04:03:05,714 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/match-group-lead-application-security-engineer-remote-r89ep
+
+
+2023-12-09 04:03:06,153 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/airbnb-senior-backend-engineer-media-foundation-dtjyb
+
+
+2023-12-09 04:03:06,503 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/lime-engineering-manager-developer-platform-g3l3t
+
+
+2023-12-09 04:03:06,845 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/revinate-senior-front-end-engineer-swmin
+
+
+2023-12-09 04:03:07,252 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-jehjy
+
+
+2023-12-09 04:03:07,349 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 04:03:07,374 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 04:03:13,913 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4557
+Total number of unique jobs: 77
+Current total count of jobs in PostgreSQL: 4634
+
+2023-12-09 04:03:14,023 INFO: 
+Async BS4 crawlers finished! all in: 69.35 seconds.
+
+2023-12-09 04:03:14,035 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/opentable-senior-ios-engineer-hospitality-remote-2ye1d
+
+
+2023-12-09 04:03:14,419 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/verana-health-software-development-engineer-in-test-ii-v0fdq
+
+
+2023-12-09 04:03:14,766 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/verana-health-senior-director-of-engineering-data-platform-5p5gw
+
+
+2023-12-09 04:03:15,241 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mantl-senior-full-stack-engineer-fs4h7
+
+
+2023-12-09 04:03:15,654 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mantl-senior-frontend-engineer-iq0y9
+
+
+2023-12-09 04:03:16,062 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mantl-full-stack-software-engineer-e3tfe
+
+
+2023-12-09 04:03:16,473 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl
+
+
+2023-12-09 04:03:16,878 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/elroy-air-senior-guidance-navigation-and-control-gnc-engineer-johk3
+
+
+2023-12-09 04:03:17,220 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/stripe-full-stack-engineer-connect-bjdv9
+
+
+2023-12-09 04:03:17,735 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/stripe-full-stack-engineer-billing-5e10j
+
+
+2023-12-09 04:03:18,108 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/welbehealth-senior-network-engineer-ym1c8
+
+
+2023-12-09 04:03:18,519 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-backend-engineer-3-remote-9idxt
+
+
+2023-12-09 04:03:18,868 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/oscar-health-lead-appian-developer-56zfm
+
+
+2023-12-09 04:03:19,342 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/fireflies-ai-full-stack-engineer-backend-remote-2j3xv
+
+
+2023-12-09 04:03:19,747 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-engineering-manager-grafana-plugins-platform-remote-emea-6sqgd
+
+
+2023-12-09 04:03:20,107 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/feedzai-senior-software-engineer-pwltr
+
+
+2023-12-09 04:03:20,567 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/feedzai-mobile-software-engineer-i2qew
+
+
+2023-12-09 04:03:20,938 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/feedzai-expert-software-engineer-bc090
+
+
+2023-12-09 04:03:21,300 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/postman-engineering-manager-observability-szpft
+
+
+2023-12-09 04:03:21,660 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/kong-sre-senior-software-engineer-canada-nmwux
+
+
+2023-12-09 04:03:22,029 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/kong-senior-software-engineer-microservices-typescript-8k1s2
+
+
+2023-12-09 04:03:22,506 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/jetty-senior-site-reliability-engineer-gxzvx
+
+
+2023-12-09 04:03:22,923 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/10up-lead-web-engineer-gkd1g
+
+
+2023-12-09 04:03:23,333 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/10up-senior-javascript-engineer-21d77
+
+
+2023-12-09 04:03:23,717 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/10up-lead-javascript-engineer-3doj2
+
+
+2023-12-09 04:03:24,154 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/10up-associate-director-of-javascript-engineering-remote-remote-worldwide-d12fl
+
+
+2023-12-09 04:03:24,561 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/10up-senior-front-end-engineer-il1t2
+
+
+2023-12-09 04:03:24,967 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/10up-lead-front-end-engineer-oq3r3
+
+
+2023-12-09 04:03:25,446 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/procurify-staff-front-end-engineer-xidrc
+
+
+2023-12-09 04:03:25,880 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/procurify-engineering-team-lead-devsecops-sre-gddyv
+
+
+2023-12-09 04:03:26,276 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/real-lead-platforms-engineer-y17vv
+
+
+2023-12-09 04:03:26,629 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/evolutioniq-senior-ml-machine-learning-ops-engineer-nlp-vs1gv
+
+
+2023-12-09 04:03:26,992 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/twilio-senior-software-engineer-iy3uu
+
+
+2023-12-09 04:03:27,355 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/twilio-principal-fullstack-engineer-94g2w
+
+
+2023-12-09 04:03:27,734 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/twilio-engineering-manager-o08gw
+
+
+2023-12-09 04:03:28,097 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/rupa-health-full-stack-software-engineer-d9tqd
+
+
+2023-12-09 04:03:28,554 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/pulumi-principal-full-stack-engineer-3u69g
+
+
+2023-12-09 04:03:28,912 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/text-iq-senior-java-software-engineer-xs55i
+
+
+2023-12-09 04:03:29,377 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/calendly-lead-product-manager-core-scheduling-rb1vg
+
+
+2023-12-09 04:03:29,783 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/shield-ai-senior-frontend-software-engineer-command-control-temporary-r2303-81goc
+
+
+2023-12-09 04:03:30,193 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/appcues-sr-backend-engineer-hgrto
+
+
+2023-12-09 04:03:30,638 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/samsara-senior-staff-software-engineer-embedded-system-r6078
+
+
+2023-12-09 04:03:31,027 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/howl-principal-software-engineer-ekm5p
+
+
+2023-12-09 04:03:31,444 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/cyera-senior-customer-success-engineer-us-hozvb
+
+
+2023-12-09 04:03:31,790 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/check-technologies-engineering-manager-xtrve
+
+
+2023-12-09 04:03:32,150 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/wizeline-senior-data-engineer-spark-h1w9t
+
+
+2023-12-09 04:03:32,652 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/wizeline-senior-data-engineer-python-aws-databricks-ulyuo
+
+
+2023-12-09 04:03:33,059 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/omnipresent-senior-staff-software-engineer-fully-remote-02hcp
+
+
+2023-12-09 04:03:33,419 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/omnipresent-senior-staff-software-engineer-fully-remote-dq2nx
+
+
+2023-12-09 04:03:33,877 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/enterra-solutions-senior-front-end-web-developer-2r6g5
+
+
+2023-12-09 04:03:34,292 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/enterra-solutions-senior-data-engineer-941zw
+
+
+2023-12-09 04:03:34,689 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/enterra-solutions-senior-back-end-developer-python-o99a0
+
+
+2023-12-09 04:03:35,049 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/enterra-solutions-front-end-web-developer-skq7d
+
+
+2023-12-09 04:03:35,429 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/enterra-solutions-data-engineer-x30sc
+
+
+2023-12-09 04:03:35,788 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/enterra-solutions-back-end-developer-python-sdn6p
+
+
+2023-12-09 04:03:36,153 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/squadformers-senior-software-engineer-full-stack-yqk1y
+
+
+2023-12-09 04:03:36,647 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tech-holding-senior-backend-developer-mx-cmaik
+
+
+2023-12-09 04:03:37,009 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/ziprecruiter-staff-software-engineer-machine-learning-9ivea
+
+
+2023-12-09 04:03:37,385 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/ziprecruiter-software-engineer-machine-learning-q7boc
+
+
+2023-12-09 04:03:37,775 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/ziprecruiter-senior-software-engineer-machine-learning-v1bra
+
+
+2023-12-09 04:03:38,132 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/rackspace-vmware-cloud-engineer-ii-r-18535-r-18536-ckk4l
+
+
+2023-12-09 04:03:41,077 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/rackspace-salesforce-software-developer-ii-s4slr
+
+
+2023-12-09 04:03:41,432 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/bigcommerce-senior-software-engineer-enzdn
+
+
+2023-12-09 04:03:41,816 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/bigcommerce-senior-infrastructure-engineer-remote-uendp
+
+
+2023-12-09 04:03:42,191 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/paystone-sales-manager-lead-generation-centers-ep90d
+
+
+2023-12-09 04:03:42,579 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/seedify-senior-web3-full-stack-developer-njvn9
+
+
+2023-12-09 04:03:42,948 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/seedify-senior-test-engineer-y9jyb
+
+
+2023-12-09 04:03:43,324 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/seedify-senior-frontend-engineer-v8nxo
+
+
+2023-12-09 04:03:43,696 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/seedify-senior-backend-engineer-hep1w
+
+
+2023-12-09 04:03:44,196 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/seedify-backend-game-developer-vlohh
+
+
+2023-12-09 04:03:44,565 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/pagoda-software-engineer-blockchain-protocol-afdbr
+
+
+2023-12-09 04:03:44,937 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/codesignal-software-engineer-product-engineering-owlyn
+
+
+2023-12-09 04:03:45,322 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/magic-eden-mobile-engineer-hd1nw
+
+
+2023-12-09 04:03:45,689 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/singularity-6-senior-graphics-engineer-hdxh6
+
+
+2023-12-09 04:03:46,172 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/coinbase-senior-software-engineer-frontend-consumer-zl2u2
+
+
+2023-12-09 04:03:46,668 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/stytch-engineering-manager-platform-orh34
+
+
+2023-12-09 04:03:47,601 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/weavegrid-senior-software-engineer-full-stack-svtzj
+
+
+2023-12-09 04:03:47,963 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mantl-software-engineer-xdbes
+
+
+2023-12-09 04:03:48,327 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/wasabi-technologies-senior-principal-database-engineer-cockroachdb-3bmxd
+
+
+2023-12-09 04:03:48,692 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-systems-engineer-okta-58rew
+
+
+2023-12-09 04:03:49,088 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-systems-engineer-okta-vqbgd
+
+
+2023-12-09 04:03:49,467 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-systems-engineer-okta-h0fuh
+
+
+2023-12-09 04:03:49,875 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-lead-platform-security-engineer-oafe1
+
+
+2023-12-09 04:03:50,237 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-lead-platform-security-engineer-3itzo
+
+
+2023-12-09 04:03:50,616 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-staff-machine-learning-engineer-mlops-tmf7o
+
+
+2023-12-09 04:03:51,081 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/hungryroot-senior-frontend-software-engineer-1cjfd
+
+
+2023-12-09 04:03:51,460 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/swordhealth-junior-android-engineer-8lt22
+
+
+2023-12-09 04:03:51,822 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/printify-front-end-software-engineer-01i5a
+
+
+2023-12-09 04:03:52,197 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tabby-golang-engineer-marketplace-9bbrd
+
+
+2023-12-09 04:03:52,619 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/thirty-madison-senior-software-engineer-ll-care-technology-o3sxh
+
+
+2023-12-09 04:03:53,033 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-senior-backend-engineer-grafana-databases-remote-emea-e8wye
+
+
+2023-12-09 04:03:53,442 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-senior-backend-engineer-cloud-dept-databases-mimir-injest-remote-usa-z6k3w
+
+
+2023-12-09 04:03:53,854 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/vercel-senior-developer-advocate-l9ffj
+
+
+2023-12-09 04:03:54,368 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tubi-director-data-engineering-1o03u
+
+
+2023-12-09 04:03:55,001 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/applovin-junior-game-developer-994bv
+
+
+2023-12-09 04:03:55,590 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/redpanda-data-software-engineer-core-enterprise-zr4mf
+
+
+2023-12-09 04:03:55,977 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/nexu-sr-full-stack-developer-x3697
+
+
+2023-12-09 04:03:56,479 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/sentinelone-sr-machine-learning-engineer-ju2db
+
+
+2023-12-09 04:03:56,997 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/twilio-senior-solutions-engineer-498jq
+
+
+2023-12-09 04:03:57,442 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tomocredit-senior-data-engineer-x1nf6
+
+
+2023-12-09 04:03:57,907 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/classy-lead-product-marketing-manager-abro7
+
+
+2023-12-09 04:03:58,354 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/motive-ex-keeptruckin-growth-frontend-engineer-6guwe
+
+
+2023-12-09 04:03:58,712 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/reforge-senior-software-engineer-kybyr
+
+
+2023-12-09 04:03:59,175 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/splunk-engineering-manager-sre-observability-cloud-jnmnc
+
+
+2023-12-09 04:03:59,584 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/splunk-senior-technical-support-engineer-splunk-o11y-cloud-1isxu
+
+
+2023-12-09 04:03:59,954 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/fastly-software-engineer-edge-delivery-hrt0d
+
+
+2023-12-09 04:04:00,400 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/capella-space-devops-engineer-direct-access-services-0sgvm
+
+
+2023-12-09 04:04:00,765 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tapcart-senior-software-engineer-ios-h6c3u
+
+
+2023-12-09 04:04:01,220 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tapcart-senior-software-engineer-web-0gjui
+
+
+2023-12-09 04:04:01,633 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tapcart-senior-software-engineer-platform-ze0zm
+
+
+2023-12-09 04:04:02,034 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tapcart-senior-software-engineer-data-5z8dy
+
+
+2023-12-09 04:04:02,447 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/reify-health-engineering-manager-product-platform-m17dk
+
+
+2023-12-09 04:04:02,869 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/captivateiq-software-engineer-xdzpi
+
+
+2023-12-09 04:04:03,275 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/seatgeek-senior-software-engineer-rightsholder-foundation-ybtai
+
+
+2023-12-09 04:04:03,675 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/sure-director-of-engineering-remote-full-time-remote-ujy5p
+
+
+2023-12-09 04:04:04,192 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/hightouch-senior-solutions-engineer-emea-nx6nm
+
+
+2023-12-09 04:04:04,625 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/zynga-director-of-engineering-applied-ai-austin-tx-bay-area-ca-carlsbad-ca-chicago-il-eugene-or-los-angeles-ca-new-york-ny-remote-us-remote-canada-toronto-canada-s3636
+
+
+2023-12-09 04:04:04,985 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/basis-technologies-sr-software-engineer-platform-txw4o
+
+
+2023-12-09 04:04:05,427 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/basis-technologies-qa-engineer-ex7zb
+
+
+2023-12-09 04:04:05,936 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/arctic-wolf-senior-sales-engineer-toronto-w56f8
+
+
+2023-12-09 04:04:06,337 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/arctic-wolf-senior-sales-engineer-winnipeg-0vmnh
+
+
+2023-12-09 04:04:06,861 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tanium-data-loss-protection-engineer-r664s
+
+
+2023-12-09 04:04:07,225 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/rackspace-aws-cloud-engineer-i-in-r-17696-3r02g
+
+
+2023-12-09 04:04:07,674 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/marqeta-senior-software-engineer-data-eng-hxzum
+
+
+2023-12-09 04:04:08,075 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/runzero-inc-senior-security-research-engineer-9lfca
+
+
+2023-12-09 04:04:08,492 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/passport-sr-software-engineer-2silz
+
+
+2023-12-09 04:04:09,003 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/prisma-manager-developer-advocacy-6xyte
+
+
+2023-12-09 04:04:09,415 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/cere-network-developer-community-lead-qu4ct
+
+
+2023-12-09 04:04:09,765 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/afresh-senior-software-engineer-react-native-product-2yei8
+
+
+2023-12-09 04:04:10,225 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/motive-software-engineer-backend-3dy9y
+
+
+2023-12-09 04:04:10,619 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/cribl-senior-full-stack-engineer-cloud-dety1
+
+
+2023-12-09 04:04:11,049 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/lovevery-principal-security-engineer-auf93
+
+
+2023-12-09 04:04:11,460 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/stripe-engineering-manager-document-database-q15s9
+
+
+2023-12-09 04:04:11,859 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/zoe-director-of-engineering-remote-full-time-uk-eu-or-compatible-timezone-remote-x9dt1
+
+
+2023-12-09 04:04:12,227 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/patreon-site-reliability-engineer-kydld
+
+
+2023-12-09 04:04:12,718 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tripactions-senior-back-end-engineer-flights-ocevp
+
+
+2023-12-09 04:04:13,256 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/nerdwallet-staff-engineer-native-infrastructure-r4dyt
+
+
+2023-12-09 04:04:13,622 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/earnest-lead-cloud-engineer-remote-us-g8jw2
+
+
+2023-12-09 04:04:14,006 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/array-senior-engineering-manager-sre-devops-fxmyb
+
+
+2023-12-09 04:04:14,356 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-staff-backend-engineer-rrhnv
+
+
+2023-12-09 04:04:14,751 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-python-back-end-engineer-8i83k
+
+
+2023-12-09 04:04:15,113 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-python-back-end-engineer-h5edp
+
+
+2023-12-09 04:04:15,559 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tide-senior-java-engineer-remote-ngup3
+
+
+2023-12-09 04:04:16,035 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/quora-machine-learning-engineer-search-ranking-poe-remote-kcidu
+
+
+2023-12-09 04:04:16,451 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-senior-software-engineer-grafana-k6-oss-remote-canada-or-latam-dgxgu
+
+
+2023-12-09 04:04:16,892 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-senior-software-engineer-grafana-k6-browser-api-remote-nasa-sb7sd
+
+
+2023-12-09 04:04:17,245 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-senior-developer-advocate-remote-emea-6xth4
+
+
+2023-12-09 04:04:17,708 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/grafana-labs-senior-developer-advocate-remote-americas-est-oh6ie
+
+
+2023-12-09 04:04:18,119 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/side-senior-frontend-engineer-react-owwhc
+
+
+2023-12-09 04:04:18,518 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/protenus-staff-cloud-security-engineer-prldx
+
+
+2023-12-09 04:04:18,935 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/shipwell-data-engineer-myki2
+
+
+2023-12-09 04:04:19,293 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/abnormal-security-sr-software-engineer-engineering-effectiveness-6dt81
+
+
+2023-12-09 04:04:19,757 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/abnormal-security-sr-software-engineer-engineering-effectiveness-exxuv
+
+
+2023-12-09 04:04:20,160 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/abnormal-security-sr-back-end-site-reliability-engineer-xhult
+
+
+2023-12-09 04:04:20,575 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/jumpcloud-software-engineer-front-end-developer-lebanon-gdqgo
+
+
+2023-12-09 04:04:21,092 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/samsara-software-engineer-developer-ecosystem-aetul
+
+
+2023-12-09 04:04:21,497 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/databento-engineering-manager-data-infrastructure-sipxj
+
+
+2023-12-09 04:04:21,903 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/gympass-senior-full-stack-software-engineer-trainiac-iq5mc
+
+
+2023-12-09 04:04:22,249 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/slope-io-lead-qa-engineer-aqoj4
+
+
+2023-12-09 04:04:22,716 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/puzzl-senior-software-engineer-fullstack-yadl8
+
+
+2023-12-09 04:04:23,143 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tomocredit-senior-software-engineer-frontend-backend-fullstack-jo50x
+
+
+2023-12-09 04:04:23,544 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/splunk-data-engineer-sgt-engineering-hybrid-remote-bjbtp
+
+
+2023-12-09 04:04:23,953 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/splunk-data-engineer-marketing-analytics-hybrid-remote-x6or0
+
+
+2023-12-09 04:04:24,321 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/splunk-engineering-manager-fdse-uuy0s
+
+
+2023-12-09 04:04:24,766 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/affinity-engineering-manager-identity-access-management-bpbo3
+
+
+2023-12-09 04:04:25,286 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/affinity-engineering-manager-identity-access-management-strmn
+
+
+2023-12-09 04:04:25,800 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/1password-junior-golang-developer-6c31b
+
+
+2023-12-09 04:04:26,210 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/delphix-senior-sales-engineer-al15u
+
+
+2023-12-09 04:04:26,617 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/sumo-logic-staff-software-engineer-unified-alerting-0zta4
+
+
+2023-12-09 04:04:26,966 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/sumo-logic-staff-software-engineer-unified-alerting-aqbvk
+
+
+2023-12-09 04:04:27,320 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/sumo-logic-staff-software-engineer-unified-alerting-v5gcb
+
+
+2023-12-09 04:04:27,742 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/sumo-logic-staff-software-engineer-unified-alerting-7fqbw
+
+
+2023-12-09 04:04:28,185 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/ltk-senior-software-engineer-i-3cbga
+
+
+2023-12-09 04:04:28,559 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/hackerrank-senior-devops-engineer-remote-dyhse
+
+
+2023-12-09 04:04:28,962 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/orbital-insight-senior-ui-engineer-gv1gh
+
+
+2023-12-09 04:04:29,331 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/binance-senior-devops-engineer-lcu8r
+
+
+2023-12-09 04:04:29,679 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/huntress-senior-software-engineer-ruby-on-rails-ox1x3
+
+
+2023-12-09 04:04:30,087 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/censys-senior-solutions-engineer-5cd7z
+
+
+2023-12-09 04:04:30,510 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/rackspace-site-reliability-engineering-sre-networking-remote-full-time-united-states-remote-gbanr
+
+
+2023-12-09 04:04:30,917 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/aptos-software-engineer-programming-languages-dyyru
+
+
+2023-12-09 04:04:31,273 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/mmhmm-full-stack-developer-for-sora-union-sgoyy
+
+
+2023-12-09 04:04:31,626 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/waabi-software-engineer-simulation-fczmb
+
+
+2023-12-09 04:04:31,980 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/waabi-software-engineer-rlgit
+
+
+2023-12-09 04:04:32,350 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/waabi-senior-staff-software-engineer-system-performance-optimization-k7rse
+
+
+2023-12-09 04:04:32,759 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/brooksource-lead-data-engineer-l1qyp
+
+
+2023-12-09 04:04:33,165 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/tantus-technologies-inc-react-frontend-developer-short-term-contract-17kjk
+
+
+2023-12-09 04:04:33,579 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/vaco-staff-software-engineer-net-remote-cst-est-a16p8
+
+
+2023-12-09 04:04:33,987 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/vaco-senior-devops-engineer-remote-cst-est-jpqv1
+
+
+2023-12-09 04:04:34,506 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/vaco-staff-software-engineer-aws-microservices-java-remote-7spv5
+
+
+2023-12-09 04:04:34,860 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/vaco-senior-software-engineer-java-angular-er2fp
+
+
+2023-12-09 04:04:35,207 WARNING: 
+Setting description to default at AsyncFollowLinkEchoJobs().
+Following https://echojobs.io/job/vaco-senior-devops-engineer-remote-cst-est-n7z7p
+
+
+2023-12-09 04:04:35,207 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 04:04:35,251 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 04:05:07,632 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4634
+Total number of unique jobs: 421
+Current total count of jobs in PostgreSQL: 5055
+
+2023-12-09 04:05:07,706 INFO: 
+Async APIs finished! all in: 184.01 seconds.
+
+2023-12-09 04:05:07,708 ERROR: 
+Exception occurred in function async_rss_template: KeyError in 'title_tag'
+NoneType: None
+
+
+2023-12-09 04:05:07,708 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.07 minutes.
+
+2023-12-09 04:08:17,102 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 04:08:17,102 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 04:08:17,764 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 04:08:18,747 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 04:08:19,210 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 04:08:50,986 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 04:08:52,767 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4946
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 4950
+
+2023-12-09 04:08:52,831 INFO: 
+Async Sel finished! all in: 33.62 seconds.
+
+2023-12-09 04:09:00,079 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 04:09:00,081 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 04:09:00,767 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4950
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4950
+
+2023-12-09 04:09:00,833 INFO: 
+Async BS4 crawlers finished! all in: 42.09 seconds.
+
+2023-12-09 04:09:57,146 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 04:09:57,176 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 04:10:06,426 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4950
+Total number of unique jobs: 109
+Current total count of jobs in PostgreSQL: 5059
+
+2023-12-09 04:10:06,492 INFO: 
+Async APIs finished! all in: 109.39 seconds.
+
+2023-12-09 04:10:06,494 ERROR: 
+Exception occurred in function async_rss_template: KeyError in 'title_tag'
+NoneType: None
+
+
+2023-12-09 04:10:06,494 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.82 minutes.
+

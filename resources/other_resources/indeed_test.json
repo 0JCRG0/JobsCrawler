@@ -7,7 +7,7 @@
                 "code": " MX",
                 "url_1": "https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=",
                 "url_2": "",
-                "pages_to_crawl": 3,
+                "pages_to_crawl": 1,
                 "follow_link": "yes",
                 "inner_link_tag": "#viewJobSSRRoot #jobDescriptionText",
                 "elements_path": [

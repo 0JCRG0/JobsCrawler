@@ -2,9 +2,10 @@ import asyncio
 import logging
 from sql.clean_loc import clean_location_rows, convert_names_to_codes
 from utils.handy import *
+from typing import Callable
+import pandas as pd
 
-def clean_postgre_indeed(df: pd.DataFrame, S, Q, c_code):
-	df.to_csv(S, index=False)
+def clean_postgre_indeed(df: pd.DataFrame, save_path: str, function_postgre: Callable, c_code: str):
 
 	for col in df.columns:
 		if col == 'description':
@@ -30,4 +31,6 @@ def clean_postgre_indeed(df: pd.DataFrame, S, Q, c_code):
 	
 	logging.info('Finished Indeed. Results below ⬇︎')
 
-	Q(df)
+	df.to_csv(save_path, index=False)
+
+	function_postgre(df)

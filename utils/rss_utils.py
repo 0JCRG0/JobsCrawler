@@ -1,7 +1,9 @@
 import logging
 from utils.handy import *
+from typing import Callable
+import pandas as pd
 
-def clean_postgre_rss(df: pd.DataFrame, csv_path, db):
+def clean_postgre_rss(df: pd.DataFrame, save_path: str, function_postgre: Callable):
 	#Cleaning columns
 	for col in df.columns:
 		if col == 'description':
@@ -24,10 +26,10 @@ def clean_postgre_rss(df: pd.DataFrame, csv_path, db):
 				df[col] = df[col].str.strip()  # Remove trailing white space
 	
 	#Save it in local machine
-	df.to_csv(csv_path, index=False)
+	df.to_csv(save_path, index=False)
 
 	#Log it 
 	logging.info('Finished RSS Reader. Results below ⬇︎')
 	
 	# SEND IT TO TO PostgreSQL    
-	db(df)
+	function_postgre(df)

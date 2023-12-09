@@ -74,6 +74,9 @@ async def async_rss_template(pipeline):
 		#TODO: FINISH TESTING cryptojobslist
 
 		url = url_obj['url']
+		title_tag =  url_obj["title_tag"]
+		link_tag = url_obj["link_tag"]
+		description_tag = url_obj["description_tag"]
 		loc_tag = url_obj['location_tag']
 		follow_link = url_obj['follow_link']
 		inner_link_tag = url_obj['inner_link_tag']
@@ -89,16 +92,16 @@ async def async_rss_template(pipeline):
 							# create a new dictionary to store the data for the current job
 							job_data = {}
 
-							job_data["title"] = entry.title if 'title' in entry else "NaN"
+							job_data["title"] = getattr(entry, title_tag) if hasattr(entry, loc_tag) else "NaN"
 							#print(job_data["title"])
 
-							job_data["link"] = entry.link if 'link' in entry else "NaN"
+							job_data["link"] = getattr(entry, link_tag) if hasattr(entry, loc_tag) else "NaN"
 							
 							if await link_exists_in_db(link=job_data["link"], cur=cur):
 								#logging.info(f"""Link {job_data["link"]} already found in the db. Skipping... """)
 								continue
 							else:
-								default = entry.description if 'description' in entry else "NaN"
+								default = getattr(entry, description_tag) if hasattr(entry, loc_tag) else "NaN"
 								if follow_link == 'yes':
 									job_data["description"] = ""
 									job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore

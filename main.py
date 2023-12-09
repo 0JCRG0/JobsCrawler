@@ -44,7 +44,7 @@ async def async_main(pipeline):
 		safe_call(async_rss_template, 'async_rss_template', pipeline),
 		safe_call(async_bs4_template, 'async_bs4_template', pipeline),
 		safe_call(async_selenium_template, 'async_selenium_template', pipeline),
-		safe_call(async_indeed_template, 'async_indeed_template', "MX", "", pipeline)
+		#safe_call(async_indeed_template, 'async_indeed_template', "MX", "", pipeline)
 	)
 
 	for result, func_name in results:
@@ -60,7 +60,7 @@ async def async_main(pipeline):
 	logging.info(f"ALL ASYNC CRAWLERS FINISHED IN: {min_elapsed_time:.2f} minutes.")
 
 async def main():
-	await async_main("TEST")
+	await async_main("PROD")
 
 if __name__ == "__main__":
     asyncio.run(main())

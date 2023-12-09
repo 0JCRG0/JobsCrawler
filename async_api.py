@@ -22,18 +22,9 @@ import aiohttp
 
 load_dotenv()
 
-PROD = os.environ.get('JSON_PROD_API')
-TEST = os.environ.get('JSON_TEST_API')
+JSON_PROD = os.environ.get('JSON_PROD_API')
+JSON_TEST = os.environ.get('JSON_TEST_API')
 SAVE_PATH = os.environ.get('SAVE_PATH_API')
-user = os.environ.get('user')
-password = os.environ.get('password')
-host = os.environ.get('host')
-port = os.environ.get('port')
-database = os.environ.get('database')
-
-# Create a connection to the database & cursor
-conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
-cur = conn.cursor()
 
 async def async_api_template(pipeline):
 	#Start the timer
@@ -46,16 +37,20 @@ async def async_api_template(pipeline):
 	JSON = None
 	POSTGRESQL = None
 
-	if PROD and TEST:
-		JSON, POSTGRESQL = test_or_prod(pipeline, PROD, TEST, to_postgre, test_postgre)
+	if JSON_PROD and JSON_TEST:
+		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
 
 	# Check that JSON and POSTGRESQL have been assigned valid values
-	if JSON is None or POSTGRESQL is None:
-		logging.error("Error: JSON and POSTGRESQL must be assigned valid values.")
+	if JSON is None or POSTGRESQL is None or URL_DB is None:
+		logging.error("Error: JSON and POSTGRESQL and URL_DB must be assigned valid values.")
 		return
 
 	print("\n", "ASYNC APIs HAS STARTED.")
 	logging.info("Async API crawler deployed!.")
+
+	# Create a connection to the database & cursor to check for existent links
+	conn = psycopg2.connect(URL_DB)
+	cur = conn.cursor()
 
 	async def async_api_fetcher(session, api_obj):
 
@@ -109,8 +104,8 @@ async def async_api_template(pipeline):
 									job_data["link"] = job.get(elements_path["link_tag"], "NaN")
 									
 									""" WHETHER THE LINK IS IN THE DB """
-									if await link_exists_in_db(link=job_data["link"], cur=cur):
-										#logging.info(f"""Link {job_data["link"]} already found in the db. Skipping... """)
+									if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+										print(f"""Link {job_data["link"]} already found in the db. Skipping... """)
 										continue
 									else:
 										""" WHETHER TO FOLLOW LINK """
@@ -197,7 +192,7 @@ async def async_api_template(pipeline):
 
 		if title_len == link_len == description_len == pubdate_len == location_len == timestamp_len:
 			logging.info("Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE")
-			clean_postgre_api(df = pd.DataFrame(combined_data), csv_path=SAVE_PATH, db=POSTGRESQL)
+			clean_postgre_api(df = pd.DataFrame(combined_data), save_path=SAVE_PATH, function_postgre=POSTGRESQL)
 		else:
 			logging.error(f"ERROR ON Async_API. LISTS DO NOT HAVE SAME LENGHT. FIX: \n {lengths_info}")
 			pass
@@ -209,7 +204,7 @@ async def async_api_template(pipeline):
 	print(f"Async APIs finished! all in: {elapsed_time:.2f} seconds.", "\n")
 	logging.info(f"Async APIs finished! all in: {elapsed_time:.2f} seconds.")
 async def main():
-	await async_api_template("TEST")
+	await async_api_template("LocalProd")
 
 if __name__ == "__main__":
 	asyncio.run(main())

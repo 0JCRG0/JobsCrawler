@@ -70,8 +70,6 @@ async def async_rss_template(pipeline):
 				"timestamp": total_timestamps}
 
 		""" LOAD THE VARIABLES """
-		#TODO: ADD EVERY TAG HERE & IN JSON (title, description, link, etc...)
-		#TODO: FINISH TESTING cryptojobslist
 
 		url = url_obj['url']
 		title_tag =  url_obj["title_tag"]

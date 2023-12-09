@@ -5,7 +5,7 @@ import re
 #url_to_follow = "https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl"
 #selector = 'div[data-qa="btn-apply-bottom"] a'
 
-url_to_follow = "https://mx.indeed.com/jobs?q=&l=remoto&rbl=Desde+casa&jlid=24899cbf30589459&sort=date&start=0&vjk=b211bd2c9a9ad19b"
+url_to_follow = "https://app.remotesome.com/jobs/?page=0"
 
 selector = 'job-detail mb-4'
 

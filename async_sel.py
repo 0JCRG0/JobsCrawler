@@ -46,7 +46,6 @@ conn = psycopg2.connect(database=database, user=user, password=password, host=ho
 cur = conn.cursor()
 
 async def async_selenium_template(pipeline):
-	#TODO REMOVE cryptojobslist
 	#start timer
 	start_time = timeit.default_timer()
 

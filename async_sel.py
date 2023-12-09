@@ -32,18 +32,9 @@ from utils.handy import *
 
 load_dotenv()
 
-PROD = os.environ.get('JSON_PROD_SEL')
-TEST = os.environ.get('JSON_TEST_SEL')
+JSON_PROD = os.environ.get('JSON_PROD_SEL')
+JSON_TEST = os.environ.get('JSON_TEST_SEL')
 SAVE_PATH = os.environ.get('SAVE_PATH_SEL')
-user = os.environ.get('user')
-password = os.environ.get('password')
-host = os.environ.get('host')
-port = os.environ.get('port')
-database = os.environ.get('database')
-
-# Create a connection to the database & cursor
-conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
-cur = conn.cursor()
 
 async def async_selenium_template(pipeline):
 	#start timer
@@ -62,8 +53,8 @@ async def async_selenium_template(pipeline):
 	JSON = None
 	POSTGRESQL = None
 
-	if PROD and TEST:
-		JSON, POSTGRESQL = test_or_prod(pipeline, PROD, TEST, to_postgre, test_postgre)
+	if JSON_PROD and JSON_TEST:
+		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
 
 	# Check that JSON and POSTGRESQL have been assigned valid values
 	if JSON is None or POSTGRESQL is None:
@@ -72,6 +63,10 @@ async def async_selenium_template(pipeline):
 
 	print("\n", "Async Sel has started")
 	logging.info("Async Sel crawler deployed!")
+
+	# Create a connection to the database & cursor to check for existent links
+	conn = psycopg2.connect(URL_DB)
+	cur = conn.cursor()
 
 	async def fetch_sel(url, driver):
 		loop = asyncio.get_event_loop()
@@ -141,7 +136,7 @@ async def async_selenium_template(pipeline):
 								job_data["link"] = link_element.get_attribute("href") if link_element else "NaN"
 
 								""" WHETHER THE LINK IS IN THE DB """
-								if await link_exists_in_db(link=job_data["link"], cur=cur):
+								if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
 									#logging.info(f"""Link {job_data["link"]} already found in the db. Skipping... """)
 									continue
 								
@@ -207,7 +202,7 @@ async def async_selenium_template(pipeline):
 								location = location_element.get_attribute("innerHTML") if location_element else "NaN"
 
 								""" WHETHER THE LINK IS IN THE DB """
-								if await link_exists_in_db(link=link, cur=cur):
+								if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
 									continue
 
 								# Add the data for the current job to the lists
@@ -284,7 +279,7 @@ async def async_selenium_template(pipeline):
 		print("Number of duplicate rows:", num_duplicates)
 		# remove duplicate rows based on all columns
 		df = df.drop_duplicates(subset="title")
-		clean_postgre_sel(df=df, csv_path=SAVE_PATH, db=POSTGRESQL)
+		clean_postgre_sel(df=df, save_path=SAVE_PATH, function_postgre=POSTGRESQL)
 
 	await insert_postgre()
 

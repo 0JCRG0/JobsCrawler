@@ -27,18 +27,11 @@ from utils.handy import *
 
 load_dotenv()
 
-PROD = os.environ.get('JSON_PROD_INDEED', "")
-TEST = os.environ.get('JSON_TEST_INDEED', "")
+JSON_PROD = os.environ.get('JSON_PROD_INDEED', "")
+JSON_TEST = os.environ.get('JSON_TEST_INDEED', "")
 SAVE_PATH = os.environ.get('SAVE_PATH_INDEED', "")
-user = os.environ.get('user')
-password = os.environ.get('password')
-host = os.environ.get('host')
-port = os.environ.get('port')
-database = os.environ.get('database')
 
-# Create a connection to the database & cursor
-conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
-cur = conn.cursor()
+#TODO Needs a lot of fixes. Mainly headless browser & that all arrays must be the same lenght. Also, it does not respect the follow link
 
 async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 	start_time = timeit.default_timer()
@@ -59,13 +52,21 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 	JSON = None
 	POSTGRESQL = None
 
-	if PROD and TEST:
-		JSON, POSTGRESQL = test_or_prod(pipeline, PROD, TEST, to_postgre, test_postgre)
+	if JSON_PROD and JSON_TEST:
+		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
 
 	# Check that JSON and POSTGRESQL have been assigned valid values
 	if JSON is None or POSTGRESQL is None:
 		logging.error("Error: JSON and POSTGRESQL must be assigned valid values.")
 		return
+	
+
+	print("\n", "Async INDEED has started.")
+	logging.info("Async INDEED crawler deployed!.")
+
+	# Create a connection to the database & cursor to check for existent links
+	conn = psycopg2.connect(URL_DB)
+	cur = conn.cursor()
 
 	async def fetch_indeed(url, driver):
 		loop = asyncio.get_event_loop()
@@ -75,9 +76,6 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 	
 	#async def async_indeed_crawling(strategies, options):
 	async def async_indeed_crawling(strategies):
-		#print("\n", f"Reading {file}... ", "\n")
-		print("\n", "Async INDEED has started.")
-		logging.info("Async INDEED crawler deployed!.")
 
 		#NEW DRIVER EACH ITERATION FOR SITE
 		#driver = webdriver.Chrome(options=options, service=service)
@@ -146,7 +144,7 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 								job_data["link"] = link_raw.get_attribute("href") if link_raw else "NaN"
 
 								""" WHETHER THE LINK IS IN THE DB """
-								if await link_exists_in_db(link=job_data["link"], cur=cur):
+								if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
 									continue
 
 								#DATES
@@ -234,7 +232,7 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 			print("Locations:", len(combined_data["location"]))
 			print("Timestamps:", len(combined_data["timestamp"]))
 
-			clean_postgre_indeed(df=pd.DataFrame(combined_data), S=SAVE_PATH, Q=POSTGRESQL, c_code=SCHEME)
+			clean_postgre_indeed(df=pd.DataFrame(combined_data), save_path=SAVE_PATH, function_postgre=POSTGRESQL, c_code=SCHEME)
 
 	#await gather_tasks_indeed(options=options)
 	await gather_tasks_indeed()
@@ -245,7 +243,7 @@ async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 	print("\n", f"Finished async Indeed. All in {elapsed_time:.5f} seconds!!!", "\n")
 	logging.info(f"Finished async Indeed. All in {elapsed_time:.5f} seconds!!!")
 async def main():
-	await async_indeed_template("MX", "", "TEST")
+	await async_indeed_template("USA", "", "TEST")
 
 if __name__ == "__main__":
 	asyncio.run(main())

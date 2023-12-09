@@ -27,8 +27,8 @@ import aiohttp
 
 load_dotenv()
 
-PROD = os.environ.get('JSON_PROD_BS4')
-TEST = os.environ.get('JSON_TEST_BS4')
+JSON_PROD = os.environ.get('JSON_PROD_BS4')
+JSON_TEST = os.environ.get('JSON_TEST_BS4')
 SAVE_PATH = os.environ.get('SAVE_PATH_BS4')
 user = os.environ.get('user')
 password = os.environ.get('password')
@@ -36,9 +36,6 @@ host = os.environ.get('host')
 port = os.environ.get('port')
 database = os.environ.get('database')
 
-# Create a connection to the database & cursor
-conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
-cur = conn.cursor()
 
 async def async_bs4_template(pipeline):
 
@@ -54,14 +51,20 @@ async def async_bs4_template(pipeline):
 	JSON = None
 	POSTGRESQL = None
 
-	if PROD and TEST:
-		JSON, POSTGRESQL = test_or_prod(pipeline, PROD, TEST, to_postgre, test_postgre)
+	if JSON_PROD and JSON_TEST:
+		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
 
-	if JSON is None or POSTGRESQL is None:
-		logging.error("Error: JSON and POSTGRESQL must be assigned valid values.")
+	# Check that JSON and POSTGRESQL have been assigned valid values
+	if JSON is None or POSTGRESQL is None or URL_DB is None:
+		logging.error("Error: JSON and POSTGRESQL and URL_DB must be assigned valid values.")
 		return
 
 	logging.info("Async BS4 crawler deployed!.")
+	print(POSTGRESQL,type(POSTGRESQL), URL_DB, type(URL_DB))
+
+	# Create a connection to the database & cursor to check for existent links
+	conn = psycopg2.connect(URL_DB)
+	cur = conn.cursor()
 
 	async def fetch(url, session):
 		async with session.get(url) as response:
@@ -126,7 +129,7 @@ async def async_bs4_template(pipeline):
 										job_data["link"] = name + link_element["href"] if link_element else "NaN"
 
 										""" WHETHER THE LINK IS IN THE DB """
-										if await link_exists_in_db(link=job_data["link"], cur=cur):
+										if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
 											#logging.info(f"""Link {job_data["link"]} already found in the db. Skipping... """)
 											continue
 										else:
@@ -184,7 +187,7 @@ async def async_bs4_template(pipeline):
 										location = location_element.get_text(strip=True) if location_element else "NaN"
 
 										# Check if the link exists in the database
-										if await link_exists_in_db(link=link, cur=cur):
+										if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
 											continue
 
 										# Follow the link if specified
@@ -255,7 +258,7 @@ async def async_bs4_template(pipeline):
 
 		if title_len == link_len == description_len == pubdate_len == location_len == timestamp_len:
 			logging.info("BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE")
-			clean_postgre_bs4(df=pd.DataFrame(combined_data), S=SAVE_PATH, Q=POSTGRESQL)
+			clean_postgre_bs4(df=pd.DataFrame(combined_data), save_data_path=SAVE_PATH, function_postgre=POSTGRESQL)
 		else:
 			logging.error(f"ERROR ON ASYNC BS4. LISTS DO NOT HAVE SAME LENGHT. FIX {lengths_info}")
 			pass
@@ -268,7 +271,7 @@ async def async_bs4_template(pipeline):
 	logging.info(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.")
 
 async def main():
-	await async_bs4_template("TEST")
+	await async_bs4_template("PROD")
 
 if __name__ == "__main__":
 	asyncio.run(main())

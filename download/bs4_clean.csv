@@ -1,1 +1,432 @@
 title,link,description,pubdate,location,timestamp
+JOB TITLE: UI/UX Designer (URGENT),https://dribbble.com/jobs/236189-JOB-TITLE-UI-UX-Designer-URGENT?source=index,"
+Attach a link to your past UI/UX work examples or portfolio.Company DescriptionJoin OttoLeads where the future is now! Were the innovative force reshaping the real estate industry through cutting-edge AI technology. We specialize in providing robust software-as-a-service (SaaS) solutions designed to revolutionize lead generation and client engagement for real estate professionals. Our platform cleverly integrates artificial intelligence to not only streamline the lead acquisition process but also to enhance communication through AI-driven calling features and more.Role DescriptionWe are seeking a Senior UI/UX Designer to join our team. This is a temporary full-time (w/ potential overtime) remote role that will collaborate with cross-functional teams to design a landing page for our flagship AI-driven real estate SaaS solution OttoLeads.The ideal candidate will have a proven track record of creating visually compelling user-friendly landing pages with a special focus on engaging animations and interactive elements.The ideal candidate can work extremely fast and is extremely creative.We are on a time crunch and were willing to compensate you generously if youre a rockstar at rapid and quality design.
+Qualifications
+Fluency in Figma
+Can deliver in a timely manner
+Can collaborate with other team members
+Highly creative
+Portfolio of high-quality past work
+
+",2023-12-11,Remote,2023-12-11 22:00:46.794610
+Senior Backend Engineer,https://remote.co/job/senior-backend-engineer-11-3/,"
+Title: Senior Backend Engineer – Grafana Operator Experience (Remote Americas)
+Location: LATAM (Remote)
+This is a Full time remote position for the Americas – we can’t consider other time zones due to team setup.
+What is Grafana?
+Grafana software enables you to query visualize alert on and explore your metrics logs and traces wherever they are stored. Grafana provides you with tools to turn your data into insightful graphs and visualizations. The Grafana plugin framework also enables you to connect other data sources like databases ticketing tools and cloud CI/CD services. Grafana is an open source product with licensed features for enterprise customers. Grafana Labs also operates Grafana Cloud a SaaS offering that thoughtfully integrates the best-in-breed open source technologies into a curated observability platform all managed and scaled by the team at Grafana Labs.
+Who is Grafana Operator Experience?
+Grafana Operator is the team that builds features and operates services used by people who operate grafana. Our customers include open source users developers site reliability engineers large global enterprises the leading global cloud service providers and our very own Grafana Cloud teams.
+What will you be doing?
+
+Earning the trust of our customers to further Grafana’s big tent philosophy of data accessibility.
+Leading the development of features for people like you.
+Driving continuous improvement of our engineering culture through word and deed.
+Driving projects from initial ideation to production.
+Contributing to projects that impact the experience of Grafana operators across the organization.
+Owning the experience of our customers by participating in weekday 12h x 5d and separate weekend 24h x 2d on-call rotations.
+Hiring and developing the best engineers to build the future of Grafana.
+Developing your skills as a thought leader to drive continuous improvement of engineering and operational practices across Grafana Labs.
+
+As we are remote-first and our engineering organization we provide guidance and meet regularly using video calls so an independent attitude and good communication skills are a must.
+What are we looking for in you?
+
+You earn trust by saying what you mean and doing what you say.
+You are customer focused. You start with the customers’ needs and work backwards.
+You take on complex challenges and break them down into digestible problems and leverage your team and organization to deliver.
+You design modular solutions deliver MVPs gather data and feedback and then progress iteratively.
+
+Requirements:
+
+Solid professional experience with at least one programming language in a production distributed system environment. We use Go but experience with Python C C++ Rust or similar languages translates well.
+Experience delivering projects from gathering requirements brainstorming ideas all the way to shipping a product to the customer’s hands in a self-driven way.
+Professional experience with major cloud providers such as AWS Azure or GCP.
+Experience writing clean robust and performant software that is easily maintained by others.
+
+Nice to haves:
+
+Experience working with Kubernetes.
+Some experience using Grafana software or cloud services regardless of scale. We particularly want to hear about hobby or passion projects where you’ve used Grafana.
+Familiarity with being on-call and managing production operations for business and/or mission critical distributed information systems.
+
+
+
+
+
+
+About Grafana Labs: There are more than 950000 active installations of Grafana around the globe monitoring everything from beehives to climate change in the Alps. The instantly recognizable dashboards have been spotted everywhere from a NASA launch and Minecraft HQ to Wimbledon and the Tour de France. Grafana Labs also helps companies including Bloomberg JPMorgan Chase and eBay manage their observability strategies with full-stack offerings that can be run fully managed with Grafana Cloud or self-managed with Grafana Enterprise Stack. The Grafana stack has grown to include four other open source projects Grafana Loki (for logs) Grafana Tempo (for traces) Grafana Mimir (for metrics) and Grafana OnCall (for on-call management).
+
+Benefits: For more information about the perks and benefits of working at Grafana please check out our careers page.
+
+Equal Opportunity Employer: At Grafana Labs we’re building a company where a diverse mix of talented people want to come stay and do their best work. We know that our company runs on the hard work and the dedication of our passionate and creative employees. If you’re excited about this role but your experience doesn’t align perfectly with every qualification in the job description we encourage you to apply anyways.
+
+We will recruit train compensate and promote regardless of race religion colour national origin gender disability age veteran status and all the other fascinating characteristics that make us different and unique. We believe that equality and diversity builds a strong organisation and we’re working hard to make sure that’s the foundation of our organisation as we grow.
+
+For information about how your personal data is used once you’ve applied to a job check out our privacy policy.
+
+",2023-12-11,"Grafana Labs | Back End Developer                                                 
+                                                              
+                                                                               |Full time|International",2023-12-11 22:01:05.142240
+Senior Software Enigineer I Front End,https://remote.co/job/senior-software-enigineer-i-front-end-11/,"
+Title: Sr. SE I Front End (Remote Eligible)
+Location: -REMOTE USA-
+We’re as excited about AI as anyone and our investment in the space speaks to how fundamentally it can change our product and technology in general. As we spoke about at our ENGAGE customer conference this year in the keynote no less we are exploring ways to make teams more efficient and effective by leveraging AI at scale and building it into the heart of our product not just tacking it on around the sides. This position is a huge opportunity to leverage your experience building world class front-end experiences to be at the forefront of Smartsheet’s AI strategy which will be integral to the company’s growth for years to come.
+In 2005 Smartsheet was founded on the idea that teams and millions of people worldwide deserve a better way to deliver their very best work. Today we deliver a leading cloud-based platform for work execution empowering organizations to plan capture track automate and report on work at scale resulting in more efficient processes and better business outcomes.
+You will report to our Manager of Engineering located in our Bellevue WA office or you may work remotely from anywhere in the US where Smartsheet is a registered employer.
+You Will:
+
+Write clean and efficient code based on product specifications and participate in the entire development life cycle from concept to release
+Create and promote modern web UI development
+Develop modular maintainable components for the next generation of applications at Smartsheet (React JavaScript TypeScript Node.js HTML and CSS)
+Be a technical leader on our team implementing features in TypeScript and integrating with cloud native back-end services
+Develop and maintain CI/CD pipeline implementations for tests linting deployment etc.
+Take part in code reviews and architectural discussions as you work with other software engineers UX designers and product managers
+Mentor junior engineers on code quality and other industry best practices
+Develop services that can consume process and act on millions of user actions within Smartsheet and scale to 100x as our as our customers continues to grow
+Enhance existing application code with new features and strike a balance when making technical decisions (build vs refactor vs simplify)
+
+You Have:
+
+5+ years software development experience
+5+ years experience in at least one modern object oriented programming language (Java C# Ruby etc.)
+2+ years experience in SaaS application development
+Experience with modern web technologies front-end frameworks and integrating with back-end services
+Experience building Single Page Applications at scale
+Successful in an environment with frequent production releases
+Experience writing complex asynchronous code that communicates with multiple services
+A degree in Computer Science Engineering or a related field or equivalent practical experience
+Legally eligible to work in the U.S. on an ongoing basis
+While an interest in emerging AI technologies is key direct experience building and/or maintaining these technologies in production is not strictly necessary
+
+Perks & Benefits:
+
+HSA 100% employer-paid premiums or Buy-up medical/vision and dental coverage options for full-time employees
+Equity – Restricted Stock Units (RSUs) with all offers
+Lucrative Employee Stock Purchase Program (15% discount)
+401k Match to help you save for your future (50% of your contribution up to the first 6% of your eligible pay)
+Monthly stipend to support your work and productivity
+Flexible Time Away Program plus Incidental Sick Leave
+Up to 24 weeks of Parental Leave
+Personal paid Volunteer Day to support our community
+Opportunities for professional growth and development including access to LinkedIn Learning online courses
+Company Funded Perks including a counseling membership primary care membership local retail discounts and your own personal Smartsheet account
+Teleworking options from any registered location in the U.S. (role specific)
+
+Smartsheet provides a competitive range of compensation for roles that may be hired in different geographic areas we are licensed to operate our business from. Actual compensation is determined by several factors including but not limited to level of professional educational experience skills and specific candidate location. In addition this role will be eligible for a market competitive bonus and RSU stock grant upon accepted offer. California & New York: $145800 to $213300 | All other US States: $135000 to $197500
+Equal Opportunity Employer:
+Smartsheet is an Equal Opportunity Employer committed to fostering an inclusive environment with the best employees. We provide employment opportunities without regard to any legally protected status in accordance with applicable laws in the US UK Australia Costa Rica and Germany. If there are preparations we can make to help ensure you have a comfortable and positive interview experience please let us know.
+At Smartsheet we strive to build an inclusive environment that encourages supports and celebrates the diverse voices of our team members who also represent the diverse needs of our customers. We’re looking for people who are driven authentic supportive effective and honest. You’re encouraged to apply even if your experience doesn’t precisely match our job description if your career path has been nontraditional that will set you apart. At Smartsheet we welcome diverse perspectives and people who aren’t afraid to be innovative join us!
+
+#BI-Remote
+
+",2023-12-11,"Smartsheet | Back End Developer                                                 
+                                                              
+                                                                               |Full time|High paying|International",2023-12-11 22:01:05.472299
+Director Customer Engineering,https://remote.co/job/director-customer-engineering-11/,"
+Title: Director Customer Engineering (pre-sales)
+Location: Remote
+
+ALL SOURCEGRAPH ROLES ARE FULLY REMOTE
+Who we are
+Our mission at Sourcegraph is to make it so that everyone can code not just ~0.1% of the population. Our code graph powers Cody the most powerful and accurate AI coding assistant as well as our Code Search product which helps devs explore their entire codebase and make large-scale migrations and security fixes. We’re building software that builds software and in doing so we’re making devs more productive and preparing for a world where a lot more code gets written.
+It’s an exciting time to join Sourcegraph. AI has taken over the world and we’ve spent the last 10 years building infrastructure that’s integral to making AI generated code more powerful and accurate. Our customers include 4/5 FAANG companies 4 of the top 10 banks government organizations Uber Plaid and many other companies building the software that pushes the world forward. We’ve raised $225M at a $2.625B valuation from Andreessen Horowitz Sequoia Redpoint Craft and others. We’re making ambitious bets on our future and we’re looking to hire exceptional people to join our team as we make Sourcegraph one of the biggest and most influential companies in the world.
+
+Working hours
+Given that are are an all-remote company and hire almost anywhere in the world we don’t have a location requirement for this role. However we prefer if your working hours overlap with US Pacific Time (US West region) or US Eastern Time (US East region) zones.
+Why this job is exciting
+As the Director you will lead our exceptional high agency all-remote team of Customer Engineers (pre-sales) within our Technical Success organization. Our Customer Engineers lead the technical sale: they demonstrate product capabilities qualify technical requirements and fit guide trials and support Sales in closing opportunities with prospective customers. This is the team that thrives on showing off the value from the nooks and crannies of our product lives for giving our customers aha moments and is the main technical point of contact our customers trust during the sales process.
+As a Director you will be responsible for leading our global pre-sales engineering team. As an integral part of the Technical Success Leadership Team you will also lead multiple key initiatives that directly drive our company-wide goals and enable us to become the de facto code AI platform. In this role you will:
+
+Lead the growth of our Customer Engineering organization as we look to make Sourcegraph valuable and accessible to every company
+Refine and scale the core CE processes such as discovery technical qualification technical evaluations and professional services opportunities (where warranted)
+Help manage and develop our team’s ability to lead successful product demonstrations through customer discovery
+Influence prospects towards best practice architecture decisions
+Collaborate with a variety of internal functional areas to ensure solutions are implemented and supported in-line with client expectations and best practices
+
+Within one month you will
+
+Go through a multi-week onboarding process including training on our product our value propositions our customers our team and our processes.
+Meet our existing pre-sales Customer Engineers and begin the process of forging a long standing partnership with each of them.
+Learn about how we discover relevant use cases map those to key product capabilities and demonstrate the value of Sourcegraph to customers.
+Dive deep into our existing customer experience – processes tools and templates.
+Meet other internal organization leads and begin establishing working relationships.
+
+Within two months you will
+
+Take over direct front-line management of our existing team of Customer Engineers which includes:
+
+Doing a regular reviews of each CE’s book of business including technical wins they are managing
+Making technical or strategic suggestions to unblock any issues for CEs and the customers they serve
+Regularly providing feedback to the team to encourage personal and career development and
+Staying in lock-step with the Sales team to ensure consistent alignment along all customer touch points.
+Based on your observations thus far make recommendations to leadership for improvement or the stand up of new processes tools templates etc.
+
+
+
+Within three months and beyond you will
+
+Place your unique stamp on Sourcegraph by capturing and sharing the innovative approaches you and your team come up with and driving those through the rest of the organization.
+Take ownership of and execute the processes that will enable us to innovate and scale the CE function at Sourcegraph.
+Develop and grow the Customer Engineering team by cultivating a first class team culture process and results. Results can be seen in Sourcegraph growth (revenue and adoption) and customer happiness.
+
+About you
+You are an experienced and visionary people-driven pre-sales technical leader who has the skills to effectively drive progress toward our organization’s ambitious and technically challenging objectives. You are strongly aligned with our values inspired by our mission to make it so that everyone can code and motivated to do your best work at Sourcegraph. If you are passionate about enterprise technical sales then this role might be a perfect mutual match.
+Your skillset:
+
+An excitement for our mission to make it so that everyone can code.
+Direct experience having managed a pre-sales client facing team (eg Sales Engineering Solutions Engineering etc) that works with a technical product and buyer.
+A passion for driving your vision of success through strong communication skills and the ability to motivate and empower others.
+Enthusiasm to help form the foundation of a new team and new strategy from scratch and you enjoy working on challenging open-ended problems.
+Ability to work core business hours for US Pacific Time (US West region) or US Eastern Time (US East region).
+
+Level
+This job is an M4. You can read more about our job leveling philosophy in our Handbook.
+Compensation
+We pay you an above-average salary because we want to hire the best people who are fully focused on helping Sourcegraph succeed not worried about paying bills. You will have the flexibility to work and live anywhere in the world (unless specified otherwise in the job description) and we’ll never take your location or current/past salary information into account when determining your compensation. As an open and transparent company that values equitable and competitive compensation for everyone our compensation ranges are visible to every single Sourcegraph Teammate. To determine your salary we use a number of market and data-driven salary sources and target the high-end of the range ensuring that we’re always paying above market regardless of where you live in the world.
+If base only insert: The target compensation for this role is $253833 USD base.
+In addition to our cash compensation we offer equity (because when we succeed as a company we want you to succeed too) and generous perks & benefits.
+Interview process
+Below is the interview process you can expect for this role (you can read more about the types of interviews in our Handbook). It may look like a lot of steps but rest assured that we move quickly and the steps are designed to help you get the information needed to determine if we’re the right fit for you Interviewing is a two-way street after all!
+We expect the interview process to take 5.5 hours in total.
+Introduction Stage – we have initial conversations to get to know you better
+
+30m Recruiter Screen with Grace Bohl
+30m Hiring Manager Screen with Aimee Menne
+60m Resume Deep Dive with Aimee Menne
+
+Team Interview Stage – we then delve into your experience in more depth and introduce you to members of the team including cross-functional partners
+
+45m Cross-Functional Peer Collaboration with Sales leadership
+45m Team interview with 2 direct reports
+
+Final Interview Stage – we move you to our final round where you gain a better understanding of our business and values holistically
+
+30m Values Interview
+30m Leadership Interview with co-founder
+30m Leadership with Carly
+We check references and conduct your background check
+
+Please note – you are welcome to request additional conversations with anyone you would like to meet but didn’t get to meet during the interview process.
+
+Not sure if this is you?
+We want a diverse global team with a broad range of experience and perspectives. If this job sounds great but you’re not sure if you qualify apply anyway! We carefully consider every application and will either move forward with you find another team that might be a better fit keep in touch for future opportunities or thank you for your time.
+Learn more about us
+To create a product that serves the needs of all developers we are building a diverse all-remote team that is distributed across the world. Sourcegraph is an equal opportunity workplace; we welcome people from all backgrounds and communities.
+We provide competitive compensation and practical benefits to keep you happy and healthy so that you can do your best work.
+Learn more about what it is like to work at Sourcegraph by reading our handbook.
+We want to ensure Sourcegraph is an environment that suits your working style and empowers you to do your best work so we are eager to answer any questions that you have about us at any point in the interview process.
+Go back to the careers page for all open positions.
+Sourcegraph participates in E-Verify for U.S. Employees
+
+",2023-12-11,"Sourcegraph | Sales                                                 
+                                                              
+                                                                               |Full time|High paying|International",2023-12-11 22:01:06.640726
+Lead Animator Artist,https://remote.co/job/lead-animator-artist-11/,"
+Title: Lead Animator Artist | AAA Video Games | Remote
+Location: Madrid Community of Madrid ES
+Title: Lead Animator Artist
+Level: Senior.
+Type: Remote Home-Working
+Location: Anywhere in the world
+We are extensively growing our Global Art Team
+As a Lead 3D Animator in1518you will work closely with the team to create skilled animation with strong acting story-driven performances and convincing motion that will bring our worlds and characters to life.
+1518studios are now on the hunt for a talented professionalLead Animator to join our global Art Team. You’ll be working on a variety of games we are proud to house the best quality animations ranging from heavily stylised to realistic behaviours across both cinematic sequences and real-time motion. Whether you are animating a hero or a monster a crowd or an object you will always think of the movement’s intention and the subject’s behaviour. It is important for you to know how the tiny details help building up the big picture in-game. You will have a strong sense of 3D design facial animation and body mechanics (realistic and cartoony) which must be displayed in a compelling reel.
+This position entails a great deal of responsibility and opportunity to drive further the development of your artistic technical and creative expertise and will accept applications from 2D and 3D Artists that can work on a variety of art styles.
+We are ideally looking for3D Animatorsthat have 5+ years of commercial experience in the games industry but equally if youre a super talented self-taught or even come from a different creative field we would love to hear from you. were interested to hear from you and review your portfolio/reel.
+Requirements
+Qualifications
+
+BA in Art Media graphic design or equivalent relevant experience (bachelor’s in fine arts computer animation illustration digital arts media arts or master’s of fine arts in animation or visual effects for example).
+Previous AAA/Indie/PC games mobile games and NFT projects or at minimum a passion for games and knowledge of the gaming industry.
+Good understanding of creative briefs able to consider elements such as context timescales and creative constraints when solving tasks.
+A keen eye for spinning narrative and life into a character props and special effects.
+Excellent time management skills able to meet deadlines and multitask.
+
+
+Excellent creative thinking skills able to solve creative problems through innovative solutions balancing flow function and aesthetics.
+Solid understanding of both realistic and cartoon human/creature poses and keyframe animations.
+Proficient skills at creating facial expressions and animations in conjunction with blendshapes or similar.
+The ability to provide multiple creative options then iterate upon them as projects progress.
+Knowledge of computer 3D animation techniques motion design and camera movement principles. Able to animate characters objects and special effects.
+
+
+Skilled at working within Maya and Motion Capture data to create the animations.
+Experienced with animationmockups able to plan and generate asset libraries to help smooth the pipeline.
+Strong collaborative attitude. A receptive individual who’s open to take feedback and working together with team-mates on streamlining and improving the animation pipelines/processes and deliverables.
+Experienced with working across departments to provide the mostoptimizedformat for the best in-game performance.
+High level of proficiency in 2D/3D editing and software tools like Maya After Effects CC Premier Pro CC Adobe Flash Animate CC environment Photoshop CC and Illustrator CC to be able to deliver any kind of good quality 2D/3D assets.
+
+
+Ability to draw in a variety of styles and genres with knowledge of lighting perspective material finishes and special effects and a cinematic eye for lighting and shading.
+Good understanding of the 2D/3D rigging process and different technical software.
+Supportive attitude eager to guide other animators in the team and take ownership.
+Fluency in written and spoken English.
+
+Big bonus points if you…
+
+Have experience with locomotion is a big plus.
+Are proficienct with Unity (or another game engine) with the ability to import export and set up the animation state machine with devs. and troubleshoot issues.
+Know also how to animate in 2D and are confident with 2D animation techniques being able to animate characters objects and special effects.
+
+Benefits
+
+You will be working for the pre-eminent global provider of specialist services to the games industry and provided with full training and the opportunity to work on some of the biggest games titles in the world.
+Competitive remuneration holidays regular team competitions with great prizes; and inclusion into an extensive social calendar. Collaborative team-work with people from all around the world different nationalities and languages.
+A supportive community inclusive of LGBTQ+ and any age ethnicity religion or disability. We care about the wellbeing of our employees and have a dedicated employee wellbeing programme.
+
+Who we are
+PTW is a video games services company which supports video game developers and publishers through outsourced production services. We started 25 years ago and since then have grown exponentially year-on-year to where we are today. Our history is in gaming and we are gamers at heart. In our time within the games industry we have worked on over 1500 titles across all genres and all platforms including 8 out of the past 10 Game-Of-The-Year-winning titles.
+We have grown rapidly over the past few years and now have 35 sites spanning the globe. The PTW umbrella of companies includes 1518 SIDE and Orange Rock. SIDE works at the cutting edge of interactive media as a provider of audio services for the global entertainment market. Orange Rock is our in-house game and product development studio. 1518 is our award- winning global Art studio service.
+Welcome to 1518
+",2023-12-11,"Pole To Win | Design Graphic Design                                                 
+                                                              
+                                                                               |Full time|International",2023-12-11 22:01:06.890274
+Enterprise Account Executive Middle East,https://remote.co/job/enterprise-account-executive-middle-east-11/,"
+Title: Enterprise Account Executive Middle East
+Location: Paris France
+SLSQ125R10
+While candidates in the listed locations are encouraged for this role we are open to remote candidates in other locations.
+Want to join a fast growth pre-IPO organisation that could define the next stage of your career?
+Databricks operates at the leading edge of the Unified Data Analytics and AI space. Our customers turn to us to lead the accelerated innovation that their businesses need to gain first mover advantage in today’s ultra competitive landscape.
+We are looking for a creative delivery oriented Enterprise Account Executive to join the Middle East team to maximise the phenomenal market opportunity that exists for Databricks. Reporting to the Director Enterprise Sales IMEA as an Enterprise Account Executive at Databricks you’ll focus on acquiring new enterprise-class customers and share an informed point of view on the Big Data and Advanced Analytics space.
+The impact you will have:
+
+Assess your territory develop account strategies and implement them!
+Identify new business opportunities win new clients and increase usage of the Data Intelligence platform by aligning its benefits to the strategic objectives of your clients
+Orchestrate and utilise our field engineering teams to ensure valuable outcomes for clients
+Build and demonstrate value with all engagements to guide successful negotiations to close point
+
+What we look for:
+
+5 + years experience in a technical or software direct sales role or Databricks knowledge
+General understanding of data platform open source and cloud ecosystems
+Experience at high growth and successful companies/organisations
+Longevity with previous employers
+Quota over-achievement when selling complex software and services to Enterprise accounts
+Experience driving successful adoption of usage-based subscription services (SaaS) and co-selling with AWS Azure and Google Cloud teams
+Methods for co-developing business cases and gaining support from C-level Executives
+Familiarity with sales methodologies and process e.g Territory and Account planning MEDDPICC Challenger Sales and Command of the Message
+Experience in building effective champions collaborative teams and partnerships to support the execution of your territory plan
+Understanding of consumption-based land and expand sales models advantageous
+Understanding of how to identify important uses cases and buying centres to increase the impact of Databricks for clients
+
+Benefits
+
+
+Private medical insurance
+Private life and disability coverage
+Pension Plan
+Equity awards
+Enhanced Parental Leaves
+Fitness reimbursement
+Annual career development fund
+Home office & work headphones reimbursement
+Business travel accident insurance
+Mental wellness resources
+Employee referral bonus
+
+
+
+About Databricks
+Databricks is the data and AI company. More than 10000 organizations worldwide including Comcast Cond Nast Grammarly and over 50% of the Fortune 500 rely on the Databricks Data Intelligence Platform to unify and democratize data analytics and AI. Databricks is headquartered in San Francisco with offices around the globe and was founded by the original creators of Lakehouse Apache Spark  Delta Lake and MLflow. To learn more follow Databricks on Twitter LinkedIn and Facebook.
+Our Commitment to Diversity and Inclusion
+At Databricks we are committed to fostering a diverse and inclusive culture where everyone can excel. We take great care to ensure that our hiring practices are inclusive and meet equal employment opportunity standards. Individuals looking for employment at Databricks are considered without regard to age color disability ethnicity family or marital status gender identity or expression language national origin physical and mental ability political affiliation race religion sexual orientation socio-economic status veteran status and other protected characteristics.
+Compliance
+If access to export-controlled technology or source code is required for performance of job duties it is within Employer’s discretion whether to apply for a U.S. government license for such positions and Employer may decline to proceed with an applicant on this basis alone.
+
+",2023-12-11,"Databricks | Account Manager Sales                                                 
+                                                              
+                                                                               |Full time|International",2023-12-11 22:01:08.082232
+Senior Implementations Program Manager,https://remote.co/job/senior-implementations-program-manager-11/,"
+Title: Senior Implementations Program Manager
+Location: Remote-AMER
+About Remote
+Remote is solving global remote organizations’ biggest challenge: employing anyone anywhere compliantly. We make it possible for businesses big and small to employ a global team by handling global payroll benefits taxes and compliance. Check out remote.com/how-it-works to learn more or if you’re interested in adding to the mission scroll down to apply now.
+Please take a look at remote.com/handbook to learn more about our culture and what it is like to work here. Not only do we encourage folks from all ethnic groups genders sexuality age and abilities to apply but we prioritize a sense of belonging. You can check out independent reviews by other candidates on Glassdoor or look up the results of our candidate surveys to see how others feel about working and interviewing here.
+All of our positions are fully remote. You do not have to relocate to join us!
+What this job can offer you
+
+Direct ownership of the success of transformative partnerships critical to Remote’s business success
+High exposure externally and internally across all functional areas
+Ability to steer product & service development with high velocity in response to partner needs
+An opportunity to co-develop the strategy and vision of the Powered by Remote’ API suite of embedded services
+Opportunity to work with senior stakeholders with high autonomy
+
+What you bring
+
+8+ years of experience in project management / implementations / professional services in the HRtech fintech or software/technology industry
+A proven track record in managing long-term relationships with partners / customers
+Exceptional organizational skills with a proven ability to juggle and complete multiple tasks and projects simultaneously in a fast-paced environment
+The capacity to work collaboratively with cross-functional teams fostering a productive and cooperative environment
+The ability to quickly learn and understand complex issues analyze root causes and solution options and synthesize conclusions and to communicate these effectively to partners and internal teams
+Superior verbal written and presentation skills as well as the ability to work effectively across internal and external organizations
+Experience in B2B SaaS technology partnerships preferred
+
+Job Responsibilities
+
+Directly support the General Manager in building and growing Remote’s API program ensuring alignment with strategic objectives
+Develop and project manage API partners’ integration architecture implementation timeline and operational work streams
+Lead the planning tracking and completion of all project tasks throughout the partner onboarding and implementation process including but not limited to:
+
+Develop and oversee the project schedule and lead regular meetings with operational leads to build workflows not support by integration
+Document coordinate and monitor progress of partner including ensuring all requirements are met
+Coordinate internal resources as required across various departments including Product Legal Finance Sales Partnerships Growth Customer Experience and Operations to drive API partner success
+Work closely with the Product Operations and other teams to understand and communicate the timing of deliverables necessary to keep partners unblocked and drive project to release on time with high quality
+Help partner sales support and customer success teams understand product features and benefits
+Communicate project plan deployment progress execution and delivery using relevant reporting tools and dashboards; create visibility on status of all open issues action items dependencies and timelines for deliverables
+
+
+Own the day-to-day relationship with the partner ensuring questions are directed to and addressed by the appropriate internal teams efficiently
+Identify and understand project risks coordinate with respective teams as applicable to mitigate and resolve
+Develop and execute strategies to continuously improve partner and customer satisfaction meet revenue targets and scale team operations (in collaboration with Product Engineering Partnerships Customer Experience and Operations)
+Contribute to the development of integration best practices training material and Remote internal and external collateral
+
+Work with GM Partnerships and Product Marketing to package implementation best practices and integrate these in partner value prop for future partners
+Develop clear and accurate implementation guide covering technical GTM and operational implementation (in collaboration with Technical Solutions Consultant)
+Develop and maintain a comprehensive documentation system that organizes partner interactions including FAQs workflows dependencies and blockers
+Work with other teams to populate the partner knowledge base and partner portal
+
+
+
+Practicals
+
+You’ll report to: General Manager of Partnership Business
+Location: You’ll need to be able to work in the US timezone
+Start date: As soon as possible
+
+Remote Compensation Philosophy
+Remote’s Total Rewards philosophy is to ensure fair unbiased compensation and fair equity pay along with competitive benefits in all locations in which we operate. We do not agree to or encourage cheap-labor practices and therefore we ensure to pay above in-location rates. We hope to inspire other companies to support global talent-hiring and bring local wealth to developing countries.
+At first glance our salary bands seem quite wide – here is some context. At Remote we have international operations and a globally distributed workforce. We use geo ranges to consider geographic pay differentials as part of our global compensation strategy to remain competitive in various markets while hiring globally.
+The base salary range for this full-time position is between $53600 USD to $180900 USD. Our salary ranges are determined by role level and location and our job titles may span more than one career level. The actual base pay for the successful candidate in this role is dependent upon many factors such as location transferable or job-related skills work experience relevant training business needs and market demands. The base salary range may be subject to change.
+Application process
+Roughly 4 hours across 3 weeks
+
+Interview with Recruiter
+Interview with future manager
+Interview with team members (no managers present)
+Prior employment verification check
+
+#LI-DNI
+Benefits
+Our full benefits & perks are explained in our handbook at remote.com/r/benefits. As a global company each country works differently but some benefits/perks are for all Remoters:
+
+work from anywhere
+unlimited personal time off (minimum 4 weeks)
+quarterly company-wide day off for self care
+flexible working hours (we are async)
+16 weeks paid parental leave
+mental health support services
+stock options
+learning budget
+home office budget & IT equipment
+budget for local in-person social events or co-working spaces
+
+How you’ll plan your day (and life)
+We work async at Remote which means you can plan your schedule around your life (and not around meetings). Read more at remote.com/async.
+You will be empowered to take ownership and be proactive. When in doubt you will default to action instead of waiting. Your life-work balance is important and you will be encouraged to put yourself and your family first and fit work around your needs.
+If that sounds like something you want apply now!
+We will ask you to voluntarily tell us your pronouns at interview stage and you will have the option to answer our anonymous demographic questionnaire when you apply below. As an equal employment opportunity employer it’s important to us that our workforce reflects people of all backgrounds identities and experiences and this data will help us to stay accountable. We thank you for providing this data if you chose to.
+Need help? Email hiring@remote.com
+",2023-12-11,"Remote Technology Inc. | Operations Project Manager                                                 
+                                                              
+                                                                               |International",2023-12-11 22:01:09.115082

@@ -4526,3 +4526,5805 @@ NoneType: None
 2023-12-09 04:10:06,494 INFO: 
 ALL ASYNC CRAWLERS FINISHED IN: 1.82 minutes.
 
+2023-12-09 06:12:50,172 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 06:12:50,172 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 06:12:52,171 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 06:12:53,184 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 06:12:54,399 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 06:13:11,378 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 06:13:12,111 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5059
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5059
+
+2023-12-09 06:13:12,244 INFO: 
+Async Sel finished! all in: 17.84 seconds.
+
+2023-12-09 06:13:38,735 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 06:13:38,740 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 06:13:39,394 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5059
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5059
+
+2023-12-09 06:13:39,458 INFO: 
+Async BS4 crawlers finished! all in: 46.27 seconds.
+
+2023-12-09 06:13:58,053 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 06:13:58,080 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 06:13:59,006 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5059
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 5062
+
+2023-12-09 06:13:59,067 INFO: 
+Async APIs finished! all in: 68.89 seconds.
+
+2023-12-09 06:13:59,068 ERROR: 
+Exception occurred in function async_rss_template: KeyError in 'title_tag'
+NoneType: None
+
+
+2023-12-09 06:13:59,068 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.15 minutes.
+
+2023-12-09 10:03:34,597 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 10:03:34,598 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 10:03:35,361 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 10:03:35,850 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 10:03:36,421 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 10:03:52,813 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 10:03:53,885 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5062
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5062
+
+2023-12-09 10:03:53,986 INFO: 
+Async Sel finished! all in: 17.57 seconds.
+
+2023-12-09 10:04:20,160 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 10:04:20,185 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 10:04:21,360 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5062
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 5064
+
+2023-12-09 10:04:21,483 INFO: 
+Async BS4 crawlers finished! all in: 45.64 seconds.
+
+2023-12-09 10:04:41,984 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 10:04:42,009 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 10:04:45,056 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5064
+Total number of unique jobs: 24
+Current total count of jobs in PostgreSQL: 5088
+
+2023-12-09 10:04:45,120 INFO: 
+Async APIs finished! all in: 70.53 seconds.
+
+2023-12-09 10:04:45,122 ERROR: 
+Exception occurred in function async_rss_template: KeyError in 'title_tag'
+NoneType: None
+
+
+2023-12-09 10:04:45,122 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.18 minutes.
+
+2023-12-09 14:04:03,409 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 14:04:03,409 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 14:04:04,116 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 14:04:04,574 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 14:04:05,212 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 14:04:47,293 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 14:04:48,104 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5088
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5088
+
+2023-12-09 14:04:48,167 INFO: 
+Async Sel finished! all in: 18.03 seconds.
+
+2023-12-09 14:15:14,851 ERROR: 
+OperationalError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+
+
+2023-12-09 14:15:14,905 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 14:32:34,665 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 14:32:34,666 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 14:32:34,700 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 14:32:35,477 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5088
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 5089
+
+2023-12-09 14:32:35,541 INFO: 
+Async BS4 crawlers finished! all in: 89.54 seconds.
+
+2023-12-09 14:32:35,542 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-09 14:32:35,542 ERROR: 
+Exception occurred in function async_rss_template: KeyError in 'title_tag'
+NoneType: None
+
+
+2023-12-09 14:32:35,542 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.51 minutes.
+
+2023-12-09 18:11:56,233 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 18:11:56,234 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 18:11:56,808 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 18:11:57,264 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 18:11:57,714 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 18:12:12,280 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 18:12:13,849 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5089
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5089
+
+2023-12-09 18:12:13,914 INFO: 
+Async Sel finished! all in: 16.20 seconds.
+
+2023-12-09 18:18:15,920 ERROR: 
+OperationalError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+
+
+2023-12-09 18:19:40,180 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-09 18:19:40,194 ERROR: 
+InterfaceError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-09 18:19:40,223 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 18:36:14,249 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 18:36:14,252 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 18:36:14,284 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 18:36:14,990 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5089
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5089
+
+2023-12-09 18:36:15,053 INFO: 
+Async BS4 crawlers finished! all in: 100.58 seconds.
+
+2023-12-09 18:36:15,054 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-09 18:36:15,055 ERROR: 
+Exception occurred in function async_rss_template: KeyError in 'title_tag'
+NoneType: None
+
+
+2023-12-09 18:36:15,055 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.69 minutes.
+
+2023-12-09 20:45:03,696 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 20:45:03,697 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 20:45:04,333 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 20:45:04,776 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 20:45:05,223 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 20:45:16,926 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 20:45:17,588 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5089
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5089
+
+2023-12-09 20:45:17,650 INFO: 
+Async Sel finished! all in: 12.43 seconds.
+
+2023-12-09 20:45:50,054 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 20:45:50,055 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 20:45:51,143 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5089
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5089
+
+2023-12-09 20:45:51,205 INFO: 
+Async BS4 crawlers finished! all in: 46.43 seconds.
+
+2023-12-09 20:46:26,764 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 20:46:26,794 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-09 20:46:32,703 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5089
+Total number of unique jobs: 80
+Current total count of jobs in PostgreSQL: 5169
+
+2023-12-09 20:46:32,789 INFO: 
+Async APIs finished! all in: 89.09 seconds.
+
+2023-12-09 20:47:24,344 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 20:47:24,405 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-09 20:47:50,195 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5169
+Total number of unique jobs: 386
+Current total count of jobs in PostgreSQL: 5555
+
+2023-12-09 20:47:50,269 INFO: 
+Async RSS readers finished! all in: 165.94 seconds.
+
+2023-12-09 20:47:50,270 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.78 minutes.
+
+2023-12-09 22:12:57,171 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-09 22:12:57,172 INFO: 
+Async API crawler deployed!.
+
+2023-12-09 22:12:57,804 INFO: 
+Async RSS crawler deployed!
+
+2023-12-09 22:12:58,256 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-09 22:12:58,762 INFO: 
+Async Sel crawler deployed!
+
+2023-12-09 22:14:06,164 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-09 22:14:06,884 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5555
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5555
+
+2023-12-09 22:14:06,946 INFO: 
+Async Sel finished! all in: 18.35 seconds.
+
+2023-12-09 22:41:54,363 ERROR: 
+OperationalError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-09 22:41:54,582 ERROR: 
+Encountered a request error: Cannot connect to host www.workingnomads.com:443 ssl:default [None]. Moving to the next API...
+
+2023-12-09 22:41:54,584 ERROR: 
+An error occurred: Server disconnected. Skipping URL https://dribbble.com/jobs?anywhere=true&keyword=&page=1
+
+2023-12-09 22:41:54,978 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-09 22:42:56,046 ERROR: 
+An error occurred: Server disconnected. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-09 23:00:10,278 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://www.fossjobs.net/jobs-worldwide/?page=1
+
+2023-12-09 23:00:10,280 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-09 23:00:10,305 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-09 23:00:11,006 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5555
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5555
+
+2023-12-09 23:00:11,074 INFO: 
+Async BS4 crawlers finished! all in: 182.88 seconds.
+
+2023-12-09 23:00:11,074 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-09 23:00:11,075 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+NoneType: None
+
+
+2023-12-09 23:00:11,075 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.07 minutes.
+
+2023-12-10 06:00:08,991 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-10 06:00:08,991 INFO: 
+Async API crawler deployed!.
+
+2023-12-10 06:00:09,755 INFO: 
+Async RSS crawler deployed!
+
+2023-12-10 06:00:10,234 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-10 06:00:10,690 INFO: 
+Async Sel crawler deployed!
+
+2023-12-10 06:00:26,691 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-10 06:00:27,387 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5555
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5555
+
+2023-12-10 06:00:27,450 INFO: 
+Async Sel finished! all in: 16.76 seconds.
+
+2023-12-10 06:01:05,990 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 06:01:05,994 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-10 06:01:06,663 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5555
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5555
+
+2023-12-10 06:01:06,724 INFO: 
+Async BS4 crawlers finished! all in: 56.49 seconds.
+
+2023-12-10 06:01:39,399 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 06:01:39,426 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-10 06:01:43,741 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5555
+Total number of unique jobs: 49
+Current total count of jobs in PostgreSQL: 5604
+
+2023-12-10 06:01:43,843 INFO: 
+Async APIs finished! all in: 94.86 seconds.
+
+2023-12-10 06:01:54,200 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 06:01:54,234 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-10 06:01:59,504 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5604
+Total number of unique jobs: 75
+Current total count of jobs in PostgreSQL: 5679
+
+2023-12-10 06:01:59,565 INFO: 
+Async RSS readers finished! all in: 109.81 seconds.
+
+2023-12-10 06:01:59,566 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.84 minutes.
+
+2023-12-10 10:06:10,817 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-10 10:06:10,818 INFO: 
+Async API crawler deployed!.
+
+2023-12-10 10:06:11,771 INFO: 
+Async RSS crawler deployed!
+
+2023-12-10 10:06:12,745 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-10 10:06:13,336 INFO: 
+Async Sel crawler deployed!
+
+2023-12-10 10:07:51,471 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-10 10:07:52,395 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5679
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5679
+
+2023-12-10 10:07:52,473 INFO: 
+Async Sel finished! all in: 24.40 seconds.
+
+2023-12-10 19:22:46,587 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-10 19:22:46,660 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-10 19:22:58,822 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-10 19:22:59,361 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-10 19:22:59,361 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-10 19:22:59,361 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-10 19:22:59,362 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 130.76 minutes.
+
+2023-12-10 19:28:39,486 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-10 19:28:39,487 INFO: 
+Async API crawler deployed!.
+
+2023-12-10 19:28:40,095 INFO: 
+Async RSS crawler deployed!
+
+2023-12-10 19:28:40,543 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-10 19:28:40,988 INFO: 
+Async Sel crawler deployed!
+
+2023-12-10 19:28:55,010 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-10 19:28:55,748 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5679
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5679
+
+2023-12-10 19:28:55,816 INFO: 
+Async Sel finished! all in: 14.83 seconds.
+
+2023-12-10 19:29:37,240 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 19:29:37,284 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-10 19:29:39,943 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5679
+Total number of unique jobs: 28
+Current total count of jobs in PostgreSQL: 5707
+
+2023-12-10 19:29:40,009 INFO: 
+Async BS4 crawlers finished! all in: 59.47 seconds.
+
+2023-12-10 19:30:17,767 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 19:30:17,947 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-10 19:30:28,506 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5707
+Total number of unique jobs: 109
+Current total count of jobs in PostgreSQL: 5816
+
+2023-12-10 19:30:28,621 INFO: 
+Async APIs finished! all in: 109.14 seconds.
+
+2023-12-10 19:30:48,357 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 19:30:48,403 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-10 19:31:01,083 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5816
+Total number of unique jobs: 158
+Current total count of jobs in PostgreSQL: 5974
+
+2023-12-10 19:31:01,149 INFO: 
+Async RSS readers finished! all in: 141.06 seconds.
+
+2023-12-10 19:31:01,152 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.36 minutes.
+
+2023-12-10 22:00:09,000 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-10 22:00:09,000 INFO: 
+Async API crawler deployed!.
+
+2023-12-10 22:00:09,646 INFO: 
+Async RSS crawler deployed!
+
+2023-12-10 22:00:10,104 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-10 22:00:10,669 INFO: 
+Async Sel crawler deployed!
+
+2023-12-10 22:00:30,060 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-10 22:00:30,964 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5974
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5974
+
+2023-12-10 22:00:31,026 INFO: 
+Async Sel finished! all in: 20.36 seconds.
+
+2023-12-10 22:01:09,436 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 22:01:09,446 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-10 22:01:10,146 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5974
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5974
+
+2023-12-10 22:01:10,213 INFO: 
+Async BS4 crawlers finished! all in: 60.11 seconds.
+
+2023-12-10 22:01:34,592 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 22:01:34,622 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-10 22:01:36,976 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5974
+Total number of unique jobs: 26
+Current total count of jobs in PostgreSQL: 6000
+
+2023-12-10 22:01:37,038 INFO: 
+Async APIs finished! all in: 88.04 seconds.
+
+2023-12-10 22:01:59,915 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-10 22:01:59,953 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-10 22:02:09,143 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6000
+Total number of unique jobs: 124
+Current total count of jobs in PostgreSQL: 6124
+
+2023-12-10 22:02:09,209 INFO: 
+Async RSS readers finished! all in: 119.57 seconds.
+
+2023-12-10 22:02:09,211 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.00 minutes.
+
+2023-12-11 06:00:08,505 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-11 06:00:08,505 INFO: 
+Async API crawler deployed!.
+
+2023-12-11 06:00:09,277 INFO: 
+Async RSS crawler deployed!
+
+2023-12-11 06:00:09,942 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-11 06:00:10,508 INFO: 
+Async Sel crawler deployed!
+
+2023-12-11 06:01:05,069 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-11 06:01:06,984 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6124
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6124
+
+2023-12-11 06:01:07,125 INFO: 
+Async Sel finished! all in: 56.56 seconds.
+
+2023-12-11 06:01:24,900 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 06:01:24,961 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-11 06:01:25,865 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6124
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 6126
+
+2023-12-11 06:01:25,992 INFO: 
+Async BS4 crawlers finished! all in: 76.05 seconds.
+
+2023-12-11 06:01:48,602 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 06:01:48,633 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-11 06:01:50,579 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6126
+Total number of unique jobs: 19
+Current total count of jobs in PostgreSQL: 6145
+
+2023-12-11 06:01:50,643 INFO: 
+Async APIs finished! all in: 102.14 seconds.
+
+2023-12-11 06:02:55,587 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 06:02:55,646 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-11 06:03:07,608 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6145
+Total number of unique jobs: 162
+Current total count of jobs in PostgreSQL: 6307
+
+2023-12-11 06:03:07,687 INFO: 
+Async RSS readers finished! all in: 178.42 seconds.
+
+2023-12-11 06:03:07,767 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.99 minutes.
+
+2023-12-11 10:04:45,621 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-11 10:04:45,621 INFO: 
+Async API crawler deployed!.
+
+2023-12-11 10:04:46,446 INFO: 
+Async RSS crawler deployed!
+
+2023-12-11 10:04:46,908 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-11 10:04:47,625 INFO: 
+Async Sel crawler deployed!
+
+2023-12-11 15:12:18,690 ERROR: 
+OperationalError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-11 15:12:58,405 ERROR: 
+InterfaceError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-11 15:12:58,650 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-11 15:13:01,051 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-11 15:13:02,376 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6307
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 6311
+
+2023-12-11 15:13:02,520 INFO: 
+Async Sel finished! all in: 7871.99 seconds.
+
+2023-12-11 15:13:02,521 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-11 15:13:02,521 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-11 15:13:02,521 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-11 15:13:02,521 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 131.23 minutes.
+
+2023-12-11 18:00:08,511 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-11 18:00:08,511 INFO: 
+Async API crawler deployed!.
+
+2023-12-11 18:00:09,081 INFO: 
+Async RSS crawler deployed!
+
+2023-12-11 18:00:09,555 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-11 18:00:10,074 INFO: 
+Async Sel crawler deployed!
+
+2023-12-11 18:01:12,422 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-11 18:01:13,960 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 1912
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 1919
+
+2023-12-11 18:01:14,101 INFO: 
+Async Sel finished! all in: 64.03 seconds.
+
+2023-12-11 18:01:25,542 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 18:01:25,567 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-11 18:01:26,605 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 1919
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 1925
+
+2023-12-11 18:01:26,667 INFO: 
+Async BS4 crawlers finished! all in: 77.11 seconds.
+
+2023-12-11 18:01:50,812 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 18:01:50,835 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-11 18:01:54,473 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 1925
+Total number of unique jobs: 39
+Current total count of jobs in PostgreSQL: 1964
+
+2023-12-11 18:01:54,535 INFO: 
+Async APIs finished! all in: 106.02 seconds.
+
+2023-12-11 18:03:14,444 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 18:03:14,485 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-11 18:03:28,668 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 1964
+Total number of unique jobs: 175
+Current total count of jobs in PostgreSQL: 2139
+
+2023-12-11 18:03:28,739 INFO: 
+Async RSS readers finished! all in: 199.66 seconds.
+
+2023-12-11 18:03:28,751 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.34 minutes.
+
+2023-12-11 22:00:08,386 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-11 22:00:08,389 INFO: 
+Async API crawler deployed!.
+
+2023-12-11 22:00:09,003 INFO: 
+Async RSS crawler deployed!
+
+2023-12-11 22:00:09,468 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-11 22:00:09,925 INFO: 
+Async Sel crawler deployed!
+
+2023-12-11 22:01:12,142 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 22:01:12,186 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-11 22:01:13,706 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2139
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 2146
+
+2023-12-11 22:01:13,821 INFO: 
+Async BS4 crawlers finished! all in: 64.35 seconds.
+
+2023-12-11 22:02:07,274 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 22:02:07,307 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-11 22:02:09,121 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2146
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 2163
+
+2023-12-11 22:02:09,185 INFO: 
+Async APIs finished! all in: 94.95 seconds.
+
+2023-12-11 22:02:10,585 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-11 22:02:12,076 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2163
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 2173
+
+2023-12-11 22:02:12,147 INFO: 
+Async Sel finished! all in: 96.38 seconds.
+
+2023-12-11 22:02:40,015 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-11 22:02:40,055 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-11 22:02:46,225 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2173
+Total number of unique jobs: 81
+Current total count of jobs in PostgreSQL: 2254
+
+2023-12-11 22:02:46,288 INFO: 
+Async RSS readers finished! all in: 131.44 seconds.
+
+2023-12-11 22:02:46,291 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.20 minutes.
+
+2023-12-12 06:10:17,226 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-12 06:10:17,226 INFO: 
+Async API crawler deployed!.
+
+2023-12-12 06:10:18,087 INFO: 
+Async RSS crawler deployed!
+
+2023-12-12 06:10:18,738 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-12 06:10:19,302 INFO: 
+Async Sel crawler deployed!
+
+2023-12-12 06:27:32,674 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+
+
+2023-12-12 06:44:55,731 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-12 07:05:00,931 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-12 07:05:00,976 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-12 07:05:02,046 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2254
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 2254
+
+2023-12-12 07:05:02,215 INFO: 
+Async Sel finished! all in: 150.10 seconds.
+
+2023-12-12 07:05:02,629 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-12 07:05:02,803 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-12 07:05:03,294 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-12 07:05:04,467 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2254
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 2255
+
+2023-12-12 07:05:04,564 INFO: 
+Async BS4 crawlers finished! all in: 153.01 seconds.
+
+2023-12-12 07:05:04,574 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-12 07:05:04,574 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-12 07:05:04,574 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.58 minutes.
+
+2023-12-12 10:06:30,762 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-12 10:06:30,763 INFO: 
+Async API crawler deployed!.
+
+2023-12-12 10:06:31,361 INFO: 
+Async RSS crawler deployed!
+
+2023-12-12 10:06:31,813 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-12 10:06:32,457 INFO: 
+Async Sel crawler deployed!
+
+2023-12-12 10:39:29,195 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-12 10:55:11,176 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-12 10:55:11,200 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-12 10:55:12,097 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2255
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 2255
+
+2023-12-12 10:55:12,163 INFO: 
+Async BS4 crawlers finished! all in: 126.11 seconds.
+
+2023-12-12 10:56:49,987 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-12 10:56:51,265 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2255
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 2261
+
+2023-12-12 10:56:51,328 INFO: 
+Async Sel finished! all in: 150.46 seconds.
+
+2023-12-12 10:56:51,329 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-12 10:56:51,329 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-12 10:56:51,329 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.54 minutes.
+
+2023-12-12 14:05:41,607 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-12 14:05:41,607 INFO: 
+Async API crawler deployed!.
+
+2023-12-12 14:05:42,695 INFO: 
+Async RSS crawler deployed!
+
+2023-12-12 14:05:43,333 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-12 14:05:43,931 INFO: 
+Async Sel crawler deployed!
+
+2023-12-12 17:12:23,672 ERROR: 
+OperationalError **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-12 17:12:23,924 ERROR: 
+WebDriverException **before** getting the elements in https://www.remoteimpact.io/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 117, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    return driver.page_source
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 446, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=120.0.6099.71)
+Stacktrace:
+0   chromedriver                        0x000000010524c4cc chromedriver + 4162764
+1   chromedriver                        0x0000000105244654 chromedriver + 4130388
+2   chromedriver                        0x0000000104e9bbc0 chromedriver + 293824
+3   chromedriver                        0x0000000104e830b0 chromedriver + 192688
+4   chromedriver                        0x0000000104e82fd8 chromedriver + 192472
+5   chromedriver                        0x0000000104f212b0 chromedriver + 840368
+6   chromedriver                        0x0000000104ed56bc chromedriver + 530108
+7   chromedriver                        0x0000000104ed6930 chromedriver + 534832
+8   chromedriver                        0x0000000105211df8 chromedriver + 3923448
+9   chromedriver                        0x00000001052163cc chromedriver + 3941324
+10  chromedriver                        0x00000001051fa028 chromedriver + 3825704
+11  chromedriver                        0x0000000105216f2c chromedriver + 3944236
+12  chromedriver                        0x00000001051ec6e4 chromedriver + 3770084
+13  chromedriver                        0x0000000105233970 chromedriver + 4061552
+14  chromedriver                        0x0000000105233ae8 chromedriver + 4061928
+15  chromedriver                        0x00000001052442d4 chromedriver + 4129492
+16  libsystem_pthread.dylib             0x0000000188109034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000188103e3c thread_start + 8
+
+
+
+
+2023-12-12 17:12:24,087 ERROR: 
+WebDriverException **before** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 117, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    return driver.page_source
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 446, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=120.0.6099.71)
+Stacktrace:
+0   chromedriver                        0x0000000100ed84cc chromedriver + 4162764
+1   chromedriver                        0x0000000100ed0654 chromedriver + 4130388
+2   chromedriver                        0x0000000100b27bc0 chromedriver + 293824
+3   chromedriver                        0x0000000100b0f0b0 chromedriver + 192688
+4   chromedriver                        0x0000000100b0efd8 chromedriver + 192472
+5   chromedriver                        0x0000000100bad2b0 chromedriver + 840368
+6   chromedriver                        0x0000000100b616bc chromedriver + 530108
+7   chromedriver                        0x0000000100b62930 chromedriver + 534832
+8   chromedriver                        0x0000000100e9ddf8 chromedriver + 3923448
+9   chromedriver                        0x0000000100ea23cc chromedriver + 3941324
+10  chromedriver                        0x0000000100e86028 chromedriver + 3825704
+11  chromedriver                        0x0000000100ea2f2c chromedriver + 3944236
+12  chromedriver                        0x0000000100e786e4 chromedriver + 3770084
+13  chromedriver                        0x0000000100ebf970 chromedriver + 4061552
+14  chromedriver                        0x0000000100ebfae8 chromedriver + 4061928
+15  chromedriver                        0x0000000100ed02d4 chromedriver + 4129492
+16  libsystem_pthread.dylib             0x0000000188109034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x0000000188103e3c thread_start + 8
+
+
+
+
+2023-12-12 17:12:24,264 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-12 17:12:25,100 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2261
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 2261
+
+2023-12-12 17:12:25,162 INFO: 
+Async Sel finished! all in: 7827.49 seconds.
+
+2023-12-12 17:12:25,167 ERROR: 
+Exception occurred in function async_api_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-12 17:12:25,167 ERROR: 
+Exception occurred in function async_rss_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-12 17:12:25,168 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-12 17:12:25,168 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 130.50 minutes.
+
+2023-12-12 18:04:06,090 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-12 18:04:06,091 INFO: 
+Async API crawler deployed!.
+
+2023-12-12 18:04:06,829 INFO: 
+Async RSS crawler deployed!
+
+2023-12-12 18:04:07,308 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-12 18:04:07,892 INFO: 
+Async Sel crawler deployed!
+
+2023-12-12 22:12:30,882 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-12 22:12:31,000 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-12 22:12:56,478 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-12 22:12:57,187 ERROR: 
+OperationalError **while** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-12 22:13:00,861 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-12 22:13:02,880 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2261
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 2267
+
+2023-12-12 22:13:03,002 INFO: 
+Async Sel finished! all in: 7865.22 seconds.
+
+2023-12-12 22:13:03,002 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-12 22:13:03,003 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-12 22:13:03,003 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-12 22:13:03,003 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 131.12 minutes.
+
+2023-12-13 06:00:22,124 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-13 06:00:22,124 INFO: 
+Async API crawler deployed!.
+
+2023-12-13 06:00:23,006 INFO: 
+Async RSS crawler deployed!
+
+2023-12-13 06:00:23,531 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-13 06:00:24,053 INFO: 
+Async Sel crawler deployed!
+
+2023-12-13 06:18:28,874 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-13 06:19:42,790 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-13 06:19:43,194 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-13 06:19:44,538 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2267
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 2271
+
+2023-12-13 06:19:44,601 INFO: 
+Async Sel finished! all in: 85.95 seconds.
+
+2023-12-13 06:35:38,796 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-13 06:35:38,872 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 06:35:38,956 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-13 06:35:40,156 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2271
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 2272
+
+2023-12-13 06:35:40,221 INFO: 
+Async BS4 crawlers finished! all in: 101.60 seconds.
+
+2023-12-13 06:35:40,222 ERROR: 
+Exception occurred in function async_api_template: OperationalError in server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+NoneType: None
+
+
+2023-12-13 06:35:40,222 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-13 06:35:40,222 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.72 minutes.
+
+2023-12-13 10:09:12,540 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-13 10:09:12,540 INFO: 
+Async API crawler deployed!.
+
+2023-12-13 10:09:13,213 INFO: 
+Async RSS crawler deployed!
+
+2023-12-13 10:09:13,682 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-13 10:09:14,320 INFO: 
+Async Sel crawler deployed!
+
+2023-12-13 11:30:38,057 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-13 11:30:38,057 INFO: 
+Async API crawler deployed!.
+
+2023-12-13 11:30:38,847 INFO: 
+Async RSS crawler deployed!
+
+2023-12-13 11:30:39,481 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-13 11:30:40,140 INFO: 
+Async Sel crawler deployed!
+
+2023-12-13 11:31:51,998 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 11:31:52,064 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-13 11:31:54,912 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2272
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 2289
+
+2023-12-13 11:31:54,983 INFO: 
+Async BS4 crawlers finished! all in: 75.50 seconds.
+
+2023-12-13 11:31:56,645 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-13 11:31:58,344 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2289
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 2299
+
+2023-12-13 11:31:58,412 INFO: 
+Async Sel finished! all in: 78.28 seconds.
+
+2023-12-13 11:32:43,904 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 11:32:43,952 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-13 11:32:55,357 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2299
+Total number of unique jobs: 125
+Current total count of jobs in PostgreSQL: 2424
+
+2023-12-13 11:32:55,421 INFO: 
+Async RSS readers finished! all in: 136.58 seconds.
+
+2023-12-13 11:33:22,797 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 11:33:22,825 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-13 11:33:39,373 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2424
+Total number of unique jobs: 186
+Current total count of jobs in PostgreSQL: 2610
+
+2023-12-13 11:33:39,447 INFO: 
+Async APIs finished! all in: 181.40 seconds.
+
+2023-12-13 11:33:39,448 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.02 minutes.
+
+2023-12-13 13:33:17,904 ERROR: 
+TimeoutError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 141, in async_bs4_crawler
+    job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 24, in async_follow_link
+    async with session.get(followed_link) as link_res:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client.py", line 560, in _request
+    await resp.start(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 894, in start
+    with self._timer:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/helpers.py", line 721, in __exit__
+    raise asyncio.TimeoutError from None
+asyncio.exceptions.TimeoutError
+
+
+
+2023-12-13 13:33:17,910 ERROR: 
+TimeoutError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 141, in async_bs4_crawler
+    job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 24, in async_follow_link
+    async with session.get(followed_link) as link_res:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client.py", line 560, in _request
+    await resp.start(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 894, in start
+    with self._timer:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/helpers.py", line 721, in __exit__
+    raise asyncio.TimeoutError from None
+asyncio.exceptions.TimeoutError
+
+
+
+2023-12-13 13:33:34,607 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-13 13:33:37,081 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2610
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 2610
+
+2023-12-13 13:33:37,175 INFO: 
+Async Sel finished! all in: 7894.28 seconds.
+
+2023-12-13 13:33:37,178 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-13 13:33:37,178 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-13 13:33:37,178 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-13 13:33:37,178 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 131.60 minutes.
+
+2023-12-13 14:00:28,399 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-13 14:00:28,399 INFO: 
+Async API crawler deployed!.
+
+2023-12-13 14:00:29,135 INFO: 
+Async RSS crawler deployed!
+
+2023-12-13 14:00:29,605 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-13 14:00:30,074 INFO: 
+Async Sel crawler deployed!
+
+2023-12-13 14:02:15,518 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 14:02:15,581 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-13 14:02:17,303 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2610
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 2612
+
+2023-12-13 14:02:17,385 INFO: 
+Async BS4 crawlers finished! all in: 83.89 seconds.
+
+2023-12-13 14:02:17,386 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [Connection reset by peer]. Moving to the next API...
+
+2023-12-13 14:02:17,558 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 14:02:17,573 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-13 14:02:19,467 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2612
+Total number of unique jobs: 9
+Current total count of jobs in PostgreSQL: 2621
+
+2023-12-13 14:02:19,559 INFO: 
+Async APIs finished! all in: 87.27 seconds.
+
+2023-12-13 14:02:37,545 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 14:02:37,552 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-13 14:02:39,414 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2621
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 2628
+
+2023-12-13 14:02:39,546 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-13 14:02:41,116 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2628
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 2634
+
+2023-12-13 14:02:41,250 INFO: 
+Async Sel finished! all in: 107.28 seconds.
+
+2023-12-13 14:02:41,250 INFO: 
+Async RSS readers finished! all in: 108.22 seconds.
+
+2023-12-13 14:02:41,250 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.82 minutes.
+
+2023-12-13 18:00:10,498 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-13 18:00:10,499 INFO: 
+Async API crawler deployed!.
+
+2023-12-13 18:00:11,605 INFO: 
+Async RSS crawler deployed!
+
+2023-12-13 18:00:12,166 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-13 18:00:13,197 INFO: 
+Async Sel crawler deployed!
+
+2023-12-13 18:01:19,581 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-13 18:01:20,934 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2634
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 2636
+
+2023-12-13 18:01:20,999 INFO: 
+Async Sel finished! all in: 67.80 seconds.
+
+2023-12-13 18:01:43,655 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 18:01:43,672 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-13 18:01:46,001 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2636
+Total number of unique jobs: 9
+Current total count of jobs in PostgreSQL: 2645
+
+2023-12-13 18:01:46,139 INFO: 
+Async BS4 crawlers finished! all in: 93.98 seconds.
+
+2023-12-13 18:02:07,548 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 18:02:07,568 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-13 18:02:09,833 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2645
+Total number of unique jobs: 19
+Current total count of jobs in PostgreSQL: 2664
+
+2023-12-13 18:02:09,896 INFO: 
+Async RSS readers finished! all in: 118.30 seconds.
+
+2023-12-13 18:02:34,193 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 18:02:34,217 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-13 18:02:36,952 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2664
+Total number of unique jobs: 22
+Current total count of jobs in PostgreSQL: 2686
+
+2023-12-13 18:02:37,052 INFO: 
+Async APIs finished! all in: 146.56 seconds.
+
+2023-12-13 18:02:37,054 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.44 minutes.
+
+2023-12-13 22:00:09,076 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-13 22:00:09,077 INFO: 
+Async API crawler deployed!.
+
+2023-12-13 22:00:10,379 INFO: 
+Async RSS crawler deployed!
+
+2023-12-13 22:00:11,090 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-13 22:00:11,677 INFO: 
+Async Sel crawler deployed!
+
+2023-12-13 22:01:18,579 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-13 22:01:20,145 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2686
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 2692
+
+2023-12-13 22:01:20,230 INFO: 
+Async Sel finished! all in: 68.56 seconds.
+
+2023-12-13 22:01:30,824 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 22:01:30,841 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-13 22:01:31,980 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2692
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 2696
+
+2023-12-13 22:01:32,055 INFO: 
+Async BS4 crawlers finished! all in: 80.98 seconds.
+
+2023-12-13 22:01:57,584 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 22:01:57,599 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-13 22:02:00,614 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2696
+Total number of unique jobs: 28
+Current total count of jobs in PostgreSQL: 2724
+
+2023-12-13 22:02:00,681 INFO: 
+Async APIs finished! all in: 111.62 seconds.
+
+2023-12-13 22:02:23,052 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-13 22:02:23,088 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-13 22:02:26,107 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2724
+Total number of unique jobs: 27
+Current total count of jobs in PostgreSQL: 2751
+
+2023-12-13 22:02:26,194 INFO: 
+Async RSS readers finished! all in: 135.83 seconds.
+
+2023-12-13 22:02:26,195 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.29 minutes.
+
+2023-12-14 06:11:48,392 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-14 06:11:48,392 INFO: 
+Async API crawler deployed!.
+
+2023-12-14 06:11:49,033 INFO: 
+Async RSS crawler deployed!
+
+2023-12-14 06:11:49,484 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-14 06:11:49,924 INFO: 
+Async Sel crawler deployed!
+
+2023-12-14 06:24:50,683 ERROR: 
+OperationalError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-14 06:40:20,670 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-14 06:40:20,713 ERROR: 
+InterfaceError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-14 06:40:20,817 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-14 06:40:21,892 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2751
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 2753
+
+2023-12-14 06:40:21,961 INFO: 
+Async Sel finished! all in: 90.93 seconds.
+
+2023-12-14 06:40:22,398 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-14 06:40:22,398 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 06:40:22,406 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-14 06:40:23,313 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2753
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 2755
+
+2023-12-14 06:40:23,376 INFO: 
+Async BS4 crawlers finished! all in: 92.79 seconds.
+
+2023-12-14 06:40:23,377 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-14 06:40:23,377 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-14 06:40:23,377 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.56 minutes.
+
+2023-12-14 10:00:09,379 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-14 10:00:09,379 INFO: 
+Async API crawler deployed!.
+
+2023-12-14 10:00:09,996 INFO: 
+Async RSS crawler deployed!
+
+2023-12-14 10:00:10,461 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-14 10:00:10,988 INFO: 
+Async Sel crawler deployed!
+
+2023-12-14 10:16:24,680 ERROR: 
+OperationalError **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-14 10:16:25,020 ERROR: 
+InterfaceError **while** getting the elements in https://www.remoteimpact.io/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 205, in async_sel_crawler
+    if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-14 10:16:25,184 ERROR: 
+InterfaceError **while** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-14 10:16:25,439 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-14 10:16:26,193 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2755
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 2755
+
+2023-12-14 10:16:26,257 INFO: 
+Async Sel finished! all in: 51.14 seconds.
+
+2023-12-14 10:19:23,191 ERROR: 
+OperationalError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-14 10:28:10,048 ERROR: 
+InterfaceError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-14 10:28:10,111 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-14 10:28:51,082 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-14 10:43:55,293 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-14 10:43:55,297 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 10:43:55,372 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-14 10:43:56,203 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2755
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 2755
+
+2023-12-14 10:43:56,264 INFO: 
+Async BS4 crawlers finished! all in: 155.37 seconds.
+
+2023-12-14 10:43:56,265 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-14 10:43:56,265 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-14 10:43:56,265 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.61 minutes.
+
+2023-12-14 14:00:08,692 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-14 14:00:08,693 INFO: 
+Async API crawler deployed!.
+
+2023-12-14 14:00:09,335 INFO: 
+Async RSS crawler deployed!
+
+2023-12-14 14:00:10,182 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-14 14:00:10,643 INFO: 
+Async Sel crawler deployed!
+
+2023-12-14 14:01:18,014 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 14:01:18,082 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-14 14:01:19,638 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2755
+Total number of unique jobs: 8
+Current total count of jobs in PostgreSQL: 2763
+
+2023-12-14 14:01:19,743 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-14 14:01:21,473 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2763
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 2773
+
+2023-12-14 14:01:21,547 INFO: 
+Async Sel finished! all in: 70.91 seconds.
+
+2023-12-14 14:01:21,552 INFO: 
+Async BS4 crawlers finished! all in: 71.37 seconds.
+
+2023-12-14 14:02:08,392 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 14:02:08,468 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-14 14:02:16,138 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2773
+Total number of unique jobs: 91
+Current total count of jobs in PostgreSQL: 2864
+
+2023-12-14 14:02:16,212 INFO: 
+Async APIs finished! all in: 127.52 seconds.
+
+2023-12-14 14:03:00,858 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 14:03:01,139 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-14 14:03:12,673 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 2864
+Total number of unique jobs: 139
+Current total count of jobs in PostgreSQL: 3003
+
+2023-12-14 14:03:12,761 INFO: 
+Async RSS readers finished! all in: 183.43 seconds.
+
+2023-12-14 14:03:12,770 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.07 minutes.
+
+2023-12-14 18:00:10,088 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-14 18:00:10,088 INFO: 
+Async API crawler deployed!.
+
+2023-12-14 18:00:11,325 INFO: 
+Async RSS crawler deployed!
+
+2023-12-14 18:00:11,788 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-14 18:00:12,370 INFO: 
+Async Sel crawler deployed!
+
+2023-12-14 18:01:38,121 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-14 18:01:39,481 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3003
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3003
+
+2023-12-14 18:01:39,572 INFO: 
+Async Sel finished! all in: 87.20 seconds.
+
+2023-12-14 18:02:28,281 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 18:02:28,438 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-14 18:02:29,672 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3003
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 3006
+
+2023-12-14 18:02:29,770 INFO: 
+Async BS4 crawlers finished! all in: 137.99 seconds.
+
+2023-12-14 18:02:55,400 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 18:02:55,802 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-14 18:02:58,551 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3006
+Total number of unique jobs: 27
+Current total count of jobs in PostgreSQL: 3033
+
+2023-12-14 18:02:58,644 INFO: 
+Async APIs finished! all in: 168.56 seconds.
+
+2023-12-14 18:03:21,852 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 18:03:21,898 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-14 18:03:26,567 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3033
+Total number of unique jobs: 35
+Current total count of jobs in PostgreSQL: 3068
+
+2023-12-14 18:03:26,691 INFO: 
+Async RSS readers finished! all in: 195.37 seconds.
+
+2023-12-14 18:03:26,700 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.28 minutes.
+
+2023-12-14 22:03:44,542 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-14 22:03:44,543 INFO: 
+Async API crawler deployed!.
+
+2023-12-14 22:03:45,426 INFO: 
+Async RSS crawler deployed!
+
+2023-12-14 22:03:45,915 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-14 22:03:46,388 INFO: 
+Async Sel crawler deployed!
+
+2023-12-14 22:05:09,998 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 22:05:10,060 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-14 22:05:11,104 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3068
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 3069
+
+2023-12-14 22:05:11,178 INFO: 
+Async BS4 crawlers finished! all in: 85.26 seconds.
+
+2023-12-14 22:05:14,383 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-14 22:05:16,289 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3069
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 3079
+
+2023-12-14 22:05:16,366 INFO: 
+Async Sel finished! all in: 89.98 seconds.
+
+2023-12-14 22:05:46,229 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 22:05:46,251 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-14 22:05:48,638 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3079
+Total number of unique jobs: 19
+Current total count of jobs in PostgreSQL: 3098
+
+2023-12-14 22:05:48,739 INFO: 
+Async APIs finished! all in: 124.20 seconds.
+
+2023-12-14 22:06:08,284 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-14 22:06:08,309 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-14 22:06:11,622 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3098
+Total number of unique jobs: 31
+Current total count of jobs in PostgreSQL: 3129
+
+2023-12-14 22:06:11,728 INFO: 
+Async RSS readers finished! all in: 146.30 seconds.
+
+2023-12-14 22:06:11,748 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.45 minutes.
+
+2023-12-15 02:01:38,259 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-15 02:01:38,262 INFO: 
+Async API crawler deployed!.
+
+2023-12-15 02:01:39,515 INFO: 
+Async RSS crawler deployed!
+
+2023-12-15 02:01:40,679 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-15 02:01:41,175 INFO: 
+Async Sel crawler deployed!
+
+2023-12-15 02:02:38,891 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-15 02:02:40,493 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3129
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 3131
+
+2023-12-15 02:02:40,577 INFO: 
+Async Sel finished! all in: 59.38 seconds.
+
+2023-12-15 02:02:51,744 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-15 02:02:51,752 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-15 02:02:52,926 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3131
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 3134
+
+2023-12-15 02:02:53,061 INFO: 
+Async BS4 crawlers finished! all in: 72.38 seconds.
+
+2023-12-15 02:03:20,779 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-15 02:03:20,801 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-15 02:03:22,869 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3134
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 3151
+
+2023-12-15 02:03:22,966 INFO: 
+Async RSS readers finished! all in: 103.45 seconds.
+
+2023-12-15 02:03:40,346 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-15 02:03:40,377 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-15 02:03:44,897 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3151
+Total number of unique jobs: 55
+Current total count of jobs in PostgreSQL: 3206
+
+2023-12-15 02:03:44,959 INFO: 
+Async APIs finished! all in: 126.70 seconds.
+
+2023-12-15 02:03:44,960 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.11 minutes.
+
+2023-12-15 06:02:43,140 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-15 06:02:43,141 INFO: 
+Async API crawler deployed!.
+
+2023-12-15 06:02:43,833 INFO: 
+Async RSS crawler deployed!
+
+2023-12-15 06:02:44,287 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-15 06:02:44,865 INFO: 
+Async Sel crawler deployed!
+
+2023-12-15 06:03:25,357 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-15 06:03:26,020 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3206
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3206
+
+2023-12-15 06:03:26,082 INFO: 
+Async Sel finished! all in: 16.31 seconds.
+
+2023-12-15 14:17:33,881 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-15 14:17:34,016 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-15 14:17:34,343 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-15 14:17:34,768 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-15 14:17:34,768 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-15 14:17:34,768 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+
+2023-12-15 14:17:34,769 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 131.48 minutes.
+
+2023-12-17 12:29:13,491 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-17 12:29:13,492 INFO: 
+Async API crawler deployed!.
+
+2023-12-17 12:29:13,504 INFO: 
+Async RSS crawler deployed!
+
+2023-12-17 12:29:13,505 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-17 12:29:13,506 INFO: 
+Async Sel crawler deployed!
+
+2023-12-17 12:29:13,507 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not translate host name "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" to address: nodename nor servname provided, or not known
+
+NoneType: None
+
+
+2023-12-17 12:29:13,507 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not translate host name "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" to address: nodename nor servname provided, or not known
+
+NoneType: None
+
+
+2023-12-17 12:29:13,507 ERROR: 
+Exception occurred in function async_bs4_template: OperationalError in could not translate host name "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" to address: nodename nor servname provided, or not known
+
+NoneType: None
+
+
+2023-12-17 12:29:13,507 ERROR: 
+Exception occurred in function async_selenium_template: OperationalError in could not translate host name "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" to address: nodename nor servname provided, or not known
+
+NoneType: None
+
+
+2023-12-17 12:29:13,507 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 0.00 minutes.
+
+2023-12-17 14:00:10,214 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-17 14:00:10,215 INFO: 
+Async API crawler deployed!.
+
+2023-12-17 14:00:10,901 INFO: 
+Async RSS crawler deployed!
+
+2023-12-17 14:00:11,426 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-17 14:00:11,993 INFO: 
+Async Sel crawler deployed!
+
+2023-12-17 14:01:02,646 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-17 14:01:05,414 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3206
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 3216
+
+2023-12-17 14:01:05,499 INFO: 
+Async Sel finished! all in: 53.51 seconds.
+
+2023-12-17 14:01:13,043 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 14:01:13,064 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-17 14:01:14,975 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3216
+Total number of unique jobs: 14
+Current total count of jobs in PostgreSQL: 3230
+
+2023-12-17 14:01:15,050 INFO: 
+Async BS4 crawlers finished! all in: 63.63 seconds.
+
+2023-12-17 14:02:13,952 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 14:02:13,990 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-17 14:02:27,060 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3230
+Total number of unique jobs: 181
+Current total count of jobs in PostgreSQL: 3411
+
+2023-12-17 14:02:27,139 INFO: 
+Async APIs finished! all in: 136.93 seconds.
+
+2023-12-17 14:03:28,895 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 14:03:28,938 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-17 14:03:44,927 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3411
+Total number of unique jobs: 217
+Current total count of jobs in PostgreSQL: 3628
+
+2023-12-17 14:03:45,002 INFO: 
+Async RSS readers finished! all in: 214.11 seconds.
+
+2023-12-17 14:03:45,003 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.58 minutes.
+
+2023-12-17 18:12:20,991 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-17 18:12:20,991 INFO: 
+Async API crawler deployed!.
+
+2023-12-17 18:12:21,993 INFO: 
+Async RSS crawler deployed!
+
+2023-12-17 18:12:22,639 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-17 18:12:23,357 INFO: 
+Async Sel crawler deployed!
+
+2023-12-17 18:13:09,268 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-17 18:13:10,277 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3628
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3628
+
+2023-12-17 18:13:10,372 INFO: 
+Async Sel finished! all in: 22.11 seconds.
+
+2023-12-17 18:28:29,220 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+
+
+2023-12-17 18:40:56,236 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-17 18:41:42,282 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-17 18:41:42,479 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-17 18:43:22,099 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-17 18:43:22,101 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 18:43:22,175 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-17 18:43:23,265 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3628
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 3629
+
+2023-12-17 18:43:23,342 INFO: 
+Async BS4 crawlers finished! all in: 268.21 seconds.
+
+2023-12-17 18:43:23,342 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-17 18:43:23,342 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+
+2023-12-17 18:43:23,342 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 4.50 minutes.
+
+2023-12-17 20:11:03,865 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-17 20:11:03,865 INFO: 
+Async API crawler deployed!.
+
+2023-12-17 20:11:04,467 INFO: 
+Async RSS crawler deployed!
+
+2023-12-17 20:11:04,920 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-17 20:11:05,417 INFO: 
+Async Sel crawler deployed!
+
+2023-12-17 20:11:18,429 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-17 20:11:19,186 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3629
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3629
+
+2023-12-17 20:11:19,249 INFO: 
+Async Sel finished! all in: 13.83 seconds.
+
+2023-12-17 20:12:15,633 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 20:12:15,666 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-17 20:12:16,742 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3629
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 3635
+
+2023-12-17 20:12:16,804 INFO: 
+Async APIs finished! all in: 72.94 seconds.
+
+2023-12-17 20:12:16,806 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 20:12:16,809 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-17 20:12:17,675 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3635
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3635
+
+2023-12-17 20:12:17,838 INFO: 
+Async BS4 crawlers finished! all in: 72.92 seconds.
+
+2023-12-17 20:12:58,518 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 20:12:58,544 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-17 20:13:03,220 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3635
+Total number of unique jobs: 61
+Current total count of jobs in PostgreSQL: 3696
+
+2023-12-17 20:13:03,283 INFO: 
+Async RSS readers finished! all in: 118.82 seconds.
+
+2023-12-17 20:13:03,284 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.99 minutes.
+
+2023-12-17 21:32:09,424 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-17 21:32:09,424 INFO: 
+Async API crawler deployed!.
+
+2023-12-17 21:32:10,043 INFO: 
+Async RSS crawler deployed!
+
+2023-12-17 21:32:10,549 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-17 21:32:11,058 INFO: 
+Async Sel crawler deployed!
+
+2023-12-17 21:32:31,118 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-17 21:32:32,635 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3696
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3696
+
+2023-12-17 21:32:32,794 INFO: 
+Async Sel finished! all in: 21.74 seconds.
+
+2023-12-17 21:33:27,447 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 21:33:27,482 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-17 21:33:28,655 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3696
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 3697
+
+2023-12-17 21:33:28,752 INFO: 
+Async APIs finished! all in: 79.33 seconds.
+
+2023-12-17 21:33:28,866 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 21:33:28,869 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-17 21:33:29,544 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3697
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3697
+
+2023-12-17 21:33:29,615 INFO: 
+Async BS4 crawlers finished! all in: 79.07 seconds.
+
+2023-12-17 21:33:50,850 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 21:33:50,865 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-17 21:33:53,326 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3697
+Total number of unique jobs: 21
+Current total count of jobs in PostgreSQL: 3718
+
+2023-12-17 21:33:53,422 INFO: 
+Async RSS readers finished! all in: 103.38 seconds.
+
+2023-12-17 21:33:53,424 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.73 minutes.
+
+2023-12-17 22:00:03,523 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-17 22:00:03,523 INFO: 
+Async API crawler deployed!.
+
+2023-12-17 22:00:04,116 INFO: 
+Async RSS crawler deployed!
+
+2023-12-17 22:00:04,632 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-17 22:00:05,159 INFO: 
+Async Sel crawler deployed!
+
+2023-12-17 22:00:19,926 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-17 22:00:20,862 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3718
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3718
+
+2023-12-17 22:00:20,934 INFO: 
+Async Sel finished! all in: 15.77 seconds.
+
+2023-12-17 22:01:01,145 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 22:01:01,151 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-17 22:01:02,683 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3718
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3718
+
+2023-12-17 22:01:02,791 INFO: 
+Async BS4 crawlers finished! all in: 58.16 seconds.
+
+2023-12-17 22:01:16,409 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 22:01:16,430 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-17 22:01:17,238 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3718
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 3720
+
+2023-12-17 22:01:17,301 INFO: 
+Async RSS readers finished! all in: 73.19 seconds.
+
+2023-12-17 22:01:17,303 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [None]. Moving to the next API...
+
+2023-12-17 22:01:17,303 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-17 22:01:17,306 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-17 22:01:17,938 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3720
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3720
+
+2023-12-17 22:01:17,998 INFO: 
+Async APIs finished! all in: 74.48 seconds.
+
+2023-12-17 22:01:17,999 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.24 minutes.
+
+2023-12-18 06:00:46,459 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-18 06:00:46,460 INFO: 
+Async API crawler deployed!.
+
+2023-12-18 06:00:47,349 INFO: 
+Async RSS crawler deployed!
+
+2023-12-18 06:00:48,041 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-18 06:00:48,509 INFO: 
+Async Sel crawler deployed!
+
+2023-12-18 06:01:04,097 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-18 06:01:05,986 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3720
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3720
+
+2023-12-18 06:01:06,137 INFO: 
+Async Sel finished! all in: 17.63 seconds.
+
+2023-12-18 06:01:53,221 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 06:01:53,259 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-18 06:01:54,438 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3720
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 3723
+
+2023-12-18 06:01:54,504 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [None]. Moving to the next API...
+
+2023-12-18 06:01:54,505 INFO: 
+Async BS4 crawlers finished! all in: 66.46 seconds.
+
+2023-12-18 06:01:54,607 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 06:01:54,623 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-18 06:01:56,552 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3723
+Total number of unique jobs: 14
+Current total count of jobs in PostgreSQL: 3737
+
+2023-12-18 06:01:56,617 INFO: 
+Async APIs finished! all in: 70.15 seconds.
+
+2023-12-18 06:02:58,223 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 06:02:58,274 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-18 06:03:05,702 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3737
+Total number of unique jobs: 96
+Current total count of jobs in PostgreSQL: 3833
+
+2023-12-18 06:03:05,772 INFO: 
+Async RSS readers finished! all in: 138.42 seconds.
+
+2023-12-18 06:03:05,778 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.32 minutes.
+
+2023-12-18 10:00:08,483 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-18 10:00:08,484 INFO: 
+Async API crawler deployed!.
+
+2023-12-18 10:00:09,139 INFO: 
+Async RSS crawler deployed!
+
+2023-12-18 10:00:10,177 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-18 10:00:11,489 INFO: 
+Async Sel crawler deployed!
+
+2023-12-18 10:00:27,043 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-18 10:00:27,883 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3833
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 3833
+
+2023-12-18 10:00:27,948 INFO: 
+Async Sel finished! all in: 16.46 seconds.
+
+2023-12-18 10:01:15,509 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 10:01:15,536 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-18 10:01:16,429 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3833
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 3836
+
+2023-12-18 10:01:16,507 INFO: 
+Async BS4 crawlers finished! all in: 66.33 seconds.
+
+2023-12-18 10:01:52,462 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 10:01:52,494 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-18 10:01:57,107 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3836
+Total number of unique jobs: 37
+Current total count of jobs in PostgreSQL: 3873
+
+2023-12-18 10:01:57,178 INFO: 
+Async APIs finished! all in: 108.70 seconds.
+
+2023-12-18 10:02:12,923 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 10:02:12,956 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-18 10:02:17,790 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3873
+Total number of unique jobs: 54
+Current total count of jobs in PostgreSQL: 3927
+
+2023-12-18 10:02:17,855 INFO: 
+Async RSS readers finished! all in: 128.72 seconds.
+
+2023-12-18 10:02:17,857 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.16 minutes.
+
+2023-12-18 14:00:09,381 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-18 14:00:09,381 INFO: 
+Async API crawler deployed!.
+
+2023-12-18 14:00:11,084 INFO: 
+Async RSS crawler deployed!
+
+2023-12-18 14:00:11,558 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-18 14:00:12,044 INFO: 
+Async Sel crawler deployed!
+
+2023-12-18 14:05:36,559 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 14:05:36,593 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-18 14:05:37,706 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3927
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 3929
+
+2023-12-18 14:05:37,795 INFO: 
+Async BS4 crawlers finished! all in: 326.25 seconds.
+
+2023-12-18 14:05:46,670 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-18 14:05:48,558 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3929
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 3939
+
+2023-12-18 14:05:48,644 INFO: 
+Async Sel finished! all in: 336.61 seconds.
+
+2023-12-18 14:06:15,122 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 14:06:15,216 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-18 14:06:18,460 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3939
+Total number of unique jobs: 22
+Current total count of jobs in PostgreSQL: 3961
+
+2023-12-18 14:06:18,551 INFO: 
+Async APIs finished! all in: 369.18 seconds.
+
+2023-12-18 14:06:18,553 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://tryremotely.com/feeds/remote-jobs.rss
+
+2023-12-18 14:06:18,554 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 14:06:18,563 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-18 14:06:19,536 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3961
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 3965
+
+2023-12-18 14:06:19,599 INFO: 
+Async RSS readers finished! all in: 368.53 seconds.
+
+2023-12-18 14:06:19,600 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 6.17 minutes.
+
+2023-12-18 18:00:08,476 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-18 18:00:08,477 INFO: 
+Async API crawler deployed!.
+
+2023-12-18 18:00:09,858 INFO: 
+Async RSS crawler deployed!
+
+2023-12-18 18:00:10,694 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-18 18:00:11,373 INFO: 
+Async Sel crawler deployed!
+
+2023-12-18 18:01:49,488 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 18:01:49,603 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-18 18:01:50,668 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3965
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 3966
+
+2023-12-18 18:01:50,804 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-18 18:01:52,119 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3966
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 3970
+
+2023-12-18 18:01:52,201 INFO: 
+Async Sel finished! all in: 100.82 seconds.
+
+2023-12-18 18:01:52,203 INFO: 
+Async BS4 crawlers finished! all in: 101.50 seconds.
+
+2023-12-18 18:02:22,715 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 18:02:22,797 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-18 18:02:25,842 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3970
+Total number of unique jobs: 21
+Current total count of jobs in PostgreSQL: 3991
+
+2023-12-18 18:02:25,924 INFO: 
+Async APIs finished! all in: 137.43 seconds.
+
+2023-12-18 18:03:39,351 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-18 18:03:39,412 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-18 18:03:50,260 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 3991
+Total number of unique jobs: 119
+Current total count of jobs in PostgreSQL: 4110
+
+2023-12-18 18:03:50,523 INFO: 
+Async RSS readers finished! all in: 220.58 seconds.
+
+2023-12-18 18:03:50,543 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.70 minutes.
+
+2023-12-19 00:26:12,966 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 00:26:12,966 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 00:26:13,693 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 00:26:14,267 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 00:26:14,720 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 00:27:10,823 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-19 00:27:12,208 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4110
+Total number of unique jobs: 8
+Current total count of jobs in PostgreSQL: 4118
+
+2023-12-19 00:27:12,276 INFO: 
+Async Sel finished! all in: 57.56 seconds.
+
+2023-12-19 00:27:17,380 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 00:27:17,394 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-19 00:27:19,747 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4118
+Total number of unique jobs: 16
+Current total count of jobs in PostgreSQL: 4134
+
+2023-12-19 00:27:19,864 INFO: 
+Async BS4 crawlers finished! all in: 65.60 seconds.
+
+2023-12-19 00:27:42,229 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 00:27:42,240 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-19 00:27:45,838 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4134
+Total number of unique jobs: 31
+Current total count of jobs in PostgreSQL: 4165
+
+2023-12-19 00:27:45,904 INFO: 
+Async APIs finished! all in: 92.94 seconds.
+
+2023-12-19 00:28:24,164 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 00:28:24,203 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-19 00:28:31,770 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4165
+Total number of unique jobs: 74
+Current total count of jobs in PostgreSQL: 4239
+
+2023-12-19 00:28:31,866 INFO: 
+Async RSS readers finished! all in: 138.18 seconds.
+
+2023-12-19 00:28:31,868 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.32 minutes.
+
+2023-12-19 06:11:12,638 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 06:11:12,638 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 06:11:38,402 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 06:11:38,979 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 06:11:39,540 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 12:06:51,403 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 12:06:51,403 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 12:06:53,014 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 12:06:53,715 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 12:06:54,189 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 12:07:52,004 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 12:07:52,041 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-19 12:07:53,299 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4239
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 4242
+
+2023-12-19 12:07:53,366 INFO: 
+Async BS4 crawlers finished! all in: 59.65 seconds.
+
+2023-12-19 12:07:59,365 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-19 12:08:00,820 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4242
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 4252
+
+2023-12-19 12:08:00,885 INFO: 
+Async Sel finished! all in: 66.70 seconds.
+
+2023-12-19 12:08:39,461 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 12:08:39,486 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-19 12:08:43,361 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4252
+Total number of unique jobs: 45
+Current total count of jobs in PostgreSQL: 4297
+
+2023-12-19 12:08:43,440 INFO: 
+Async APIs finished! all in: 112.04 seconds.
+
+2023-12-19 12:09:34,113 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 12:09:34,157 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-19 12:09:41,658 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4297
+Total number of unique jobs: 100
+Current total count of jobs in PostgreSQL: 4397
+
+2023-12-19 12:09:41,733 INFO: 
+Async RSS readers finished! all in: 168.73 seconds.
+
+2023-12-19 12:09:41,734 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.84 minutes.
+
+2023-12-19 14:00:09,063 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 14:00:09,063 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 14:00:09,865 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 14:00:10,453 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 14:00:11,061 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 14:01:24,357 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 14:01:24,439 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-19 14:01:25,200 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4397
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4397
+
+2023-12-19 14:01:25,267 INFO: 
+Async BS4 crawlers finished! all in: 74.82 seconds.
+
+2023-12-19 14:01:27,324 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-19 14:01:29,270 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4397
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 4407
+
+2023-12-19 14:01:29,334 INFO: 
+Async Sel finished! all in: 78.28 seconds.
+
+2023-12-19 14:01:47,843 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 14:01:47,858 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-19 14:01:49,133 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4407
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 4414
+
+2023-12-19 14:01:49,362 INFO: 
+Async APIs finished! all in: 100.30 seconds.
+
+2023-12-19 14:02:04,668 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 14:02:04,687 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-19 14:02:06,040 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4414
+Total number of unique jobs: 9
+Current total count of jobs in PostgreSQL: 4423
+
+2023-12-19 14:02:06,109 INFO: 
+Async RSS readers finished! all in: 116.25 seconds.
+
+2023-12-19 14:02:06,110 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.95 minutes.
+
+2023-12-19 18:00:07,759 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 18:00:07,760 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 18:00:08,864 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 18:00:09,405 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 18:00:09,886 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 18:01:20,686 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 18:01:20,703 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-19 18:01:21,701 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4423
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4423
+
+2023-12-19 18:01:21,783 INFO: 
+Async BS4 crawlers finished! all in: 72.38 seconds.
+
+2023-12-19 18:01:22,064 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-19 18:01:23,594 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4423
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 4427
+
+2023-12-19 18:01:23,659 INFO: 
+Async Sel finished! all in: 73.78 seconds.
+
+2023-12-19 18:01:52,977 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 18:01:53,004 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-19 18:01:56,380 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4427
+Total number of unique jobs: 32
+Current total count of jobs in PostgreSQL: 4459
+
+2023-12-19 18:01:56,461 INFO: 
+Async APIs finished! all in: 108.71 seconds.
+
+2023-12-19 18:02:09,895 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 18:02:09,914 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-19 18:02:12,124 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4459
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 4476
+
+2023-12-19 18:02:12,201 INFO: 
+Async RSS readers finished! all in: 123.34 seconds.
+
+2023-12-19 18:02:12,202 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.07 minutes.
+
+2023-12-19 22:00:09,392 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 22:00:09,393 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 22:00:10,240 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 22:00:10,842 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 22:00:11,384 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 22:01:41,183 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-19 22:01:43,274 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4476
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 4486
+
+2023-12-19 22:01:43,378 INFO: 
+Async Sel finished! all in: 92.00 seconds.
+
+2023-12-19 22:02:08,105 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 22:02:08,400 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-19 22:02:10,864 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4486
+Total number of unique jobs: 13
+Current total count of jobs in PostgreSQL: 4499
+
+2023-12-19 22:02:10,958 INFO: 
+Async APIs finished! all in: 121.56 seconds.
+
+2023-12-19 22:02:17,232 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 22:02:17,252 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-19 22:02:18,951 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4499
+Total number of unique jobs: 9
+Current total count of jobs in PostgreSQL: 4508
+
+2023-12-19 22:02:19,061 INFO: 
+Async BS4 crawlers finished! all in: 128.22 seconds.
+
+2023-12-19 22:03:05,886 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 22:03:06,183 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-19 22:03:13,025 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4508
+Total number of unique jobs: 62
+Current total count of jobs in PostgreSQL: 4570
+
+2023-12-19 22:03:13,124 INFO: 
+Async RSS readers finished! all in: 182.89 seconds.
+
+2023-12-19 22:03:13,126 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.06 minutes.
+
+2023-12-19 22:57:18,100 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-19 22:57:18,116 INFO: 
+Async API crawler deployed!.
+
+2023-12-19 22:57:24,342 INFO: 
+Async RSS crawler deployed!
+
+2023-12-19 22:57:25,509 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-19 22:57:26,307 INFO: 
+Async Sel crawler deployed!
+
+2023-12-19 22:58:05,346 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-19 22:58:06,151 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4570
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4570
+
+2023-12-19 22:58:06,248 INFO: 
+Async Sel finished! all in: 39.94 seconds.
+
+2023-12-19 22:59:15,183 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 22:59:15,212 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-19 22:59:15,993 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4570
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4570
+
+2023-12-19 22:59:16,061 INFO: 
+Async BS4 crawlers finished! all in: 110.56 seconds.
+
+2023-12-19 22:59:16,162 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 22:59:16,176 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-19 22:59:16,955 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4570
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 4571
+
+2023-12-19 22:59:17,019 INFO: 
+Async APIs finished! all in: 118.91 seconds.
+
+2023-12-19 22:59:37,599 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-19 22:59:37,747 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-19 22:59:39,492 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4571
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 4581
+
+2023-12-19 22:59:39,591 INFO: 
+Async RSS readers finished! all in: 135.32 seconds.
+
+2023-12-19 22:59:39,693 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.36 minutes.
+
+2023-12-20 06:00:09,410 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-20 06:00:09,411 INFO: 
+Async API crawler deployed!.
+
+2023-12-20 06:00:10,049 INFO: 
+Async RSS crawler deployed!
+
+2023-12-20 06:00:10,559 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-20 06:00:11,521 INFO: 
+Async Sel crawler deployed!
+
+2023-12-20 06:00:28,557 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-20 06:00:29,589 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4581
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4581
+
+2023-12-20 06:00:29,671 INFO: 
+Async Sel finished! all in: 18.15 seconds.
+
+2023-12-20 06:01:15,899 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 06:01:15,930 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-20 06:01:16,751 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4581
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 4582
+
+2023-12-20 06:01:16,816 INFO: 
+Async BS4 crawlers finished! all in: 66.26 seconds.
+
+2023-12-20 06:01:16,917 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [None]. Moving to the next API...
+
+2023-12-20 06:01:16,917 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 06:01:16,930 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-20 06:01:19,364 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4582
+Total number of unique jobs: 18
+Current total count of jobs in PostgreSQL: 4600
+
+2023-12-20 06:01:19,460 INFO: 
+Async APIs finished! all in: 70.05 seconds.
+
+2023-12-20 06:02:06,705 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 06:02:06,732 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-20 06:02:11,832 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4600
+Total number of unique jobs: 52
+Current total count of jobs in PostgreSQL: 4652
+
+2023-12-20 06:02:11,936 INFO: 
+Async RSS readers finished! all in: 121.89 seconds.
+
+2023-12-20 06:02:11,937 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.04 minutes.
+
+2023-12-20 10:00:10,861 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-20 10:00:10,862 INFO: 
+Async API crawler deployed!.
+
+2023-12-20 10:00:12,354 INFO: 
+Async RSS crawler deployed!
+
+2023-12-20 10:00:13,123 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-20 10:00:13,899 INFO: 
+Async Sel crawler deployed!
+
+2023-12-20 10:01:11,297 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-20 10:01:12,377 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4652
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 4654
+
+2023-12-20 10:01:12,545 INFO: 
+Async Sel finished! all in: 58.65 seconds.
+
+2023-12-20 10:01:23,390 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 10:01:23,414 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-20 10:01:24,808 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4654
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 4659
+
+2023-12-20 10:01:24,948 INFO: 
+Async BS4 crawlers finished! all in: 71.83 seconds.
+
+2023-12-20 10:01:53,893 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 10:01:53,909 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-20 10:01:56,550 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4659
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 4676
+
+2023-12-20 10:01:56,658 INFO: 
+Async APIs finished! all in: 105.80 seconds.
+
+2023-12-20 10:02:14,595 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 10:02:14,616 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-20 10:02:17,763 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4676
+Total number of unique jobs: 25
+Current total count of jobs in PostgreSQL: 4701
+
+2023-12-20 10:02:17,854 INFO: 
+Async RSS readers finished! all in: 125.51 seconds.
+
+2023-12-20 10:02:17,856 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.12 minutes.
+
+2023-12-20 14:00:10,115 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-20 14:00:10,115 INFO: 
+Async API crawler deployed!.
+
+2023-12-20 14:00:12,425 INFO: 
+Async RSS crawler deployed!
+
+2023-12-20 14:00:13,007 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-20 14:00:13,816 INFO: 
+Async Sel crawler deployed!
+
+2023-12-20 14:01:23,195 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 14:01:23,245 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-20 14:01:24,420 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4701
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 4703
+
+2023-12-20 14:01:24,483 INFO: 
+Async BS4 crawlers finished! all in: 71.48 seconds.
+
+2023-12-20 14:01:27,346 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-20 14:01:28,715 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4703
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 4713
+
+2023-12-20 14:01:28,780 INFO: 
+Async Sel finished! all in: 74.97 seconds.
+
+2023-12-20 14:01:51,856 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 14:01:51,967 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-20 14:01:55,545 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4713
+Total number of unique jobs: 35
+Current total count of jobs in PostgreSQL: 4748
+
+2023-12-20 14:01:55,630 INFO: 
+Async APIs finished! all in: 105.52 seconds.
+
+2023-12-20 14:02:09,623 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 14:02:09,646 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-20 14:02:11,792 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4748
+Total number of unique jobs: 22
+Current total count of jobs in PostgreSQL: 4770
+
+2023-12-20 14:02:11,855 INFO: 
+Async RSS readers finished! all in: 119.43 seconds.
+
+2023-12-20 14:02:11,856 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.03 minutes.
+
+2023-12-20 18:08:35,316 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-20 18:08:35,316 INFO: 
+Async API crawler deployed!.
+
+2023-12-20 18:08:35,906 INFO: 
+Async RSS crawler deployed!
+
+2023-12-20 18:09:36,357 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-20 18:09:36,849 INFO: 
+Async Sel crawler deployed!
+
+2023-12-20 18:28:51,246 ERROR: 
+OperationalError **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-20 18:28:51,620 ERROR: 
+InterfaceError **while** getting the elements in https://www.remoteimpact.io/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 205, in async_sel_crawler
+    if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-20 18:28:51,818 ERROR: 
+InterfaceError **while** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-20 18:28:52,108 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-20 18:28:53,075 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4770
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4770
+
+2023-12-20 18:28:53,148 INFO: 
+Async Sel finished! all in: 57.03 seconds.
+
+2023-12-20 18:34:52,802 ERROR: 
+OperationalError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-20 18:34:52,859 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-20 18:34:52,873 ERROR: 
+InterfaceError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-20 18:37:09,160 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-20 18:37:09,166 ERROR: 
+Encountered a request error: Response payload is not completed. Moving to the next API...
+
+2023-12-20 18:54:59,612 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-20 18:54:59,613 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-20 18:54:59,637 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-20 18:55:00,420 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4770
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4770
+
+2023-12-20 18:55:00,482 INFO: 
+Async BS4 crawlers finished! all in: 139.56 seconds.
+
+2023-12-20 18:55:00,482 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-20 18:55:00,483 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in connection to server at "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" (18.118.220.241), port 5432 failed: SSL connection has been closed unexpectedly
+
+NoneType: None
+
+NoneType: None
+2023-12-20 18:55:00,483 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.51 minutes.
+
+2023-12-20 22:14:41,051 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-20 22:14:41,051 INFO: 
+Async API crawler deployed!.
+
+2023-12-20 22:14:41,634 INFO: 
+Async RSS crawler deployed!
+
+2023-12-20 22:14:42,104 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-20 22:14:42,700 INFO: 
+Async Sel crawler deployed!
+
+2023-12-21 16:12:21,748 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-21 16:12:21,777 ERROR: 
+TimeoutException **before** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 117, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 74, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 299.761
+  (Session info: chrome=120.0.6099.109)
+Stacktrace:
+0   chromedriver                        0x000000010479c4dc chromedriver + 4162780
+1   chromedriver                        0x0000000104794664 chromedriver + 4130404
+2   chromedriver                        0x00000001043ebbc0 chromedriver + 293824
+3   chromedriver                        0x00000001043d3c3c chromedriver + 195644
+4   chromedriver                        0x00000001043d3ad0 chromedriver + 195280
+5   chromedriver                        0x00000001043d1e3c chromedriver + 187964
+6   chromedriver                        0x00000001043d2b30 chromedriver + 191280
+7   chromedriver                        0x00000001043e1f5c chromedriver + 253788
+8   chromedriver                        0x00000001043f74b4 chromedriver + 341172
+9   chromedriver                        0x00000001043d31e0 chromedriver + 192992
+10  chromedriver                        0x00000001043f72d0 chromedriver + 340688
+11  chromedriver                        0x0000000104471bd8 chromedriver + 842712
+12  chromedriver                        0x00000001044256bc chromedriver + 530108
+13  chromedriver                        0x0000000104426930 chromedriver + 534832
+14  chromedriver                        0x0000000104761e08 chromedriver + 3923464
+15  chromedriver                        0x00000001047663dc chromedriver + 3941340
+16  chromedriver                        0x000000010474a038 chromedriver + 3825720
+17  chromedriver                        0x0000000104766f3c chromedriver + 3944252
+18  chromedriver                        0x000000010473c6f4 chromedriver + 3770100
+19  chromedriver                        0x0000000104783980 chromedriver + 4061568
+20  chromedriver                        0x0000000104783af8 chromedriver + 4061944
+21  chromedriver                        0x00000001047942e4 chromedriver + 4129508
+22  libsystem_pthread.dylib             0x00000001875ca034 _pthread_start + 136
+23  libsystem_pthread.dylib             0x00000001875c4e3c thread_start + 8
+
+
+
+
+2023-12-21 16:12:22,144 ERROR: 
+TimeoutError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 141, in async_bs4_crawler
+    job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 24, in async_follow_link
+    async with session.get(followed_link) as link_res:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client.py", line 560, in _request
+    await resp.start(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 894, in start
+    with self._timer:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/aiohttp/helpers.py", line 721, in __exit__
+    raise asyncio.TimeoutError from None
+asyncio.exceptions.TimeoutError
+
+
+
+2023-12-21 16:12:22,565 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-21 16:12:23,436 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4770
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 4770
+
+2023-12-21 16:12:23,504 INFO: 
+Async Sel finished! all in: 7839.71 seconds.
+
+2023-12-21 16:12:23,515 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-21 16:12:23,515 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-21 16:12:23,515 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-21 16:12:23,515 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 130.69 minutes.
+
+2023-12-21 18:00:08,884 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-21 18:00:08,885 INFO: 
+Async API crawler deployed!.
+
+2023-12-21 18:00:10,367 INFO: 
+Async RSS crawler deployed!
+
+2023-12-21 18:00:10,942 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-21 18:00:11,420 INFO: 
+Async Sel crawler deployed!
+
+2023-12-21 18:01:12,302 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-21 18:01:53,993 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-21 18:01:54,047 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-21 18:01:56,376 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4770
+Total number of unique jobs: 9
+Current total count of jobs in PostgreSQL: 4779
+
+2023-12-21 18:01:56,444 INFO: 
+Async BS4 crawlers finished! all in: 105.51 seconds.
+
+2023-12-21 18:01:57,313 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-21 18:01:59,184 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4779
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 4789
+
+2023-12-21 18:01:59,253 INFO: 
+Async Sel finished! all in: 107.84 seconds.
+
+2023-12-21 18:02:59,131 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-21 18:02:59,172 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-21 18:03:08,655 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4789
+Total number of unique jobs: 127
+Current total count of jobs in PostgreSQL: 4916
+
+2023-12-21 18:03:08,720 INFO: 
+Async APIs finished! all in: 179.84 seconds.
+
+2023-12-21 18:04:05,042 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-21 18:04:05,075 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-21 18:04:25,819 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 4916
+Total number of unique jobs: 210
+Current total count of jobs in PostgreSQL: 5126
+
+2023-12-21 18:04:25,906 INFO: 
+Async RSS readers finished! all in: 255.55 seconds.
+
+2023-12-21 18:04:25,907 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 4.28 minutes.
+
+2023-12-21 22:00:08,050 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-21 22:00:08,050 INFO: 
+Async API crawler deployed!.
+
+2023-12-21 22:00:09,516 INFO: 
+Async RSS crawler deployed!
+
+2023-12-21 22:00:10,438 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-21 22:00:11,653 INFO: 
+Async Sel crawler deployed!
+
+2023-12-21 22:00:32,244 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-21 22:02:32,597 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-21 22:02:32,748 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-21 22:02:32,795 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-21 22:02:34,228 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5126
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5126
+
+2023-12-21 22:02:34,323 INFO: 
+Async BS4 crawlers finished! all in: 143.90 seconds.
+
+2023-12-21 22:02:37,027 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-21 22:02:39,182 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5126
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 5136
+
+2023-12-21 22:02:39,268 INFO: 
+Async Sel finished! all in: 147.63 seconds.
+
+2023-12-21 22:03:14,350 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-21 22:03:14,389 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-21 22:03:19,073 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5136
+Total number of unique jobs: 36
+Current total count of jobs in PostgreSQL: 5172
+
+2023-12-21 22:03:19,164 INFO: 
+Async APIs finished! all in: 191.13 seconds.
+
+2023-12-21 22:03:49,539 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-21 22:03:49,589 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-21 22:03:56,564 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5172
+Total number of unique jobs: 58
+Current total count of jobs in PostgreSQL: 5230
+
+2023-12-21 22:03:56,661 INFO: 
+Async RSS readers finished! all in: 227.17 seconds.
+
+2023-12-21 22:03:56,665 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.81 minutes.
+
+2023-12-22 06:01:18,141 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-22 06:01:18,170 INFO: 
+Async API crawler deployed!.
+
+2023-12-22 06:01:22,124 INFO: 
+Async RSS crawler deployed!
+
+2023-12-22 06:01:22,834 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-22 06:01:23,449 INFO: 
+Async Sel crawler deployed!
+
+2023-12-22 06:37:33,682 ERROR: 
+Exception occurred in function async_api_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-22 06:37:33,778 ERROR: 
+Exception occurred in function async_rss_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-22 06:37:33,778 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-22 06:37:33,778 ERROR: 
+Exception occurred in function async_selenium_template: SessionNotCreatedException in Message: session not created: DevToolsActivePort file doesn't exist
+Stacktrace:
+0   chromedriver                        0x00000001047844dc chromedriver + 4162780
+1   chromedriver                        0x000000010477c664 chromedriver + 4130404
+2   chromedriver                        0x00000001043d3bc0 chromedriver + 293824
+3   chromedriver                        0x0000000104408c18 chromedriver + 511000
+4   chromedriver                        0x0000000104404d2c chromedriver + 494892
+5   chromedriver                        0x0000000104402128 chromedriver + 483624
+6   chromedriver                        0x0000000104448c40 chromedriver + 773184
+7   chromedriver                        0x000000010440d6bc chromedriver + 530108
+8   chromedriver                        0x000000010440e930 chromedriver + 534832
+9   chromedriver                        0x0000000104749e08 chromedriver + 3923464
+10  chromedriver                        0x000000010474e3dc chromedriver + 3941340
+11  chromedriver                        0x0000000104732038 chromedriver + 3825720
+12  chromedriver                        0x000000010474ef3c chromedriver + 3944252
+13  chromedriver                        0x00000001047246f4 chromedriver + 3770100
+14  chromedriver                        0x000000010476b980 chromedriver + 4061568
+15  chromedriver                        0x000000010476baf8 chromedriver + 4061944
+16  chromedriver                        0x000000010477c2e4 chromedriver + 4129508
+17  libsystem_pthread.dylib             0x00000001875ca034 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001875c4e3c thread_start + 8
+
+NoneType: None
+
+NoneType: None
+2023-12-22 06:37:33,779 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 36.26 minutes.
+
+2023-12-22 10:01:15,108 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-22 10:01:15,215 INFO: 
+Async API crawler deployed!.
+
+2023-12-22 10:01:20,357 INFO: 
+Async RSS crawler deployed!
+
+2023-12-22 10:01:21,178 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-22 10:01:22,160 INFO: 
+Async Sel crawler deployed!
+
+2023-12-22 10:13:34,361 ERROR: 
+Exception occurred in function async_api_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-22 10:13:34,390 ERROR: 
+Exception occurred in function async_rss_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-22 10:13:34,391 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-22 10:13:34,391 ERROR: 
+Exception occurred in function async_selenium_template: SessionNotCreatedException in Message: session not created: DevToolsActivePort file doesn't exist
+Stacktrace:
+0   chromedriver                        0x0000000102c704dc chromedriver + 4162780
+1   chromedriver                        0x0000000102c68664 chromedriver + 4130404
+2   chromedriver                        0x00000001028bfbc0 chromedriver + 293824
+3   chromedriver                        0x00000001028f4c18 chromedriver + 511000
+4   chromedriver                        0x00000001028f0d2c chromedriver + 494892
+5   chromedriver                        0x00000001028ee128 chromedriver + 483624
+6   chromedriver                        0x0000000102934c40 chromedriver + 773184
+7   chromedriver                        0x00000001028f96bc chromedriver + 530108
+8   chromedriver                        0x00000001028fa930 chromedriver + 534832
+9   chromedriver                        0x0000000102c35e08 chromedriver + 3923464
+10  chromedriver                        0x0000000102c3a3dc chromedriver + 3941340
+11  chromedriver                        0x0000000102c1e038 chromedriver + 3825720
+12  chromedriver                        0x0000000102c3af3c chromedriver + 3944252
+13  chromedriver                        0x0000000102c106f4 chromedriver + 3770100
+14  chromedriver                        0x0000000102c57980 chromedriver + 4061568
+15  chromedriver                        0x0000000102c57af8 chromedriver + 4061944
+16  chromedriver                        0x0000000102c682e4 chromedriver + 4129508
+17  libsystem_pthread.dylib             0x00000001875ca034 _pthread_start + 136
+18  libsystem_pthread.dylib             0x00000001875c4e3c thread_start + 8
+
+NoneType: None
+
+NoneType: None
+2023-12-22 10:13:34,391 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 12.32 minutes.
+
+2023-12-22 14:00:08,576 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-22 14:00:08,577 INFO: 
+Async API crawler deployed!.
+
+2023-12-22 14:00:09,153 INFO: 
+Async RSS crawler deployed!
+
+2023-12-22 14:00:09,599 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-22 14:00:10,088 INFO: 
+Async Sel crawler deployed!
+
+2023-12-22 14:00:25,604 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-22 14:00:58,218 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-22 14:00:59,347 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5230
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 5233
+
+2023-12-22 14:00:59,409 INFO: 
+Async Sel finished! all in: 49.32 seconds.
+
+2023-12-22 14:01:07,092 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-22 14:01:07,099 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-22 14:01:07,982 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5233
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 5236
+
+2023-12-22 14:01:08,057 INFO: 
+Async BS4 crawlers finished! all in: 58.46 seconds.
+
+2023-12-22 14:01:32,405 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-22 14:01:32,425 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-22 14:01:37,288 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5236
+Total number of unique jobs: 56
+Current total count of jobs in PostgreSQL: 5292
+
+2023-12-22 14:01:37,378 INFO: 
+Async APIs finished! all in: 88.80 seconds.
+
+2023-12-22 14:02:42,229 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-22 14:02:42,286 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-22 14:02:50,878 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5292
+Total number of unique jobs: 105
+Current total count of jobs in PostgreSQL: 5397
+
+2023-12-22 14:02:50,966 INFO: 
+Async RSS readers finished! all in: 161.81 seconds.
+
+2023-12-22 14:02:50,982 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.71 minutes.
+
+2023-12-22 18:00:08,550 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-22 18:00:08,550 INFO: 
+Async API crawler deployed!.
+
+2023-12-22 18:00:09,152 INFO: 
+Async RSS crawler deployed!
+
+2023-12-22 18:00:09,620 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-22 18:00:10,684 INFO: 
+Async Sel crawler deployed!
+
+2023-12-22 18:00:47,352 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-22 18:01:34,232 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-22 18:01:34,257 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-22 18:01:35,244 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5397
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5397
+
+2023-12-22 18:01:35,379 INFO: 
+Async BS4 crawlers finished! all in: 85.76 seconds.
+
+2023-12-22 18:01:38,918 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-22 18:01:41,811 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5397
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 5407
+
+2023-12-22 18:01:42,005 INFO: 
+Async Sel finished! all in: 91.33 seconds.
+
+2023-12-22 18:02:00,043 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-22 18:02:00,206 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-22 18:02:03,019 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5407
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 5424
+
+2023-12-22 18:02:03,507 INFO: 
+Async RSS readers finished! all in: 114.33 seconds.
+
+2023-12-22 18:02:21,044 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-22 18:02:21,092 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-22 18:02:25,306 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5424
+Total number of unique jobs: 31
+Current total count of jobs in PostgreSQL: 5455
+
+2023-12-22 18:02:25,404 INFO: 
+Async APIs finished! all in: 136.86 seconds.
+
+2023-12-22 18:02:25,406 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.28 minutes.
+
+2023-12-22 22:09:28,496 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-22 22:09:28,496 INFO: 
+Async API crawler deployed!.
+
+2023-12-22 22:09:29,240 INFO: 
+Async RSS crawler deployed!
+
+2023-12-22 22:09:29,726 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-22 22:09:30,235 INFO: 
+Async Sel crawler deployed!
+
+2023-12-22 22:10:42,826 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-23 03:24:29,386 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-23 03:24:31,059 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5455
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 5457
+
+2023-12-23 03:24:31,162 INFO: 
+Async Sel finished! all in: 7834.32 seconds.
+
+2023-12-23 03:24:31,556 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-23 03:24:31,557 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-23 03:24:31,557 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-23 03:24:31,557 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 130.61 minutes.
+
+2023-12-23 06:00:07,629 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-23 06:00:07,629 INFO: 
+Async API crawler deployed!.
+
+2023-12-23 06:00:08,211 INFO: 
+Async RSS crawler deployed!
+
+2023-12-23 06:00:08,685 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-23 06:00:09,692 INFO: 
+Async Sel crawler deployed!
+
+2023-12-23 06:00:30,250 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-23 06:00:30,273 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-23 06:00:32,653 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5457
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5457
+
+2023-12-23 06:00:32,777 INFO: 
+Async Sel finished! all in: 23.09 seconds.
+
+2023-12-23 06:01:17,538 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-23 06:01:17,588 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-23 06:01:18,523 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5457
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 5459
+
+2023-12-23 06:01:18,626 INFO: 
+Async BS4 crawlers finished! all in: 69.94 seconds.
+
+2023-12-23 06:01:41,816 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-23 06:01:41,846 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-23 06:01:46,991 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5459
+Total number of unique jobs: 40
+Current total count of jobs in PostgreSQL: 5499
+
+2023-12-23 06:01:47,057 INFO: 
+Async APIs finished! all in: 99.43 seconds.
+
+2023-12-23 06:02:40,930 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-23 06:02:40,991 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-23 06:02:49,966 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5499
+Total number of unique jobs: 105
+Current total count of jobs in PostgreSQL: 5604
+
+2023-12-23 06:02:50,036 INFO: 
+Async RSS readers finished! all in: 161.83 seconds.
+
+2023-12-23 06:02:50,036 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.71 minutes.
+
+2023-12-23 10:00:03,974 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-23 10:00:03,975 INFO: 
+Async API crawler deployed!.
+
+2023-12-23 10:00:04,628 INFO: 
+Async RSS crawler deployed!
+
+2023-12-23 10:00:05,128 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-23 10:00:05,624 INFO: 
+Async Sel crawler deployed!
+
+2023-12-23 10:00:30,041 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-23 10:00:30,062 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-23 10:00:31,008 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5604
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5604
+
+2023-12-23 10:00:31,181 INFO: 
+Async Sel finished! all in: 25.53 seconds.
+
+2023-12-23 10:01:09,759 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-23 10:01:09,803 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-23 10:01:12,100 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5604
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 5605
+
+2023-12-23 10:01:12,176 INFO: 
+Async BS4 crawlers finished! all in: 67.05 seconds.
+
+2023-12-23 10:01:30,344 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-23 10:01:30,352 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-23 10:01:32,111 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5605
+Total number of unique jobs: 15
+Current total count of jobs in PostgreSQL: 5620
+
+2023-12-23 10:01:32,184 INFO: 
+Async APIs finished! all in: 88.21 seconds.
+
+2023-12-23 10:01:57,295 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-23 10:01:57,314 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-23 10:02:00,383 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5620
+Total number of unique jobs: 32
+Current total count of jobs in PostgreSQL: 5652
+
+2023-12-23 10:02:00,450 INFO: 
+Async RSS readers finished! all in: 115.83 seconds.
+
+2023-12-23 10:02:00,452 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.94 minutes.
+
+2023-12-23 14:01:14,310 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-23 14:01:14,311 INFO: 
+Async API crawler deployed!.
+
+2023-12-23 14:01:14,984 INFO: 
+Async RSS crawler deployed!
+
+2023-12-23 14:01:15,443 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-23 14:01:15,918 INFO: 
+Async Sel crawler deployed!
+
+2023-12-23 14:02:27,474 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-23 14:02:27,494 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-23 14:02:28,230 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5652
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5652
+
+2023-12-23 14:02:28,291 INFO: 
+Async Sel finished! all in: 22.56 seconds.
+
+2023-12-24 03:26:42,121 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-24 03:26:42,721 ERROR: 
+Exception occurred in function async_api_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-24 03:26:42,722 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-24 03:26:42,722 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-24 03:26:42,722 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 131.05 minutes.
+
+2023-12-24 06:02:23,564 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-24 06:02:23,564 INFO: 
+Async API crawler deployed!.
+
+2023-12-24 06:03:00,777 INFO: 
+Async RSS crawler deployed!
+
+2023-12-24 06:03:01,294 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-24 06:03:01,769 INFO: 
+Async Sel crawler deployed!
+
+2023-12-24 06:20:20,435 ERROR: 
+OperationalError **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-24 06:20:45,865 ERROR: 
+InterfaceError **while** getting the elements in https://www.remoteimpact.io/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 205, in async_sel_crawler
+    if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-24 06:20:45,982 ERROR: 
+InterfaceError **while** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-24 06:20:46,174 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-24 06:20:46,222 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-24 06:20:47,057 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5652
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5652
+
+2023-12-24 06:20:47,121 INFO: 
+Async Sel finished! all in: 40.77 seconds.
+
+2023-12-24 06:39:57,217 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-24 06:39:57,299 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-24 06:39:57,318 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-24 06:41:06,974 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-24 07:06:54,466 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-24 07:06:54,477 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-24 07:06:54,553 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-24 07:06:55,693 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5652
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5652
+
+2023-12-24 07:06:55,784 INFO: 
+Async BS4 crawlers finished! all in: 123.59 seconds.
+
+2023-12-24 07:06:55,785 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-24 07:06:55,785 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-24 07:06:55,785 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.27 minutes.
+
+2023-12-24 10:11:40,460 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-24 10:11:40,460 INFO: 
+Async API crawler deployed!.
+
+2023-12-24 10:11:41,179 INFO: 
+Async RSS crawler deployed!
+
+2023-12-24 10:11:41,828 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-24 10:11:42,380 INFO: 
+Async Sel crawler deployed!
+
+2023-12-24 10:12:53,781 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-24 10:30:11,693 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-24 10:30:11,742 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-24 10:30:11,757 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-24 10:48:22,190 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-24 10:48:22,711 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-24 10:48:22,711 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-24 10:48:22,757 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-24 10:48:23,806 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5652
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 5654
+
+2023-12-24 10:48:23,871 INFO: 
+Async BS4 crawlers finished! all in: 80.42 seconds.
+
+2023-12-24 11:07:48,695 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-24 14:37:06,802 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-24 14:37:06,824 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+NoneType: None
+
+NoneType: None
+2023-12-24 14:37:06,828 ERROR: 
+Exception occurred in function async_selenium_template: OperationalError in connection to server at "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" (3.143.61.25), port 5432 failed: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+connection to server at "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" (3.143.61.25), port 5432 failed: FATAL:  SSL/TLS required
+
+NoneType: None
+
+NoneType: None
+2023-12-24 14:37:06,834 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 132.02 minutes.
+
+2023-12-24 18:00:09,000 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-24 18:00:09,001 INFO: 
+Async API crawler deployed!.
+
+2023-12-24 18:00:09,596 INFO: 
+Async RSS crawler deployed!
+
+2023-12-24 18:00:10,084 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-24 18:00:11,587 INFO: 
+Async Sel crawler deployed!
+
+2023-12-24 18:00:40,607 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-24 18:01:21,479 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-24 18:01:24,285 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5654
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 5658
+
+2023-12-24 18:01:24,388 INFO: 
+Async Sel finished! all in: 72.80 seconds.
+
+2023-12-24 18:01:37,582 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-24 18:01:37,666 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-24 18:01:40,224 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5658
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 5668
+
+2023-12-24 18:01:40,483 INFO: 
+Async BS4 crawlers finished! all in: 90.40 seconds.
+
+2023-12-24 18:02:06,096 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-24 18:02:06,137 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-24 18:02:14,160 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5668
+Total number of unique jobs: 59
+Current total count of jobs in PostgreSQL: 5727
+
+2023-12-24 18:02:14,264 INFO: 
+Async APIs finished! all in: 125.27 seconds.
+
+2023-12-24 18:03:57,648 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-24 18:03:57,716 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-24 18:04:23,278 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5727
+Total number of unique jobs: 209
+Current total count of jobs in PostgreSQL: 5936
+
+2023-12-24 18:04:23,376 INFO: 
+Async RSS readers finished! all in: 253.79 seconds.
+
+2023-12-24 18:04:23,387 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 4.24 minutes.
+
+2023-12-24 22:00:03,756 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-24 22:00:03,756 INFO: 
+Async API crawler deployed!.
+
+2023-12-24 22:00:04,834 INFO: 
+Async RSS crawler deployed!
+
+2023-12-24 22:00:05,489 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-24 22:00:07,002 INFO: 
+Async Sel crawler deployed!
+
+2023-12-24 22:00:27,456 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-24 22:00:27,480 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-25 03:50:00,157 ERROR: 
+Exception occurred in function async_api_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-25 03:50:00,168 ERROR: 
+Exception occurred in function async_rss_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-25 03:50:00,179 ERROR: 
+Exception occurred in function async_bs4_template: TimeoutError in 
+NoneType: None
+
+NoneType: None
+2023-12-25 03:50:00,180 ERROR: 
+Exception occurred in function async_selenium_template: OperationalError in connection to server at "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" (3.129.155.172), port 5432 failed: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-25 03:50:00,186 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 130.41 minutes.
+
+2023-12-25 06:03:13,910 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-25 06:03:13,911 INFO: 
+Async API crawler deployed!.
+
+2023-12-25 06:03:14,673 INFO: 
+Async RSS crawler deployed!
+
+2023-12-25 06:03:15,642 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-25 06:03:16,125 INFO: 
+Async Sel crawler deployed!
+
+2023-12-25 06:27:11,689 ERROR: 
+OperationalError **while** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-25 06:27:12,082 ERROR: 
+InterfaceError **while** getting the elements in https://www.remoteimpact.io/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 205, in async_sel_crawler
+    if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-25 06:27:12,875 ERROR: 
+InterfaceError **while** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 139, in async_sel_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-25 06:27:13,072 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-25 06:27:13,094 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-25 06:27:13,947 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5936
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5936
+
+2023-12-25 06:27:14,009 INFO: 
+Async Sel finished! all in: 62.61 seconds.
+
+2023-12-25 07:02:49,733 ERROR: 
+OperationalError **while** getting the elements in https://www.fossjobs.net/jobs-worldwide/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.OperationalError: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+
+
+
+2023-12-25 07:02:49,788 ERROR: 
+InterfaceError **while** getting the elements in https://www.python.org/jobs/?page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-25 07:02:49,826 ERROR: 
+InterfaceError **while** getting the elements in https://dribbble.com/jobs?anywhere=true&keyword=&page=1. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 132, in async_bs4_crawler
+    if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/handy.py", line 270, in link_exists_in_db
+    cur.execute(query, (link,))
+psycopg2.InterfaceError: cursor already closed
+
+
+
+2023-12-25 07:22:30,266 ERROR: 
+An error occurred: CONTAINER NOT FOUND.. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2023-12-25 07:50:27,102 ERROR: 
+An error occurred: [Errno 60] Operation timed out. Skipping URL https://remote.co/international-remote-jobs/?page=1
+
+2023-12-25 07:50:27,105 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-25 07:50:27,132 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-25 07:50:28,158 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5936
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5936
+
+2023-12-25 07:50:28,222 INFO: 
+Async BS4 crawlers finished! all in: 195.65 seconds.
+
+2023-12-25 07:50:28,222 ERROR: 
+Exception occurred in function async_api_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-25 07:50:28,223 ERROR: 
+Exception occurred in function async_rss_template: OperationalError in could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-25 07:50:28,223 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.29 minutes.
+
+2023-12-25 10:00:02,725 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-25 10:00:02,726 INFO: 
+Async API crawler deployed!.
+
+2023-12-25 10:00:03,717 INFO: 
+Async RSS crawler deployed!
+
+2023-12-25 10:00:04,327 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-26 16:24:50,365 INFO: 
+Async Sel crawler deployed!
+
+2023-12-26 16:25:07,049 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-26 16:25:07,068 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-26 16:25:07,887 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5936
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5936
+
+2023-12-26 16:25:07,949 INFO: 
+Async Sel finished! all in: 17.62 seconds.
+
+2023-12-26 16:25:15,318 ERROR: 
+Exception occurred in function async_api_template: DatabaseError in could not receive data from server: Can't assign requested address
+SSL SYSCALL error: Can't assign requested address
+
+NoneType: None
+
+NoneType: None
+2023-12-26 16:25:15,318 ERROR: 
+Exception occurred in function async_rss_template: DatabaseError in could not receive data from server: Can't assign requested address
+SSL SYSCALL error: Can't assign requested address
+
+NoneType: None
+
+NoneType: None
+2023-12-26 16:25:15,318 ERROR: 
+Exception occurred in function async_bs4_template: OperationalError in connection to server at "dpg-cl00hpjamefc73cgd2q0-a.ohio-postgres.render.com" (3.143.61.25), port 5432 failed: could not receive data from server: Operation timed out
+SSL SYSCALL error: Operation timed out
+
+NoneType: None
+
+NoneType: None
+2023-12-26 16:25:15,318 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 130.49 minutes.
+
+2023-12-26 17:46:05,493 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-26 17:46:05,493 INFO: 
+Async API crawler deployed!.
+
+2023-12-26 17:46:06,899 INFO: 
+Async RSS crawler deployed!
+
+2023-12-26 17:46:07,966 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-26 17:46:09,088 INFO: 
+Async Sel crawler deployed!
+
+2023-12-26 17:46:23,706 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-26 17:46:23,726 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-26 17:46:24,789 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5936
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 5936
+
+2023-12-26 17:46:24,925 INFO: 
+Async Sel finished! all in: 15.84 seconds.
+
+2023-12-26 17:47:18,888 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 17:47:18,922 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-26 17:47:21,350 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5936
+Total number of unique jobs: 12
+Current total count of jobs in PostgreSQL: 5948
+
+2023-12-26 17:47:21,427 INFO: 
+Async BS4 crawlers finished! all in: 73.46 seconds.
+
+2023-12-26 17:48:06,229 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 17:48:06,468 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-26 17:48:16,194 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 5948
+Total number of unique jobs: 115
+Current total count of jobs in PostgreSQL: 6063
+
+2023-12-26 17:48:16,258 INFO: 
+Async APIs finished! all in: 130.77 seconds.
+
+2023-12-26 17:49:50,710 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 17:49:50,776 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-26 17:50:06,301 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6063
+Total number of unique jobs: 213
+Current total count of jobs in PostgreSQL: 6276
+
+2023-12-26 17:50:06,373 INFO: 
+Async RSS readers finished! all in: 239.48 seconds.
+
+2023-12-26 17:50:06,382 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 4.01 minutes.
+
+2023-12-26 18:00:07,540 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-26 18:00:07,540 INFO: 
+Async API crawler deployed!.
+
+2023-12-26 18:00:08,101 INFO: 
+Async RSS crawler deployed!
+
+2023-12-26 18:00:08,592 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-26 18:00:09,067 INFO: 
+Async Sel crawler deployed!
+
+2023-12-26 18:00:27,155 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-26 18:00:27,174 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-26 18:00:28,022 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6276
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6276
+
+2023-12-26 18:00:28,105 INFO: 
+Async Sel finished! all in: 19.04 seconds.
+
+2023-12-26 18:01:36,017 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 18:01:36,043 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-26 18:01:36,930 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6276
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6276
+
+2023-12-26 18:01:37,011 INFO: 
+Async APIs finished! all in: 89.47 seconds.
+
+2023-12-26 18:01:40,126 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 18:01:40,156 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-26 18:01:41,037 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6276
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 6277
+
+2023-12-26 18:01:41,099 INFO: 
+Async RSS readers finished! all in: 93.00 seconds.
+
+2023-12-26 18:01:41,100 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 18:01:41,116 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-26 18:01:42,068 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6277
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 6279
+
+2023-12-26 18:01:42,130 INFO: 
+Async BS4 crawlers finished! all in: 93.54 seconds.
+
+2023-12-26 18:01:42,132 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.58 minutes.
+
+2023-12-26 22:00:07,492 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2023-12-26 22:00:07,492 INFO: 
+Async API crawler deployed!.
+
+2023-12-26 22:00:08,097 INFO: 
+Async RSS crawler deployed!
+
+2023-12-26 22:00:08,567 INFO: 
+Async BS4 crawler deployed!.
+
+2023-12-26 22:00:09,049 INFO: 
+Async Sel crawler deployed!
+
+2023-12-26 22:00:27,623 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2023-12-26 22:00:27,649 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2023-12-26 22:00:28,629 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6279
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6279
+
+2023-12-26 22:00:28,692 INFO: 
+Async Sel finished! all in: 19.64 seconds.
+
+2023-12-26 22:01:10,576 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 22:01:12,245 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2023-12-26 22:01:14,225 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6279
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6279
+
+2023-12-26 22:01:14,389 INFO: 
+Async BS4 crawlers finished! all in: 65.77 seconds.
+
+2023-12-26 22:01:35,661 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 22:01:38,879 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2023-12-26 22:01:41,656 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6279
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 6282
+
+2023-12-26 22:01:41,829 INFO: 
+Async APIs finished! all in: 94.31 seconds.
+
+2023-12-26 22:02:10,892 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2023-12-26 22:02:14,505 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2023-12-26 22:02:20,154 INFO: 
+to_render_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6282
+Total number of unique jobs: 28
+Current total count of jobs in PostgreSQL: 6310
+
+2023-12-26 22:02:20,422 INFO: 
+Async RSS readers finished! all in: 132.30 seconds.
+
+2023-12-26 22:02:20,424 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.22 minutes.
+
+2024-01-03 10:59:09,187 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 10:59:09,320 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 11:00:04,832 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 11:00:05,455 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 11:02:48,730 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 11:02:48,833 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 11:34:59,655 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 11:35:00,459 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 11:37:26,670 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 11:37:26,758 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 11:38:22,783 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 402
+Current total count of jobs in PostgreSQL: 402
+
+2024-01-03 11:38:22,893 INFO: 
+Async APIs finished! all in: 203.25 seconds.
+
+2024-01-03 11:51:46,420 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 11:51:47,020 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 11:54:13,990 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 11:54:14,074 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 11:54:54,306 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6310
+Total number of unique jobs: 358
+Current total count of jobs in PostgreSQL: 6668
+
+2024-01-03 11:54:54,425 INFO: 
+Async APIs finished! all in: 188.01 seconds.
+
+2024-01-03 11:55:32,742 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-03 11:55:32,743 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 11:55:33,317 INFO: 
+Async RSS crawler deployed!
+
+2024-01-03 11:55:33,830 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-03 11:55:34,321 INFO: 
+Async Sel crawler deployed!
+
+2024-01-03 11:56:24,079 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 11:57:21,365 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 11:57:21,377 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 11:57:22,325 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6668
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6668
+
+2024-01-03 11:57:22,422 INFO: 
+Async APIs finished! all in: 109.68 seconds.
+
+2024-01-03 11:57:29,356 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-03 11:57:31,545 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6668
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 6678
+
+2024-01-03 11:57:31,626 INFO: 
+Async Sel finished! all in: 117.31 seconds.
+
+2024-01-03 11:57:46,150 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 11:57:46,179 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-03 11:57:52,968 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6678
+Total number of unique jobs: 47
+Current total count of jobs in PostgreSQL: 6725
+
+2024-01-03 11:57:53,081 INFO: 
+Async BS4 crawlers finished! all in: 139.26 seconds.
+
+2024-01-03 11:59:44,778 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 11:59:44,819 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-03 12:00:12,540 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6725
+Total number of unique jobs: 240
+Current total count of jobs in PostgreSQL: 6965
+
+2024-01-03 12:00:12,660 INFO: 
+Async RSS readers finished! all in: 279.36 seconds.
+
+2024-01-03 12:00:12,661 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 4.67 minutes.
+

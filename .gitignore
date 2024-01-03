@@ -14,3 +14,4 @@ data/
 archive/
 drafts/
 venv/
+.DS_Store

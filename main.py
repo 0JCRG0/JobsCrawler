@@ -15,8 +15,8 @@ from utils.handy import LoggingMasterCrawler
 LoggingMasterCrawler()
 
 """
-In this code, the safe_call function is a wrapper that calls 
-the provided function with the provided arguments and catches any 
+In this script, safe_call() calls the provided functions 
+with their respective arguments and catches any 
 exceptions that occur. It then returns the result 
 (or the exception) along with the function name.
 This way, when an exception occurs, you can log the 
@@ -50,7 +50,7 @@ async def async_main(pipeline):
 	for result, func_name in results:
 		if isinstance(result, Exception):
 			# handle exception
-			logging.error(f"Exception occurred in function {func_name}: {type(result).__name__} in {result}\n{traceback.format_exc()}")
+			logging.error(f"Exception occurred in function {func_name}: {type(result).__name__} in {result}\n{traceback.format_exc()}", exc_info=True)
 			continue
 
 	#print the time

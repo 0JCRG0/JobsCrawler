@@ -204,7 +204,7 @@ async def async_api_template(pipeline):
 	print(f"Async APIs finished! all in: {elapsed_time:.2f} seconds.", "\n")
 	logging.info(f"Async APIs finished! all in: {elapsed_time:.2f} seconds.")
 async def main():
-	await async_api_template("LocalProd")
+	await async_api_template("PROD")
 
 if __name__ == "__main__":
 	asyncio.run(main())

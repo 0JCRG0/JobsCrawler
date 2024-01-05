@@ -2,20 +2,20 @@
     {
         "urls": [
             {
-                "name": "https://www.python.org",
-                "url": "https://www.python.org/jobs/?page=",
+                "name": "https://remote.co",
+                "url": "https://remote.co/international-remote-jobs/?page=",
                 "pages_to_crawl": 1,
                 "start_point": 1,
-                "strategy": "main",
+                "strategy": "container",
                 "follow_link": "yes",
-                "inner_link_tag": ".content-wrapper .container .main-content.with-right-sidebar .text .job-description",
+                "inner_link_tag": ".container.pt-4 .row.row-with-sidebar .col .card.mb-2 .card-body.loosen .single_job_listing .job_description",
                 "elements_path": [
                         {
-                        "jobs_path": ".list-recent-jobs.list-row-container.menu li",
-                        "title_path": ".listing-company-name a",
-                        "link_path": ".listing-company-name a",
-                        "description_path": ".listing-job-type",
-                        "location_path": ".listing-location a"
+                        "jobs_path": ".card.bg-light.mb-3.rounded-0 .card-body .card.bg-white.m-0 .card-body.p-0",
+                        "title_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0 .font-weight-bold.larger",
+                        "link_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom",
+                        "location_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary",
+                        "description_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary"
                     }
                 ]
             }

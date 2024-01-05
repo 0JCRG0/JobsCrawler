@@ -41,8 +41,9 @@ async def async_selenium_template(pipeline):
 	start_time = timeit.default_timer()
 
 	#Modify the options so it is headless - to disable just comment the next 2 lines and use the commented driver
+	service = Service()
 	options = webdriver.ChromeOptions()
-	options.add_argument('--headless=new')
+	#options.add_argument('--headless=new')
 	#service = Service(executable_path='/Users/juanreyesgarcia/chromedriver', log_path=path.devnull)
 	#service.start()
 
@@ -76,8 +77,8 @@ async def async_selenium_template(pipeline):
 
 	async def async_sel_crawler(url_obj, options):
 		#NEW DRIVER EACH ITERATION FOR SITE
-		driver = webdriver.Chrome(options=options)
-		#driver = webdriver.Chrome(options=options, service=service)
+		#driver = webdriver.Chrome(options=options)
+		driver = webdriver.Chrome(options=options, service=service)
 
 		#INITIALISE THE LISTS
 		total_links = []

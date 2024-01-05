@@ -13,6 +13,7 @@ load_dotenv()
 LOCAL_POSTGRE_URL = os.environ.get("LOCAL_POSTGRE_URL")
 RENDER_POSTGRE_URL = os.environ.get("RENDER_POSTGRE_URL")
 DATABASE_URL = os.environ.get("DATABASE_URL_DO")
+LOGGER_PATH = os.environ.get("LOGGER_PATH")
 
 
 """ LOAD THE ENVIRONMENT VARIABLES """
@@ -23,7 +24,7 @@ def LoggingMasterCrawler():
 	log_format = '%(asctime)s %(levelname)s: \n%(message)s\n'
 
 	# Configure the logger with the custom format
-	logging.basicConfig(filename="/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/logs/LoggingMasterCrawler.log",
+	logging.basicConfig(filename=LOGGER_PATH,
 						level=logging.INFO,
 						format=log_format)
 

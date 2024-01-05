@@ -11634,3 +11634,401 @@ Current total count of jobs in PostgreSQL: 438
 2024-01-05 12:59:13,188 INFO: 
 Async BS4 crawlers finished! all in: 8.86 seconds.
 
+2024-01-05 13:47:10,844 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-05 13:47:11,573 INFO: 
+https://remote.co has started
+
+2024-01-05 13:47:12,970 INFO: 
+Crawling https://remote.co/international-remote-jobs/?page=1 with container strategy
+
+2024-01-05 13:47:13,295 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-product-manager-4-5/
+
+
+2024-01-05 13:47:13,651 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/sr-staff-technical-product-manager-4/
+
+
+2024-01-05 13:47:13,994 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/screenwriter-4/
+
+
+2024-01-05 13:47:14,253 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/data-analyst-3-2/
+
+
+2024-01-05 13:47:14,531 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/marketing-amp-community-3/
+
+
+2024-01-05 13:47:14,788 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/campuspress-sales-support-specialist-wordpress-saas-sales-education-3/
+
+
+2024-01-05 13:47:15,051 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/head-of-marketing-3-2/
+
+
+2024-01-05 13:47:15,307 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-backend-engineer-3-2/
+
+
+2024-01-05 13:47:15,566 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/media-buyer-3-2/
+
+
+2024-01-05 13:47:15,826 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/customer-support-agent-2-2/
+
+
+2024-01-05 13:47:16,086 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/full-stack-engineer-global-data-tools-2/
+
+
+2024-01-05 13:47:16,354 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/head-of-people-1/
+
+
+2024-01-05 13:47:16,624 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/digital-marketing-strategist-paid-social-1/
+
+
+2024-01-05 13:47:16,905 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/counsel-commercial-1/
+
+
+2024-01-05 13:47:17,166 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/consultant-media-relations-specialist-core-communications-29/
+
+
+2024-01-05 13:47:17,439 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/int-operations-director-online-casino-games-28/
+
+
+2024-01-05 13:47:17,672 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/event-operations-associate-partner-activations-27/
+
+
+2024-01-05 13:47:17,920 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/producer-video-production-27/
+
+
+2024-01-05 13:47:18,163 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/audio-manager-27/
+
+
+2024-01-05 13:47:18,425 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/full-stack-php-developer-27/
+
+
+2024-01-05 13:47:18,680 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/marketing-assistant-27/
+
+
+2024-01-05 13:47:18,946 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-consultant-growth-marketing-26/
+
+
+2024-01-05 13:47:19,166 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/director-of-design-26-2/
+
+
+2024-01-05 13:47:19,418 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-monitoring-evaluation-and-learning-mel-specialist-camel-and-cla-26/
+
+
+2024-01-05 13:47:19,659 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/consolidation-senior-manager-25/
+
+
+2024-01-05 13:47:19,937 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-software-engineer-24-4/
+
+
+2024-01-05 13:47:20,180 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-development-writer-23/
+
+
+2024-01-05 13:47:20,432 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-content-designer-americas-team-23/
+
+
+2024-01-05 13:47:20,687 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-ux-writer-worldwide-remote-21/
+
+
+2024-01-05 13:47:20,934 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/hospital-account-manager-21/
+
+
+2024-01-05 13:47:21,170 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/lifecycle-marketing-manger-mobile-20/
+
+
+2024-01-05 13:47:21,423 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/mango-live-coach-for-french-20/
+
+
+2024-01-05 13:47:21,684 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-tech-artist-vfx-20/
+
+
+2024-01-05 13:47:21,911 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/hospital-recruiter-20/
+
+
+2024-01-05 13:47:22,138 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/field-marketing-manager-20/
+
+
+2024-01-05 13:47:22,362 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/astra-senior-wordpress-developer-20/
+
+
+2024-01-05 13:47:22,611 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/customer-success-advisor-19/
+
+
+2024-01-05 13:47:22,875 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-mobile-product-designer-19/
+
+
+2024-01-05 13:47:23,125 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-data-engineer-19-2/
+
+
+2024-01-05 13:47:23,380 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/education-subject-matter-expert-19/
+
+
+2024-01-05 13:47:23,632 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/qa-engineer-19-5/
+
+
+2024-01-05 13:47:23,899 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-data-scientist-18-5/
+
+
+2024-01-05 13:47:24,155 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/manager-lifecycle-offboarding-18/
+
+
+2024-01-05 13:47:24,408 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-backend-engineer-18-2/
+
+
+2024-01-05 13:47:24,666 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-data-engineer-18-2/
+
+
+2024-01-05 13:47:24,897 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/media-thumbnail-designer-18/
+
+
+2024-01-05 13:47:25,141 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/seo-content-editor-18/
+
+
+2024-01-05 13:47:25,435 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/lead-trending-topics-editor-18/
+
+
+2024-01-05 13:47:25,689 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/remote-c-3d-developer-18/
+
+
+2024-01-05 13:47:25,980 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-designer-18/
+
+
+2024-01-05 13:47:26,041 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 13:47:26,073 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-05 13:47:31,571 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 438
+Total number of unique jobs: 50
+Current total count of jobs in PostgreSQL: 488
+
+2024-01-05 13:47:31,672 INFO: 
+Async BS4 crawlers finished! all in: 20.83 seconds.
+
+2024-01-05 13:47:53,150 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-05 13:47:53,678 INFO: 
+https://remote.co has started
+
+2024-01-05 13:47:54,850 INFO: 
+Crawling https://remote.co/international-remote-jobs/?page=1 with container strategy
+
+2024-01-05 13:47:55,034 INFO: 
+Link https://remote.co/job/senior-product-manager-4-5/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,111 INFO: 
+Link https://remote.co/job/sr-staff-technical-product-manager-4/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,188 INFO: 
+Link https://remote.co/job/screenwriter-4/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,265 INFO: 
+Link https://remote.co/job/data-analyst-3-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,341 INFO: 
+Link https://remote.co/job/marketing-amp-community-3/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,418 INFO: 
+Link https://remote.co/job/campuspress-sales-support-specialist-wordpress-saas-sales-education-3/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,494 INFO: 
+Link https://remote.co/job/head-of-marketing-3-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,571 INFO: 
+Link https://remote.co/job/senior-backend-engineer-3-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,647 INFO: 
+Link https://remote.co/job/media-buyer-3-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,752 INFO: 
+Link https://remote.co/job/customer-support-agent-2-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,858 INFO: 
+Link https://remote.co/job/full-stack-engineer-global-data-tools-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:55,964 INFO: 
+Link https://remote.co/job/head-of-people-1/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,069 INFO: 
+Link https://remote.co/job/digital-marketing-strategist-paid-social-1/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,176 INFO: 
+Link https://remote.co/job/counsel-commercial-1/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,282 INFO: 
+Link https://remote.co/job/consultant-media-relations-specialist-core-communications-29/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,388 INFO: 
+Link https://remote.co/job/int-operations-director-online-casino-games-28/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,494 INFO: 
+Link https://remote.co/job/event-operations-associate-partner-activations-27/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,599 INFO: 
+Link https://remote.co/job/producer-video-production-27/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,696 INFO: 
+Link https://remote.co/job/audio-manager-27/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,773 INFO: 
+Link https://remote.co/job/full-stack-php-developer-27/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,850 INFO: 
+Link https://remote.co/job/marketing-assistant-27/ already found in the db. Skipping... 
+
+2024-01-05 13:47:56,926 INFO: 
+Link https://remote.co/job/senior-consultant-growth-marketing-26/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,003 INFO: 
+Link https://remote.co/job/director-of-design-26-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,080 INFO: 
+Link https://remote.co/job/senior-monitoring-evaluation-and-learning-mel-specialist-camel-and-cla-26/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,167 INFO: 
+Link https://remote.co/job/consolidation-senior-manager-25/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,244 INFO: 
+Link https://remote.co/job/senior-software-engineer-24-4/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,321 INFO: 
+Link https://remote.co/job/senior-development-writer-23/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,398 INFO: 
+Link https://remote.co/job/senior-content-designer-americas-team-23/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,475 INFO: 
+Link https://remote.co/job/senior-ux-writer-worldwide-remote-21/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,552 INFO: 
+Link https://remote.co/job/hospital-account-manager-21/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,629 INFO: 
+Link https://remote.co/job/lifecycle-marketing-manger-mobile-20/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,705 INFO: 
+Link https://remote.co/job/mango-live-coach-for-french-20/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,782 INFO: 
+Link https://remote.co/job/senior-tech-artist-vfx-20/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,859 INFO: 
+Link https://remote.co/job/hospital-recruiter-20/ already found in the db. Skipping... 
+
+2024-01-05 13:47:57,936 INFO: 
+Link https://remote.co/job/field-marketing-manager-20/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,013 INFO: 
+Link https://remote.co/job/astra-senior-wordpress-developer-20/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,089 INFO: 
+Link https://remote.co/job/customer-success-advisor-19/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,166 INFO: 
+Link https://remote.co/job/senior-mobile-product-designer-19/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,243 INFO: 
+Link https://remote.co/job/senior-data-engineer-19-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,319 INFO: 
+Link https://remote.co/job/education-subject-matter-expert-19/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,395 INFO: 
+Link https://remote.co/job/qa-engineer-19-5/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,472 INFO: 
+Link https://remote.co/job/senior-data-scientist-18-5/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,549 INFO: 
+Link https://remote.co/job/manager-lifecycle-offboarding-18/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,625 INFO: 
+Link https://remote.co/job/senior-backend-engineer-18-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,702 INFO: 
+Link https://remote.co/job/senior-data-engineer-18-2/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,781 INFO: 
+Link https://remote.co/job/media-thumbnail-designer-18/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,858 INFO: 
+Link https://remote.co/job/seo-content-editor-18/ already found in the db. Skipping... 
+
+2024-01-05 13:47:58,935 INFO: 
+Link https://remote.co/job/lead-trending-topics-editor-18/ already found in the db. Skipping... 
+
+2024-01-05 13:47:59,012 INFO: 
+Link https://remote.co/job/remote-c-3d-developer-18/ already found in the db. Skipping... 
+
+2024-01-05 13:47:59,090 INFO: 
+Link https://remote.co/job/senior-designer-18/ already found in the db. Skipping... 
+
+2024-01-05 13:47:59,091 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 13:47:59,108 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-05 13:47:59,816 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 488
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 488
+
+2024-01-05 13:47:59,893 INFO: 
+Async BS4 crawlers finished! all in: 6.74 seconds.
+

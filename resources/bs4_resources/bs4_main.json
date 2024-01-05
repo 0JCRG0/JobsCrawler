@@ -60,7 +60,7 @@
                 "url": "https://vuejobs.com/jobs/?page=",
                 "pages_to_crawl": 1,
                 "start_point": 1,
-                "strategy": "other",
+                "strategy": "container",
                 "follow_link": "yes",
                 "inner_link_tag": ".lg\\:pb-12 .py-8.lg\\:py-12 .container .order-2.lg\\:order.lg\\:col-span-5 .prose.max-w-full.mt-6.prose-lg",
                 "elements_path": [
@@ -78,7 +78,7 @@
                 "url": "https://remote.co/international-remote-jobs/?page=",
                 "pages_to_crawl": 1,
                 "start_point": 1,
-                "strategy": "other",
+                "strategy": "container",
                 "follow_link": "yes",
                 "inner_link_tag": ".container.pt-4 .row.row-with-sidebar .col .card.mb-2 .card-body.loosen .single_job_listing .job_description",
                 "elements_path": [

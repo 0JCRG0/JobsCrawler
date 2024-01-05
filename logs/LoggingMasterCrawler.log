@@ -10328,3 +10328,529 @@ Async RSS readers finished! all in: 279.36 seconds.
 2024-01-03 12:00:12,661 INFO: 
 ALL ASYNC CRAWLERS FINISHED IN: 4.67 minutes.
 
+2024-01-04 23:37:48,828 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 23:37:49,510 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [getaddrinfo failed]. Moving to the next API...
+
+2024-01-04 23:38:02,322 ERROR: 
+Encountered a request error: Cannot connect to host www.workingnomads.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]. Moving to the next API...
+
+2024-01-04 23:38:29,828 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 23:38:29,879 INFO: 
+Finished API crawlers. Results below \u2b07\ufe0e
+
+2024-01-04 23:38:34,538 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7385
+Total number of unique jobs: 16
+Current total count of jobs in PostgreSQL: 7401
+
+2024-01-04 23:38:34,624 INFO: 
+Async APIs finished! all in: 45.80 seconds.
+
+2024-01-05 00:07:51,185 INFO: 
+Async Sel crawler deployed!
+
+2024-01-05 00:08:15,595 INFO: 
+Finished Selenium_Crawlers. Results below \u2b07\ufe0e
+
+2024-01-05 00:08:18,197 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 402
+Total number of unique jobs: 15
+Current total count of jobs in PostgreSQL: 417
+
+2024-01-05 00:08:18,318 INFO: 
+Async Sel finished! all in: 20.49 seconds.
+
+2024-01-05 00:11:50,053 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-05 00:11:50,055 INFO: 
+Async API crawler deployed!.
+
+2024-01-05 00:11:50,556 INFO: 
+Async RSS crawler deployed!
+
+2024-01-05 00:11:51,184 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-05 00:11:52,472 INFO: 
+Async Sel crawler deployed!
+
+2024-01-05 00:11:56,200 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [getaddrinfo failed]. Moving to the next API...
+
+2024-01-05 00:12:04,535 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C13FE90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c1ff0981ae8de959a61b32888ee2b6f6/source
+
+2024-01-05 00:12:08,606 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C175FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c1ff0981ae8de959a61b32888ee2b6f6/source
+
+2024-01-05 00:12:12,671 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C1773E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c1ff0981ae8de959a61b32888ee2b6f6/source
+
+2024-01-05 00:12:16,758 ERROR: 
+MaxRetryError **before** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1322, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1081, in _send_output
+    self.send(msg)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1025, in send
+    self.connect()
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002387C177560>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 118, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 76, in fetch_sel
+    return driver.page_source
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 110, in request
+    return self.request_encode_url(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=60304): Max retries exceeded with url: /session/c1ff0981ae8de959a61b32888ee2b6f6/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C177560>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+
+
+2024-01-05 00:12:20,839 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C177650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c1ff0981ae8de959a61b32888ee2b6f6
+
+2024-01-05 00:12:24,887 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C1777D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c1ff0981ae8de959a61b32888ee2b6f6
+
+2024-01-05 00:12:28,929 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C6901A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c1ff0981ae8de959a61b32888ee2b6f6
+
+2024-01-05 00:12:41,114 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387BB25340>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/471b9a1934eb8944f0c472030a0603f1/source
+
+2024-01-05 00:12:45,176 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C690470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/471b9a1934eb8944f0c472030a0603f1/source
+
+2024-01-05 00:12:49,246 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C690590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/471b9a1934eb8944f0c472030a0603f1/source
+
+2024-01-05 00:12:53,315 ERROR: 
+MaxRetryError **before** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1322, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1081, in _send_output
+    self.send(msg)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1025, in send
+    self.connect()
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002387C690710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 118, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 76, in fetch_sel
+    return driver.page_source
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 110, in request
+    return self.request_encode_url(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=60304): Max retries exceeded with url: /session/471b9a1934eb8944f0c472030a0603f1/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C690710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+
+
+2024-01-05 00:12:57,361 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C177800>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/471b9a1934eb8944f0c472030a0603f1
+
+2024-01-05 00:13:01,440 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C177380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/471b9a1934eb8944f0c472030a0603f1
+
+2024-01-05 00:13:05,514 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002387C1774A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/471b9a1934eb8944f0c472030a0603f1
+
+2024-01-05 00:13:13,694 INFO: 
+Finished Selenium_Crawlers. Results below \u2b07\ufe0e
+
+2024-01-05 00:13:14,432 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7401
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 7401
+
+2024-01-05 00:13:14,507 INFO: 
+Async Sel finished! all in: 75.40 seconds.
+
+2024-01-05 00:13:18,362 ERROR: 
+Encountered a request error: Cannot connect to host www.workingnomads.com:443 ssl:default [None]. Moving to the next API...
+
+2024-01-05 00:13:18,364 ERROR: 
+An error occurred: Cannot connect to host vuejobs.com:443 ssl:default [[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)]. Skipping URL https://vuejobs.com/jobs/?page=1
+
+2024-01-05 00:13:18,371 ERROR: 
+An error occurred: Cannot connect to host dribbble.com:443 ssl:default [None]. Skipping URL https://dribbble.com/jobs?anywhere=true&keyword=&page=1
+
+2024-01-05 00:13:24,740 ERROR: 
+Encountered a request error: Server disconnected. Moving to the next API...
+
+2024-01-05 00:13:24,745 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 00:13:24,771 INFO: 
+Finished API crawlers. Results below \u2b07\ufe0e
+
+2024-01-05 00:13:26,095 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7401
+Total number of unique jobs: 8
+Current total count of jobs in PostgreSQL: 7409
+
+2024-01-05 00:13:26,170 INFO: 
+Async APIs finished! all in: 96.11 seconds.
+
+2024-01-05 00:14:09,137 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 00:14:09,144 INFO: 
+Finished RSS Reader. Results below \u2b07\ufe0e
+
+2024-01-05 00:14:10,393 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7409
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 7416
+
+2024-01-05 00:14:10,470 INFO: 
+Async RSS readers finished! all in: 139.91 seconds.
+
+2024-01-05 00:14:10,471 ERROR: 
+Exception occurred in function async_bs4_template: FeatureNotFound in Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+NoneType: None
+
+NoneType: None
+2024-01-05 00:14:10,472 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.23 minutes.
+
+2024-01-05 00:17:50,667 INFO: 
+Async Sel crawler deployed!
+
+2024-01-05 00:18:03,239 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F711130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb2c64fe9983e17f7173e688a0036bf6/source
+
+2024-01-05 00:18:07,297 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F7116D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb2c64fe9983e17f7173e688a0036bf6/source
+
+2024-01-05 00:18:11,352 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F711940>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb2c64fe9983e17f7173e688a0036bf6/source
+
+2024-01-05 00:18:15,448 ERROR: 
+MaxRetryError **before** getting the elements in https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1. Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1322, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1081, in _send_output
+    self.send(msg)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1025, in send
+    self.connect()
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F83F7102F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 118, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 76, in fetch_sel
+    return driver.page_source
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 110, in request
+    return self.request_encode_url(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=60480): Max retries exceeded with url: /session/cb2c64fe9983e17f7173e688a0036bf6/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F7102F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+
+
+2024-01-05 00:18:19,498 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F711CD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb2c64fe9983e17f7173e688a0036bf6
+
+2024-01-05 00:18:23,557 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F7119A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb2c64fe9983e17f7173e688a0036bf6
+
+2024-01-05 00:18:27,591 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F711F70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/cb2c64fe9983e17f7173e688a0036bf6
+
+2024-01-05 00:18:39,800 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F6BB170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd/source
+
+2024-01-05 00:18:43,878 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F712480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd/source
+
+2024-01-05 00:18:47,942 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F7125A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd/source
+
+2024-01-05 00:18:52,032 ERROR: 
+MaxRetryError **before** getting the elements in https://app.remotesome.com/jobs/?page=1. Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1322, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1081, in _send_output
+    self.send(msg)
+  File "C:\Users\juanc\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1025, in send
+    self.connect()
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F83F712720>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 118, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 76, in fetch_sel
+    return driver.page_source
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 110, in request
+    return self.request_encode_url(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\_request_methods.py", line 143, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=60480): Max retries exceeded with url: /session/c82a249d3e3cf7713a8ddf6412da14dd/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F712720>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+
+
+2024-01-05 00:18:56,110 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F7127E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd
+
+2024-01-05 00:19:00,164 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F7129F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd
+
+2024-01-05 00:19:04,229 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F712C00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd
+

@@ -6,7 +6,7 @@ import pretty_errors
 import pandas as pd
 import timeit
 import os
-import logging
+import logging	
 import bs4
 from datetime import date
 from datetime import datetime

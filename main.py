@@ -8,7 +8,7 @@ from async_rss import async_rss_template
 from async_api import async_api_template
 from async_bs4 import async_bs4_template
 from async_sel import async_selenium_template
-from async_indeed import async_indeed_template
+#from async_indeed import async_indeed_template
 from utils.handy import LoggingMasterCrawler
 
 #SET UP LOGGING

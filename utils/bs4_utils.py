@@ -34,7 +34,7 @@ async def async_main_strategy_bs4(pipeline:str, cur: cursor, session: aiohttp.Cl
 	
 
 	jobs = soup.select(elements_path["jobs_path"])
-	assert jobs is not None, "No elements found for 'jobs' in main_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
+	assert jobs is not None, "No elements found for 'jobs' in async_main_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
 	for job in jobs:
 
 		# create a new dictionary to store the data for the current job
@@ -91,6 +91,77 @@ async def async_main_strategy_bs4(pipeline:str, cur: cursor, session: aiohttp.Cl
 		"timestamp": total_timestamps
 	}
 
+async def async_container_strategy_bs4(pipeline:str, cur: cursor, session: aiohttp.ClientSession, elements_path: dict, name:str, inner_link_tag:str, follow_link:str, soup: bs4.BeautifulSoup):
+	
+	total_links = []
+	total_titles = []
+	total_pubdates = []
+	total_locations = []
+	total_descriptions = []
+	total_timestamps = []
+	
+
+	# Identify the container with all the jobs
+	container = soup.select_one(elements_path["jobs_path"])
+	assert container is not None, "No elements found for 'container' in async_container_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
+
+	titles = container.select(elements_path["title_path"])
+	assert titles is not None, "No elements found for 'titles' in async_container_strategy_bs4(). Check 'elements_path[\"title_path\"]'"
+
+	links = container.select(elements_path["link_path"])
+	assert links is not None, "No elements found for 'links' in async_container_strategy_bs4(). Check 'elements_path[\"link_path\"]'"
+
+	descriptions = container.select(elements_path["description_path"])
+	assert descriptions is not None, "No elements found for 'descriptions' in async_container_strategy_bs4(). Check 'elements_path[\"description_path\"]'"
+
+	locations = container.select(elements_path["location_path"])
+	assert locations is not None, "No elements found for 'locations' in async_container_strategy_bs4(). Check 'elements_path[\"location_path\"]'"
+
+	# Identify the elements for each job
+	job_elements = list(zip(
+		titles,
+		links,
+		descriptions,
+		locations,
+	))
+
+	assert all(len(element) == len(job_elements[0]) for element in job_elements), "Not all elements have the same length in async_container_strategy_bs4()"
+
+
+	for title_element, link_element, description_element, location_element in job_elements:
+		# Process the elements for the current job
+		title = title_element.get_text(strip=True) if title_element else "NaN"
+		link = name + link_element.get("href") if link_element else "NaN"
+		description_default = description_element.get_text(strip=True) if description_element else "NaN"
+		location = location_element.get_text(strip=True) if location_element else "NaN"
+
+		# Check if the link exists in the database
+		if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+			logging.info(f"""Link {link} already found in the db. Skipping... """)
+			continue
+
+		# Follow the link if specified
+		description = ''
+		if follow_link == "yes":
+			description = await async_follow_link(session, link, description, inner_link_tag, description_default)
+
+
+		# add the data for the current job to the rows list
+		total_titles.append(title)
+		total_links.append(link)
+		total_descriptions.append(description)
+		total_locations.append(location)
+		total_pubdates.append(date.today())
+		total_timestamps.append(datetime.now())
+
+	return {
+		"title": total_titles,
+		"link": total_links,
+		"description": total_descriptions,
+		"pubdate": total_pubdates,
+		"location": total_locations,
+		"timestamp": total_timestamps
+	}
 
 
 def clean_postgre_bs4(df: pd.DataFrame, save_data_path: str, function_postgre: Callable):

@@ -288,7 +288,7 @@ async def async_selenium_template(pipeline):
 	logging.info(f"Async Sel finished! all in: {elapsed_time:.2f} seconds.")
 	
 async def main():
-	await async_selenium_template("TEST")
+	await async_selenium_template("PROD")
 
 if __name__ == "__main__":
 	asyncio.run(main())

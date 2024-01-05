@@ -10328,3 +10328,759 @@ Async RSS readers finished! all in: 279.36 seconds.
 2024-01-03 12:00:12,661 INFO: 
 ALL ASYNC CRAWLERS FINISHED IN: 4.67 minutes.
 
+2024-01-03 14:00:08,327 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-03 14:00:08,328 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 14:00:09,240 INFO: 
+Async RSS crawler deployed!
+
+2024-01-03 14:00:09,904 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-03 14:00:10,618 INFO: 
+Async Sel crawler deployed!
+
+2024-01-03 14:00:34,798 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 14:00:34,820 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-03 14:00:35,948 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6965
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6965
+
+2024-01-03 14:00:36,051 INFO: 
+Async Sel finished! all in: 25.43 seconds.
+
+2024-01-03 14:01:41,215 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 14:01:41,409 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-03 14:01:42,369 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6965
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 6965
+
+2024-01-03 14:01:42,453 INFO: 
+Async BS4 crawlers finished! all in: 92.53 seconds.
+
+2024-01-03 14:02:08,686 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 14:02:08,733 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 14:02:14,425 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6965
+Total number of unique jobs: 14
+Current total count of jobs in PostgreSQL: 6979
+
+2024-01-03 14:02:14,505 INFO: 
+Async APIs finished! all in: 126.16 seconds.
+
+2024-01-03 14:03:52,955 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 14:03:53,092 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-03 14:03:54,141 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6979
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 6981
+
+2024-01-03 14:03:54,219 INFO: 
+Async RSS readers finished! all in: 224.96 seconds.
+
+2024-01-03 14:03:54,224 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.76 minutes.
+
+2024-01-03 18:00:08,284 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-03 18:00:08,285 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 18:00:08,932 INFO: 
+Async RSS crawler deployed!
+
+2024-01-03 18:00:09,448 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-03 18:00:09,951 INFO: 
+Async Sel crawler deployed!
+
+2024-01-03 18:01:12,640 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 18:02:11,041 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-03 18:02:12,746 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6981
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 6985
+
+2024-01-03 18:02:12,850 INFO: 
+Async Sel finished! all in: 122.91 seconds.
+
+2024-01-03 18:02:12,852 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 18:02:12,870 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-03 18:02:14,083 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6985
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 6987
+
+2024-01-03 18:02:14,177 INFO: 
+Async BS4 crawlers finished! all in: 124.73 seconds.
+
+2024-01-03 18:02:37,830 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 18:02:37,858 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-03 18:02:39,608 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6987
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 6997
+
+2024-01-03 18:02:39,701 INFO: 
+Async RSS readers finished! all in: 150.78 seconds.
+
+2024-01-03 18:03:12,091 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 18:03:12,138 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 18:03:19,508 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 6997
+Total number of unique jobs: 46
+Current total count of jobs in PostgreSQL: 7043
+
+2024-01-03 18:03:19,639 INFO: 
+Async APIs finished! all in: 191.36 seconds.
+
+2024-01-03 18:03:19,640 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 3.19 minutes.
+
+2024-01-03 22:00:06,454 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-03 22:00:06,455 INFO: 
+Async API crawler deployed!.
+
+2024-01-03 22:00:07,087 INFO: 
+Async RSS crawler deployed!
+
+2024-01-03 22:00:07,701 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-03 22:00:08,281 INFO: 
+Async Sel crawler deployed!
+
+2024-01-03 22:00:29,304 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-03 22:01:17,614 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-03 22:01:22,575 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7043
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 7047
+
+2024-01-03 22:01:23,285 INFO: 
+Async Sel finished! all in: 75.01 seconds.
+
+2024-01-03 22:01:30,246 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 22:01:30,262 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-03 22:01:31,548 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7047
+Total number of unique jobs: 3
+Current total count of jobs in PostgreSQL: 7050
+
+2024-01-03 22:01:31,652 INFO: 
+Async BS4 crawlers finished! all in: 83.96 seconds.
+
+2024-01-03 22:01:59,956 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 22:01:59,986 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-03 22:02:02,903 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7050
+Total number of unique jobs: 17
+Current total count of jobs in PostgreSQL: 7067
+
+2024-01-03 22:02:03,026 INFO: 
+Async RSS readers finished! all in: 115.94 seconds.
+
+2024-01-03 22:02:27,882 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-03 22:02:27,931 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-03 22:02:32,856 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7067
+Total number of unique jobs: 27
+Current total count of jobs in PostgreSQL: 7094
+
+2024-01-03 22:02:33,029 INFO: 
+Async APIs finished! all in: 146.58 seconds.
+
+2024-01-03 22:02:33,033 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.44 minutes.
+
+2024-01-04 08:22:21,303 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-04 08:22:21,303 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 08:22:24,139 INFO: 
+Async RSS crawler deployed!
+
+2024-01-04 08:22:24,618 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-04 08:22:25,118 INFO: 
+Async Sel crawler deployed!
+
+2024-01-04 08:23:36,135 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-04 08:23:36,135 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 08:23:36,807 INFO: 
+Async RSS crawler deployed!
+
+2024-01-04 08:23:37,295 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-04 08:23:37,879 INFO: 
+Async Sel crawler deployed!
+
+2024-01-04 08:24:16,478 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-04 08:24:56,375 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [Connection reset by peer]. Moving to the next API...
+
+2024-01-04 08:24:56,381 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 08:24:56,400 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-04 08:24:58,969 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7094
+Total number of unique jobs: 21
+Current total count of jobs in PostgreSQL: 7115
+
+2024-01-04 08:24:59,066 INFO: 
+Async APIs finished! all in: 82.91 seconds.
+
+2024-01-04 08:25:03,501 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-04 08:25:04,886 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7115
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 7121
+
+2024-01-04 08:25:04,975 INFO: 
+Async Sel finished! all in: 87.10 seconds.
+
+2024-01-04 08:25:12,791 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 08:25:12,806 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-04 08:25:16,169 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7121
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 7131
+
+2024-01-04 08:25:16,253 INFO: 
+Async BS4 crawlers finished! all in: 98.96 seconds.
+
+2024-01-04 08:25:46,625 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 08:25:46,650 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-04 08:25:51,131 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7131
+Total number of unique jobs: 32
+Current total count of jobs in PostgreSQL: 7163
+
+2024-01-04 08:25:51,238 INFO: 
+Async RSS readers finished! all in: 134.44 seconds.
+
+2024-01-04 08:25:51,241 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.25 minutes.
+
+2024-01-04 10:00:08,669 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-04 10:00:08,670 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 10:00:09,425 INFO: 
+Async RSS crawler deployed!
+
+2024-01-04 10:00:09,920 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-04 10:00:10,404 INFO: 
+Async Sel crawler deployed!
+
+2024-01-04 10:00:27,033 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-04 10:00:27,061 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-04 10:00:28,146 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7163
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 7163
+
+2024-01-04 10:00:28,268 INFO: 
+Async Sel finished! all in: 17.85 seconds.
+
+2024-01-04 10:01:23,242 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 10:01:23,289 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-04 10:01:24,135 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7163
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 7163
+
+2024-01-04 10:01:24,216 INFO: 
+Async BS4 crawlers finished! all in: 74.30 seconds.
+
+2024-01-04 10:01:43,639 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 10:01:43,673 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-04 10:01:45,283 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7163
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 7168
+
+2024-01-04 10:01:45,384 INFO: 
+Async RSS readers finished! all in: 95.96 seconds.
+
+2024-01-04 10:02:35,181 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 10:02:35,214 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-04 10:02:42,538 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7168
+Total number of unique jobs: 68
+Current total count of jobs in PostgreSQL: 7236
+
+2024-01-04 10:02:42,645 INFO: 
+Async APIs finished! all in: 153.98 seconds.
+
+2024-01-04 10:02:42,647 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.57 minutes.
+
+2024-01-04 14:00:07,429 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-04 14:00:07,429 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 14:00:08,048 INFO: 
+Async RSS crawler deployed!
+
+2024-01-04 14:00:08,539 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-04 14:00:09,110 INFO: 
+Async Sel crawler deployed!
+
+2024-01-04 14:00:23,998 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-04 14:01:10,934 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 14:01:11,022 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-04 14:01:12,260 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7236
+Total number of unique jobs: 2
+Current total count of jobs in PostgreSQL: 7238
+
+2024-01-04 14:01:12,370 INFO: 
+Async BS4 crawlers finished! all in: 63.84 seconds.
+
+2024-01-04 14:01:19,968 ERROR: 
+Encountered a request error: Server disconnected. Moving to the next API...
+
+2024-01-04 14:01:19,969 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 14:01:19,980 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-04 14:01:22,726 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7238
+Total number of unique jobs: 23
+Current total count of jobs in PostgreSQL: 7261
+
+2024-01-04 14:01:22,820 INFO: 
+Async APIs finished! all in: 75.40 seconds.
+
+2024-01-04 14:01:24,705 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-04 14:01:26,828 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7261
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 7271
+
+2024-01-04 14:01:26,926 INFO: 
+Async Sel finished! all in: 77.82 seconds.
+
+2024-01-04 14:01:45,507 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 14:01:45,542 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-04 14:01:47,483 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7271
+Total number of unique jobs: 15
+Current total count of jobs in PostgreSQL: 7286
+
+2024-01-04 14:01:47,585 INFO: 
+Async RSS readers finished! all in: 99.54 seconds.
+
+2024-01-04 14:01:47,586 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.67 minutes.
+
+2024-01-04 18:00:03,782 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-04 18:00:03,782 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 18:00:04,344 INFO: 
+Async RSS crawler deployed!
+
+2024-01-04 18:00:04,814 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-04 18:00:05,305 INFO: 
+Async Sel crawler deployed!
+
+2024-01-04 18:00:22,544 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-04 18:01:12,064 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 18:01:12,101 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-04 18:01:13,233 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7286
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 7286
+
+2024-01-04 18:01:13,336 INFO: 
+Async BS4 crawlers finished! all in: 68.52 seconds.
+
+2024-01-04 18:01:15,696 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-04 18:01:17,365 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7286
+Total number of unique jobs: 8
+Current total count of jobs in PostgreSQL: 7294
+
+2024-01-04 18:01:17,449 INFO: 
+Async Sel finished! all in: 72.15 seconds.
+
+2024-01-04 18:01:37,465 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 18:01:37,496 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-04 18:01:38,709 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7294
+Total number of unique jobs: 6
+Current total count of jobs in PostgreSQL: 7300
+
+2024-01-04 18:01:38,785 INFO: 
+Async RSS readers finished! all in: 94.44 seconds.
+
+2024-01-04 18:02:07,253 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 18:02:07,277 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-04 18:02:11,095 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7300
+Total number of unique jobs: 31
+Current total count of jobs in PostgreSQL: 7331
+
+2024-01-04 18:02:11,192 INFO: 
+Async APIs finished! all in: 127.41 seconds.
+
+2024-01-04 18:02:11,197 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.12 minutes.
+
+2024-01-04 22:00:08,384 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-04 22:00:08,385 INFO: 
+Async API crawler deployed!.
+
+2024-01-04 22:00:09,003 INFO: 
+Async RSS crawler deployed!
+
+2024-01-04 22:00:09,898 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-04 22:00:10,380 INFO: 
+Async Sel crawler deployed!
+
+2024-01-04 22:00:31,142 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-04 22:01:19,007 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 22:01:19,043 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-04 22:01:19,981 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7331
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 7332
+
+2024-01-04 22:01:20,083 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-04 22:01:21,313 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7332
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 7336
+
+2024-01-04 22:01:21,393 INFO: 
+Async Sel finished! all in: 71.01 seconds.
+
+2024-01-04 22:01:21,393 INFO: 
+Async BS4 crawlers finished! all in: 71.50 seconds.
+
+2024-01-04 22:01:37,234 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 22:01:37,270 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-04 22:01:38,391 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7336
+Total number of unique jobs: 5
+Current total count of jobs in PostgreSQL: 7341
+
+2024-01-04 22:01:38,464 INFO: 
+Async RSS readers finished! all in: 89.46 seconds.
+
+2024-01-04 22:02:11,299 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-04 22:02:11,339 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-04 22:02:15,446 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7341
+Total number of unique jobs: 44
+Current total count of jobs in PostgreSQL: 7385
+
+2024-01-04 22:02:15,525 INFO: 
+Async APIs finished! all in: 127.15 seconds.
+
+2024-01-04 22:02:15,528 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.12 minutes.
+
+2024-01-05 00:19:55,703 INFO: 
+Async Sel crawler deployed!
+
+2024-01-05 00:20:08,626 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-05 00:20:09,505 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7416
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 7416
+
+2024-01-05 00:20:09,604 INFO: 
+Async Sel finished! all in: 13.90 seconds.
+
+2024-01-05 06:10:14,285 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-05 06:10:14,286 INFO: 
+Async API crawler deployed!.
+
+2024-01-05 06:10:15,070 INFO: 
+Async RSS crawler deployed!
+
+2024-01-05 06:10:15,732 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-05 06:10:18,970 INFO: 
+Async Sel crawler deployed!
+
+2024-01-05 06:10:37,667 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-05 06:10:37,687 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-05 06:10:38,778 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7416
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 7416
+
+2024-01-05 06:10:38,872 INFO: 
+Async Sel finished! all in: 19.90 seconds.
+
+2024-01-05 06:11:31,160 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 06:11:31,217 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-05 06:11:32,155 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7416
+Total number of unique jobs: 1
+Current total count of jobs in PostgreSQL: 7417
+
+2024-01-05 06:11:32,235 INFO: 
+Async BS4 crawlers finished! all in: 76.51 seconds.
+
+2024-01-05 06:11:59,903 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 06:11:59,929 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-05 06:12:02,164 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7417
+Total number of unique jobs: 15
+Current total count of jobs in PostgreSQL: 7432
+
+2024-01-05 06:12:02,272 INFO: 
+Async RSS readers finished! all in: 107.21 seconds.
+
+2024-01-05 06:12:25,602 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 06:12:25,638 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-05 06:12:29,421 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7432
+Total number of unique jobs: 31
+Current total count of jobs in PostgreSQL: 7463
+
+2024-01-05 06:12:29,528 INFO: 
+Async APIs finished! all in: 135.25 seconds.
+
+2024-01-05 06:12:29,530 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.25 minutes.
+
+2024-01-05 10:00:04,923 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-05 10:00:04,924 INFO: 
+Async API crawler deployed!.
+
+2024-01-05 10:00:05,874 INFO: 
+Async RSS crawler deployed!
+
+2024-01-05 10:00:06,575 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-05 10:00:07,257 INFO: 
+Async Sel crawler deployed!
+
+2024-01-05 10:02:32,122 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+

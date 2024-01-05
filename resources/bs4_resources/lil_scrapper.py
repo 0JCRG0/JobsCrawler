@@ -5,9 +5,9 @@ import re
 #url_to_follow = "https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl"
 #selector = 'div[data-qa="btn-apply-bottom"] a'
 
-url_to_follow = "https://app.remotesome.com/jobs/?page=0"
+url_to_follow = "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1"
 
-selector = 'job-detail mb-4'
+selector = '.row.job-tile-title'
 
 def FollowLinkEchoJobs(url_to_follow: str, selector: str) -> str:
 
@@ -19,16 +19,16 @@ def FollowLinkEchoJobs(url_to_follow: str, selector: str) -> str:
 	# Use the 'html.parser' to parse the page
 	soup = BeautifulSoup(r.content, 'html.parser')
 
-	print(soup.prettify())
-	
+	#print(soup.prettify())
+	title = soup.select(selector)
 	# Find the 'div' tag with the class "job-detail mb-4"
 	#div_tag = soup.find('div', {'class': selector})
 
 	# Get the text of the 'div' tag
-	#text = div_tag.get_text()
+	text = title
 
 	# Print the text
-	#print(text)
+	print(text)
 	
 
 FollowLinkEchoJobs(url_to_follow, selector)

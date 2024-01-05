@@ -1,0 +1,223 @@
+#!/usr/local/bin/python3
+
+import bs4
+import pandas as pd
+import re
+import pretty_errors
+from urllib.error import HTTPError
+import timeit
+import traceback
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from dateutil.parser import parse
+from datetime import date, datetime
+import json
+import logging
+import requests
+import os
+from utils.FollowLink import async_follow_link
+from dotenv import load_dotenv
+from utils.handy import *
+from utils.bs4_utils import *
+import asyncio
+import aiohttp
+""" LOAD THE ENVIRONMENT VARIABLES """
+
+#TODO: Move Himalayas to API
+
+load_dotenv()
+
+JSON_PROD = os.environ.get('JSON_PROD_BS4')
+JSON_TEST = os.environ.get('JSON_TEST_BS4')
+SAVE_PATH = os.environ.get('SAVE_PATH_BS4')
+user = os.environ.get('user')
+password = os.environ.get('password')
+host = os.environ.get('host')
+port = os.environ.get('port')
+database = os.environ.get('database')
+
+
+async def async_bs4_template(pipeline):
+
+	#start timer
+	start_time = asyncio.get_event_loop().time()
+
+	""" DETERMINING WHICH JSON TO LOAD & WHICH POSTGRE TABLE WILL BE USED """
+
+	LoggingMasterCrawler()
+
+	#DETERMINING WHICH JSON TO LOAD & WHICH POSTGRE TABLE WILL BE USED
+
+	JSON = None
+	POSTGRESQL = None
+
+	if JSON_PROD and JSON_TEST:
+		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
+
+	# Check that JSON and POSTGRESQL have been assigned valid values
+	if JSON is None or POSTGRESQL is None or URL_DB is None:
+		logging.error("Error: JSON and POSTGRESQL and URL_DB must be assigned valid values.")
+		return
+
+	logging.info("Async BS4 crawler deployed!.")
+	print(POSTGRESQL,type(POSTGRESQL), URL_DB, type(URL_DB))
+
+	# Create a connection to the database & cursor to check for existent links
+	conn = psycopg2.connect(URL_DB)
+	cur = conn.cursor()
+
+	async def fetch(url, session):
+		async with session.get(url) as response:
+			return await response.text()
+
+	async def async_bs4_crawler(session, url_obj):
+		
+		rows = {}
+
+		name = url_obj['name']
+		logging.info(f"{name} has started")
+		logging.debug(f"All parameters for {name}:\n{url_obj}")
+		# Extract the 'url' key from the current dictionary and assign it to the variable 'url_prefix'
+		url_prefix = url_obj['url']
+		# Extract the first dictionary from the 'elements_path' list in the current dictionary and assign it to the variable 'elements_path'
+		elements_path = url_obj['elements_path'][0]
+			#Each site is different to a json file can give us the flexibility we need
+		pages = url_obj['pages_to_crawl']
+		#Extract the number in which the range is going to start from
+		start_point = url_obj['start_point']
+		#strategy
+		strategy = url_obj['strategy']
+		#Whether to follow link
+		follow_link = url_obj['follow_link']
+		#Extract inner link if follow link
+		inner_link_tag = url_obj['inner_link_tag']
+		# You need to +1 because range is exclusive
+		async with aiohttp.ClientSession() as session:
+
+				for i in range(start_point, pages + 1):
+					url = url_prefix + str(i)
+
+					try:
+						html = await fetch(url, session)
+						soup = bs4.BeautifulSoup(html, 'lxml')
+						logging.info(f"Crawling {url} with {strategy} strategy")
+						
+						if strategy == "main":
+							try:
+								rows = await async_main_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+							except Exception as e:
+								error_message = f"{type(e).__name__} in async_main_strategy_bs4() **while** crawling {url}. {traceback.format_exc()}"
+								print(error_message)
+								logging.error(f"{error_message}\n")
+								continue
+						elif strategy == "container":
+							# Identify the container with all the jobs
+							container = soup.select_one(elements_path["jobs_path"])
+
+							try:
+								if container:
+									# Identify the elements for each job
+									job_elements = list(zip(
+										container.select(elements_path["title_path"]),
+										container.select(elements_path["link_path"]),
+										container.select(elements_path["description_path"]),
+										container.select(elements_path["location_path"]),
+									))
+
+									for title_element, link_element, description_element, location_element in job_elements:
+										# Process the elements for the current job
+										title = title_element.get_text(strip=True) if title_element else "NaN"
+										link = name + link_element.get("href") if link_element else "NaN"
+										description_default = description_element.get_text(strip=True) if description_element else "NaN"
+										location = location_element.get_text(strip=True) if location_element else "NaN"
+
+										# Check if the link exists in the database
+										if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+											continue
+
+										# Follow the link if specified
+										description = ''
+										if follow_link == "yes":
+											description = await async_follow_link(session, link, description, inner_link_tag, description_default)
+
+										# Add the data for the current job to the lists
+										"""
+										total_titles.append(title)
+										total_links.append(link)
+										total_descriptions.append(description)
+										total_locations.append(location)
+										total_pubdates.append(date.today())
+										total_timestamps.append(datetime.now())"""
+							except:
+								print(f"An error occurred: CONTAINER NOT FOUND.. Skipping URL {url}")
+								logging.error(f"An error occurred: CONTAINER NOT FOUND.. Skipping URL {url}")
+								continue
+					except aiohttp.ClientError as e:
+						print(f"An error occurred: {e}. Skipping URL {url}")
+						logging.error(f"An error occurred: {e}. Skipping URL {url}")
+						continue
+		return rows
+
+	async def gather_json_loads_bs4(session):
+		with open(JSON) as f:
+			data = json.load(f)
+			urls = data[0]["urls"]
+
+		tasks = [async_bs4_crawler(session, url_obj) for url_obj in urls]
+		results = await asyncio.gather(*tasks)
+
+		# Combine the results
+		combined_data = {
+			"title": [],
+			"link": [],
+			"description": [],
+			"pubdate": [],
+			"location": [],
+			"timestamp": [],
+		}
+		for result in results:
+			for key in combined_data:
+				combined_data[key].extend(result[key])
+		
+		title_len = len(combined_data["title"])
+		link_len = len(combined_data["link"])
+		description_len = len(combined_data["description"])
+		pubdate_len = len(combined_data["pubdate"])
+		location_len = len(combined_data["location"])
+		timestamp_len = len(combined_data["timestamp"])
+
+		lengths_info = """
+			Titles: {}
+			Links: {}
+			Descriptions: {}
+			Pubdates: {}
+			Locations: {}
+			Timestamps: {}
+			""".format(
+				title_len,
+				link_len,
+				description_len,
+				pubdate_len,
+				location_len,
+				timestamp_len
+			)
+
+		if title_len == link_len == description_len == pubdate_len == location_len == timestamp_len:
+			logging.info("BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE")
+			clean_postgre_bs4(df=pd.DataFrame(combined_data), save_data_path=SAVE_PATH, function_postgre=POSTGRESQL)
+		else:
+			logging.error(f"ERROR ON ASYNC BS4. LISTS DO NOT HAVE SAME LENGHT. FIX {lengths_info}")
+			pass
+	
+	async with aiohttp.ClientSession() as session:
+		await gather_json_loads_bs4(session)
+
+	elapsed_time = asyncio.get_event_loop().time() - start_time
+	print(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.", "\n")
+	logging.info(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.")
+
+async def main():
+	await async_bs4_template("TEST")
+
+if __name__ == "__main__":
+	asyncio.run(main())

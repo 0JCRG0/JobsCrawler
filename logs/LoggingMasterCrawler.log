@@ -11610,3 +11610,27 @@ Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) a
 2024-01-05 00:19:04,229 WARNING: 
 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F83F712C00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c82a249d3e3cf7713a8ddf6412da14dd
 
+2024-01-05 12:59:04,328 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-05 12:59:04,973 INFO: 
+https://www.python.org has started
+
+2024-01-05 12:59:05,602 INFO: 
+Crawling https://www.python.org/jobs/?page=1 with main strategy
+
+2024-01-05 12:59:10,353 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 12:59:10,369 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-05 12:59:13,085 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 417
+Total number of unique jobs: 21
+Current total count of jobs in PostgreSQL: 438
+
+2024-01-05 12:59:13,188 INFO: 
+Async BS4 crawlers finished! all in: 8.86 seconds.
+

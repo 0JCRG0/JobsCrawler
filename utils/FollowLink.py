@@ -23,7 +23,7 @@ async def async_follow_link(session, followed_link, description_final, inner_lin
 
 	async with session.get(followed_link) as link_res:
 		if link_res.status == 200:
-			print(f"""CONNECTION ESTABLISHED ON {followed_link}""", "\n")
+			logging.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
 			link_text = await link_res.text()
 			link_soup = bs4.BeautifulSoup(link_text, 'html.parser')
 			description_tag = link_soup.select_one(inner_link_tag)

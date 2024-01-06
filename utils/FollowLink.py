@@ -36,19 +36,8 @@ async def async_follow_link(session, followed_link, description_final, inner_lin
 		elif link_res.status == 403:
 			print(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""", "\n")
 			logging.warning(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""")
-			#START SEL
-			options = webdriver.FirefoxOptions()
-			options.add_argument('-headless')
-			# Start the session
-			driver = webdriver.Firefox(options=options)
-			driver.get(followed_link)
-			description_tag = driver.find_element(By.CSS_SELECTOR, inner_link_tag)
-			if description_tag:
-				description_final = description_tag.get_attribute("innerHTML")
-				return description_final
-			else:
-				description_final = 'NaN'
-				return description_final
+			description_final = 'NaN'
+			return description_final
 		else:
 			print(f"""CONNECTION FAILED ON {followed_link}. STATUS CODE: "{link_res.status}". Getting the description from default.""", "\n")
 			logging.warning(f"""CONNECTION FAILED ON {followed_link}. STATUS CODE: "{link_res.status}". Getting the description from default.""")

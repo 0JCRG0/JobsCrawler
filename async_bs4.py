@@ -20,6 +20,7 @@ from dotenv import load_dotenv
 from utils.handy import *
 from utils.bs4_utils import *
 import asyncio
+import random
 import aiohttp
 """ LOAD THE ENVIRONMENT VARIABLES """
 
@@ -55,160 +56,66 @@ async def async_bs4_template(pipeline):
 		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
 
 	# Check that JSON and POSTGRESQL have been assigned valid values
-	if JSON is None or POSTGRESQL is None or URL_DB is None:
-		logging.error("Error: JSON and POSTGRESQL and URL_DB must be assigned valid values.")
-		return
+	assert JSON is not None and POSTGRESQL is not None and URL_DB is not None, "JSON, POSTGRESQL, and URL_DB must be assigned valid values."
 
 	logging.info("Async BS4 crawler deployed!.")
-	print(POSTGRESQL,type(POSTGRESQL), URL_DB, type(URL_DB))
 
 	# Create a connection to the database & cursor to check for existent links
 	conn = psycopg2.connect(URL_DB)
 	cur = conn.cursor()
 
 	async def fetch(url, session):
-		async with session.get(url) as response:
+		#Get a random header agent from the pool of headers
+		random_user_agent = {'User-Agent': random.choice(user_agents)}
+		async with session.get(url, headers=random_user_agent) as response:
+			response_text = response.text
+			logging.debug(f"random_header: {random_user_agent}\nresponse_text: {response_text}")
 			return await response.text()
 
 	async def async_bs4_crawler(session, url_obj):
+		
+		rows = {}
 
-		total_links = []
-		total_titles = []
-		total_pubdates = []
-		total_locations = []
-		total_descriptions = []
-		total_timestamps = []
-		rows = {"title": total_titles,
-				"link": total_links,
-				"description": total_descriptions,
-				"pubdate": total_pubdates,
-				"location": total_locations,
-				"timestamp": total_timestamps}
-
-		#Extract the name of the crawler
 		name = url_obj['name']
-		print("\n", f"{name} has started", "\n")
-		# Extract the 'url' key from the current dictionary and assign it to the variable 'url_prefix'
 		url_prefix = url_obj['url']
-		# Extract the first dictionary from the 'elements_path' list in the current dictionary and assign it to the variable 'elements_path'
 		elements_path = url_obj['elements_path'][0]
-			#Each site is different to a json file can give us the flexibility we need
 		pages = url_obj['pages_to_crawl']
-		#Extract the number in which the range is going to start from
 		start_point = url_obj['start_point']
-		#strategy
 		strategy = url_obj['strategy']
-		#Whether to follow link
 		follow_link = url_obj['follow_link']
-		#Extract inner link if follow link
 		inner_link_tag = url_obj['inner_link_tag']
-		# You need to +1 because range is exclusive
+
+		logging.info(f"{name} has started")
+		logging.debug(f"All parameters for {name}:\n{url_obj}")
+		
 		async with aiohttp.ClientSession() as session:
-				# ... (same URL processing logic as before)
 
 				for i in range(start_point, pages + 1):
 					url = url_prefix + str(i)
 
 					try:
-						html = await fetch(url, session) # type: ignore
+						html = await fetch(url, session)
 						soup = bs4.BeautifulSoup(html, 'lxml')
-						print(f"Crawling {url} with {strategy} strategy")
+						logging.info(f"Crawling {url} with {strategy} strategy")
+						
 						if strategy == "main":
-							jobs = soup.select(elements_path["jobs_path"])
-							if jobs:
-								try:
-									for job in jobs:
-
-										# create a new dictionary to store the data for the current job
-										job_data = {}
-
-										title_element = job.select_one(elements_path["title_path"])
-										job_data["title"] = title_element.text if title_element else "NaN"
-
-										link_element = job.select_one(elements_path["link_path"])
-										job_data["link"] = name + link_element["href"] if link_element else "NaN"
-
-										""" WHETHER THE LINK IS IN THE DB """
-										if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
-											#logging.info(f"""Link {job_data["link"]} already found in the db. Skipping... """)
-											continue
-										else:
-											""" WHETHER TO FOLLOW LINK """
-											description_default = job.select_one(elements_path["description_path"])
-											default = description_default.text if description_default else "NaN"
-											if follow_link == "yes":
-												job_data["description"] = ""
-												job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
-											else:
-												# Get the descriptions & append it to its list
-												job_data["description"]= default
-
-											#PUBDATE
-											today = date.today()
-											job_data["pubdate"] = today
-
-											location_element = job.select_one(elements_path["location_path"])
-											job_data["location"] = location_element.text if location_element else "NaN"
-
-											timestamp = datetime.now() # type: ignore
-											job_data["timestamp"] = timestamp
-
-													# add the data for the current job to the rows list
-											total_links.append(job_data["link"])
-											total_titles.append(job_data["title"])
-											total_pubdates.append(job_data["pubdate"])
-											total_locations.append(job_data["location"])
-											total_timestamps.append(job_data["timestamp"])
-											total_descriptions.append(job_data["description"])
-								except (Exception) as e:
-									error_message = f"{type(e).__name__} **while** getting the elements in {url}. {traceback.format_exc()}"
-									print(error_message)
-									logging.error(f"{error_message}\n")
-									continue
-						else:
-							# Identify the container with all the jobs
-							container = soup.select_one(elements_path["jobs_path"])
-
 							try:
-								if container:
-									# Identify the elements for each job
-									job_elements = list(zip(
-										container.select(elements_path["title_path"]),
-										container.select(elements_path["link_path"]),
-										container.select(elements_path["description_path"]),
-										container.select(elements_path["location_path"]),
-									))
-
-									for title_element, link_element, description_element, location_element in job_elements:
-										# Process the elements for the current job
-										title = title_element.get_text(strip=True) if title_element else "NaN"
-										link = name + link_element.get("href") if link_element else "NaN"
-										description_default = description_element.get_text(strip=True) if description_element else "NaN"
-										location = location_element.get_text(strip=True) if location_element else "NaN"
-
-										# Check if the link exists in the database
-										if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
-											continue
-
-										# Follow the link if specified
-										description = ''
-										if follow_link == "yes":
-											description = await async_follow_link(session, link, description, inner_link_tag, description_default)
-
-										# Add the data for the current job to the lists
-										total_titles.append(title)
-										total_links.append(link)
-										total_descriptions.append(description)
-										total_locations.append(location)
-										total_pubdates.append(date.today())
-										total_timestamps.append(datetime.now())
-							except:
-								print(f"An error occurred: CONTAINER NOT FOUND.. Skipping URL {url}")
-								logging.error(f"An error occurred: CONTAINER NOT FOUND.. Skipping URL {url}")
+								rows = await async_main_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+							except Exception as e:
+								error_message = f"{type(e).__name__} in **async_main_strategy_bs4()** while crawling {url}.\n\n{e}"
+								logging.error(f"{error_message}\n", exc_info=True)
 								continue
-					except aiohttp.ClientError as e:
-						print(f"An error occurred: {e}. Skipping URL {url}")
-						logging.error(f"An error occurred: {e}. Skipping URL {url}")
+						
+						elif strategy == "container":
+							try:
+								rows = await async_container_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+							except Exception as e:
+								error_message = f"{type(e).__name__} in **async_container_strategy_bs4()** while crawling {url}.\n\n{e}"
+								logging.error(f"{error_message}\n", exc_info=True)
+								continue
+					except Exception as e:
+						error_message = f"{type(e).__name__} occured before deploying crawling strategy on {url}.\n\n{e}"
+						logging.error(f"{error_message}\n", exc_info=True)
 						continue
 		return rows
 

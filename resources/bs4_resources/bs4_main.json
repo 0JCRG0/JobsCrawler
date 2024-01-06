@@ -90,6 +90,24 @@
                         "description_path": ".card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary"
                     }
                 ]
+            },
+            {
+                "name": "https://4dayweek.io",
+                "url": "https://4dayweek.io/remote-jobs/fully-remote/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "container",
+                "follow_link": "yes",
+                "inner_link_tag": ".row.job-content-wrapper .col-sm-8.cols.hero-left",
+                "elements_path": [
+                        {
+                        "jobs_path": ".row.jobs-list",
+                        "title_path": ".row.job-tile-title",
+                        "link_path": ".row.job-tile-title h3 a",
+                        "location_path": ".job-tile-tags .remote-country",
+                        "description_path": ".job-tile-tags .tile-salary"
+                    }
+                ]
             }
         ]
     }

@@ -1,37 +1,62 @@
 import requests
 from bs4 import BeautifulSoup
+import urllib.request
 import re
+import sys
+from selenium import webdriver
+from bs4 import BeautifulSoup
 
 #url_to_follow = "https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl"
 #selector = 'div[data-qa="btn-apply-bottom"] a'
 
-url_to_follow = "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1"
+#url_to_follow = "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1"
+url_to_follow = "https://www.remoteimpact.io/?page=1"
 
-selector = '.row.job-tile-title'
+container_selector = '.row.jobs-list'
+title_selector = '.row.job-tile-title'
+location_selector = '.job-tile-tags .remote-country'
+description_default = '.job-tile-tags .tile-salary'
+link = '.row.job-tile-title h3 a'
+inner_link = '.row.job-content-wrapper .col-sm-8.cols.hero-left'
 
-def FollowLinkEchoJobs(url_to_follow: str, selector: str) -> str:
+def FollowLinkEchoJobs(url_to_follow: str) -> str:
+	#service = Service()
+	#options = webdriver.ChromeOptions()
+	
+	driver = webdriver.Chrome(options=options, service=service)
+	driver = webdriver.Chrome()
+	#driver.implicitly_wait(4)
+	driver.get(url_to_follow)
+
+	html = driver.page_source
+	
+	soup = BeautifulSoup(html, 'lxml')
+
+	print(soup.prettify())
+
+
+
 
 	
 	# Make a request to the website
-	r = requests.get(url_to_follow)
-	r.content
+	#r = requests.get(url_to_follow)
+	#r.content
 
 	# Use the 'html.parser' to parse the page
-	soup = BeautifulSoup(r.content, 'html.parser')
+	#soup = BeautifulSoup(r.content, 'html.parser')
 
 	#print(soup.prettify())
-	title = soup.select(selector)
+	#container = soup.select_one(".row.jobs-list")
+	
+	#title = container.select(selector)
 	# Find the 'div' tag with the class "job-detail mb-4"
 	#div_tag = soup.find('div', {'class': selector})
-
-	# Get the text of the 'div' tag
-	text = title
-
-	# Print the text
-	print(text)
+	#description_tag = soup.select_one(inner_link)
 	
+	#description_final = description_tag.text
+	#print(description_final)
 
-FollowLinkEchoJobs(url_to_follow, selector)
+FollowLinkEchoJobs(url_to_follow)
 
 exit(0)
 

@@ -23,7 +23,7 @@
                 "api": "https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest",
                 "class_json": "dict",
                 "follow_link": "yes",
-                "inner_link_tag": ".flex.flex-col.-mt-10.px-4.sm\\:px-0.justify-between.max-w-6xl.mx-auto.min-h-screen .flex.flex-col.sm\\:flex-row .basis-3\\/4.flex.flex-col.sm\\:pr-20 ",
+                "inner_link_tag": "job-detail mb-4",
                 "elements_path": [
                     {
                         "dict_tag": "result",

@@ -16186,3 +16186,147 @@ Current total count of jobs in PostgreSQL: 7474
 2024-01-05 18:00:10,934 INFO: 
 Async BS4 crawlers finished! all in: 23.58 seconds.
 
+2024-01-05 18:03:41,249 INFO: 
+Async API crawler deployed!.
+
+2024-01-05 18:03:41,878 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-05 18:04:36,840 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-05 18:04:36,895 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-05 18:04:47,937 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7474
+Total number of unique jobs: 104
+Current total count of jobs in PostgreSQL: 7578
+
+2024-01-05 18:04:48,048 INFO: 
+Async APIs finished! all in: 66.80 seconds.
+
+2024-01-08 10:21:37,171 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 10:22:04,402 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 10:22:04,510 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 10:22:30,392 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 5
+Total number of unique jobs: 200
+Current total count of jobs in PostgreSQL: 205
+
+2024-01-08 10:22:30,483 INFO: 
+Async APIs finished! all in: 53.31 seconds.
+
+2024-01-08 10:52:44,944 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 10:53:06,344 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 10:53:06,428 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 10:53:23,338 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 200
+Current total count of jobs in PostgreSQL: 200
+
+2024-01-08 10:53:23,424 INFO: 
+Async APIs finished! all in: 38.48 seconds.
+
+2024-01-08 10:56:23,625 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 10:56:43,529 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 10:56:43,605 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 10:57:00,539 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 200
+Current total count of jobs in PostgreSQL: 200
+
+2024-01-08 10:57:00,621 INFO: 
+Async APIs finished! all in: 36.97 seconds.
+
+2024-01-08 10:59:39,017 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 10:59:56,438 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 10:59:56,517 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 11:00:13,616 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 200
+Current total count of jobs in PostgreSQL: 200
+
+2024-01-08 11:00:13,695 INFO: 
+Async APIs finished! all in: 34.68 seconds.
+
+2024-01-08 11:15:10,022 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 11:15:27,611 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 11:15:27,650 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 11:18:29,629 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 11:18:50,285 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 11:18:50,370 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 11:19:07,028 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 200
+Current total count of jobs in PostgreSQL: 200
+
+2024-01-08 11:19:07,110 INFO: 
+Async APIs finished! all in: 37.48 seconds.
+
+2024-01-08 11:21:26,225 INFO: 
+Async API crawler deployed!.
+
+2024-01-08 11:21:26,878 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-08 11:21:57,712 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [None]. Moving to the next API...
+
+2024-01-08 11:21:57,713 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 11:21:57,803 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-08 11:22:21,372 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7578
+Total number of unique jobs: 282
+Current total count of jobs in PostgreSQL: 7860
+
+2024-01-08 11:22:21,458 INFO: 
+Async APIs finished! all in: 55.24 seconds.
+

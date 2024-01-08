@@ -354,24 +354,6 @@ async def link_exists_in_db(link, cur, pipeline):
 
 """ OTHER UTILS """
 
-## Function to choose class_json_strategy
-def class_json_strategy(data, elements_path, class_json):
-	"""
-	
-	Given that some JSON requests are either
-	dict or list we need to access the 1st dict if 
-	needed
-	
-	"""
-	if class_json == "dict":                    
-		# Access the key of the dictionary, which is a list of job postings
-		jobs = data[elements_path["dict_tag"]]
-		return jobs
-	elif class_json == "list":
-		jobs = data
-		return jobs
-
-
 def test_or_prod(
 		pipeline: str,
 		json_prod: str,

@@ -16330,3 +16330,451 @@ Current total count of jobs in PostgreSQL: 7860
 2024-01-08 11:22:21,458 INFO: 
 Async APIs finished! all in: 55.24 seconds.
 
+2024-01-08 11:44:24,837 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-08 11:44:25,475 INFO: 
+https://ai-jobs.net has started
+
+2024-01-08 11:44:26,422 INFO: 
+Crawling https://ai-jobs.net/?reg=7 with container strategy
+
+2024-01-08 11:44:36,661 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 11:44:36,699 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-08 11:44:45,781 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 200
+Total number of unique jobs: 100
+Current total count of jobs in PostgreSQL: 300
+
+2024-01-08 11:44:45,867 INFO: 
+Async BS4 crawlers finished! all in: 21.03 seconds.
+
+2024-01-08 11:48:06,275 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-08 11:48:06,870 INFO: 
+https://ai-jobs.net has started
+
+2024-01-08 11:48:07,805 INFO: 
+Crawling https://ai-jobs.net/?reg=7 with container strategy
+
+2024-01-08 11:48:08,318 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/108274-machine-learning-engineer-computer-vision/
+
+
+2024-01-08 11:48:08,725 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107340-part-time-student-data-analyst-remote/
+
+
+2024-01-08 11:48:09,128 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107320-junior-data-developer-sql-serverssis/
+
+
+2024-01-08 11:48:09,547 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107300-principal-data-engineer-india/
+
+
+2024-01-08 11:48:09,968 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107290-data-engineer-marketing-solutions-remote/
+
+
+2024-01-08 11:48:10,372 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107090-manager-data-integrations-analyst/
+
+
+2024-01-08 11:48:10,783 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107152-senior-machine-learning-engineer/
+
+
+2024-01-08 11:48:11,178 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107197-sr-director-product-marketing-ai-analytics/
+
+
+2024-01-08 11:48:11,587 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107418-sql-server-bi-developer-ssisssrs/
+
+
+2024-01-08 11:48:11,959 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107179-senior-team-lead-c-software-engineer-embedded-controls-autonomous-vehicles-remote/
+
+
+2024-01-08 11:48:12,382 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107206-salessolutions-architect-enterprise-imaging-radiology-and-cardiology/
+
+
+2024-01-08 11:48:12,800 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107192-elasticsearch-senior-software-engineer-data-management/
+
+
+2024-01-08 11:48:13,342 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107109-data-analyst-bo-remote/
+
+
+2024-01-08 11:48:13,729 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107292-senior-data-engineer/
+
+
+2024-01-08 11:48:14,176 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107365-ai-compiler-engineer/
+
+
+2024-01-08 11:48:14,542 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107252-senior-data-scientist/
+
+
+2024-01-08 11:48:14,943 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107193-elasticsearch-senior-software-developer-data-management/
+
+
+2024-01-08 11:48:15,487 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107261-senior-data-scientist/
+
+
+2024-01-08 11:48:15,872 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106930-analyst-data-management/
+
+
+2024-01-08 11:48:16,267 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107299-data-engineer/
+
+
+2024-01-08 11:48:16,648 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107081-big-data-engineer-work-from-home/
+
+
+2024-01-08 11:48:17,057 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107191-elasticsearch-senior-software-engineer-data-management/
+
+
+2024-01-08 11:48:17,615 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107180-principal-team-lead-controls-embedded-software-autonomous-vehicles-remote/
+
+
+2024-01-08 11:48:18,025 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107260-sr-data-scientist/
+
+
+2024-01-08 11:48:18,441 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106783-experienced-data-analyst/
+
+
+2024-01-08 11:48:18,847 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107135-director-aiml/
+
+
+2024-01-08 11:48:19,403 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106742-business-intelligence-analyst/
+
+
+2024-01-08 11:48:19,812 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107139-sustainable-finance-research-analyst/
+
+
+2024-01-08 11:48:20,194 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107286-director-data-engineering-remote/
+
+
+2024-01-08 11:48:20,755 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107237-data-science-manager-growth/
+
+
+2024-01-08 11:48:21,323 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107115-data-analyst-ii/
+
+
+2024-01-08 11:48:21,688 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107117-data-analytics/
+
+
+2024-01-08 11:48:22,116 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107194-elasticsearch-engineering-manager-java-search/
+
+
+2024-01-08 11:48:22,539 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107137-junior-full-stack-engineer-aiml/
+
+
+2024-01-08 11:48:22,971 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/107258-senior-data-scientist/
+
+
+2024-01-08 11:48:23,414 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106478-ai-architect-part-time-hourly-freelancer/
+
+
+2024-01-08 11:48:23,864 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106556-manager-customer-success-engineering-aiml/
+
+
+2024-01-08 11:48:24,273 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106600-data-science-engineer-data-engineering-team/
+
+
+2024-01-08 11:48:24,683 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106632-senior-data-analyst/
+
+
+2024-01-08 11:48:25,149 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106473-temporary-research-scientist-us-based-remote-opportunity/
+
+
+2024-01-08 11:48:25,761 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106756-senior-data-quality-integrity-engineer/
+
+
+2024-01-08 11:48:26,162 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106609-lead-data-scientist/
+
+
+2024-01-08 11:48:26,565 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106606-data-scientist-intern/
+
+
+2024-01-08 11:48:26,994 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106706-data-engineer/
+
+
+2024-01-08 11:48:27,369 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106789-data-analyst-energy-efficiency-programs/
+
+
+2024-01-08 11:48:27,759 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106482-machine-learning-engineer/
+
+
+2024-01-08 11:48:28,172 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106561-ai-engineer/
+
+
+2024-01-08 11:48:28,598 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106673-elasticsearch-software-engineering-manager-distributed-systems/
+
+
+2024-01-08 11:48:29,020 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106793-analyst-data-analysis-consulting-remote/
+
+
+2024-01-08 11:48:29,388 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106671-senior-ml-engineer/
+
+
+2024-01-08 11:48:29,824 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106611-2023-2024-remote-software-engineering-and-data-science-intern/
+
+
+2024-01-08 11:48:30,264 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106755-data-quality-analyst-remote/
+
+
+2024-01-08 11:48:30,633 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106481-director-of-data-science-machine-learning-pricing/
+
+
+2024-01-08 11:48:30,993 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106567-head-of-data/
+
+
+2024-01-08 11:48:31,360 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106630-senior-data-analyst-customer-success/
+
+
+2024-01-08 11:48:31,767 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106649-data-analyst/
+
+
+2024-01-08 11:48:32,118 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106599-data-scientist-ii/
+
+
+2024-01-08 11:48:32,543 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106387-arity-data-scientist-remote/
+
+
+2024-01-08 11:48:32,960 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106781-healthcare-data-analyst/
+
+
+2024-01-08 11:48:33,414 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106469-senior-c-deep-learning-engineer-gpu-optimization/
+
+
+2024-01-08 11:48:33,798 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106759-data-quality-analyst/
+
+
+2024-01-08 11:48:34,230 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106557-senior-customer-success-engineer-aiml/
+
+
+2024-01-08 11:48:34,630 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106644-sr-data-analyst/
+
+
+2024-01-08 11:48:34,984 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106536-director-of-data-engineering-battery-storage/
+
+
+2024-01-08 11:48:35,434 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106631-data-analyst/
+
+
+2024-01-08 11:48:35,805 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106391-senior-data-scientist-customer-growth-marketing/
+
+
+2024-01-08 11:48:36,212 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106203-sr-data-engineer/
+
+
+2024-01-08 11:48:36,601 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106390-principal-data-scientist-customer-growth-marketing/
+
+
+2024-01-08 11:48:37,037 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106596-senior-data-scientist-sales/
+
+
+2024-01-08 11:48:37,462 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106666-business-intelligence-analyst-amplitude/
+
+
+2024-01-08 11:48:37,901 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106672-elasticsearch-software-engineering-manager-distributed-systems/
+
+
+2024-01-08 11:48:38,328 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106658-business-intelligence-manager/
+
+
+2024-01-08 11:48:38,701 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106202-sr-data-engineer/
+
+
+2024-01-08 11:48:39,036 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106042-data-scientist/
+
+
+2024-01-08 11:48:39,390 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106158-finance-data-analyst-riga-or-tallinn/
+
+
+2024-01-08 11:48:39,760 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/105991-data-operations-analyst/
+
+
+2024-01-08 11:48:40,150 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106028-senior-data-scientist-viator/
+
+
+2024-01-08 11:48:40,547 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106145-senior-data-analyst-finance/
+
+
+2024-01-08 11:48:40,928 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106112-analytics-engineer/
+
+
+2024-01-08 11:48:41,318 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/105996-data-engineer-data-engineering-team/
+
+
+2024-01-08 11:48:41,691 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106013-data-engineer/
+
+
+2024-01-08 11:48:42,083 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106205-data-engineer-iii/
+
+
+2024-01-08 11:48:42,451 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106058-research-analyst-digital-assets-indices/
+
+
+2024-01-08 11:48:42,823 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106106-python-engineer-data-modeling-infrastructure/
+
+
+2024-01-08 11:48:43,236 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106073-principal-software-engineer-machine-learning-platform/
+
+
+2024-01-08 11:48:43,645 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106149-senior-clinical-data-analyst/
+
+
+2024-01-08 11:48:44,252 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106067-elasticsearch-engineering-manager-java-search/
+
+
+2024-01-08 11:48:44,637 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106370-software-engineer-etlab-initio-remote/
+
+
+2024-01-08 11:48:45,189 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106020-senior-manager-engineering-data-products/
+
+
+2024-01-08 11:48:45,610 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106153-senior-data-analyst-financial-reporting/
+
+
+2024-01-08 11:48:46,032 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106060-senior-ai-researcher-phd-required/
+
+
+2024-01-08 11:48:46,410 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106164-data-analyst-pleno-core-logistics/
+
+
+2024-01-08 11:48:46,791 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106103-lead-data-manager/
+
+
+2024-01-08 11:48:47,194 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106006-data-engineer-ii-nbc-sports-next/
+
+
+2024-01-08 11:48:47,574 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106046-senior-data-scientist-inteligencia-artificial-aplicada/
+
+
+2024-01-08 11:48:47,966 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106141-data-architect-clearance-required/
+
+
+2024-01-08 11:48:48,368 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106015-data-engineer/
+
+
+2024-01-08 11:48:48,795 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/106005-azuredatabricks-data-engineer-empower-remotecanada-based/
+
+
+2024-01-08 11:48:49,359 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/105820-data-analyst/
+
+
+2024-01-08 11:48:49,746 INFO: 
+CONNECTION ESTABLISHED ON https://ai-jobs.net/job/105854-ai-research-intern-privacy-and-security/
+
+
+2024-01-08 11:48:49,791 INFO: 
+BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-08 11:48:49,833 INFO: 
+Finished bs4 crawlers. Results below ⬇︎
+
+2024-01-08 11:48:59,406 INFO: 
+to_managed_test_postgre() ON test report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 100
+Current total count of jobs in PostgreSQL: 100
+
+2024-01-08 11:48:59,485 INFO: 
+Async BS4 crawlers finished! all in: 53.21 seconds.
+

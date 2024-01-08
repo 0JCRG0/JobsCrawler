@@ -3,6 +3,24 @@ from utils.handy import *
 import pandas as pd
 from typing import Callable
 
+## Function to choose class_json_strategy
+def class_json_strategy(data, elements_path, class_json) -> dict | list:
+	"""
+	
+	Given that some JSON requests are either
+	dict or list we need to access the 1st dict if 
+	needed.
+	
+	"""
+	if class_json == "dict":                    
+		# Access the key of the dictionary, which is a list of job postings
+		jobs = data[elements_path["dict_tag"]]
+		return jobs
+	elif class_json == "list":
+		jobs = data
+		return jobs
+
+
 def clean_postgre_api(df: pd.DataFrame, save_path:str, function_postgre: Callable):
 	for col in df.columns:
 		if col == 'description':

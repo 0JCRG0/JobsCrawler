@@ -108,6 +108,24 @@
                         "description_path": ".job-tile-tags .tile-salary"
                     }
                 ]
+            },
+            {
+                "name": "https://ai-jobs.net",
+                "url": "https://ai-jobs.net/?reg=",
+                "pages_to_crawl": 7,
+                "start_point": 7,
+                "strategy": "container",
+                "follow_link": "yes",
+                "inner_link_tag": "#job-description",
+                "elements_path": [
+                        {
+                        "jobs_path": ".list-group.list-group-flush.mb-4",
+                        "title_path": ".col.pt-2.pb-3 .h5.mb-2.text-body-emphasis",
+                        "link_path": ".col.pt-2.pb-3",
+                        "location_path": ".col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break",
+                        "description_path": ".col.pt-2.pb-3 .badge.rounded-pill.text-bg-light"
+                    }
+                ]
             }
         ]
     }

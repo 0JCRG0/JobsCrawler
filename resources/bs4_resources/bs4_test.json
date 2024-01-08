@@ -2,20 +2,20 @@
     {
         "urls": [
             {
-                "name": "https://www.remoteimpact.io",
-                "url": "https://www.remoteimpact.io/?page=",
-                "pages_to_crawl": 1,
-                "start_point": 1,
+                "name": "https://ai-jobs.net",
+                "url": "https://ai-jobs.net/?reg=",
+                "pages_to_crawl": 7,
+                "start_point": 7,
                 "strategy": "container",
                 "follow_link": "yes",
-                "inner_link_tag": "body",
+                "inner_link_tag": "#job-description",
                 "elements_path": [
                         {
-                        "jobs_path": ".bg-gray-100.overflow-hidden.min-h-screen.flex.flex-col.relative .container.mx-auto.pt-4.mb-12.false div main",
-                        "title_path": "a div div div .lg\\:text-lg.font-bold.pr-2.line-clamp-1",
-                        "link_path": "a",
-                        "location_path": "a div div div div .text-slate-700.line-clamp-1",
-                        "description_path": "a div div div .text-lg"
+                        "jobs_path": ".list-group.list-group-flush.mb-4",
+                        "title_path": ".col.pt-2.pb-3 .h5.mb-2.text-body-emphasis",
+                        "link_path": ".col.pt-2.pb-3",
+                        "location_path": ".col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break",
+                        "description_path": ".col.pt-2.pb-3 .badge.rounded-pill.text-bg-light"
                     }
                 ]
             }

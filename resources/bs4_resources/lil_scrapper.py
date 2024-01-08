@@ -10,51 +10,36 @@ from bs4 import BeautifulSoup
 #selector = 'div[data-qa="btn-apply-bottom"] a'
 
 #url_to_follow = "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1"
-url_to_follow = "https://www.remoteimpact.io/?page=1"
+url_to_follow = "https://ai-jobs.net/?reg=7"
 
-container_selector = '.row.jobs-list'
-title_selector = '.row.job-tile-title'
-location_selector = '.job-tile-tags .remote-country'
-description_default = '.job-tile-tags .tile-salary'
-link = '.row.job-tile-title h3 a'
+container_selector = '.list-group.list-group-flush.mb-4'
+title_selector = '.col.pt-2.pb-3 .h5.mb-2.text-body-emphasis'
+location_selector = '.col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 span'
+description_default = '.col.pt-2.pb-3 .badge.rounded-pill.text-bg-light'
+link_selector = '.col.pt-2.pb-3'
 inner_link = '.row.job-content-wrapper .col-sm-8.cols.hero-left'
 
 def FollowLinkEchoJobs(url_to_follow: str) -> str:
-	#service = Service()
-	#options = webdriver.ChromeOptions()
-	
-	driver = webdriver.Chrome(options=options, service=service)
-	driver = webdriver.Chrome()
-	#driver.implicitly_wait(4)
-	driver.get(url_to_follow)
-
-	html = driver.page_source
-	
-	soup = BeautifulSoup(html, 'lxml')
-
-	print(soup.prettify())
-
-
-
-
-	
 	# Make a request to the website
-	#r = requests.get(url_to_follow)
-	#r.content
+	r = requests.get(url_to_follow)
+	r.content
 
 	# Use the 'html.parser' to parse the page
-	#soup = BeautifulSoup(r.content, 'html.parser')
+	soup = BeautifulSoup(r.content, 'html.parser')
 
 	#print(soup.prettify())
-	#container = soup.select_one(".row.jobs-list")
+	container = soup.select_one(container_selector)
 	
-	#title = container.select(selector)
+	title = container.select(title_selector)
+	location = container.select(location_selector)
+	description = container.select(description_default)
+	link = container.select(link_selector)
 	# Find the 'div' tag with the class "job-detail mb-4"
 	#div_tag = soup.find('div', {'class': selector})
 	#description_tag = soup.select_one(inner_link)
 	
 	#description_final = description_tag.text
-	#print(description_final)
+	print(title, location, description, link)
 
 FollowLinkEchoJobs(url_to_follow)
 

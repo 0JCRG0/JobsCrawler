@@ -178,7 +178,7 @@ async def async_bs4_template(pipeline):
 	logging.info(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.")
 
 async def main():
-	await async_bs4_template("PROD")
+	await async_bs4_template("TEST")
 
 if __name__ == "__main__":
 	asyncio.run(main())

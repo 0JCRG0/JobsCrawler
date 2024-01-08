@@ -3,7 +3,7 @@ import requests
 import pretty_errors
 
 #Request the api...
-url = 'https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest'
+url = 'https://himalayas.app/jobs/api'
 
 #response = requests.get(url)
 headers = {"User-Agent": "my-app"}
@@ -14,7 +14,11 @@ if response.status_code == 200:
     data = json.loads(response.text)
     #data = response.json()
 
+    #pretty_json = json.dumps(data, indent=4)
+    #print(pretty_json, type(data))
+    #data = data["jobs"][0]
     pretty_json = json.dumps(data, indent=4)
-    print(pretty_json, type(data))
+
+    print(pretty_json)
 else:
     print("aaaa")

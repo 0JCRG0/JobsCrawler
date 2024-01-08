@@ -12,7 +12,7 @@ from datetime import date
 from datetime import datetime
 from dotenv import load_dotenv
 from utils.handy import *
-from utils.api_utils import clean_postgre_api
+from utils.api_utils import clean_postgre_api, class_json_strategy
 from utils.FollowLink import *
 import asyncio
 import aiohttp
@@ -73,18 +73,19 @@ async def async_api_template(pipeline):
 		api = api_obj['api']
 		# Extract the first dictionary from the 'elements_path' list in the current dictionary and assign it to the variable 'elements_path'
 		elements_path = api_obj['elements_path'][0]
+		location_default = elements_path["location_default"]
 		#Extract the class of the JSON
 		class_json = api_obj['class_json']
 		#Whether to follow link
 		follow_link = api_obj['follow_link']
 		#Extract inner link if follow link
 		inner_link_tag = api_obj['inner_link_tag']
-		headers = {"User-Agent": "my-app"}
+		random_user_agent = {'User-Agent': random.choice(user_agents)}
 		
 		async with aiohttp.ClientSession() as session:
 			try:
 				print("\n", f"Requesting {name}...")
-				async with session.get(api, headers=headers) as response:
+				async with session.get(api, headers=random_user_agent) as response:
 					if response.status != 200:
 						print(f"Received non-200 response ({response.status}) for API: {api}. Skipping...")
 						logging.warning(f"Received non-200 response ({response.status}) for API: {api}. Skipping...")
@@ -124,7 +125,7 @@ async def async_api_template(pipeline):
 										job_data["pubdate"] = today
 										
 										#locations
-										job_data["location"] = job.get(elements_path["location_tag"], "NaN")
+										job_data["location"] = job.get(elements_path["location_tag"], "NaN") or location_default
 										
 										#TIMESTAMP
 										timestamp = datetime.now()

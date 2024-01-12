@@ -17609,3 +17609,216 @@ AVERAGE NUMBER OF TOKENS PER BATCH: 877.0388349514564
 APPROXIMATE COST OF EMBEDDING: $0 USD
 
 
+2024-01-12 02:38:45,552 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-12 02:38:45,552 INFO: 
+Async API crawler deployed!.
+
+2024-01-12 02:38:46,089 INFO: 
+Async RSS crawler deployed!
+
+2024-01-12 02:38:46,595 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-12 02:38:47,444 INFO: 
+https://dribbble.com has started
+
+2024-01-12 02:38:47,444 INFO: 
+https://www.python.org has started
+
+2024-01-12 02:38:47,444 INFO: 
+ has started
+
+2024-01-12 02:38:47,444 INFO: 
+https://vuejobs.com has started
+
+2024-01-12 02:38:47,444 INFO: 
+https://remote.co has started
+
+2024-01-12 02:38:47,444 INFO: 
+https://4dayweek.io has started
+
+2024-01-12 02:38:47,444 INFO: 
+https://ai-jobs.net has started
+
+2024-01-12 02:38:47,476 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [getaddrinfo failed]. Moving to the next API...
+
+2024-01-12 02:38:51,921 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://www.python.org/jobs/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:38:51,952 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://vuejobs.com/jobs/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:38:51,952 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://4dayweek.io/remote-jobs/fully-remote/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:39:13,286 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://dribbble.com/jobs?anywhere=true&keyword=&page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:39:30,500 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/blablacar-community-relations-specialist-spanish-speaking-65876
+
+
+2024-01-12 02:39:32,298 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://ai-jobs.net/?reg=7.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:39:32,313 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://www.fossjobs.net/jobs-worldwide/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:39:32,313 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/relativity-relativity-service-delivery-manager-ediscovery-65875
+
+
+2024-01-12 02:39:32,439 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://remote.co/international-remote-jobs/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 02:39:32,676 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/spendesk-senior-product-manager-cards-accounting-65874
+
+
+2024-01-12 02:39:53,003 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cision-customer-success-associate-65873
+
+
+2024-01-12 02:40:07,889 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-12 02:40:07,967 INFO: 
+Finished API crawlers. Results below \u2b07\ufe0e
+
+2024-01-12 02:40:09,705 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8891
+Total number of unique jobs: 12
+Current total count of jobs in PostgreSQL: 8903
+
+2024-01-12 02:40:09,784 INFO: 
+Async APIs finished! all in: 84.24 seconds.
+
+2024-01-12 02:40:09,784 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-12 02:40:09,784 INFO: 
+Finished RSS Reader. Results below \u2b07\ufe0e
+
+2024-01-12 02:40:10,810 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8903
+Total number of unique jobs: 4
+Current total count of jobs in PostgreSQL: 8907
+
+2024-01-12 02:40:10,889 INFO: 
+Async RSS readers finished! all in: 84.80 seconds.
+
+2024-01-12 02:40:10,889 ERROR: 
+Exception occurred in function async_bs4_template: KeyError in 'title'
+NoneType: None
+
+NoneType: None
+2024-01-12 02:40:10,889 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.42 minutes.
+
+2024-01-12 02:40:10,889 INFO: 
+Pipeline is set to 'PROD'. Jobs will be sent to Render PostgreSQL's main_jobs table
+
+2024-01-12 02:40:10,889 INFO: 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt taken from C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt.txt
+
+2024-01-12 02:40:11,998 INFO: 
+
+Jobs selected for embedding: 119.\Temporal new max_id: 9026
+
+2024-01-12 02:40:12,625 INFO: 
+
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 119
+TOTAL NUMBER OF TOKENS: 104465
+MAX TOKENS PER BATCH: 1000
+NUMBER OF TRUNCATIONS: 36
+AVERAGE NUMBER OF TOKENS PER BATCH: 877.8571428571429
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+
+2024-01-12 02:42:46,578 INFO: 
+
+embeddings_e5_base_v2_to_df() done! Elapsed time: 2.57 minutes.
+
+2024-01-12 02:42:47,097 INFO: 
+Pipeline selected = PROD. Sending jobs to DO's prod Postgre
+
+2024-01-12 02:43:00,148 INFO: 
+embeddings_e5_base_v2 Table Report on DO's prod Postgre:
+Total count of jobs before crawling: 8717
+Total number of unique jobs: 119
+Current total count of jobs in PostgreSQL: 8836
+
+2024-01-12 02:43:00,251 INFO: 
+PostgreToEmbeddings has finished correctly! Writing the max_id: 9026 on C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt
+

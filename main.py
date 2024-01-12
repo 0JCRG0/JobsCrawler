@@ -8,6 +8,7 @@ from async_rss import async_rss_template
 from async_api import async_api_template
 from async_bs4 import async_bs4_template
 from async_sel import async_selenium_template
+from PostgreToEmbeddings import PostgreToEmbeddings
 #from async_indeed import async_indeed_template
 from utils.handy import LoggingMasterCrawler
 
@@ -61,6 +62,7 @@ async def async_main(pipeline):
 
 async def main():
 	await async_main("PROD")
+	await asyncio.to_thread(PostgreToEmbeddings, pipeline="PROD", embedding_model="e5_base_v2")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+	asyncio.run(main())

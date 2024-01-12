@@ -15,7 +15,7 @@ Env variables
 """
 
 load_dotenv('.env')
-SAVE_PATH = os.getenv("SAVE_PATH")
+#SAVE_PATH = os.getenv("SAVE_PATH")
 LOCAL_POSTGRE_URL = os.environ.get("LOCAL_POSTGRE_URL")
 #RENDER_POSTGRE_URL = os.environ.get("RENDER_POSTGRE_URL")
 LOGGER_MAIN = os.environ.get("LOGGER_PATH")
@@ -44,7 +44,8 @@ def PostgreToEmbeddings(pipeline: str, embedding_model: str):
 		raise e
 
 	#Uncomment after first call
-	#MAX_ID_FILE_PATH = SAVE_PATH + MAX_ID_FILE
+	MAX_ID_FILE_PATH = 'C:\\Users\\juanc\\DevBox\\JobsCrawler\\' + MAX_ID_FILE_PATH
+	print(MAX_ID_FILE_PATH)
 	with open(f"{MAX_ID_FILE_PATH}", "r") as f:
 		MAX_ID = int(f.read())
 

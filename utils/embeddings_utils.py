@@ -1,4 +1,3 @@
-#!/Users/juanreyesgarcia/Dev/Python/Embeddings/JobsEmbeddings/env1/bin/python
 
 import re
 import tiktoken
@@ -18,11 +17,14 @@ import os
 
 load_dotenv(".env")
 LOGGER_MAIN = os.getenv("LOGGER_MAIN")
-LOGGER_TEST = os.getenv("LOGGER_TEST")
 SAVE_PATH = os.getenv("SAVE_PATH")
-RENDER_POSTGRE_URL = os.environ.get("RENDER_POSTGRE_URL")
 LOCAL_POSTGRE_URL = os.environ.get("LOCAL_POSTGRE_URL")
 DATABASE_URL = os.environ.get("DATABASE_URL_DO")
+MAX_ID_TEST = os.environ.get("MAX_ID_TEST")
+MAX_ID_POST = os.environ.get("MAX_ID_POST")
+MAX_ID_LOCAL = os.environ.get("MAX_ID_LOCAL")
+
+
 
 
 

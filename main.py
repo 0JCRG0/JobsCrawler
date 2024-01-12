@@ -43,7 +43,7 @@ async def async_main(pipeline):
 		safe_call(async_api_template, 'async_api_template', pipeline),
 		safe_call(async_rss_template, 'async_rss_template', pipeline),
 		safe_call(async_bs4_template, 'async_bs4_template', pipeline),
-		safe_call(async_selenium_template, 'async_selenium_template', pipeline),
+		#safe_call(async_selenium_template, 'async_selenium_template', pipeline),
 		#safe_call(async_indeed_template, 'async_indeed_template', "MX", "", pipeline)
 	)
 

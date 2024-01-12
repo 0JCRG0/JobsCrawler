@@ -16778,3 +16778,479 @@ Current total count of jobs in PostgreSQL: 100
 2024-01-08 11:48:59,485 INFO: 
 Async BS4 crawlers finished! all in: 53.21 seconds.
 
+2024-01-11 23:56:23,683 INFO: 
+Pipeline is set to 'PROD'. Jobs will be sent to Render PostgreSQL's main_jobs table
+
+2024-01-12 00:03:32,517 INFO: 
+Pipeline is set to 'PROD'. Jobs will be sent to Render PostgreSQL's main_jobs table
+
+2024-01-12 00:03:32,517 INFO: 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: data\max_id_prod.txt taken from data\max_id_prod.txt.txt
+
+2024-01-12 00:03:35,792 INFO: 
+
+Jobs selected for embedding: 1662.\Temporal new max_id: 8746
+
+2024-01-12 00:03:50,295 INFO: 
+
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 1662
+TOTAL NUMBER OF TOKENS: 1582062
+MAX TOKENS PER BATCH: 1000
+NUMBER OF TRUNCATIONS: 568
+AVERAGE NUMBER OF TOKENS PER BATCH: 951.9025270758123
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+
+2024-01-12 00:07:12,220 INFO: 
+Pipeline is set to 'PROD'. Jobs will be sent to Render PostgreSQL's main_jobs table
+
+2024-01-12 00:07:12,220 INFO: 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: data\max_id_prod.txt taken from data\max_id_prod.txt.txt
+
+2024-01-12 00:07:12,993 ERROR: 
+No new rows. Be sure crawler is populating the respective table. Aborting execution.
+
+2024-01-12 00:07:43,938 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-12 00:07:43,954 INFO: 
+Async API crawler deployed!.
+
+2024-01-12 00:07:44,505 INFO: 
+Async RSS crawler deployed!
+
+2024-01-12 00:07:45,004 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-12 00:07:45,571 INFO: 
+Async Sel crawler deployed!
+
+2024-01-12 00:07:46,516 INFO: 
+https://dribbble.com has started
+
+2024-01-12 00:07:46,516 INFO: 
+https://www.python.org has started
+
+2024-01-12 00:07:46,516 INFO: 
+ has started
+
+2024-01-12 00:07:46,516 INFO: 
+https://vuejobs.com has started
+
+2024-01-12 00:07:46,516 INFO: 
+https://remote.co has started
+
+2024-01-12 00:07:46,516 INFO: 
+https://4dayweek.io has started
+
+2024-01-12 00:07:46,516 INFO: 
+https://ai-jobs.net has started
+
+2024-01-12 00:08:07,180 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331A9434D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c525f6318bef6555528fdae8ab72af8e/source
+
+2024-01-12 00:08:11,252 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331A958650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c525f6318bef6555528fdae8ab72af8e/source
+
+2024-01-12 00:08:15,300 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331AD58610>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c525f6318bef6555528fdae8ab72af8e/source
+
+2024-01-12 00:08:19,390 ERROR: 
+MaxRetryError **before** getting the elements in https://www.remoteimpact.io/?page=1. Traceback (most recent call last):
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\http\client.py", line 1294, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\http\client.py", line 1340, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\http\client.py", line 1289, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\http\client.py", line 1048, in _send_output
+    self.send(msg)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\http\client.py", line 986, in send
+    self.connect()
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002331AD58E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 118, in async_sel_crawler
+    await fetch_sel(url, driver) # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_sel.py", line 76, in fetch_sel
+    return driver.page_source
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\request.py", line 77, in request
+    return self.request_encode_url(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\request.py", line 99, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connectionpool.py", line 827, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=55175): Max retries exceeded with url: /session/c525f6318bef6555528fdae8ab72af8e/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331AD58E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+
+
+2024-01-12 00:08:23,445 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331A943D10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c525f6318bef6555528fdae8ab72af8e
+
+2024-01-12 00:08:27,507 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331ADE4AD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c525f6318bef6555528fdae8ab72af8e
+
+2024-01-12 00:08:31,569 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002331ADE5550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c525f6318bef6555528fdae8ab72af8e
+
+2024-01-12 00:08:39,706 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [getaddrinfo failed]. Moving to the next API...
+
+2024-01-12 00:08:39,738 INFO: 
+Finished Selenium_Crawlers. Results below \u2b07\ufe0e
+
+2024-01-12 00:08:40,509 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8627
+Total number of unique jobs: 0
+Current total count of jobs in PostgreSQL: 8627
+
+2024-01-12 00:08:40,589 INFO: 
+Async Sel finished! all in: 54.82 seconds.
+
+2024-01-12 00:08:45,325 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://www.fossjobs.net/jobs-worldwide/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:08:45,329 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://www.python.org/jobs/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:08:56,194 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://ai-jobs.net/?reg=7.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:08:56,245 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://vuejobs.com/jobs/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:08:56,257 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://4dayweek.io/remote-jobs/fully-remote/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:09:17,528 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://dribbble.com/jobs?anywhere=true&keyword=&page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:09:17,559 ERROR: 
+FeatureNotFound occured before deploying crawling strategy on https://remote.co/international-remote-jobs/?page=1.
+
+Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 98, in async_bs4_crawler
+    soup = bs4.BeautifulSoup(html, 'lxml')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+2024-01-12 00:09:17,559 ERROR: 
+Encountered a request error: Cannot connect to host echojobs.io:443 ssl:default [None]. Moving to the next API...
+
+2024-01-12 00:09:33,316 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/adept-software-engineer-product-65858
+
+
+2024-01-12 00:09:33,554 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-12 00:09:33,724 INFO: 
+Finished API crawlers. Results below \u2b07\ufe0e
+
+2024-01-12 00:09:47,311 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8627
+Total number of unique jobs: 124
+Current total count of jobs in PostgreSQL: 8751
+
+2024-01-12 00:09:47,437 INFO: 
+Async APIs finished! all in: 123.48 seconds.
+
+2024-01-12 00:09:47,437 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/activecampaign-business-development-representative-65857
+
+
+2024-01-12 00:09:47,939 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cision-analyst-part-time-weekend-hours-65856
+
+
+2024-01-12 00:09:48,443 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/optiv-sr-consultant-sailpoint-iiq-engineer-i-remote-usa-65855
+
+
+2024-01-12 00:09:49,009 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/xero-senior-data-engineer-65854
+
+
+2024-01-12 00:09:49,936 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/binance-senior-internal-auditor-it-audit-65853
+
+
+2024-01-12 00:09:50,425 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/supraoracles-rust-based-implementation-internship-65852
+
+
+2024-01-12 00:09:50,961 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/caseware-senior-pricing-and-revenue-analyst-65851
+
+
+2024-01-12 00:09:51,589 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/adcouncil-assistant-media-manager-65850
+
+
+2024-01-12 00:09:52,123 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/backmarket-payroll-and-hris-specialist-65849
+
+
+2024-01-12 00:09:52,629 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/binance-product-operations-65848
+
+
+2024-01-12 00:09:53,172 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cision-sales-development-representative-uki-65847
+
+
+2024-01-12 00:09:53,643 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/kinaxis-senior-ux-researcher-65846
+
+
+2024-01-12 00:09:54,344 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/dun-bradstreet-strategic-account-executive-iii-east-r-15546-65845
+
+
+2024-01-12 00:09:54,952 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/xero-workplace-experience-coordinator-65844
+
+
+2024-01-12 00:09:55,516 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/affirm-senior-software-engineer-fullstack-consumer-pricing-65843
+
+
+2024-01-12 00:09:55,992 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/1password-account-executive-enterprise-65842
+
+
+2024-01-12 00:09:56,538 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/pointclickcare-vice-president-customer-success-a-p-us-65841
+
+
+2024-01-12 00:09:57,085 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/keboola-senior-marketing-event-manager-65840
+
+
+2024-01-12 00:09:58,013 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/dun-bradstreet-senior-software-engineer-r-15493-65839
+
+
+2024-01-12 00:09:58,505 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/relativity-senior-software-engineer-24-9001-65838
+
+
+2024-01-12 00:09:58,985 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/hypebeast-videographer-65837
+
+
+2024-01-12 00:09:59,451 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/ontic-product-marketing-manager-65836
+
+
+2024-01-12 00:09:59,938 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/hudl-facilities-manager-65835
+
+
+2024-01-12 00:10:00,823 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/everbridge-technical-support-engineer-65834
+
+
+2024-01-12 00:10:01,469 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/circle-lead-program-manager-data-accounting-65833
+
+
+2024-01-12 00:10:01,943 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/whatnot-software-engineer-infrastructure-ireland-65832
+
+
+2024-01-12 00:10:02,474 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/curology-associate-brand-manager-agency-65831
+
+
+2024-01-12 00:10:02,982 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/activecampaign-manager-customer-activation-team-65830
+
+
+2024-01-12 00:10:03,491 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/swile-crm-manager-f-m-n-65829
+
+
+2024-01-12 00:10:17,481 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-12 00:10:17,543 INFO: 
+Finished RSS Reader. Results below \u2b07\ufe0e
+
+2024-01-12 00:10:21,685 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8751
+Total number of unique jobs: 37
+Current total count of jobs in PostgreSQL: 8788
+
+2024-01-12 00:10:21,796 INFO: 
+Async RSS readers finished! all in: 157.28 seconds.
+
+2024-01-12 00:10:21,804 ERROR: 
+Exception occurred in function async_bs4_template: KeyError in 'title'
+NoneType: None
+
+NoneType: None
+2024-01-12 00:10:21,804 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 2.63 minutes.
+
+2024-01-12 00:11:14,915 INFO: 
+Pipeline is set to 'PROD'. Jobs will be sent to Render PostgreSQL's main_jobs table
+
+2024-01-12 00:11:14,915 INFO: 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: data\max_id_prod.txt taken from data\max_id_prod.txt.txt
+
+2024-01-12 00:11:18,203 INFO: 
+
+Jobs selected for embedding: 161.\Temporal new max_id: 8907
+
+2024-01-12 00:11:19,365 INFO: 
+
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 161
+TOTAL NUMBER OF TOKENS: 147259
+MAX TOKENS PER BATCH: 1000
+NUMBER OF TRUNCATIONS: 63
+AVERAGE NUMBER OF TOKENS PER BATCH: 914.6521739130435
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+
+2024-01-12 00:16:26,701 INFO: 
+
+embeddings_e5_base_v2_to_df() done! Elapsed time: 5.12 minutes.
+
+2024-01-12 00:16:27,219 INFO: 
+Pipeline selected = PROD. Sending jobs to DO's prod Postgre
+
+2024-01-12 00:16:44,537 INFO: 
+embeddings_e5_base_v2 Table Report on DO's prod Postgre:
+Total count of jobs before crawling: 8556
+Total number of unique jobs: 161
+Current total count of jobs in PostgreSQL: 8717
+
+2024-01-12 00:16:44,648 INFO: 
+PostgreToEmbeddings has finished correctly! Writing the max_id: 8907 on data\max_id_prod.txt
+

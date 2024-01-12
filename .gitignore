@@ -26,3 +26,4 @@ utils/__pycache__
 ~/.aws
 archive
 tools
+embeddings/

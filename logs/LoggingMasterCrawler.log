@@ -17822,3 +17822,901 @@ Current total count of jobs in PostgreSQL: 8836
 2024-01-12 02:43:00,251 INFO: 
 PostgreToEmbeddings has finished correctly! Writing the max_id: 9026 on C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt
 
+2024-01-12 03:15:27,054 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-12 03:15:27,054 INFO: 
+Async API crawler deployed!.
+
+2024-01-12 03:15:27,591 INFO: 
+Async RSS crawler deployed!
+
+2024-01-12 03:15:28,064 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-12 03:15:28,928 INFO: 
+https://dribbble.com has started
+
+2024-01-12 03:15:28,928 INFO: 
+https://www.python.org has started
+
+2024-01-12 03:15:28,928 INFO: 
+ has started
+
+2024-01-12 03:15:28,928 INFO: 
+https://vuejobs.com has started
+
+2024-01-12 03:15:28,928 INFO: 
+https://remote.co has started
+
+2024-01-12 03:15:28,928 INFO: 
+https://4dayweek.io has started
+
+2024-01-12 03:15:28,928 INFO: 
+https://ai-jobs.net has started
+
+2024-01-12 03:15:28,975 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [getaddrinfo failed]. Moving to the next API...
+
+2024-01-12 03:15:34,076 INFO: 
+Crawling https://vuejobs.com/jobs/?page=1 with container strategy
+
+2024-01-12 03:15:35,885 INFO: 
+Crawling https://4dayweek.io/remote-jobs/fully-remote/?page=1 with container strategy
+
+2024-01-12 03:15:35,996 INFO: 
+Link https://4dayweek.io/remote-job/software-engineer-backend-python-2-close already found in the db. Skipping... 
+
+2024-01-12 03:15:36,073 INFO: 
+Link https://4dayweek.io/remote-job/senior-content-marketing-manager-literal-humans already found in the db. Skipping... 
+
+2024-01-12 03:15:36,152 INFO: 
+Link https://4dayweek.io/remote-job/head-of-developer-marketing-meilisearch already found in the db. Skipping... 
+
+2024-01-12 03:15:36,247 INFO: 
+Link https://4dayweek.io/remote-job/performance-marketing-manager-soax already found in the db. Skipping... 
+
+2024-01-12 03:15:36,512 INFO: 
+Crawling https://www.python.org/jobs/?page=1 with main strategy
+
+2024-01-12 03:15:58,288 INFO: 
+Crawling https://ai-jobs.net/?reg=7 with container strategy
+
+2024-01-12 03:15:58,566 INFO: 
+Crawling https://www.fossjobs.net/jobs-worldwide/?page=1 with main strategy
+
+2024-01-12 03:15:58,646 INFO: 
+Link https://www.fossjobs.net/job/11345/storage-engineer-ceph-and-distributed-storage-at-opennebula-systems/ already found in the db. Skipping... 
+
+2024-01-12 03:15:58,725 INFO: 
+Link https://www.fossjobs.net/job/11344/seeking-two-singularities-at-petites-singularites/ already found in the db. Skipping... 
+
+2024-01-12 03:15:58,804 INFO: 
+Link https://www.fossjobs.net/job/11341/baserow-specialist-at-baserow/ already found in the db. Skipping... 
+
+2024-01-12 03:15:58,890 INFO: 
+Link https://www.fossjobs.net/job/11340/senior-full-stack-developer-at-baserow/ already found in the db. Skipping... 
+
+2024-01-12 03:15:58,962 INFO: 
+Link https://www.fossjobs.net/job/11339/senior-full-stack-developer-at-baserow/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,041 INFO: 
+Link https://www.fossjobs.net/job/11338/senior-software-engineer-future-audiences-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,120 INFO: 
+Link https://www.fossjobs.net/job/11334/bind-9-software-engineer-at-internet-system-consortium/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,199 INFO: 
+Link https://www.fossjobs.net/job/11333/lead-data-engineer-at-open-earth-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,278 INFO: 
+Link https://www.fossjobs.net/job/11329/freebsd-openjdk-porter-at-the-freebsd-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,357 INFO: 
+Link https://www.fossjobs.net/job/11326/lead-community-tech-manager-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,436 INFO: 
+Link https://www.fossjobs.net/job/11325/senior-big-data-engineer-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,531 INFO: 
+Link https://www.fossjobs.net/job/11324/site-reliability-engineer-iii-observability-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,610 INFO: 
+Link https://www.fossjobs.net/job/11320/senior-data-scientist-community-growth-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,688 INFO: 
+Link https://www.fossjobs.net/job/11317/web-developer-at-organized-crime-and-corruption-reporting-project/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,767 INFO: 
+Link https://www.fossjobs.net/job/11310/senior-software-engineer-at-prisma/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,847 INFO: 
+Link https://www.fossjobs.net/job/11302/lead-designer-at-openrefine/ already found in the db. Skipping... 
+
+2024-01-12 03:15:59,926 INFO: 
+Link https://www.fossjobs.net/job/11299/privacy-loving-linux-generalist-at-tails/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,005 INFO: 
+Link https://www.fossjobs.net/job/11294/software-engineer-release-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,083 INFO: 
+Link https://www.fossjobs.net/job/11293/director-of-site-reliability-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,162 INFO: 
+Link https://www.fossjobs.net/job/11291/openssl-community-engagement-leader-evangelist-at-openssl/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,242 INFO: 
+Link https://www.fossjobs.net/job/11290/system-administrator-devops-engineer-at-openssl/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,321 INFO: 
+Link https://www.fossjobs.net/job/11289/software-engineer-at-openssl/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,400 INFO: 
+Link https://www.fossjobs.net/job/11283/senior-full-stack-developer-remoteanywhere-at-collabora/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,497 INFO: 
+Link https://www.fossjobs.net/job/11282/python-web-developer-remoteanywhere-at-collabora/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,573 INFO: 
+Link https://www.fossjobs.net/job/11280/senior-software-engineer-features-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,653 INFO: 
+Link https://www.fossjobs.net/job/11279/lead-visual-designer-design-systems-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,732 INFO: 
+Link https://www.fossjobs.net/job/11278/contributor-success-specialist-at-artefactual-systems-inc/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,811 INFO: 
+Link https://www.fossjobs.net/job/11274/research-manager-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,889 INFO: 
+Link https://www.fossjobs.net/job/11272/cloud-systems-developer-at-opennebula-systems/ already found in the db. Skipping... 
+
+2024-01-12 03:16:00,969 INFO: 
+Link https://www.fossjobs.net/job/11268/java-developer-for-prav-app-beta-release-at-prav-app-project/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,048 INFO: 
+Link https://www.fossjobs.net/job/11264/elasticsearch-consultant-at-the-organized-crime-and-corruption-reporting-project-occrp/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,127 INFO: 
+Link https://www.fossjobs.net/job/11261/cybercrime-journalist-at-the-organized-crime-and-corruption-reporting-project-occrp/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,206 INFO: 
+Link https://www.fossjobs.net/job/11260/cloud-systems-engineer-kubernetes-at-opennebula-systems/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,300 INFO: 
+Link https://www.fossjobs.net/job/11259/technical-support-engineer-at-xwiki-sas/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,379 INFO: 
+Link https://www.fossjobs.net/job/11257/site-reliability-engineer-traffic-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,458 INFO: 
+Link https://www.fossjobs.net/job/11252/senior-site-reliability-engineer-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,537 INFO: 
+Link https://www.fossjobs.net/job/11250/executive-director-%e2%80%94-gnome-foundation-at-gnome-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,616 INFO: 
+Link https://www.fossjobs.net/job/11249/manager-analytics-movement-insights-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,695 INFO: 
+Link https://www.fossjobs.net/job/11248/senior-site-reliability-engineer-wikimedia-enterprise-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,774 INFO: 
+Link https://www.fossjobs.net/job/11246/patternshop-project-maintenance-at-alves-r/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,853 INFO: 
+Link https://www.fossjobs.net/job/11245/fundraising-analyst-contract-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:01,933 INFO: 
+Link https://www.fossjobs.net/job/11241/digital-experience-senior-specialist-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,012 INFO: 
+Link https://www.fossjobs.net/job/11234/ooni-project-manager-at-open-observatory-of-network-interference-ooni/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,106 INFO: 
+Link https://www.fossjobs.net/job/11232/senior-site-reliability-engineer-database-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,185 INFO: 
+Link https://www.fossjobs.net/job/11230/senior-site-reliability-engineer-data-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,264 INFO: 
+Link https://www.fossjobs.net/job/11228/senior-data-engineering-manager-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,343 INFO: 
+Link https://www.fossjobs.net/job/11227/managing-director-at-matrixorg-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,422 INFO: 
+Link https://www.fossjobs.net/job/11226/managing-director-at-matrixorg-foundation/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,505 INFO: 
+Link https://www.fossjobs.net/job/11225/senior-c-developer-with-gtk-experience-at-inkscape/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,579 INFO: 
+Link https://www.fossjobs.net/job/11222/open-source-program-office-at-cloud-software-group/ already found in the db. Skipping... 
+
+2024-01-12 03:16:02,579 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/reedsy-senior-frontend-engineer-remote-europe
+
+
+2024-01-12 03:16:02,721 INFO: 
+CONNECTION ESTABLISHED ON https://www.python.org/jobs/7457/
+
+
+2024-01-12 03:16:02,910 INFO: 
+Crawling https://dribbble.com/jobs?anywhere=true&keyword=&page=1 with main strategy
+
+2024-01-12 03:16:03,006 INFO: 
+Link https://dribbble.com/jobs/234539-Designer-for-Saas-Website-Redesign?source=index already found in the db. Skipping... 
+
+2024-01-12 03:16:03,161 INFO: 
+Crawling https://remote.co/international-remote-jobs/?page=1 with container strategy
+
+2024-01-12 03:16:03,271 INFO: 
+CONNECTION ESTABLISHED ON https://4dayweek.io/remote-job/accounts-assistant-smartest-energy
+
+
+2024-01-12 03:16:03,307 ERROR: 
+ClientOSError in **async_container_strategy_bs4()** while crawling https://ai-jobs.net/?reg=7.
+
+[WinError 10053] An established connection was aborted by the software in your host machine
+
+Traceback (most recent call last):
+  File "C:\Users\juanc\DevBox\JobsCrawler\async_bs4.py", line 111, in async_bs4_crawler
+    rows = await async_container_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\utils\bs4_utils.py", line 146, in async_container_strategy_bs4
+    description = await async_follow_link(session, link, description, inner_link_tag, description_default)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\DevBox\JobsCrawler\utils\FollowLink.py", line 24, in async_follow_link
+    async with session.get(followed_link) as link_res:
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\aiohttp\client.py", line 1187, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\aiohttp\client.py", line 601, in _request
+    await resp.start(conn)
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\aiohttp\client_reqrep.py", line 965, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\juanc\anaconda3\envs\rh_crawlers\Lib\site-packages\aiohttp\streams.py", line 622, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [WinError 10053] An established connection was aborted by the software in your host machine
+2024-01-12 03:16:20,123 INFO: 
+CONNECTION ESTABLISHED ON https://www.python.org/jobs/7456/
+
+
+2024-01-12 03:16:21,177 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/tinyurl-full-stack-wordpress-developer-expert-in-vue-js
+
+
+2024-01-12 03:16:21,288 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/graphic-designer-digital-marketing-11/
+
+
+2024-01-12 03:16:21,288 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238499-Graphic-Designer-Remote-in-Canada?source=index
+
+
+2024-01-12 03:16:21,303 INFO: 
+CONNECTION ESTABLISHED ON https://www.python.org/jobs/7454/
+
+
+2024-01-12 03:16:21,414 INFO: 
+Link https://www.python.org/jobs/7452/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,492 INFO: 
+Link https://www.python.org/jobs/7451/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,579 INFO: 
+Link https://www.python.org/jobs/7450/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,651 INFO: 
+Link https://www.python.org/jobs/7449/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,730 INFO: 
+Link https://www.python.org/jobs/7448/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,809 INFO: 
+Link https://www.python.org/jobs/7446/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,888 INFO: 
+Link https://www.python.org/jobs/7445/ already found in the db. Skipping... 
+
+2024-01-12 03:16:21,966 INFO: 
+Link https://www.python.org/jobs/7442/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,045 INFO: 
+Link https://www.python.org/jobs/7441/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,125 INFO: 
+Link https://www.python.org/jobs/7438/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,204 INFO: 
+Link https://www.python.org/jobs/7436/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,282 INFO: 
+Link https://www.python.org/jobs/7435/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,361 INFO: 
+Link https://www.python.org/jobs/7434/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,439 INFO: 
+Link https://www.python.org/jobs/7432/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,519 INFO: 
+Link https://www.python.org/jobs/7431/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,614 INFO: 
+Link https://www.python.org/jobs/7430/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,692 INFO: 
+Link https://www.python.org/jobs/7427/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,771 INFO: 
+Link https://www.python.org/jobs/7393/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,866 INFO: 
+Link https://www.python.org/jobs/7391/ already found in the db. Skipping... 
+
+2024-01-12 03:16:22,945 INFO: 
+Link https://www.python.org/jobs/7390/ already found in the db. Skipping... 
+
+2024-01-12 03:16:23,025 INFO: 
+Link https://www.python.org/jobs/7328/ already found in the db. Skipping... 
+
+2024-01-12 03:16:23,260 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/vue-school-senior-full-stack-dev-laravel-vue-js-clone
+
+
+2024-01-12 03:16:23,371 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/hosting-support-wordpress-linux-ubuntu-bash-nginx-php-mysql-11/
+
+
+2024-01-12 03:16:23,586 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/214970-Product-Designer?source=index
+
+
+2024-01-12 03:16:23,843 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/blacksky-staff-accountant-65883
+
+
+2024-01-12 03:16:24,111 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238467-Mid-level-Branding-Packaging-Designer?source=index
+
+
+2024-01-12 03:16:24,363 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/mojob-2-senior-full-stack-developer
+
+
+2024-01-12 03:16:24,521 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/head-of-sales-11/
+
+
+2024-01-12 03:16:24,521 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/descript-strategic-finance-analytics-65882
+
+
+2024-01-12 03:16:24,823 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238466-Sr-Graphic-Designer?source=index
+
+
+2024-01-12 03:16:25,074 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/samsara-majors-account-executive-oklahoma-city-65881
+
+
+2024-01-12 03:16:25,232 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/plann-senior-frontend-developer
+
+
+2024-01-12 03:16:25,394 INFO: 
+Link https://vuejobs.com/jobs/my-worksheet-maker-software-development-tech-lead-remote-full-time already found in the db. Skipping... 
+
+2024-01-12 03:16:25,516 INFO: 
+Link https://vuejobs.com/jobs/the-national-college-full-stack-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:25,626 INFO: 
+Link https://vuejobs.com/jobs/the-national-college-front-end-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:25,737 INFO: 
+Link https://vuejobs.com/jobs/zammad-gmbh-2-senior-frontend-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:25,831 INFO: 
+Link https://vuejobs.com/jobs/medshift-sr-software-engineer already found in the db. Skipping... 
+
+2024-01-12 03:16:25,942 INFO: 
+Link https://vuejobs.com/jobs/proxify-senior-vue-js-developer-100-remote already found in the db. Skipping... 
+
+2024-01-12 03:16:26,037 INFO: 
+Link https://vuejobs.com/jobs/bulba-2-vue-js-developer-full-time-contract-based already found in the db. Skipping... 
+
+2024-01-12 03:16:26,116 INFO: 
+Link https://vuejobs.com/jobs/quinstreet-ui-vue-js-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:26,196 INFO: 
+Link https://vuejobs.com/jobs/sano-genetics-4-front-end-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:26,272 INFO: 
+Link https://vuejobs.com/jobs/overwolf-frontend-developer-tebex already found in the db. Skipping... 
+
+2024-01-12 03:16:26,351 INFO: 
+Link https://vuejobs.com/jobs/grid-dynamics-ui-tech-lead-vue-js already found in the db. Skipping... 
+
+2024-01-12 03:16:26,430 INFO: 
+Link https://vuejobs.com/jobs/trooptravel-front-end-engineer-vue3 already found in the db. Skipping... 
+
+2024-01-12 03:16:26,525 INFO: 
+Link https://vuejobs.com/jobs/gitlab-2-frontend-engineer-plan-product-planning-vue already found in the db. Skipping... 
+
+2024-01-12 03:16:26,604 INFO: 
+Link https://vuejobs.com/jobs/rocket-alumni-solutions-saas-startup-engineering-lead already found in the db. Skipping... 
+
+2024-01-12 03:16:26,683 INFO: 
+Link https://vuejobs.com/jobs/security-blue-team-front-end-developer-vue-nuxt-3 already found in the db. Skipping... 
+
+2024-01-12 03:16:26,776 INFO: 
+Link https://vuejobs.com/jobs/expivi-front-end-developer-senior-or-medior already found in the db. Skipping... 
+
+2024-01-12 03:16:26,840 INFO: 
+Link https://vuejobs.com/jobs/kisi-fullstack-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:26,935 INFO: 
+Link https://vuejobs.com/jobs/emailoctopus-full-stack-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:27,014 INFO: 
+Link https://vuejobs.com/jobs/aeir-software-engineer-at-aeir already found in the db. Skipping... 
+
+2024-01-12 03:16:27,109 INFO: 
+Link https://vuejobs.com/jobs/sano-genetics-3-frontend-engineer-vue-js already found in the db. Skipping... 
+
+2024-01-12 03:16:27,220 INFO: 
+Link https://vuejobs.com/jobs/foundahealth-com-senior-software-engineer already found in the db. Skipping... 
+
+2024-01-12 03:16:27,314 INFO: 
+Link https://vuejobs.com/jobs/quevera-web-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:27,426 INFO: 
+Link https://vuejobs.com/jobs/curotec-senior-vue-js-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:27,520 INFO: 
+Link https://vuejobs.com/jobs/clinical-architecture-software-engineer-ii-front-end-vue-js already found in the db. Skipping... 
+
+2024-01-12 03:16:27,631 INFO: 
+Link https://vuejobs.com/jobs/hedgehog-lab-senior-frontend-developer-vue-js already found in the db. Skipping... 
+
+2024-01-12 03:16:27,726 INFO: 
+Link https://vuejobs.com/jobs/bairesdev-2-software-developer-vue-js-remote-work already found in the db. Skipping... 
+
+2024-01-12 03:16:27,836 INFO: 
+Link https://vuejobs.com/jobs/rescue-web-developer-remote already found in the db. Skipping... 
+
+2024-01-12 03:16:27,931 INFO: 
+Link https://vuejobs.com/jobs/awesome-motive-wordpress-developer-vue-js already found in the db. Skipping... 
+
+2024-01-12 03:16:28,042 INFO: 
+Link https://vuejobs.com/jobs/rxmg-senior-full-stack-php-engineer-laravel-vue already found in the db. Skipping... 
+
+2024-01-12 03:16:28,136 INFO: 
+Link https://vuejobs.com/jobs/hostinger-senior-front-end-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:28,246 INFO: 
+Link https://vuejobs.com/jobs/hostinger-front-end-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:28,342 INFO: 
+Link https://vuejobs.com/jobs/capgemini-vue-js-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:28,452 INFO: 
+Link https://vuejobs.com/jobs/tchibo-full-stack-developer-m-f-d-team-espresso already found in the db. Skipping... 
+
+2024-01-12 03:16:28,547 INFO: 
+Link https://vuejobs.com/jobs/vattenfall-vue-js-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:28,658 INFO: 
+Link https://vuejobs.com/jobs/zaubar-vue-frontend-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:28,768 INFO: 
+Link https://vuejobs.com/jobs/wuerth-phoenix-frontend-vuejs-developer already found in the db. Skipping... 
+
+2024-01-12 03:16:28,895 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238433-Senior-Designer?source=index
+
+
+2024-01-12 03:16:28,895 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/mozilla-staff-operations-engineer-65880
+
+
+2024-01-12 03:16:29,053 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/executive-coordinator-11/
+
+
+2024-01-12 03:16:29,417 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/optiv-sr-consultant-google-chronicle-remote-usa-65879
+
+
+2024-01-12 03:16:29,558 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/customer-service-agent-merchant-team-10/
+
+
+2024-01-12 03:16:29,558 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238401-Senior-Designer?source=index
+
+
+2024-01-12 03:16:29,985 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/varicent-qa-analyst-65878
+
+
+2024-01-12 03:16:30,214 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238367-Lead-Designer?source=index
+
+
+2024-01-12 03:16:30,473 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/modsquad-remote-customer-support-vietnamese-digital-music-service-3438-65877
+
+
+2024-01-12 03:16:47,147 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-front-end-developer-10-2/
+
+
+2024-01-12 03:16:47,147 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238335-SENIOR-ART-DIRECTOR-Licensed-Apparel?source=index
+
+
+2024-01-12 03:17:06,163 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-12 03:17:06,199 INFO: 
+Finished RSS Reader. Results below \u2b07\ufe0e
+
+2024-01-12 03:17:07,555 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8907
+Total number of unique jobs: 7
+Current total count of jobs in PostgreSQL: 8914
+
+2024-01-12 03:17:07,633 INFO: 
+Async RSS readers finished! all in: 100.05 seconds.
+
+2024-01-12 03:17:07,871 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-12 03:17:07,902 INFO: 
+Finished API crawlers. Results below \u2b07\ufe0e
+
+2024-01-12 03:17:11,448 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8914
+Total number of unique jobs: 27
+Current total count of jobs in PostgreSQL: 8941
+
+2024-01-12 03:17:11,542 INFO: 
+Async APIs finished! all in: 104.49 seconds.
+
+2024-01-12 03:17:11,542 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238334-Graphic-Designer?source=index
+
+
+2024-01-12 03:17:11,542 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/software-engineer-full-stack-10/
+
+
+2024-01-12 03:17:12,044 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238270-Senior-Product-Designer?source=index
+
+
+2024-01-12 03:17:12,585 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238269-Senior-Graphic-Designer-F-cl-Studio?source=index
+
+
+2024-01-12 03:17:12,766 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-back-end-developer-10/
+
+
+2024-01-12 03:17:13,049 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/content-writer-10-3/
+
+
+2024-01-12 03:17:13,237 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238235-Graphic-Designer?source=index
+
+
+2024-01-12 03:17:13,363 INFO: 
+Link https://dribbble.com/jobs/184115-Product-Designer-Growth?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:13,457 INFO: 
+Link https://dribbble.com/jobs/230018-Senior-Product-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:13,897 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238103-B2B-Senior-Art-Director?source=index
+
+
+2024-01-12 03:17:14,163 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/finance-administrative-assistant-9/
+
+
+2024-01-12 03:17:14,367 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238070-Art-Director?source=index
+
+
+2024-01-12 03:17:14,901 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238039-Payzli-Website-Re-Design?source=index
+
+
+2024-01-12 03:17:15,231 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/human-resources-operations-manager-9/
+
+
+2024-01-12 03:17:15,435 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238038-Visual-Product-designer?source=index
+
+
+2024-01-12 03:17:15,938 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238037-Indie-Game-Studio-Seeks-Art-Director?source=index
+
+
+2024-01-12 03:17:16,314 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/sales-lead-education-amp-research-9/
+
+
+2024-01-12 03:17:16,471 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238007-Senior-Product-Designer?source=index
+
+
+2024-01-12 03:17:16,581 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/chief-marketing-officer-9/
+
+
+2024-01-12 03:17:16,897 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238006-Marketing-Designer-Remote-Freelance?source=index
+
+
+2024-01-12 03:17:17,005 INFO: 
+Link https://dribbble.com/jobs/233879-Lead-UX-UI-Designer-Warsaw-Poland?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:17,099 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/english-editing-report-writing-documentation-and-knowledge-product-development-01-9/
+
+
+2024-01-12 03:17:17,366 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-php-developer-8/
+
+
+2024-01-12 03:17:17,554 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238005-Designer-d-App-Mobile-UX-UI?source=index
+
+
+2024-01-12 03:17:17,664 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/medical-billing-and-coding-tutor-8/
+
+
+2024-01-12 03:17:18,009 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238004-Grafik-Designer-E-Commerce-m-w-d?source=index
+
+
+2024-01-12 03:17:18,150 INFO: 
+Link https://dribbble.com/jobs/233748-Senior-UX-UI-Mobile-Game-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:18,245 INFO: 
+Link https://dribbble.com/jobs/233714-Design-Lead?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:18,339 INFO: 
+Link https://dribbble.com/jobs/236124-UI-UX-Developer-Remote?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:18,732 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/financial-accountant-8/
+
+
+2024-01-12 03:17:19,077 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/237971-Looking-for-Wordpress-webdeveloper?source=index
+
+
+2024-01-12 03:17:19,234 INFO: 
+Link https://dribbble.com/jobs/234639-Senior-Apparel-Accessories-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:19,703 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/237938-Senior-Web-Designer?source=index
+
+
+2024-01-12 03:17:19,832 INFO: 
+Link https://dribbble.com/jobs/236024-Pitch-Sales-Deck-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:19,942 INFO: 
+Link https://dribbble.com/jobs/152303-Sr-Product-Designer-Remote?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,035 INFO: 
+Link https://dribbble.com/jobs/237874-Art-Director?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,130 INFO: 
+Link https://dribbble.com/jobs/237873-Senior-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,226 INFO: 
+Link https://dribbble.com/jobs/235927-Freelance-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,335 INFO: 
+Link https://dribbble.com/jobs/237872-Lead-of-Design?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,430 INFO: 
+Link https://dribbble.com/jobs/235892-Remote-UI-UX-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,525 INFO: 
+Link https://dribbble.com/jobs/235694-Now-Hiring-T-Shirt-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,619 INFO: 
+Link https://dribbble.com/jobs/237674-Brand-Designer-Web-Design?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,729 INFO: 
+Link https://dribbble.com/jobs/237608-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,824 INFO: 
+Link https://dribbble.com/jobs/237773-Graphics-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:20,918 INFO: 
+Link https://dribbble.com/jobs/229424-Senior-Product-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:21,013 INFO: 
+Link https://dribbble.com/jobs/237740-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:21,123 INFO: 
+Link https://dribbble.com/jobs/237707-Product-Design-Strategist?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:21,217 INFO: 
+Link https://dribbble.com/jobs/237641-BEST-JOB-EVER-3D-4D-Animator-turndotme?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:21,327 INFO: 
+Link https://dribbble.com/jobs/235562-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:21,437 INFO: 
+Link https://dribbble.com/jobs/233648-Graphic-Design-Associate?source=index already found in the db. Skipping... 
+
+2024-01-12 03:17:21,437 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/director-diversity-equity-amp-inclusion-8/
+
+
+2024-01-12 03:17:21,736 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/marketing-specialist-with-italian-language-5/
+
+
+2024-01-12 03:17:22,036 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/program-management-systems-senior-director-5/
+
+
+2024-01-12 03:17:22,336 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/legal-counsel-5-2/
+
+
+2024-01-12 03:17:22,525 INFO: 
+Link https://remote.co/job/senior-product-manager-4-5/ already found in the db. Skipping... 
+
+2024-01-12 03:17:22,636 INFO: 
+Link https://remote.co/job/sr-staff-technical-product-manager-4/ already found in the db. Skipping... 
+
+2024-01-12 03:17:22,762 INFO: 
+Link https://remote.co/job/screenwriter-4/ already found in the db. Skipping... 
+
+2024-01-12 03:17:22,857 INFO: 
+Link https://remote.co/job/marketing-amp-community-3/ already found in the db. Skipping... 
+
+2024-01-12 03:17:22,952 INFO: 
+Link https://remote.co/job/campuspress-sales-support-specialist-wordpress-saas-sales-education-3/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,062 INFO: 
+Link https://remote.co/job/head-of-marketing-3-2/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,157 INFO: 
+Link https://remote.co/job/senior-backend-engineer-3-2/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,267 INFO: 
+Link https://remote.co/job/media-buyer-3-2/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,363 INFO: 
+Link https://remote.co/job/customer-support-agent-2-2/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,473 INFO: 
+Link https://remote.co/job/full-stack-engineer-global-data-tools-2/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,568 INFO: 
+Link https://remote.co/job/head-of-people-1/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,678 INFO: 
+Link https://remote.co/job/digital-marketing-strategist-paid-social-1/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,773 INFO: 
+Link https://remote.co/job/counsel-commercial-1/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,883 INFO: 
+Link https://remote.co/job/int-operations-director-online-casino-games-28/ already found in the db. Skipping... 
+
+2024-01-12 03:17:23,977 INFO: 
+Link https://remote.co/job/event-operations-associate-partner-activations-27/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,087 INFO: 
+Link https://remote.co/job/producer-video-production-27/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,181 INFO: 
+Link https://remote.co/job/audio-manager-27/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,276 INFO: 
+Link https://remote.co/job/full-stack-php-developer-27/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,385 INFO: 
+Link https://remote.co/job/senior-consultant-growth-marketing-26/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,480 INFO: 
+Link https://remote.co/job/director-of-design-26-2/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,589 INFO: 
+Link https://remote.co/job/senior-monitoring-evaluation-and-learning-mel-specialist-camel-and-cla-26/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,684 INFO: 
+Link https://remote.co/job/consolidation-senior-manager-25/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,793 INFO: 
+Link https://remote.co/job/senior-software-engineer-24-4/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,904 INFO: 
+Link https://remote.co/job/senior-content-designer-americas-team-23/ already found in the db. Skipping... 
+
+2024-01-12 03:17:24,999 INFO: 
+Link https://remote.co/job/senior-ux-writer-worldwide-remote-21/ already found in the db. Skipping... 
+
+2024-01-12 03:17:25,093 INFO: 
+Link https://remote.co/job/hospital-account-manager-21/ already found in the db. Skipping... 
+
+2024-01-12 03:17:25,203 INFO: 
+Link https://remote.co/job/lifecycle-marketing-manger-mobile-20/ already found in the db. Skipping... 
+
+2024-01-12 03:17:25,313 INFO: 
+Link https://remote.co/job/mango-live-coach-for-french-20/ already found in the db. Skipping... 
+
+2024-01-12 03:17:25,421 INFO: 
+Link https://remote.co/job/hospital-recruiter-20/ already found in the db. Skipping... 
+
+2024-01-12 03:17:25,421 ERROR: 
+Exception occurred in function async_bs4_template: KeyError in 'title'
+NoneType: None
+
+NoneType: None
+2024-01-12 03:17:25,424 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 1.97 minutes.
+
+2024-01-12 03:17:25,424 INFO: 
+Pipeline is set to 'PROD'. Jobs will be sent to Render PostgreSQL's main_jobs table
+
+2024-01-12 03:17:25,424 INFO: 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt taken from C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt.txt
+
+2024-01-12 03:17:26,613 INFO: 
+
+Jobs selected for embedding: 34.\Temporal new max_id: 9060
+
+2024-01-12 03:17:27,053 INFO: 
+
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 34
+TOTAL NUMBER OF TOKENS: 32556
+MAX TOKENS PER BATCH: 1000
+NUMBER OF TRUNCATIONS: 18
+AVERAGE NUMBER OF TOKENS PER BATCH: 957.5294117647059
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+
+2024-01-12 03:18:15,261 INFO: 
+
+embeddings_e5_base_v2_to_df() done! Elapsed time: 0.80 minutes.
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+2024-01-12 03:18:15,766 INFO: 
+Pipeline selected = PROD. Sending jobs to DO's prod Postgre
+
+2024-01-12 03:18:19,827 INFO: 
+embeddings_e5_base_v2 Table Report on DO's prod Postgre:
+Total count of jobs before crawling: 8836
+Total number of unique jobs: 34
+Current total count of jobs in PostgreSQL: 8870
+
+2024-01-12 03:18:19,945 INFO: 
+PostgreToEmbeddings has finished correctly! Writing the max_id: 9060 on C:\Users\juanc\DevBox\JobsCrawler\data\max_id_prod.txt
+

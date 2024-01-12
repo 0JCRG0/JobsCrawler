@@ -10,7 +10,7 @@ from async_bs4 import async_bs4_template
 from async_sel import async_selenium_template
 from PostgreToEmbeddings import PostgreToEmbeddings
 #from async_indeed import async_indeed_template
-from utils.handy import LoggingMasterCrawler
+from utils.handy import LoggingMasterCrawler, send_email
 
 #SET UP LOGGING
 LoggingMasterCrawler()
@@ -63,6 +63,7 @@ async def async_main(pipeline):
 async def main():
 	await async_main("PROD")
 	await asyncio.to_thread(PostgreToEmbeddings, pipeline="PROD", embedding_model="e5_base_v2")
+	await asyncio.to_thread(send_email, 'C:\\Users\\juanc\\log_crawl.txt')
 
 if __name__ == "__main__":
 	asyncio.run(main())

@@ -431,4 +431,4 @@ def send_email(log_file_path):
 	server.quit()
 
 # At the end of your script
-send_email('C:\\Users\\juanc\\log_crawl.txt')
+#send_email('C:\\Users\\juanc\\log_crawl.txt')

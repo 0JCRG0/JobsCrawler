@@ -77,7 +77,7 @@ def embeddings_e5_base_v2_to_df(batches_to_embed: list[str], jobs_info: list[str
     df = pd.DataFrame(df_data)
 
     elapsed_time = (timeit.default_timer() - start_time) / 60
-    logging.info(f"\nembeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes.")
+    logging.info(f"\nembeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes.\n\n----------------------------------------------------------------------------------------------------------\n\n")
 
     return df
 

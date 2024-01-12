@@ -63,7 +63,7 @@ async def async_main(pipeline):
 async def main():
 	await async_main("PROD")
 	await asyncio.to_thread(PostgreToEmbeddings, pipeline="PROD", embedding_model="e5_base_v2")
-	await asyncio.to_thread(send_email, 'C:\\Users\\juanc\\log_crawl.txt')
+	await asyncio.to_thread(send_email, 'C:\\Users\\juanc\\DevBox\\JobsCrawler\\logs\\LoggingMasterCrawler.log')
 
 if __name__ == "__main__":
 	asyncio.run(main())

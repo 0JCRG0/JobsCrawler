@@ -16768,7 +16768,7 @@ BS4: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
 
 2024-01-08 11:48:49,833 INFO: 
 Finished bs4 crawlers. Results below ⬇︎
-
+ 
 2024-01-08 11:48:59,406 INFO: 
 to_managed_test_postgre() ON test report:
 Total count of jobs before crawling: 0
@@ -16777,4 +16777,2581 @@ Current total count of jobs in PostgreSQL: 100
 
 2024-01-08 11:48:59,485 INFO: 
 Async BS4 crawlers finished! all in: 53.21 seconds.
+
+2024-01-11 18:46:24,629 INFO: 
+ALL CRAWLERS DEPLOYED!
+
+2024-01-11 18:46:24,629 INFO: 
+Async API crawler deployed!.
+
+2024-01-11 18:46:25,417 INFO: 
+Async RSS crawler deployed!
+
+2024-01-11 18:46:26,056 INFO: 
+Async BS4 crawler deployed!.
+
+2024-01-11 18:46:26,704 INFO: 
+Async Sel crawler deployed!
+
+2024-01-11 18:46:27,363 INFO: 
+https://dribbble.com has started
+
+2024-01-11 18:46:27,363 INFO: 
+https://www.python.org has started
+
+2024-01-11 18:46:27,363 INFO: 
+ has started
+
+2024-01-11 18:46:27,363 INFO: 
+https://vuejobs.com has started
+
+2024-01-11 18:46:27,363 INFO: 
+https://remote.co has started
+
+2024-01-11 18:46:27,364 INFO: 
+https://4dayweek.io has started
+
+2024-01-11 18:46:27,364 INFO: 
+https://ai-jobs.net has started
+
+2024-01-11 18:46:33,523 ERROR: 
+Encountered a request error: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]. Moving to the next API...
+
+2024-01-11 18:46:34,039 INFO: 
+Crawling https://dribbble.com/jobs?anywhere=true&keyword=&page=1 with main strategy
+
+2024-01-11 18:46:34,330 INFO: 
+Crawling https://www.python.org/jobs/?page=1 with main strategy
+
+2024-01-11 18:46:34,816 INFO: 
+Crawling https://4dayweek.io/remote-jobs/fully-remote/?page=1 with container strategy
+
+2024-01-11 18:46:34,909 INFO: 
+Link https://4dayweek.io/remote-job/software-engineer-backend-python-2-close already found in the db. Skipping... 
+
+2024-01-11 18:46:34,994 INFO: 
+Link https://4dayweek.io/remote-job/senior-content-marketing-manager-literal-humans already found in the db. Skipping... 
+
+2024-01-11 18:46:35,076 INFO: 
+Link https://4dayweek.io/remote-job/head-of-developer-marketing-meilisearch already found in the db. Skipping... 
+
+2024-01-11 18:46:35,158 INFO: 
+Link https://4dayweek.io/remote-job/performance-marketing-manager-soax already found in the db. Skipping... 
+
+2024-01-11 18:46:48,336 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238499-Graphic-Designer-Remote-in-Canada?source=index
+
+
+2024-01-11 18:46:48,542 INFO: 
+Crawling https://ai-jobs.net/?reg=7 with container strategy
+
+2024-01-11 18:46:48,722 INFO: 
+Crawling https://www.fossjobs.net/jobs-worldwide/?page=1 with main strategy
+
+2024-01-11 18:46:48,834 INFO: 
+Link https://www.fossjobs.net/job/11345/storage-engineer-ceph-and-distributed-storage-at-opennebula-systems/ already found in the db. Skipping... 
+
+2024-01-11 18:46:48,911 INFO: 
+Link https://www.fossjobs.net/job/11344/seeking-two-singularities-at-petites-singularites/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,017 INFO: 
+Link https://www.fossjobs.net/job/11341/baserow-specialist-at-baserow/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,122 INFO: 
+Link https://www.fossjobs.net/job/11340/senior-full-stack-developer-at-baserow/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,222 INFO: 
+Link https://www.fossjobs.net/job/11339/senior-full-stack-developer-at-baserow/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,327 INFO: 
+Link https://www.fossjobs.net/job/11338/senior-software-engineer-future-audiences-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,434 INFO: 
+Link https://www.fossjobs.net/job/11334/bind-9-software-engineer-at-internet-system-consortium/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,539 INFO: 
+Link https://www.fossjobs.net/job/11333/lead-data-engineer-at-open-earth-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,645 INFO: 
+Link https://www.fossjobs.net/job/11329/freebsd-openjdk-porter-at-the-freebsd-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,749 INFO: 
+Link https://www.fossjobs.net/job/11326/lead-community-tech-manager-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,855 INFO: 
+Link https://www.fossjobs.net/job/11325/senior-big-data-engineer-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:49,960 INFO: 
+Link https://www.fossjobs.net/job/11324/site-reliability-engineer-iii-observability-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,066 INFO: 
+Link https://www.fossjobs.net/job/11320/senior-data-scientist-community-growth-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,171 INFO: 
+Link https://www.fossjobs.net/job/11317/web-developer-at-organized-crime-and-corruption-reporting-project/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,277 INFO: 
+Link https://www.fossjobs.net/job/11310/senior-software-engineer-at-prisma/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,382 INFO: 
+Link https://www.fossjobs.net/job/11302/lead-designer-at-openrefine/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,488 INFO: 
+Link https://www.fossjobs.net/job/11299/privacy-loving-linux-generalist-at-tails/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,574 INFO: 
+Link https://www.fossjobs.net/job/11294/software-engineer-release-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,682 INFO: 
+Link https://www.fossjobs.net/job/11293/director-of-site-reliability-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,768 INFO: 
+Link https://www.fossjobs.net/job/11291/openssl-community-engagement-leader-evangelist-at-openssl/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,861 INFO: 
+Link https://www.fossjobs.net/job/11290/system-administrator-devops-engineer-at-openssl/ already found in the db. Skipping... 
+
+2024-01-11 18:46:50,967 INFO: 
+Link https://www.fossjobs.net/job/11289/software-engineer-at-openssl/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,074 INFO: 
+Link https://www.fossjobs.net/job/11283/senior-full-stack-developer-remoteanywhere-at-collabora/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,181 INFO: 
+Link https://www.fossjobs.net/job/11282/python-web-developer-remoteanywhere-at-collabora/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,291 INFO: 
+Link https://www.fossjobs.net/job/11280/senior-software-engineer-features-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,379 INFO: 
+Link https://www.fossjobs.net/job/11279/lead-visual-designer-design-systems-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,484 INFO: 
+Link https://www.fossjobs.net/job/11278/contributor-success-specialist-at-artefactual-systems-inc/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,590 INFO: 
+Link https://www.fossjobs.net/job/11274/research-manager-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,697 INFO: 
+Link https://www.fossjobs.net/job/11272/cloud-systems-developer-at-opennebula-systems/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,784 INFO: 
+Link https://www.fossjobs.net/job/11268/java-developer-for-prav-app-beta-release-at-prav-app-project/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,889 INFO: 
+Link https://www.fossjobs.net/job/11264/elasticsearch-consultant-at-the-organized-crime-and-corruption-reporting-project-occrp/ already found in the db. Skipping... 
+
+2024-01-11 18:46:51,994 INFO: 
+Link https://www.fossjobs.net/job/11261/cybercrime-journalist-at-the-organized-crime-and-corruption-reporting-project-occrp/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,076 INFO: 
+Link https://www.fossjobs.net/job/11260/cloud-systems-engineer-kubernetes-at-opennebula-systems/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,181 INFO: 
+Link https://www.fossjobs.net/job/11259/technical-support-engineer-at-xwiki-sas/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,287 INFO: 
+Link https://www.fossjobs.net/job/11257/site-reliability-engineer-traffic-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,393 INFO: 
+Link https://www.fossjobs.net/job/11252/senior-site-reliability-engineer-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,498 INFO: 
+Link https://www.fossjobs.net/job/11250/executive-director-%e2%80%94-gnome-foundation-at-gnome-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,605 INFO: 
+Link https://www.fossjobs.net/job/11249/manager-analytics-movement-insights-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,711 INFO: 
+Link https://www.fossjobs.net/job/11248/senior-site-reliability-engineer-wikimedia-enterprise-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,802 INFO: 
+Link https://www.fossjobs.net/job/11246/patternshop-project-maintenance-at-alves-r/ already found in the db. Skipping... 
+
+2024-01-11 18:46:52,914 INFO: 
+Link https://www.fossjobs.net/job/11245/fundraising-analyst-contract-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,021 INFO: 
+Link https://www.fossjobs.net/job/11241/digital-experience-senior-specialist-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,127 INFO: 
+Link https://www.fossjobs.net/job/11234/ooni-project-manager-at-open-observatory-of-network-interference-ooni/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,233 INFO: 
+Link https://www.fossjobs.net/job/11232/senior-site-reliability-engineer-database-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,320 INFO: 
+Link https://www.fossjobs.net/job/11230/senior-site-reliability-engineer-data-engineering-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,425 INFO: 
+Link https://www.fossjobs.net/job/11228/senior-data-engineering-manager-at-wikimedia-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,530 INFO: 
+Link https://www.fossjobs.net/job/11227/managing-director-at-matrixorg-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,636 INFO: 
+Link https://www.fossjobs.net/job/11226/managing-director-at-matrixorg-foundation/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,741 INFO: 
+Link https://www.fossjobs.net/job/11225/senior-c-developer-with-gtk-experience-at-inkscape/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,846 INFO: 
+Link https://www.fossjobs.net/job/11222/open-source-program-office-at-cloud-software-group/ already found in the db. Skipping... 
+
+2024-01-11 18:46:53,847 INFO: 
+CONNECTION ESTABLISHED ON https://www.python.org/jobs/7457/
+
+
+2024-01-11 18:46:59,245 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/shiphero-software-security-engineer-1
+
+
+2024-01-11 18:46:59,379 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x138137070>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/source
+
+2024-01-11 18:46:59,379 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13d423ee0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/source
+
+2024-01-11 18:46:59,380 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1380f3520>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/source
+
+2024-01-11 18:46:59,385 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/jobs/principal-marketing-analyst-cerebal-adca6. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x13f100850>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 76, in fetch_sel
+    return driver.page_source
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 446, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)["value"]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 74, in request
+    return self.request_encode_url(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 96, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/source (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f100850>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:46:59,422 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f100ca0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:46:59,454 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13d422ef0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:46:59,496 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f101600>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:08,341 INFO: 
+Crawling https://vuejobs.com/jobs/?page=1 with container strategy
+
+2024-01-11 18:47:08,440 INFO: 
+CONNECTION ESTABLISHED ON https://4dayweek.io/remote-job/senior-software-engineer-stora
+
+
+2024-01-11 18:47:08,528 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/214970-Product-Designer?source=index
+
+
+2024-01-11 18:47:08,618 INFO: 
+CONNECTION ESTABLISHED ON https://www.python.org/jobs/7456/
+
+
+2024-01-11 18:47:09,216 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/apply/adca6. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x13f102320>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f102320>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:09,217 ERROR: 
+ServerDisconnectedError in **async_container_strategy_bs4()** while crawling https://ai-jobs.net/?reg=7.
+
+Server disconnected
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_bs4.py", line 111, in async_bs4_crawler
+    rows = await async_container_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/bs4_utils.py", line 146, in async_container_strategy_bs4
+    description = await async_follow_link(session, link, description, inner_link_tag, description_default)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 24, in async_follow_link
+    async with session.get(followed_link) as link_res:
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client.py", line 560, in _request
+    await resp.start(conn)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 899, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+aiohttp.client_exceptions.ServerDisconnectedError: Server disconnected
+2024-01-11 18:47:09,218 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f046350>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:09,229 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f045f60>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:09,230 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f045ff0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:25,691 INFO: 
+Crawling https://remote.co/international-remote-jobs/?page=1 with container strategy
+
+2024-01-11 18:47:25,798 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/enchanted-fairies-studios-experienced-b2c-sales-rep-for-great-places-to-work-company
+
+
+2024-01-11 18:47:25,892 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238467-Mid-level-Branding-Packaging-Designer?source=index
+
+
+2024-01-11 18:47:25,988 INFO: 
+CONNECTION ESTABLISHED ON https://4dayweek.io/remote-job/territory-sales-manager-4-revinate
+
+
+2024-01-11 18:47:26,009 INFO: 
+CONNECTION ESTABLISHED ON https://www.python.org/jobs/7454/
+
+
+2024-01-11 18:47:26,103 INFO: 
+Link https://www.python.org/jobs/7452/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,179 INFO: 
+Link https://www.python.org/jobs/7451/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,256 INFO: 
+Link https://www.python.org/jobs/7450/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,332 INFO: 
+Link https://www.python.org/jobs/7449/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,410 INFO: 
+Link https://www.python.org/jobs/7448/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,486 INFO: 
+Link https://www.python.org/jobs/7446/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,562 INFO: 
+Link https://www.python.org/jobs/7445/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,638 INFO: 
+Link https://www.python.org/jobs/7442/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,717 INFO: 
+Link https://www.python.org/jobs/7441/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,794 INFO: 
+Link https://www.python.org/jobs/7438/ already found in the db. Skipping... 
+
+2024-01-11 18:47:26,899 INFO: 
+Link https://www.python.org/jobs/7436/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,004 INFO: 
+Link https://www.python.org/jobs/7435/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,109 INFO: 
+Link https://www.python.org/jobs/7434/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,214 INFO: 
+Link https://www.python.org/jobs/7432/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,320 INFO: 
+Link https://www.python.org/jobs/7431/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,425 INFO: 
+Link https://www.python.org/jobs/7430/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,527 INFO: 
+Link https://www.python.org/jobs/7427/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,632 INFO: 
+Link https://www.python.org/jobs/7393/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,741 INFO: 
+Link https://www.python.org/jobs/7391/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,846 INFO: 
+Link https://www.python.org/jobs/7390/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,951 INFO: 
+Link https://www.python.org/jobs/7328/ already found in the db. Skipping... 
+
+2024-01-11 18:47:27,963 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/jobs/forest-carbon-growth-modeling-lead-remote-pachama-7296f. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x13f045e10>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f045e10>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:27,965 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/goodtime-growth-marketing-manager-65828
+
+
+2024-01-11 18:47:27,990 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x16802b4f0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,003 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f65b700>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,004 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f0b37f0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,108 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/reedsy-senior-frontend-engineer-remote-europe
+
+
+2024-01-11 18:47:28,239 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/head-of-sales-11/
+
+
+2024-01-11 18:47:28,369 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/dogsthat-video-editor-1
+
+
+2024-01-11 18:47:28,473 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238466-Sr-Graphic-Designer?source=index
+
+
+2024-01-11 18:47:28,581 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/apply/7296f. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x168151780>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168151780>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:28,583 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/canva-brand-marketing-manager-germany-65827
+
+
+2024-01-11 18:47:28,608 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1381837c0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,621 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x16841e500>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,622 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x16802b8b0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,707 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/executive-coordinator-11/
+
+
+2024-01-11 18:47:28,863 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/jobs/customer-success-consultant-anz-copy-granicus-6b0cb. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x16847bdc0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x16847bdc0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:28,864 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/deon-senior-cloud-asp-net-kubernetes-developer-2
+
+
+2024-01-11 18:47:28,889 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x16869faf0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,890 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1380f3a90>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,891 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168733550>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:28,975 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238433-Senior-Designer?source=index
+
+
+2024-01-11 18:47:29,092 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/apply/6b0cb. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1687336a0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1687336a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:29,093 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/tinyurl-full-stack-wordpress-developer-expert-in-vue-js
+
+
+2024-01-11 18:47:29,109 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1686e4220>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,110 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f6365c0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,111 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1687d72e0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,206 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/customer-service-agent-merchant-team-10/
+
+
+2024-01-11 18:47:29,346 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/optiv-director-of-partner-operations-remote-usa-65826
+
+
+2024-01-11 18:47:29,454 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/jobs/sr-manager-digital-services-delivery-costa-rica-granicus-41f35. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x1687d7430>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1687d7430>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:29,455 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/maharishi-foundation-international-senior-front-end-react-native-engineer-5
+
+
+2024-01-11 18:47:29,475 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f0b3160>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,475 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x16802b370>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,476 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f103190>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,552 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238401-Senior-Designer?source=index
+
+
+2024-01-11 18:47:29,776 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-front-end-developer-10-2/
+
+
+2024-01-11 18:47:29,780 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/apply/41f35. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x13f102fe0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f102fe0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:29,782 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/sophos-territory-account-executive-mid-market-italy-south-65825
+
+
+2024-01-11 18:47:29,820 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13a805600>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,822 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f6be530>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,823 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f635150>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:29,923 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/hey-contact-heroes-gmbh-freelancer-als-kundenberater-m-w-d-call-e-mail-deutsch-c1-benotigt-1
+
+
+2024-01-11 18:47:30,043 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/vue-school-senior-full-stack-dev-laravel-vue-js-clone
+
+
+2024-01-11 18:47:30,189 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/jobs/technical-director-digital-implementation-services-costa-rica-granicus-d194b. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x13f6352a0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f6352a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:30,218 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f6e3910>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:30,219 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f6e39a0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:30,219 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1687933d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1/url
+
+2024-01-11 18:47:30,323 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238367-Lead-Designer?source=index
+
+
+2024-01-11 18:47:30,578 ERROR: 
+MaxRetryError **before** following this link: https://www.remoteimpact.io/apply/d194b. Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x168793550>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/utils/FollowLink.py", line 49, in async_follow_link_sel
+    await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/async_sel.py", line 75, in fetch_sel
+    await loop.run_in_executor(executor, driver.get, url)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 354, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 343, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 291, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 312, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 815, in urlopen
+    return self.urlopen(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=53703): Max retries exceeded with url: /session/56d89ba0980c31e03fa1eb4585cb66e1/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x168793550>: Failed to establish a new connection: [Errno 61] Connection refused'))
+
+
+
+2024-01-11 18:47:30,579 WARNING: 
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f6e2320>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1
+
+2024-01-11 18:47:30,581 WARNING: 
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13f0b3220>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1
+
+2024-01-11 18:47:30,583 WARNING: 
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1688f5ba0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/56d89ba0980c31e03fa1eb4585cb66e1
+
+2024-01-11 18:47:30,585 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smartbear-talent-acquisition-sourcer-65824
+
+
+2024-01-11 18:47:30,701 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/clearscope-seo-account-manager
+
+
+2024-01-11 18:47:30,816 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/software-engineer-full-stack-10/
+
+
+2024-01-11 18:47:31,030 INFO: 
+Finished Selenium_Crawlers. Results below ⬇︎
+
+2024-01-11 18:47:32,601 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7860
+Total number of unique jobs: 10
+Current total count of jobs in PostgreSQL: 7870
+
+2024-01-11 18:47:32,676 INFO: 
+Async Sel finished! all in: 65.97 seconds.
+
+2024-01-11 18:47:32,676 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238335-SENIOR-ART-DIRECTOR-Licensed-Apparel?source=index
+
+
+2024-01-11 18:47:32,852 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/sticker-mule-software-engineer-backend-1
+
+
+2024-01-11 18:47:32,973 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-back-end-developer-10/
+
+
+2024-01-11 18:47:33,115 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/attabotics-manager-technical-support-center-65823
+
+
+2024-01-11 18:47:33,221 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/mojob-2-senior-full-stack-developer
+
+
+2024-01-11 18:47:33,347 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238334-Graphic-Designer?source=index
+
+
+2024-01-11 18:47:33,592 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/britebiz-customer-onboarding-and-support-consultant
+
+
+2024-01-11 18:47:33,725 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/content-writer-10-3/
+
+
+2024-01-11 18:47:33,880 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/supportninja-technical-data-analyst-65822
+
+
+2024-01-11 18:47:34,020 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238270-Senior-Product-Designer?source=index
+
+
+2024-01-11 18:47:34,243 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/conversion-rate-experts-cre-conversion-rate-optimization-cro-consultant-2
+
+
+2024-01-11 18:47:34,338 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/finance-administrative-assistant-9/
+
+
+2024-01-11 18:47:34,447 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cision-enterprise-customer-success-manager-german-speaking-65821
+
+
+2024-01-11 18:47:34,544 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238269-Senior-Graphic-Designer-F-cl-Studio?source=index
+
+
+2024-01-11 18:47:34,656 INFO: 
+CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/plann-senior-frontend-developer
+
+
+2024-01-11 18:47:34,749 INFO: 
+Link https://vuejobs.com/jobs/my-worksheet-maker-software-development-tech-lead-remote-full-time already found in the db. Skipping... 
+
+2024-01-11 18:47:34,827 INFO: 
+Link https://vuejobs.com/jobs/the-national-college-full-stack-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:34,923 INFO: 
+Link https://vuejobs.com/jobs/the-national-college-front-end-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:35,018 INFO: 
+Link https://vuejobs.com/jobs/zammad-gmbh-2-senior-frontend-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:35,114 INFO: 
+Link https://vuejobs.com/jobs/medshift-sr-software-engineer already found in the db. Skipping... 
+
+2024-01-11 18:47:35,209 INFO: 
+Link https://vuejobs.com/jobs/proxify-senior-vue-js-developer-100-remote already found in the db. Skipping... 
+
+2024-01-11 18:47:35,297 INFO: 
+Link https://vuejobs.com/jobs/bulba-2-vue-js-developer-full-time-contract-based already found in the db. Skipping... 
+
+2024-01-11 18:47:35,392 INFO: 
+Link https://vuejobs.com/jobs/quinstreet-ui-vue-js-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:35,489 INFO: 
+Link https://vuejobs.com/jobs/sano-genetics-4-front-end-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:35,574 INFO: 
+Link https://vuejobs.com/jobs/overwolf-frontend-developer-tebex already found in the db. Skipping... 
+
+2024-01-11 18:47:35,668 INFO: 
+Link https://vuejobs.com/jobs/grid-dynamics-ui-tech-lead-vue-js already found in the db. Skipping... 
+
+2024-01-11 18:47:35,767 INFO: 
+Link https://vuejobs.com/jobs/trooptravel-front-end-engineer-vue3 already found in the db. Skipping... 
+
+2024-01-11 18:47:35,863 INFO: 
+Link https://vuejobs.com/jobs/gitlab-2-frontend-engineer-plan-product-planning-vue already found in the db. Skipping... 
+
+2024-01-11 18:47:35,965 INFO: 
+Link https://vuejobs.com/jobs/rocket-alumni-solutions-saas-startup-engineering-lead already found in the db. Skipping... 
+
+2024-01-11 18:47:36,067 INFO: 
+Link https://vuejobs.com/jobs/security-blue-team-front-end-developer-vue-nuxt-3 already found in the db. Skipping... 
+
+2024-01-11 18:47:36,160 INFO: 
+Link https://vuejobs.com/jobs/expivi-front-end-developer-senior-or-medior already found in the db. Skipping... 
+
+2024-01-11 18:47:36,237 INFO: 
+Link https://vuejobs.com/jobs/kisi-fullstack-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:36,338 INFO: 
+Link https://vuejobs.com/jobs/emailoctopus-full-stack-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:36,431 INFO: 
+Link https://vuejobs.com/jobs/aeir-software-engineer-at-aeir already found in the db. Skipping... 
+
+2024-01-11 18:47:36,532 INFO: 
+Link https://vuejobs.com/jobs/sano-genetics-3-frontend-engineer-vue-js already found in the db. Skipping... 
+
+2024-01-11 18:47:36,632 INFO: 
+Link https://vuejobs.com/jobs/foundahealth-com-senior-software-engineer already found in the db. Skipping... 
+
+2024-01-11 18:47:36,732 INFO: 
+Link https://vuejobs.com/jobs/quevera-web-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:36,832 INFO: 
+Link https://vuejobs.com/jobs/curotec-senior-vue-js-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:36,912 INFO: 
+Link https://vuejobs.com/jobs/clinical-architecture-software-engineer-ii-front-end-vue-js already found in the db. Skipping... 
+
+2024-01-11 18:47:37,013 INFO: 
+Link https://vuejobs.com/jobs/hedgehog-lab-senior-frontend-developer-vue-js already found in the db. Skipping... 
+
+2024-01-11 18:47:37,093 INFO: 
+Link https://vuejobs.com/jobs/bairesdev-2-software-developer-vue-js-remote-work already found in the db. Skipping... 
+
+2024-01-11 18:47:37,173 INFO: 
+Link https://vuejobs.com/jobs/rescue-web-developer-remote already found in the db. Skipping... 
+
+2024-01-11 18:47:37,267 INFO: 
+Link https://vuejobs.com/jobs/awesome-motive-wordpress-developer-vue-js already found in the db. Skipping... 
+
+2024-01-11 18:47:37,365 INFO: 
+Link https://vuejobs.com/jobs/rxmg-senior-full-stack-php-engineer-laravel-vue already found in the db. Skipping... 
+
+2024-01-11 18:47:37,467 INFO: 
+Link https://vuejobs.com/jobs/hostinger-senior-front-end-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:37,560 INFO: 
+Link https://vuejobs.com/jobs/hostinger-front-end-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:37,651 INFO: 
+Link https://vuejobs.com/jobs/capgemini-vue-js-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:37,731 INFO: 
+Link https://vuejobs.com/jobs/tchibo-full-stack-developer-m-f-d-team-espresso already found in the db. Skipping... 
+
+2024-01-11 18:47:37,833 INFO: 
+Link https://vuejobs.com/jobs/vattenfall-vue-js-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:37,933 INFO: 
+Link https://vuejobs.com/jobs/zaubar-vue-frontend-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:38,034 INFO: 
+Link https://vuejobs.com/jobs/wuerth-phoenix-frontend-vuejs-developer already found in the db. Skipping... 
+
+2024-01-11 18:47:38,041 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/onthegosystems-senior-php-javascript-developer
+
+
+2024-01-11 18:47:38,165 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/human-resources-operations-manager-9/
+
+
+2024-01-11 18:47:38,411 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cision-senior-director-global-people-partners-pr-newswire-65820
+
+
+2024-01-11 18:47:38,575 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238235-Graphic-Designer?source=index
+
+
+2024-01-11 18:47:38,683 INFO: 
+Link https://dribbble.com/jobs/184115-Product-Designer-Growth?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:38,783 INFO: 
+Link https://dribbble.com/jobs/230018-Senior-Product-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:38,885 INFO: 
+Link https://dribbble.com/jobs/234539-Designer-for-Saas-Website-Redesign?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:38,990 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/gmass-inc-a-non-existent-assistant-100k-usd-year
+
+
+2024-01-11 18:47:39,104 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/sales-lead-education-amp-research-9/
+
+
+2024-01-11 18:47:39,326 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/adaptavist-service-desk-analyst-team-lead-65819
+
+
+2024-01-11 18:47:39,456 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238103-B2B-Senior-Art-Director?source=index
+
+
+2024-01-11 18:47:39,576 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/vexxhost-inc-marketing-manager-1
+
+
+2024-01-11 18:47:39,707 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/chief-marketing-officer-9/
+
+
+2024-01-11 18:47:39,957 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/docebo-application-security-engineer-appsec-65818
+
+
+2024-01-11 18:47:40,078 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238070-Art-Director?source=index
+
+
+2024-01-11 18:47:40,193 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/vexxhost-inc-remote-openstack-cloud-engineer
+
+
+2024-01-11 18:47:40,311 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/english-editing-report-writing-documentation-and-knowledge-product-development-01-9/
+
+
+2024-01-11 18:47:40,554 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smartsheet-senior-design-technologist-65817
+
+
+2024-01-11 18:47:40,696 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238039-Payzli-Website-Re-Design?source=index
+
+
+2024-01-11 18:47:40,824 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/elevate-labs-senior-ios-engineer-3
+
+
+2024-01-11 18:47:40,946 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/senior-php-developer-8/
+
+
+2024-01-11 18:47:41,225 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/ushur-customer-success-manager-65816
+
+
+2024-01-11 18:47:41,358 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238038-Visual-Product-designer?source=index
+
+
+2024-01-11 18:47:41,483 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/unique-insurance-data-entry-clerk
+
+
+2024-01-11 18:47:41,602 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/medical-billing-and-coding-tutor-8/
+
+
+2024-01-11 18:47:41,802 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/oowlish-senior-android-engineer-65815
+
+
+2024-01-11 18:47:41,923 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238037-Indie-Game-Studio-Seeks-Art-Director?source=index
+
+
+2024-01-11 18:47:42,041 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/telus-international-ai-inc-online-data-analyst-4
+
+
+2024-01-11 18:47:42,156 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/financial-accountant-8/
+
+
+2024-01-11 18:47:42,388 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/circle-senior-enterprise-risk-management-analyst-65814
+
+
+2024-01-11 18:47:42,513 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238007-Senior-Product-Designer?source=index
+
+
+2024-01-11 18:47:42,638 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/director-diversity-equity-amp-inclusion-8/
+
+
+2024-01-11 18:47:42,755 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/instinct-science-senior-full-stack-engineer
+
+
+2024-01-11 18:47:42,983 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/everlywell-lead-product-designer-65813
+
+
+2024-01-11 18:47:43,153 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238006-Marketing-Designer-Remote-Freelance?source=index
+
+
+2024-01-11 18:47:43,257 INFO: 
+Link https://dribbble.com/jobs/233879-Lead-UX-UI-Designer-Warsaw-Poland?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:43,355 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/marketing-specialist-with-italian-language-5/
+
+
+2024-01-11 18:47:43,358 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/timezest-head-of-engineering
+
+
+2024-01-11 18:47:43,731 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/relativity-senior-salesforce-administrator-65812
+
+
+2024-01-11 18:47:43,869 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238005-Designer-d-App-Mobile-UX-UI?source=index
+
+
+2024-01-11 18:47:43,994 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/locally-full-stack-engineer
+
+
+2024-01-11 18:47:44,116 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/program-management-systems-senior-director-5/
+
+
+2024-01-11 18:47:44,351 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/atmosera-principal-azure-security-consultant-65811
+
+
+2024-01-11 18:47:44,487 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/238004-Grafik-Designer-E-Commerce-m-w-d?source=index
+
+
+2024-01-11 18:47:44,606 INFO: 
+Link https://dribbble.com/jobs/233748-Senior-UX-UI-Mobile-Game-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:44,701 INFO: 
+Link https://dribbble.com/jobs/233714-Design-Lead?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:44,797 INFO: 
+Link https://dribbble.com/jobs/236124-UI-UX-Developer-Remote?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:44,896 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/getitdone-gmbh-brand-partnership-manager-china-m-f-d-in-shanghai
+
+
+2024-01-11 18:47:45,014 INFO: 
+CONNECTION ESTABLISHED ON https://remote.co/job/legal-counsel-5-2/
+
+
+2024-01-11 18:47:45,150 INFO: 
+Link https://remote.co/job/senior-product-manager-4-5/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,227 INFO: 
+Link https://remote.co/job/sr-staff-technical-product-manager-4/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,323 INFO: 
+Link https://remote.co/job/screenwriter-4/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,419 INFO: 
+Link https://remote.co/job/marketing-amp-community-3/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,514 INFO: 
+Link https://remote.co/job/campuspress-sales-support-specialist-wordpress-saas-sales-education-3/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,610 INFO: 
+Link https://remote.co/job/head-of-marketing-3-2/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,705 INFO: 
+Link https://remote.co/job/senior-backend-engineer-3-2/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,802 INFO: 
+Link https://remote.co/job/media-buyer-3-2/ already found in the db. Skipping... 
+
+2024-01-11 18:47:45,897 INFO: 
+Link https://remote.co/job/customer-support-agent-2-2/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,000 INFO: 
+Link https://remote.co/job/full-stack-engineer-global-data-tools-2/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,098 INFO: 
+Link https://remote.co/job/head-of-people-1/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,197 INFO: 
+Link https://remote.co/job/digital-marketing-strategist-paid-social-1/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,297 INFO: 
+Link https://remote.co/job/counsel-commercial-1/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,392 INFO: 
+Link https://remote.co/job/int-operations-director-online-casino-games-28/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,490 INFO: 
+Link https://remote.co/job/event-operations-associate-partner-activations-27/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,584 INFO: 
+Link https://remote.co/job/producer-video-production-27/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,679 INFO: 
+Link https://remote.co/job/audio-manager-27/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,775 INFO: 
+Link https://remote.co/job/full-stack-php-developer-27/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,871 INFO: 
+Link https://remote.co/job/senior-consultant-growth-marketing-26/ already found in the db. Skipping... 
+
+2024-01-11 18:47:46,972 INFO: 
+Link https://remote.co/job/director-of-design-26-2/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,072 INFO: 
+Link https://remote.co/job/senior-monitoring-evaluation-and-learning-mel-specialist-camel-and-cla-26/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,178 INFO: 
+Link https://remote.co/job/consolidation-senior-manager-25/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,287 INFO: 
+Link https://remote.co/job/senior-software-engineer-24-4/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,380 INFO: 
+Link https://remote.co/job/senior-content-designer-americas-team-23/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,480 INFO: 
+Link https://remote.co/job/senior-ux-writer-worldwide-remote-21/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,580 INFO: 
+Link https://remote.co/job/hospital-account-manager-21/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,681 INFO: 
+Link https://remote.co/job/lifecycle-marketing-manger-mobile-20/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,781 INFO: 
+Link https://remote.co/job/mango-live-coach-for-french-20/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,882 INFO: 
+Link https://remote.co/job/hospital-recruiter-20/ already found in the db. Skipping... 
+
+2024-01-11 18:47:47,982 INFO: 
+Link https://remote.co/job/field-marketing-manager-20/ already found in the db. Skipping... 
+
+2024-01-11 18:47:48,084 INFO: 
+Link https://remote.co/job/astra-senior-wordpress-developer-20/ already found in the db. Skipping... 
+
+2024-01-11 18:47:48,183 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/recharge-engineering-manager-dba-65810
+
+
+2024-01-11 18:47:48,311 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/237971-Looking-for-Wordpress-webdeveloper?source=index
+
+
+2024-01-11 18:47:48,425 INFO: 
+Link https://dribbble.com/jobs/234639-Senior-Apparel-Accessories-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:48,528 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/supernova-influencer-marketing-specialist-sand-sky
+
+
+2024-01-11 18:47:48,801 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/bloomerang-account-executive-1-65809
+
+
+2024-01-11 18:47:48,979 INFO: 
+CONNECTION ESTABLISHED ON https://dribbble.com/jobs/237938-Senior-Web-Designer?source=index
+
+
+2024-01-11 18:47:49,085 INFO: 
+Link https://dribbble.com/jobs/236024-Pitch-Sales-Deck-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,186 INFO: 
+Link https://dribbble.com/jobs/152303-Sr-Product-Designer-Remote?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,294 INFO: 
+Link https://dribbble.com/jobs/237874-Art-Director?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,402 INFO: 
+Link https://dribbble.com/jobs/237873-Senior-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,503 INFO: 
+Link https://dribbble.com/jobs/235927-Freelance-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,603 INFO: 
+Link https://dribbble.com/jobs/237872-Lead-of-Design?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,707 INFO: 
+Link https://dribbble.com/jobs/235892-Remote-UI-UX-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,812 INFO: 
+Link https://dribbble.com/jobs/235694-Now-Hiring-T-Shirt-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:49,912 INFO: 
+Link https://dribbble.com/jobs/237674-Brand-Designer-Web-Design?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,013 INFO: 
+Link https://dribbble.com/jobs/237608-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,114 INFO: 
+Link https://dribbble.com/jobs/237773-Graphics-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,215 INFO: 
+Link https://dribbble.com/jobs/229424-Senior-Product-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,317 INFO: 
+Link https://dribbble.com/jobs/237740-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,418 INFO: 
+Link https://dribbble.com/jobs/237707-Product-Design-Strategist?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,519 INFO: 
+Link https://dribbble.com/jobs/237641-BEST-JOB-EVER-3D-4D-Animator-turndotme?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,621 INFO: 
+Link https://dribbble.com/jobs/235562-Graphic-Designer?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,722 INFO: 
+Link https://dribbble.com/jobs/233648-Graphic-Design-Associate?source=index already found in the db. Skipping... 
+
+2024-01-11 18:47:50,723 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/gotsoccer-llc-optimization-expert-for-sports-scheduling
+
+
+2024-01-11 18:47:50,982 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/agreena-agricultural-field-surveyor-wichita-ka-usa-65808
+
+
+2024-01-11 18:47:51,100 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/loupe-art-senior-tech-lead
+
+
+2024-01-11 18:47:51,410 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/oowlish-drupal-front-end-developer-65807
+
+
+2024-01-11 18:47:51,559 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/love-in-focus-studio-booking-coordinator-remote-commission-only-1099
+
+
+2024-01-11 18:47:51,813 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/aircall-sales-operations-analyst-65806
+
+
+2024-01-11 18:47:51,992 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/leadsimple-inc-senior-product-manager-1
+
+
+2024-01-11 18:47:52,281 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/amazee-io-sales-representative-americas-1
+
+
+2024-01-11 18:47:52,458 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/relativity-shift-lead-customer-support-24-7-65805
+
+
+2024-01-11 18:47:52,724 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/bax-energy-engineering-manager
+
+
+2024-01-11 18:47:52,884 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/affirm-business-operations-lead-65804
+
+
+2024-01-11 18:47:53,158 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/order-desk-customer-support-specilist
+
+
+2024-01-11 18:47:55,549 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/oowlish-backend-developer-ach-nacha-65803
+
+
+2024-01-11 18:47:55,808 INFO: 
+CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/vidpros-revenue-operations-manager-revops
+
+
+2024-01-11 18:47:58,851 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/supportninja-account-renewal-manager-65802
+
+
+2024-01-11 18:47:59,223 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/samsara-technical-support-specialist-new-grad-65801
+
+
+2024-01-11 18:47:59,639 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/moonpig-legal-counsel-65800
+
+
+2024-01-11 18:48:00,126 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/rackspace-java-front-end-developer-cloud-native-65799
+
+
+2024-01-11 18:48:00,630 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/gyant-solutions-designer-65798
+
+
+2024-01-11 18:48:01,483 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/whoop-membership-services-representative-limerick-ireland-65797
+
+
+2024-01-11 18:48:01,921 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/lendbuzz-data-engineer-65796
+
+
+2024-01-11 18:48:02,575 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/wealthsimple-intern-data-science-summer-2024-65795
+
+
+2024-01-11 18:48:03,109 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/modernhealth-senior-clinical-data-analyst-65794
+
+
+2024-01-11 18:48:03,512 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/twilio-staff-software-engineer-authy-65793
+
+
+2024-01-11 18:48:04,013 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/samsara-senior-software-engineer-enterprise-management-and-business-services-65792
+
+
+2024-01-11 18:48:04,438 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/zenogroup-vp-strategy-health-wellness-65791
+
+
+2024-01-11 18:48:04,839 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/kinaxis-sr-application-consultant-65790
+
+
+2024-01-11 18:48:05,407 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/sophos-global-strategic-sourcing-sr-manager-product-and-field-operations-65789
+
+
+2024-01-11 18:48:05,895 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/pointclickcare-canada-sr-compensation-partner-65788
+
+
+2024-01-11 18:48:06,270 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/percona-saas-front-end-developer-65787
+
+
+2024-01-11 18:48:06,641 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/toku-senior-sales-executive-65786
+
+
+2024-01-11 18:48:07,135 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/welbehealth-medical-records-coordinator-65785
+
+
+2024-01-11 18:48:07,559 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/koddi-front-end-engineer-65784
+
+
+2024-01-11 18:48:08,282 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/pythian-mysql-database-consultant-est-65783
+
+
+2024-01-11 18:48:08,951 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/marco-payroll-coordinator-65782
+
+
+2024-01-11 18:48:09,374 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/review-online-ap-psychology-instructor-65781
+
+
+2024-01-11 18:48:09,712 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/easyllama-account-manager-mid-market-65780
+
+
+2024-01-11 18:48:10,314 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/intercom-gtm-senior-financial-analyst-65779
+
+
+2024-01-11 18:48:10,914 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/doctolib-it-support-senior-manager-x-f-m-65778
+
+
+2024-01-11 18:48:11,285 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/boulevard-onboarding-specialist-65777
+
+
+2024-01-11 18:48:11,716 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/varicent-technical-analyst-16-month-co-op-65776
+
+
+2024-01-11 18:48:12,498 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/binance-junior-litigation-counsel-europe-spain-italy-65775
+
+
+2024-01-11 18:48:12,884 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/clickhouse-data-engineer-remote-65774
+
+
+2024-01-11 18:48:13,297 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/agicap-customer-success-manager-us-launch-65773
+
+
+2024-01-11 18:48:13,686 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/opengov-sales-operations-manager-65772
+
+
+2024-01-11 18:48:14,168 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/kitware-natural-language-processing-nlp-researcher-65771
+
+
+2024-01-11 18:48:14,596 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/oowlish-drupal-backend-developer-65770
+
+
+2024-01-11 18:48:15,021 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/nuvalence-practice-lead-crm-65769
+
+
+2024-01-11 18:48:15,530 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/optiv-sr-manager-demand-delivery-identity-and-access-management-remote-usa-65768
+
+
+2024-01-11 18:48:15,958 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/restaurant365-principal-product-manager-reporting-analytics-65767
+
+
+2024-01-11 18:48:16,379 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smile-identity-product-marketing-manager-65766
+
+
+2024-01-11 18:48:16,777 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cathexis-associate-program-analyst-event-coordinator-65765
+
+
+2024-01-11 18:48:17,248 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/acquia-senior-drupal-curriculum-manager-65764
+
+
+2024-01-11 18:48:17,772 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/clari-sr-technical-support-engineer-remote-65763
+
+
+2024-01-11 18:48:18,221 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/anaplan-senior-director-gtm-planning-competitive-strategy-65762
+
+
+2024-01-11 18:48:18,686 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-strategy-director-opendata-65761
+
+
+2024-01-11 18:48:19,176 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/modsquad-remote-customer-support-german-digital-music-service-3432-65760
+
+
+2024-01-11 18:48:19,598 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/donut-fractional-marketing-consultant-nyc-hybrid-or-remote-us-65759
+
+
+2024-01-11 18:48:20,122 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veepee-junior-e-merchandiser-w-m-x-65758
+
+
+2024-01-11 18:48:20,491 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/pointclickcare-senior-product-manager-llm-canada-65757
+
+
+2024-01-11 18:48:20,910 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/zscaler-sales-engineering-manager-ceur-65756
+
+
+2024-01-11 18:48:21,371 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/oowlish-system-level-java-software-developer-65755
+
+
+2024-01-11 18:48:21,793 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/gemini-associate-director-internal-audit-65754
+
+
+2024-01-11 18:48:22,239 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/arcdev-account-executive-65753
+
+
+2024-01-11 18:48:22,636 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/siteground-customer-experience-specialist-with-english-65752
+
+
+2024-01-11 18:48:23,084 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/doctolib-marketing-communication-manager-cdd-x-f-m-65751
+
+
+2024-01-11 18:48:23,482 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/samsara-majors-account-executive-new-york-65750
+
+
+2024-01-11 18:48:23,944 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/pointclickcare-principal-product-manager-ppm-health-plan-us-65749
+
+
+2024-01-11 18:48:24,348 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/granicus-senior-product-owner-65748
+
+
+2024-01-11 18:48:24,786 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/nium-senior-data-base-administrator-dba-65747
+
+
+2024-01-11 18:48:25,227 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/token-metrics-crypto-full-stack-developer-tallinn-remote-65746
+
+
+2024-01-11 18:48:25,662 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/navisite-senior-windows-engineer-65745
+
+
+2024-01-11 18:48:26,094 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/zscaler-sr-software-engineer-python-automation-networking-ref7894u-65744
+
+
+2024-01-11 18:48:26,516 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/braintrust-blockchain-developer-rust-move-direct-hire-65743
+
+
+2024-01-11 18:48:26,932 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/oowlish-senior-ios-engineer-65742
+
+
+2024-01-11 18:48:27,344 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-principal-software-engineer-java-65741
+
+
+2024-01-11 18:48:27,721 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/bazaarvoice-technical-support-analyst-tier1-65740
+
+
+2024-01-11 18:48:28,122 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/eyeo-staff-product-manager-network-solutions-lithuania-remote-65739
+
+
+2024-01-11 18:48:28,524 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-principal-software-engineer-65738
+
+
+2024-01-11 18:48:28,951 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/coalfire-account-executive-offensive-security-remote-us-65737
+
+
+2024-01-11 18:48:29,375 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/crypto-digital-content-designer-65736
+
+
+2024-01-11 18:48:29,803 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/mozilla-senior-staff-ux-designer-65735
+
+
+2024-01-11 18:48:30,511 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/checkr-vp-data-65734
+
+
+2024-01-11 18:48:31,613 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/nium-senior-manager-compliance-financial-crime-65733
+
+
+2024-01-11 18:48:32,140 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/vergesense-product-manager-data-integrations-65732
+
+
+2024-01-11 18:48:32,614 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/too-good-to-go-sales-specialist-east-berlin-w-m-d-65731
+
+
+2024-01-11 18:48:33,154 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/clari-manager-machine-learning-remote-65730
+
+
+2024-01-11 18:48:33,525 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/adept-engineering-manager-research-65729
+
+
+2024-01-11 18:48:33,931 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/netflix-program-manager-innovation-management-65728
+
+
+2024-01-11 18:48:34,326 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/1password-account-manager-smb-65727
+
+
+2024-01-11 18:48:34,668 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/goodwin-sr-content-strategist-65726
+
+
+2024-01-11 18:48:35,068 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/minted-senior-engineering-manager-65725
+
+
+2024-01-11 18:48:35,500 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/hopper-business-operations-analyst-capital-one-hts-65724
+
+
+2024-01-11 18:48:35,918 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/fluence-project-manager-65723
+
+
+2024-01-11 18:48:36,331 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/opengov-implementation-project-manager-saas-65722
+
+
+2024-01-11 18:48:36,766 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/hypebeast-graphic-designer-65721
+
+
+2024-01-11 18:48:37,197 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veepee-sales-analyst-support-w-m-x-fixed-term-65720
+
+
+2024-01-11 18:48:37,596 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/binance-customer-service-representative-turkey-65719
+
+
+2024-01-11 18:48:38,010 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/snyk-director-head-of-equity-programs-65718
+
+
+2024-01-11 18:48:38,421 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/nisum-senior-java-developer-ab5537-65717
+
+
+2024-01-11 18:48:38,829 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/hopskipdrive-senior-data-analyst-growth-marketing-65716
+
+
+2024-01-11 18:48:39,275 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/spacex-account-manager-direct-to-cell-65715
+
+
+2024-01-11 18:48:39,855 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/token-metrics-crypto-full-stack-developer-mumbai-remote-65714
+
+
+2024-01-11 18:48:40,322 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/axon-sr-manager-computer-vision-65713
+
+
+2024-01-11 18:48:40,710 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/lendbuzz-secops-engineer-65712
+
+
+2024-01-11 18:48:41,081 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/sezzle-product-designer-colombia-65711
+
+
+2024-01-11 18:48:41,463 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/6sense-accounts-receivable-analyst-65710
+
+
+2024-01-11 18:48:41,836 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/farfetch-junior-software-engineer-back-end-farfetch-com-platform-65709
+
+
+2024-01-11 18:48:42,249 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/boxinc-small-medium-business-account-executive-san-francisco-ca-65708
+
+
+2024-01-11 18:48:42,673 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/allworthfinancial-client-operations-representative-65707
+
+
+2024-01-11 18:48:43,124 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/onfido-senior-front-end-engineer-65706
+
+
+2024-01-11 18:48:43,692 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/ataccama-saas-python-engineer-65705
+
+
+2024-01-11 18:48:44,160 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/modsquad-remote-customer-support-korean-digital-music-service-3430-65704
+
+
+2024-01-11 18:48:44,604 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/nava-technical-project-manager-65703
+
+
+2024-01-11 18:48:45,064 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/dun-bradstreet-senior-data-engineer-r-15609-65702
+
+
+2024-01-11 18:48:45,477 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/samsara-majors-account-executive-las-vegas-65701
+
+
+2024-01-11 18:48:45,875 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/opengov-project-manager-gis-asset-management-public-works-65700
+
+
+2024-01-11 18:48:46,273 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/ecore-senior-application-support-engineer-access-65699
+
+
+2024-01-11 18:48:46,704 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-performance-engineer-65698
+
+
+2024-01-11 18:48:47,445 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/binance-pr-communications-manager-turkey-65697
+
+
+2024-01-11 18:48:47,839 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/degreed-key-account-director-emea-uk-remote-65696
+
+
+2024-01-11 18:48:48,409 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/capchase-collections-manager-65695
+
+
+2024-01-11 18:48:48,825 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/granicus-software-engineer-ii-65694
+
+
+2024-01-11 18:48:49,209 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/twilio-enterprise-inside-sales-representative-65693
+
+
+2024-01-11 18:48:49,631 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/rialtic-content-portfolio-manager-65692
+
+
+2024-01-11 18:48:50,251 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/nextech-senior-data-engineer-remote-65691
+
+
+2024-01-11 18:48:50,613 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/vonage-carrier-relations-director-65690
+
+
+2024-01-11 18:48:50,962 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/anaplan-major-account-executive-tmt-65689
+
+
+2024-01-11 18:48:51,309 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/sophos-territory-account-executive-africa-region-65688
+
+
+2024-01-11 18:48:51,844 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/blockchain-talent-acquisition-associate-65687
+
+
+2024-01-11 18:48:52,263 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/totalexpert-director-software-engineering-65686
+
+
+2024-01-11 18:48:52,636 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smartsheet-senior-product-manager-foundational-services-platform-65685
+
+
+2024-01-11 18:48:52,983 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/farfetch-product-manager-65684
+
+
+2024-01-11 18:48:53,535 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/idme-director-principal-product-marketing-identity-verification-65683
+
+
+2024-01-11 18:48:53,925 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/dun-bradstreet-senior-vice-president-business-segment-lead-sales-marketing-solutions-r-15517-65682
+
+
+2024-01-11 18:48:54,434 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/affirm-senior-product-manager-consumer-payments-65681
+
+
+2024-01-11 18:48:54,864 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/optiv-vp-global-infrastructure-cloud-operations-hybrid-denver-co-65680
+
+
+2024-01-11 18:48:55,190 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/joinuplift-senior-ui-ux-designer-65679
+
+
+2024-01-11 18:48:55,771 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/gemini-lead-technical-program-manager-security-65678
+
+
+2024-01-11 18:48:56,195 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/superside-associate-creative-director-marketing-65677
+
+
+2024-01-11 18:48:56,688 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/guidepoint-security-aws-cloud-security-architect-remote-anywhere-in-the-u-s-65676
+
+
+2024-01-11 18:48:57,146 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-engineering-manager-65675
+
+
+2024-01-11 18:48:57,614 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/samsara-software-engineer-i-new-grad-65674
+
+
+2024-01-11 18:48:58,057 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-ui-architect-platform-65673
+
+
+2024-01-11 18:48:58,583 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/twilio-business-development-manager-emea-65672
+
+
+2024-01-11 18:48:59,065 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/lessen-senior-software-developer-i-65671
+
+
+2024-01-11 18:48:59,376 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/coactive-ai-software-engineer-machine-learning-65670
+
+
+2024-01-11 18:48:59,764 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/superside-operations-excellence-associate-65669
+
+
+2024-01-11 18:49:00,272 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/opengov-account-executive-pod-lead-65668
+
+
+2024-01-11 18:49:01,334 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/fanatics-vendor-management-manager-65667
+
+
+2024-01-11 18:49:01,950 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/everbridge-embedded-intelligence-analyst-german-speaking-65666
+
+
+2024-01-11 18:49:02,380 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/veeva-senior-employment-counsel-apac-65665
+
+
+2024-01-11 18:49:02,731 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/everbridge-security-operations-associate-maternity-cover-65664
+
+
+2024-01-11 18:49:03,167 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/muckrack-strategic-finance-analyst-65663
+
+
+2024-01-11 18:49:03,668 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/pointclickcare-senior-finance-manager-contract-16-18-months-canada-65662
+
+
+2024-01-11 18:49:04,316 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/adaptavist-senior-product-manager-65661
+
+
+2024-01-11 18:49:04,825 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/opengov-technical-support-specialist-level-1-65660
+
+
+2024-01-11 18:49:05,415 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/cloudflare-global-head-of-deal-desk-strategy-65659
+
+
+2024-01-11 18:49:06,003 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/datacamp-sales-enablement-manager-65658
+
+
+2024-01-11 18:49:06,427 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/xsolla-middle-senior-frontend-developer-for-xsolla-account-65657
+
+
+2024-01-11 18:49:06,852 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/secureframe-senior-event-and-partner-marketing-manager-65656
+
+
+2024-01-11 18:49:07,278 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/rackspace-enterprise-sales-executive-vi-remote-65655
+
+
+2024-01-11 18:49:07,679 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/percona-product-marketing-manager-65654
+
+
+2024-01-11 18:49:08,281 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/givebutter-mobile-engineer-65653
+
+
+2024-01-11 18:49:08,753 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/gumgum-manager-verity-customer-success-65652
+
+
+2024-01-11 18:49:09,211 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/panum-senior-hr-business-analyst-federal-experience-65651
+
+
+2024-01-11 18:49:09,616 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/restaurant365-support-specialist-payments-65650
+
+
+2024-01-11 18:49:10,106 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/everbridge-business-solutions-intern-65649
+
+
+2024-01-11 18:49:10,909 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smithmicro-engineering-intern-2024-65648
+
+
+2024-01-11 18:49:11,723 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/northstar-consultant-relations-manager-65647
+
+
+2024-01-11 18:49:12,439 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/xero-project-delivery-engagement-lead-customer-experience-65646
+
+
+2024-01-11 18:49:13,400 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/dun-bradstreet-senior-attorney-regulatory-r-15413-65645
+
+
+2024-01-11 18:49:13,820 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/waabi-senior-staff-technical-program-manager-release-and-configuration-management-65644
+
+
+2024-01-11 18:49:14,272 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/meesho-am-manager-business-s-o-65643
+
+
+2024-01-11 18:49:14,790 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smarsh-talent-advising-partner-65642
+
+
+2024-01-11 18:49:15,193 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/mulberry-lifestyle-development-and-production-manager-65641
+
+
+2024-01-11 18:49:15,588 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/logz-fullstack-developer-65640
+
+
+2024-01-11 18:49:16,066 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/whatnot-software-engineer-infrastructure-poland-65639
+
+
+2024-01-11 18:49:16,407 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/solvhealth-senior-full-stack-engineer-backend-focused-python-65638
+
+
+2024-01-11 18:49:16,961 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/billiontoone-senior-account-executive-washington-north-central-65637
+
+
+2024-01-11 18:49:17,393 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/supportninja-onboarding-support-specialist-65636
+
+
+2024-01-11 18:49:17,807 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/codeorg-manager-research-evaluation-and-data-red-65635
+
+
+2024-01-11 18:49:18,303 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/openai-compliance-engineer-65634
+
+
+2024-01-11 18:49:18,794 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/canva-software-engineering-manager-fe-editing-apis-nz-remote-65633
+
+
+2024-01-11 18:49:19,204 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/optiv-client-manager-south-ohio-valley-65632
+
+
+2024-01-11 18:49:19,678 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/smartsheet-site-reliability-engineer-remote-eligible-in-uk-65631
+
+
+2024-01-11 18:49:20,159 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/enable-senior-financial-analyst-fp-a-65630
+
+
+2024-01-11 18:49:20,593 INFO: 
+CONNECTION ESTABLISHED ON https://tryremotely.com/jobs/capital-administrador-de-redes-sociales-y-productor-de-contenido-tiktok-youtube-65629
+
+
+2024-01-11 18:49:20,637 INFO: 
+async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-11 18:49:20,681 INFO: 
+Finished RSS Reader. Results below ⬇︎
+
+2024-01-11 18:49:48,607 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 7870
+Total number of unique jobs: 244
+Current total count of jobs in PostgreSQL: 8114
+
+2024-01-11 18:49:48,721 INFO: 
+Async RSS readers finished! all in: 203.31 seconds.
+
+2024-01-11 18:50:10,263 INFO: 
+Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE
+
+2024-01-11 18:50:10,343 INFO: 
+Finished API crawlers. Results below ⬇︎
+
+2024-01-11 18:51:05,342 INFO: 
+to_managed_prod_postgre() ON main_jobs report:
+Total count of jobs before crawling: 8114
+Total number of unique jobs: 513
+Current total count of jobs in PostgreSQL: 8627
+
+2024-01-11 18:51:05,452 INFO: 
+Async APIs finished! all in: 280.84 seconds.
+
+2024-01-11 18:51:05,454 ERROR: 
+Exception occurred in function async_bs4_template: KeyError in 'title'
+NoneType: None
+
+NoneType: None
+2024-01-11 18:51:05,454 INFO: 
+ALL ASYNC CRAWLERS FINISHED IN: 4.68 minutes.
 

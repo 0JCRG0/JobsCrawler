@@ -3,7 +3,7 @@
 -------
 ## Project Overview
 
-JobsCrawler is designed to aggregate job listings from a variety of sources including job boards, custom RSS feeds, and traditional APIs. It utilizes a combination of Selenium, BeautifulSoup (bs4), custom RSS readers, and direct API calls with the `requests` library to scrape job postings and save them to a PostgreSQL database, either locally or managed. 
+JobsCrawler is designed to aggregate job listings from a variety of sources including job boards, custom RSS feeds, and traditional APIs. It utilizes a combination of `Selenium`, `BeautifulSoup (bs4)`, custom `RSS readers`, and direct API calls with the `requests` library to scrape job postings and save them to a PostgreSQL database, either locally or managed. 
 
 The project operates asynchronously, with each tool having its own unique strategy implemented in separate async files. These strategies are orchestrated together in `main.py`.
 
@@ -45,7 +45,7 @@ Each module within JobsCrawler is configured with two JSON schemas: `prod` and `
 ```
 
 - To add a new website to the crawler, create a corresponding JSON object with the required parameters. 
-- For testing, set pipeline=TEST to ensure the correct data is being scraped, and save the schema to the appropriate JSON file (e.g., bs4_test.json). 
+- For testing, set `pipeline=TEST` to ensure the correct data is being scraped, and save the schema to the appropriate JSON file (e.g., `bs4_test.json`). 
 - Before running any tests, ensure that your environment variables are correctly set up. 
 - For debugging, enable logging as there are numerous log statements placed at common breakpoints.
 - Typically, each batch of data is saved in a CSV file for manual inspection, aiding in data cleaning.
@@ -62,7 +62,7 @@ The `embeddings` branch is an updated version that includes embedding capabiliti
 ## Quickstart - Main Branch
 To get started with the main branch:
 
-1. Ensure you have Python installed.
+1. Ensure you have Python and pip installed.
 2. Clone the repository and navigate to the project directory.
 3. Install the required dependencies using pip: `pip install -r requirements.txt`
 4. Set up your `.env` file based on the `.env.example` provided.

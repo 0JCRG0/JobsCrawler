@@ -10,7 +10,6 @@ logs/selenium_crawlers.log
 geckodriver.log
 .pytest_cache/
 *.out
-data/
 archive/
 drafts/
 venv/
@@ -27,4 +26,4 @@ utils/__pycache__
 archive
 tools
 embeddings/
-download/
+*.csv

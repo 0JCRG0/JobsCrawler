@@ -4,21 +4,25 @@ import urllib.request
 import re
 import sys
 from selenium import webdriver
+import json
 from bs4 import BeautifulSoup
 
 #url_to_follow = "https://echojobs.io/job/wasabi-technologies-senior-storage-engineer-g88xl"
 #selector = 'div[data-qa="btn-apply-bottom"] a'
 
 #url_to_follow = "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=1"
-url_to_follow = "https://ai-jobs.net/?reg=7"
+#url_to_follow = "https://www.occ.com.mx/empleos/de-home-office/trabajo-en-tecnologias-de-la-informacion-sistemas/?tm=14&page=1"
 
-container_selector = '.list-group.list-group-flush.mb-4'
-title_selector = '.col.pt-2.pb-3 .h5.mb-2.text-body-emphasis'
+url_to_follow ="https://bj.scjn.gob.mx/api/buscador/documento/tesis/T_dvMHYBN_4klb4Hg8R3"
+#TODO: You want to get the description and other 
+"""container_selector = '.col-0-2-176.md5-0-2-285.jobCardContainer-0-2-536'
+title_selector = '.card-0-2-520.flat-0-2-522 .conFluid-0-2-61.gridContainer-0-2-568 .row-0-2-175.cardContent-0-2-562 .col-0-2-176.xs12-0-2-445.formatCol-0-2-569'
 location_selector = '.col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 span'
-description_default = '.col.pt-2.pb-3 .badge.rounded-pill.text-bg-light'
-link_selector = '.col.pt-2.pb-3'
-inner_link = '.row.job-content-wrapper .col-sm-8.cols.hero-left'
-
+description_default = '.adBodyDescription-0-2-564.spacing-0-2-565'
+link_selector = '.card-0-2-520.flat-0-2-522 a'
+inner_link = '.row.job-content-wrapper .col-sm-8.cols.hero-left' "card-0-2-520 flat-0-2-522 card-0-2-558 standout-0-2-559"
+"https://www.occ.com.mx/empleo/oferta/17988979/"
+"""
 def FollowLinkEchoJobs(url_to_follow: str) -> str:
 	# Make a request to the website
 	r = requests.get(url_to_follow)
@@ -27,19 +31,15 @@ def FollowLinkEchoJobs(url_to_follow: str) -> str:
 	# Use the 'html.parser' to parse the page
 	soup = BeautifulSoup(r.content, 'html.parser')
 
+	data = str(soup)
+
+	print(type(data))
+
+	#parsed_json = json.loads(data)
+	formatted_json = json.dumps(data, indent=4)
+
 	#print(soup.prettify())
-	container = soup.select_one(container_selector)
-	
-	title = container.select(title_selector)
-	location = container.select(location_selector)
-	description = container.select(description_default)
-	link = container.select(link_selector)
-	# Find the 'div' tag with the class "job-detail mb-4"
-	#div_tag = soup.find('div', {'class': selector})
-	#description_tag = soup.select_one(inner_link)
-	
-	#description_final = description_tag.text
-	print(title, location, description, link)
+	print(formatted_json)
 
 FollowLinkEchoJobs(url_to_follow)
 

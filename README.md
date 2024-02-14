@@ -14,6 +14,8 @@ This work is licensed under a
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
+-------
+
 ## Project Overview
 
 JobsCrawler is designed to aggregate job listings from a variety of sources including job boards, custom RSS feeds, and traditional APIs. It utilizes a combination of `Selenium`, `BeautifulSoup (bs4)`, custom `RSS readers`, and direct API calls with the `requests` library to scrape job postings and save them to a PostgreSQL database, either locally or managed. 

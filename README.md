@@ -1,22 +1,78 @@
 # JobsCrawler
 
-*This is an enhanced version of the previous project https://github.com/0JCRG0/Crawler-remote-jobs*
+-------
+## Project Overview
 
-## IMPORTANT CONSIDERATIONS
+JobsCrawler is designed to aggregate job listings from a variety of sources including job boards, custom RSS feeds, and traditional APIs. It utilizes a combination of `Selenium`, `BeautifulSoup (bs4)`, custom `RSS readers`, and direct API calls with the `requests` library to scrape job postings and save them to a PostgreSQL database, either locally or managed. 
 
-1. Every crawler uses a different approach depending on the website. In the future I'd like to unify these scripts (this repo will be so much more powerful once it is all unified & fully automated). 
+The project operates asynchronously, with each tool having its own unique strategy implemented in separate async files. These strategies are orchestrated together in `main.py`.
 
-2. All the crawlers send the scraped data to a postgre database. So, you have to input your own credentials to make it work.
+The `embeddings` branch is an enhanced version of the project that focuses on embedding the results from each module and offers improved modularity. Notably, this branch is compatible with Windows and can be implemented out of the box for Retrieval-Augmented Generation (RAG), unlike the main branch.
 
-3. I have to write up a requirements.txt but this should not matter if you are using the most recent update of every library that is used here (if there are any changes I will write it down).
+-------
 
-## Overview
+## Table of Contents
 
-### This repo has three main approaches in regards to data scraping.
+- [How It Works](#how-it-works)
+- [Forks](#forks)
+- [Quickstart - Main Branch](#quickstart-main-branch)
+- [Quickstart - Embeddings Branch](#quickstart-embeddings-branch)
+-------
 
-1. If we are lucky the website/job board has an API which we can easily use to find all the elements we want from the JSON. 
+## How It Works
 
-2. If the website/job board does not have an exposed API then we can look at the Source Code and try to find its RSS feed. If this is found, we just include that url to remote-working-resources.csv and the script in ALL_RSS will do its magic with bs4. 
+Each module within JobsCrawler is configured with two JSON schemas: `prod` and `test`. These schemas define the parameters for the scraping process, such as CSS selectors, the strategy to be used, and the number of pages to crawl. Here is an example JSON object for the site `4dayweek.io`:
 
-3. Finally, for the difficult but yet not impossible websites we use Selenium. Although these scripts are inherently slower, they are just incredibly powerful and versatile. (Note that this approach is only used for big websites which deserve a custom code, although if you know how I can unify these scripts I would be extremely helpful for the help/guidance)
+```json
+{
+    "name": "https://4dayweek.io",
+    "url": "https://4dayweek.io/remote-jobs/fully-remote/?page=",
+    "pages_to_crawl": 1,
+    "start_point": 1,
+    "strategy": "container",
+    "follow_link": "yes",
+    "inner_link_tag": ".row.job-content-wrapper .col-sm-8.cols.hero-left",
+    "elements_path": [
+        {
+            "jobs_path": ".row.jobs-list",
+            "title_path": ".row.job-tile-title",
+            "link_path": ".row.job-tile-title h3 a",
+            "location_path": ".job-tile-tags .remote-country",
+            "description_path": ".job-tile-tags .tile-salary"
+        }
+    ]
+}
+```
 
+- To add a new website to the crawler, create a corresponding JSON object with the required parameters. 
+- For testing, set `pipeline=TEST` to ensure the correct data is being scraped, and save the schema to the appropriate JSON file (e.g., `bs4_test.json`). 
+- Before running any tests, ensure that your environment variables are correctly set up. 
+- For debugging, enable logging as there are numerous log statements placed at common breakpoints.
+- Typically, each batch of data is saved in a CSV file for manual inspection, aiding in data cleaning.
+
+-------
+## Forks
+### Main Branch
+The `main` branch contains the core functionality of JobsCrawler. It is not compatible with Windows due to certain dependencies.
+
+### Embeddings Branch
+The `embeddings` branch is an updated version that includes embedding capabilities and is modularized for better integration with RAG models. This branch is Windows compatible.
+
+-------
+## Quickstart - Main Branch
+To get started with the main branch:
+
+1. Ensure you have Python and pip installed.
+2. Clone the repository and navigate to the project directory.
+3. Install the required dependencies using pip: `pip install -r requirements.txt`
+4. Set up your `.env` file based on the `.env.example` provided.
+-------
+
+## Quickstart - Embeddings Branch
+For the embeddings branch:
+
+1. Ensure you have Conda installed.
+2. Clone the repository and switch to the embeddings branch.
+3. Set up the Conda environment: `conda env create -f environment.yml`
+4. Set up your `.env` file based on the `.env.example` provided.
+-------

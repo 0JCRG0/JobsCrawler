@@ -3,9 +3,12 @@
 -------
 ## Project Overview
 
-JobsCrawler is designed to aggregate job listings from a variety of sources including job boards, custom RSS feeds, and traditional APIs. It utilizes a combination of Selenium, BeautifulSoup (bs4), custom RSS readers, and direct API calls with the `requests` library to scrape job postings and save them to a PostgreSQL database, either locally or managed. The project operates asynchronously, with each tool having its own unique strategy implemented in separate async files. These strategies are orchestrated together in `main.py`.
+JobsCrawler is designed to aggregate job listings from a variety of sources including job boards, custom RSS feeds, and traditional APIs. It utilizes a combination of Selenium, BeautifulSoup (bs4), custom RSS readers, and direct API calls with the `requests` library to scrape job postings and save them to a PostgreSQL database, either locally or managed. 
+
+The project operates asynchronously, with each tool having its own unique strategy implemented in separate async files. These strategies are orchestrated together in `main.py`.
 
 The `embeddings` branch is an enhanced version of the project that focuses on embedding the results from each module and offers improved modularity. Notably, this branch is compatible with Windows and could be implemented for Retriever-Augmented Generation (RAG) integrations, unlike the `main` branch.
+
 -------
 
 ## Table of Contents
@@ -54,8 +57,8 @@ The `main` branch contains the core functionality of JobsCrawler. It is not comp
 
 ### Embeddings Branch
 The `embeddings` branch is an updated version that includes embedding capabilities and is modularized for better integration with RAG models. This branch is Windows compatible.
--------
 
+-------
 ## Quickstart - Main Branch
 To get started with the main branch:
 

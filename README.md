@@ -7,7 +7,7 @@ JobsCrawler is designed to aggregate job listings from a variety of sources incl
 
 The project operates asynchronously, with each tool having its own unique strategy implemented in separate async files. These strategies are orchestrated together in `main.py`.
 
-The `embeddings` branch is an enhanced version of the project that focuses on embedding the results from each module and offers improved modularity. Notably, this branch is compatible with Windows and could be implemented for Retriever-Augmented Generation (RAG) integrations, unlike the `main` branch.
+The `embeddings` branch is an enhanced version of the project that focuses on embedding the results from each module and offers improved modularity. Notably, this branch is compatible with Windows and can be implemented out of the box for Retrieval-Augmented Generation (RAG), unlike the main branch.
 
 -------
 

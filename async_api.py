@@ -1,13 +1,11 @@
 #!/usr/local/bin/python3
 
-import requests
 import json
-import pretty_errors
+import pretty_errors  # noqa: F401
 import pandas as pd
-import timeit
 import os
-import logging	
-import bs4
+import logging
+import random	
 from datetime import date
 from datetime import datetime
 from dotenv import load_dotenv
@@ -192,7 +190,7 @@ async def async_api_template(pipeline):
 			)
 
 		if title_len == link_len == description_len == pubdate_len == location_len == timestamp_len:
-			logging.info("Async_API: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE")
+			logging.info("Async_API: LISTS HAVE THE SAME LENGTH. SENDING TO POSTGRE")
 			clean_postgre_api(df = pd.DataFrame(combined_data), save_path=SAVE_PATH, function_postgre=POSTGRESQL)
 		else:
 			logging.error(f"ERROR ON Async_API. LISTS DO NOT HAVE SAME LENGHT. FIX: \n {lengths_info}")

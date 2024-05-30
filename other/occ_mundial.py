@@ -3,11 +3,12 @@ from datetime import date, datetime
 import pandas as pd
 import random
 from dotenv import load_dotenv
-from utils.handy import *
-from utils.bs4_utils import *
+from utils.handy import USER_AGENTS, test_or_prod
+from utils.bs4_utils import 
 import os
 import logging
 import aiohttp
+import asyncio
 
 load_dotenv(".env")
 
@@ -22,8 +23,6 @@ async def async_occ_mundial_template(pipeline):
 	start_time = asyncio.get_event_loop().time()
 
 	""" DETERMINING WHICH JSON TO LOAD & WHICH POSTGRE TABLE WILL BE USED """
-
-	LoggingMasterCrawler()
 
 	#DETERMINING WHICH JSON TO LOAD & WHICH POSTGRE TABLE WILL BE USED
 

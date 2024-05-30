@@ -10,7 +10,7 @@ from async_bs4 import async_bs4_template
 #from async_sel import async_selenium_template
 from embed_latest_crawled import embed_latest_crawled
 #from async_indeed import async_indeed_template
-from utils.handy import send_email
+#from utils.handy import send_email
 
 #SET UP LOGGING
 logger = logging.getLogger(__name__)

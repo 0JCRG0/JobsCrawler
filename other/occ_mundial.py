@@ -1,14 +1,13 @@
-import requests
 from bs4 import BeautifulSoup
 from datetime import date, datetime
 import pandas as pd
-import time
 import random
 from dotenv import load_dotenv
 from utils.handy import *
 from utils.bs4_utils import *
 import os
 import logging
+import aiohttp
 
 load_dotenv(".env")
 
@@ -40,8 +39,7 @@ async def async_occ_mundial_template(pipeline):
 	logging.info("Async BS4 crawler deployed!.")
 
 	async def fetch(url, session):
-		#Get a random header agent from the pool of headers
-		random_user_agent = {'User-Agent': random.choice(user_agents)}
+		random_user_agent = {'User-Agent': random.choice(USER_AGENTS)}
 		async with session.get(url, headers=random_user_agent) as response:
 			response_text = response.text
 			logging.debug(f"random_header: {random_user_agent}\nresponse_text: {response_text}")

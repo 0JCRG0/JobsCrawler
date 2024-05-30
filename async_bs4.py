@@ -66,7 +66,7 @@ async def async_bs4_template(pipeline):
 
 	async def fetch(url, session):
 		#Get a random header agent from the pool of headers
-		random_user_agent = {'User-Agent': random.choice(user_agents)}
+		random_user_agent = {'User-Agent': random.choice(USER_AGENTS)}
 		async with session.get(url, headers=random_user_agent) as response:
 			response_text = response.text
 			logging.debug(f"random_header: {random_user_agent}\nresponse_text: {response_text}")

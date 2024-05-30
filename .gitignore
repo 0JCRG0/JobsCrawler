@@ -3,10 +3,7 @@ __pycache__/
 .env
 .vscode/
 
-logs/FreelanceCrawler.log
-logs/crawler.log
-logs/geckodriver.log
-logs/selenium_crawlers.log
+logs/
 geckodriver.log
 .pytest_cache/
 *.out
@@ -18,6 +15,8 @@ venv/
 *.parquet
 *.bin
 *.pkl
+data/
+download/:
 /.cfg
 __pycache__/
 utils/__pycache__

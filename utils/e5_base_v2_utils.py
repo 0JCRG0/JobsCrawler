@@ -1,6 +1,8 @@
+from typing import Any
 import tiktoken
 import pandas as pd
 import logging
+from psycopg2.extensions import cursor, connection
 import json
 from transformers import AutoTokenizer, AutoModel
 from pgvector.psycopg2 import register_vector
@@ -13,18 +15,21 @@ from tenacity import (
     stop_after_attempt,
 )
 import os
-from torch import Tensor
+from torch import Tensor, no_grad
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 import pretty_errors  # noqa: F401
 import timeit
-import pandas as pd
 import numpy as np
 
 load_dotenv(".env")
 LOGGER_MAIN = os.getenv("LOGGER_MAIN")
 DATABASE_URL = os.environ.get("DATABASE_URL_DO")
+
+PROD_TABLE = "embeddings_e5_base_v2"
+TEST_TABLE = "test_embeddings"
 CHUNK_SIZE = 15
+MAX_LENGTH = 512
 TOKENIZER = AutoTokenizer.from_pretrained("intfloat/e5-base-v2")
 MODEL = AutoModel.from_pretrained("intfloat/e5-base-v2")
 
@@ -54,18 +59,17 @@ def num_tokens(text: str, model: str = "gpt-3.5-turbo") -> int:
     return len(encoding.encode(text))
 
 
-def average_pool(last_hidden_states: Tensor, attention_mask: Tensor) -> Tensor:
+def average_pool(last_hidden_states: Tensor, attention_mask: Any) -> Tensor:
     last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
     return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
 
 
 def e5_base_v2_query(query):
-
     query_e5_format = f"query: {query}"
 
     batch_dict = TOKENIZER(
         query_e5_format,
-        max_length=512,
+        max_length=MAX_LENGTH,
         padding=True,
         truncation=True,
         return_tensors="pt",
@@ -102,12 +106,11 @@ def query_e5_format(raw_descriptions: list) -> list:
     before_sleep=before_sleep_log(logger, logging.WARNING),
 )
 def to_embeddings_e5_base_v2(
-    df: pd.DataFrame, cursor: cursor, conn: object, test: bool
+    df: pd.DataFrame, cursor: cursor, conn: connection, test: bool
 ):
-    if not test:
-        table = "embeddings_e5_base_v2"
-    else:
-        table = "test_embeddings_e5_base_v2"
+    if test:
+        table = TEST_TABLE
+    table = PROD_TABLE
 
     cursor.execute("CREATE EXTENSION IF NOT EXISTS vector")
 
@@ -134,7 +137,7 @@ def to_embeddings_e5_base_v2(
 		IDs UNIQUENESS SHOULD BE ENSURED DUE TO ABOVE.
 	"""
     jobs_added = []
-    for index, row in df.iterrows():
+    for _, row in df.iterrows():
         insert_query = f"""
 			INSERT INTO {table} (id, job_info, timestamp, embedding)
 			VALUES (%s, %s, %s, %s)
@@ -155,12 +158,13 @@ def to_embeddings_e5_base_v2(
     cursor.execute(final_count_query)
     final_count_result = cursor.fetchone()
 
-    if initial_count_result is not None:
+    if initial_count_result:
         initial_count = initial_count_result[0]
     else:
         initial_count = 0
     jobs_added_count = len(jobs_added)
-    if final_count_result is not None:
+    
+    if final_count_result:
         final_count = final_count_result[0]
     else:
         final_count = 0
@@ -172,7 +176,6 @@ def to_embeddings_e5_base_v2(
         "Current total count of jobs in PostgreSQL": final_count,
     }
 
-    logging.basicConfig(level=logging.INFO)
     logging.info(
         f"PostgreSQL Report: -------\n{json.dumps(postgre_report_dict, indent=4)}"
     )
@@ -207,7 +210,7 @@ def embeddings_e5_base_v2_to_df(
 
     def collate_fn(batch, tokenizer):
         batch_dict = tokenizer(
-            batch, max_length=512, padding=True, truncation=True, return_tensors="pt"
+            batch, max_length=MAX_LENGTH, padding=True, truncation=True, return_tensors="pt"
         )
         return batch_dict
 
@@ -218,7 +221,7 @@ def embeddings_e5_base_v2_to_df(
 
     embeddings_list = []
 
-    with torch.no_grad():
+    with no_grad():
         for batch_dict in tqdm(dataloader, desc="Processing batches"):
             outputs = MODEL(**batch_dict)
             batch_embeddings = (
@@ -242,7 +245,7 @@ def embeddings_e5_base_v2_to_df(
 
     elapsed_time = (timeit.default_timer() - start_time) / 60
     logging.info(
-        f"\nembeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes.\n\n----------------------------------------------------------------------------------------------------------\n\n"
+        f"embeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes."
     )
 
     return df

@@ -13,6 +13,10 @@ from utils.e5_base_v2_utils import (
 )
 import json
 
+# TODO: Logger is not set up properly
+# TODO: Write the max id in the db if the operation is successful. Get the max from embeddings table and write that.
+
+
 load_dotenv(".env")
 LOGGER_PATH = os.environ.get("LOGGER_PATH")
 DB_URL = os.environ.get("DATABASE_URL_DO")
@@ -35,11 +39,10 @@ def _clean_rows(s):
 
 
 def _fetch_postgre_rows(
-	timestamp: str) -> tuple[list[str], list[str], list[str], list[str], list[str]]:
-	table = "main_jobs"
+	timestamp: str, table: str = "main_jobs") -> tuple[list[str], list[str], list[str], list[str], list[str]]:
 
 	CURSOR.execute(
-		f"SELECT id, title, description, location, timestamp FROM {table} WHERE timestamp > {timestamp}"
+		f"SELECT id, title, description, location, timestamp FROM {table} WHERE timestamp > '{timestamp}'"
 	)
 	new_data = CURSOR.fetchall()
 
@@ -55,14 +58,14 @@ def _fetch_postgre_rows(
 def _rows_to_nested_list(
 	title_list: list[str], location_list: list[str], description_list: list[str]
 ) -> list[list[str]]:
-	formatted_titles = ["#### title: {} ####".format(title) for title in title_list]
+	formatted_titles = ["<title> {} </title>".format(title) for title in title_list]
 	cleaned_titles = [_clean_rows(title) for title in formatted_titles]
 	formatted_locations = [
-		"#### location: {} ####".format(location) for location in location_list
+		"<location> {} </location>".format(location) for location in location_list
 	]
 	cleaned_locations = [_clean_rows(location) for location in formatted_locations]
 	formatted_descriptions = [
-		"#### description: {} ####".format(description)
+		"<description> {} </description>".format(description)
 		for description in description_list
 	]
 	cleaned_descriptions = [
@@ -145,13 +148,15 @@ def _get_max_timestamp(table: str = "last_embedding") -> str:
 def embed_latest_crawled(embedding_model: str, test: bool = False):
 
 	max_timestamp = _get_max_timestamp()
+
+	print(max_timestamp)
 	
 	ids, titles, locations, descriptions, timestamps = _fetch_postgre_rows(
 		timestamp=max_timestamp
 	)
 	
 	if not len(ids) > 1:
-		error_msg = "No new rows. Be sure crawler is populating the main_jobs. Aborting execution."
+		error_msg = "No new rows. Be sure crawler is populating main_jobs. Aborting execution."
 		logging.error(error_msg)
 		raise ValueError(error_msg)
 	
@@ -172,7 +177,7 @@ def embed_latest_crawled(embedding_model: str, test: bool = False):
 		to_embeddings_e5_base_v2(df=df, cursor=CURSOR, conn=CONN, test=test)
 
 	else:
-		raise ValueError("The only supported embbedding model is 'e5_base_v2'")
+		raise ValueError("The only supported embedding model is 'e5_base_v2'")
 
 	CONN.commit()
 	CURSOR.close()
@@ -180,4 +185,4 @@ def embed_latest_crawled(embedding_model: str, test: bool = False):
 
 
 if __name__ == "__main__":
-	embed_latest_crawled(embedding_model="e5_base_v2")
+	embed_latest_crawled(embedding_model="e5_base_v2", test=True)

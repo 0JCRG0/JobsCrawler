@@ -23,16 +23,13 @@ JobsCrawler is designed to aggregate job listings from a variety of sources incl
 
 The project operates asynchronously, with each tool having its own unique strategy implemented in separate async files. These strategies are orchestrated together in `main.py`.
 
-The `embeddings` branch is an enhanced version of the project that focuses on embedding the results from each module and offers improved modularity. Notably, this branch is compatible with Windows and can be implemented out of the box for Retrieval-Augmented Generation (RAG), unlike the main branch.
-
+This project focuses on embedding the results from each module and offers improved modularity. Notably, this branch can be implemented out of the box for Retrieval-Augmented Generation (RAG).
 -------
 
 ## Table of Contents
 
 - [How It Works](#how-it-works)
-- [Forks](#forks)
-- [Quickstart - Main Branch](#quickstart-main-branch)
-- [Quickstart - Embeddings Branch](#quickstart-embeddings-branch)
+- [Quickstart](#quickstart)
 -------
 
 ## How It Works
@@ -67,28 +64,11 @@ Each module within JobsCrawler is configured with two JSON schemas: `prod` and `
 - Typically, each batch of data is saved in a CSV file for manual inspection, aiding in data cleaning.
 
 -------
-## Forks
-### Main Branch
-The `main` branch contains the core functionality of JobsCrawler. It is not compatible with Windows due to certain dependencies.
-
-### Embeddings Branch
-The `embeddings` branch is an updated version that includes embedding capabilities and is modularized for better integration with RAG models. This branch is Windows compatible.
-
--------
 ## Quickstart - Main Branch
 To get started with the main branch:
 
 1. Ensure you have Python and pip installed.
 2. Clone the repository and navigate to the project directory.
 3. Install the required dependencies using pip: `pip install -r requirements.txt`
-4. Set up your `.env` file based on the `.env.example` provided.
--------
-
-## Quickstart - Embeddings Branch
-For the embeddings branch:
-
-1. Ensure you have Conda installed.
-2. Clone the repository and switch to the embeddings branch.
-3. Set up the Conda environment: `conda env create -f environment.yml`
 4. Set up your `.env` file based on the `.env.example` provided.
 -------

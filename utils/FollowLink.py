@@ -19,7 +19,7 @@ from traceback import format_exc
 import random
 from traceback import format_exc
 
-async def async_follow_link(session, followed_link, description_final, inner_link_tag, default):
+async def async_follow_link(session: aiohttp.ClientSession, followed_link: str, description_final: str, inner_link_tag: str, default: str = "NaN"):
 
 	async with session.get(followed_link) as link_res:
 		if link_res.status == 200:
@@ -33,6 +33,30 @@ async def async_follow_link(session, followed_link, description_final, inner_lin
 			else:
 				description_final = 'NaN'
 				return description_final
+		elif link_res.status == 403:
+			print(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""", "\n")
+			logging.warning(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""")
+			description_final = 'NaN'
+			return description_final
+		else:
+			print(f"""CONNECTION FAILED ON {followed_link}. STATUS CODE: "{link_res.status}". Getting the description from default.""", "\n")
+			logging.warning(f"""CONNECTION FAILED ON {followed_link}. STATUS CODE: "{link_res.status}". Getting the description from default.""")
+			description_final = default
+			return description_final
+
+async def async_follow_link_title_description(session: aiohttp.ClientSession, followed_link: str, description_final: str, inner_link_tag: str, title_inner_link_tag: str, default: str = "NaN"):
+
+	async with session.get(followed_link) as link_res:
+		if link_res.status == 200:
+			logging.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
+			link_text = await link_res.text()
+			link_soup = bs4.BeautifulSoup(link_text, 'html.parser')
+			title_tag = link_soup.select_one(title_inner_link_tag)
+			description_tag = link_soup.select_one(inner_link_tag)
+			title_final = title_tag.text if title_tag else default
+			description_final = description_tag.text if description_tag else default
+			return title_final, description_final
+
 		elif link_res.status == 403:
 			print(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""", "\n")
 			logging.warning(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""")

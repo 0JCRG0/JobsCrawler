@@ -66,7 +66,7 @@ async def async_bs4_template(pipeline):
 
 	async def fetch(url, session):
 		#Get a random header agent from the pool of headers
-		random_user_agent = {'User-Agent': random.choice(user_agents)}
+		random_user_agent = {'User-Agent': random.choice(USER_AGENTS)}
 		async with session.get(url, headers=random_user_agent) as response:
 			response_text = response.text
 			logging.debug(f"random_header: {random_user_agent}\nresponse_text: {response_text}")
@@ -74,7 +74,15 @@ async def async_bs4_template(pipeline):
 
 	async def async_bs4_crawler(session, url_obj):
 		
-		rows = {}
+		# Initialize the rows dictionary with lists for each key
+		rows = {
+			"title": [],
+			"link": [],
+			"description": [],
+			"pubdate": [],
+			"location": [],
+			"timestamp": []
+		}
 
 		name = url_obj['name']
 		url_prefix = url_obj['url']
@@ -100,7 +108,7 @@ async def async_bs4_template(pipeline):
 						
 						if strategy == "main":
 							try:
-								rows = await async_main_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+								new_rows = await async_main_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
 							except Exception as e:
 								error_message = f"{type(e).__name__} in **async_main_strategy_bs4()** while crawling {url}.\n\n{e}"
 								logging.error(f"{error_message}\n", exc_info=True)
@@ -108,11 +116,22 @@ async def async_bs4_template(pipeline):
 						
 						elif strategy == "container":
 							try:
-								rows = await async_container_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+								new_rows = await async_container_strategy_bs4(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
 							except Exception as e:
 								error_message = f"{type(e).__name__} in **async_container_strategy_bs4()** while crawling {url}.\n\n{e}"
 								logging.error(f"{error_message}\n", exc_info=True)
 								continue
+						elif strategy == "occ":
+							try:
+								new_rows = await async_occ_mundial(pipeline, cur, session, elements_path, name, inner_link_tag, follow_link, soup)
+							except Exception as e:
+								error_message = f"{type(e).__name__} in **async_occ_mundial()** while crawling {url}.\n\n{e}"
+								logging.error(f"{error_message}\n", exc_info=True)
+								continue
+						# Update the rows dictionary with the new data
+						for key in rows:
+							rows[key].extend(new_rows.get(key, []))
+					
 					except Exception as e:
 						error_message = f"{type(e).__name__} occured before deploying crawling strategy on {url}.\n\n{e}"
 						logging.error(f"{error_message}\n", exc_info=True)

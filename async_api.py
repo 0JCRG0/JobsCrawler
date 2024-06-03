@@ -4,8 +4,7 @@ import json
 import pretty_errors  # noqa: F401
 import pandas as pd
 import os
-import logging
-import random	
+import logging	
 from datetime import date
 from datetime import datetime
 from dotenv import load_dotenv
@@ -78,7 +77,7 @@ async def async_api_template(pipeline):
 		follow_link = api_obj['follow_link']
 		#Extract inner link if follow link
 		inner_link_tag = api_obj['inner_link_tag']
-		random_user_agent = {'User-Agent': random.choice(user_agents)}
+		random_user_agent = {'User-Agent': random.choice(USER_AGENTS)}
 		
 		async with aiohttp.ClientSession() as session:
 			try:

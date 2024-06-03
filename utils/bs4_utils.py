@@ -15,7 +15,7 @@ import json
 import logging
 import requests
 import os
-from utils.FollowLink import async_follow_link
+from utils.FollowLink import *
 from dotenv import load_dotenv
 from utils.handy import * #This includes link_exists_in_db
 from utils.bs4_utils import *
@@ -214,3 +214,66 @@ def clean_postgre_bs4(df: pd.DataFrame, save_data_path: str, function_postgre: C
 
 	print("\n")
 	#print(f"BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.", "\n")
+
+async def async_occ_mundial(pipeline:str, cur: cursor, session: aiohttp.ClientSession, elements_path: dict, name:str, inner_link_tag:str, follow_link:str, soup: bs4.BeautifulSoup):
+	
+	total_links = []
+	total_titles = []
+	total_pubdates = []
+	total_locations = []
+	total_descriptions = []
+	total_timestamps = []
+	
+
+	# Identify the container with all the jobs
+	container = soup.select_one(elements_path["jobs_path"])
+	assert container is not None, "No elements found for 'container' in async_container_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
+
+	#titles = container.select(elements_path["title_path"])
+	#assert titles is not None, "No elements found for 'titles' in async_container_strategy_bs4(). Check 'elements_path[\"title_path\"]'"
+
+	links = container.select(elements_path["link_path"])
+	assert links is not None, "No elements found for 'links' in async_container_strategy_bs4(). Check 'elements_path[\"link_path\"]'"
+
+	# Identify the elements for each job
+	job_elements = list(links)
+
+	print(len(job_elements))
+
+	#assert all(len(element) == len(job_elements[0]) for element in job_elements), "Not all elements have the same length in async_container_strategy_bs4()"
+
+	for link_element in job_elements:
+		# Process the elements for the current job
+		#title = title_element.get_text(strip=True) if title_element else "NaN"
+		link = name + link_element.get("href") if link_element else "NaN"
+		#TODO: Regex on link to only iunclude this: https://www.occ.com.mx/empleo/oferta/17987183-mulesoft-developer/
+		link = re.search(r'https://www\.occ\.com\.mx/empleo/oferta/\d+[^/?]+', link).group()
+
+		# Check if the link exists in the database
+		if await link_exists_in_db(link=link, cur=cur, pipeline=pipeline):
+			logging.info(f"""Link {link} already found in the db. Skipping... """)
+			continue
+
+		# Follow the link if specified
+		title = ''
+		description = ''
+		if follow_link == "yes":
+			title, description = await async_follow_link_title_description(session, link, description, inner_link_tag, elements_path["title_path"], "NaN")
+
+
+		# add the data for the current job to the rows list
+		total_titles.append(title)
+		total_links.append(link)
+		total_descriptions.append(description)
+		total_locations.append("MX")
+		total_pubdates.append(date.today())
+		total_timestamps.append(datetime.now())
+
+	return {
+		"title": total_titles,
+		"link": total_links,
+		"description": total_descriptions,
+		"pubdate": total_pubdates,
+		"location": total_locations,
+		"timestamp": total_timestamps
+	}

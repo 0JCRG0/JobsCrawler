@@ -2,20 +2,20 @@
     {
         "urls": [
             {
-                "name": "https://ai-jobs.net",
-                "url": "https://ai-jobs.net/?reg=",
-                "pages_to_crawl": 7,
-                "start_point": 7,
-                "strategy": "container",
+                "name": "https://www.occ.com.mx",
+                "url": "https://www.occ.com.mx/empleos/de-home-office/trabajo-en-tecnologias-de-la-informacion-sistemas/?tm=14&sort=2&page=",
+                "pages_to_crawl": 2,
+                "start_point": 1,
+                "strategy": "occ",
                 "follow_link": "yes",
-                "inner_link_tag": "#job-description",
+                "inner_link_tag": "#jobbody",
                 "elements_path": [
                         {
-                        "jobs_path": ".list-group.list-group-flush.mb-4",
-                        "title_path": ".col.pt-2.pb-3 .h5.mb-2.text-body-emphasis",
-                        "link_path": ".col.pt-2.pb-3",
-                        "location_path": ".col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break",
-                        "description_path": ".col.pt-2.pb-3 .badge.rounded-pill.text-bg-light"
+                        "jobs_path": ".col-0-2-176.md5-0-2-285.jobCardContainer-0-2-536",
+                        "title_path": ".flex-0-2-5.jbetween-0-2-17.astart-0-2-20.titleRow-0-2-516 p",
+                        "link_path": ".card-0-2-520.flat-0-2-522.card-0-2-558.standout-0-2-559 .jobcard-0-2-563",
+                        "location_path": "",
+                        "description_path": ""
                     }
                 ]
             }

@@ -3,12 +3,14 @@
 import feedparser
 import os
 import json
-import pretty_errors
+import pretty_errors  # noqa: F401
 import pandas as pd
 from datetime import date, datetime
 from dotenv import load_dotenv
+import logging
+import psycopg2
 from utils.rss_utils import clean_postgre_rss
-from utils.handy import *
+from utils.handy import link_exists_in_db, test_or_prod
 from utils.FollowLink import async_follow_link
 import asyncio
 import aiohttp
@@ -19,14 +21,10 @@ load_dotenv()
 
 JSON_PROD = os.environ.get('JSON_PROD_RSS_READER')
 JSON_TEST = os.environ.get('JSON_TEST_RSS_READER')
-SAVE_PATH = os.environ.get('SAVE_PATH_RSS_READER')
+SAVE_PATH = os.environ.get('SAVE_PATH_RSS_READER', '')
 
 async def async_rss_template(pipeline):
 	start_time = asyncio.get_event_loop().time()
-	
-	LoggingMasterCrawler()
-
-	#DETERMINING WHICH JSON TO LOAD & WHICH POSTGRE TABLE WILL BE USED
 
 	JSON = None
 	POSTGRESQL = None
@@ -34,16 +32,13 @@ async def async_rss_template(pipeline):
 	if JSON_PROD and JSON_TEST:
 		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
 
-	# Check that JSON and POSTGRESQL have been assigned valid values
 	if JSON is None or POSTGRESQL is None or URL_DB is None:
 		logging.error("Error: JSON and POSTGRESQL and URL_DB must be assigned valid values.")
 		return
 
-	#print("\n", f"Reading {file}... ", "\n")
 	print("\n", "Crawler launched on RSS Feeds.")
 	logging.info("Async RSS crawler deployed!")
 
-	# Create a connection to the database & cursor to check for existent links
 	conn = psycopg2.connect(URL_DB)
 	cur = conn.cursor()
 
@@ -70,7 +65,6 @@ async def async_rss_template(pipeline):
 		loc_tag = url_obj['location_tag']
 		follow_link = url_obj['follow_link']
 		inner_link_tag = url_obj['inner_link_tag']
-		#ADD MORE VARIABLES IF REQUIRED
 		
 		try:
 			async with aiohttp.ClientSession() as session:
@@ -79,16 +73,13 @@ async def async_rss_template(pipeline):
 						feed_data = await response.text()
 						feed = feedparser.parse(feed_data)
 						for entry in feed.entries:
-							# create a new dictionary to store the data for the current job
 							job_data = {}
 
 							job_data["title"] = getattr(entry, title_tag) if hasattr(entry, loc_tag) else "NaN"
-							#print(job_data["title"])
 
 							job_data["link"] = getattr(entry, link_tag) if hasattr(entry, loc_tag) else "NaN"
 							
 							if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
-								#logging.info(f"""Link {job_data["link"]} already found in the db. Skipping... """)
 								continue
 							else:
 								default = getattr(entry, description_tag) if hasattr(entry, loc_tag) else "NaN"
@@ -103,12 +94,9 @@ async def async_rss_template(pipeline):
 
 								job_data["location"] = getattr(entry, loc_tag) if hasattr(entry, loc_tag) else "NaN"
 
-								#job_data["description"]= entry.description if 'description' in entry else "NaN"
-
 								timestamp = datetime.now()
 								job_data["timestamp"] = timestamp
 								
-								# add the data for the current job to the rows list
 								total_links.append(job_data["link"])
 								total_titles.append(job_data["title"])
 								total_pubdates.append(job_data["pubdate"])
@@ -133,7 +121,6 @@ async def async_rss_template(pipeline):
 		tasks = [async_rss_reader(session, url_obj) for url_obj in urls]
 		results = await asyncio.gather(*tasks)
 
-		# Combine the results
 		combined_data = {
 			"title": [],
 			"link": [],

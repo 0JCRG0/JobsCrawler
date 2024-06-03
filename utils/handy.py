@@ -18,7 +18,7 @@ load_dotenv()
 LOCAL_POSTGRE_URL = os.environ.get("LOCAL_POSTGRE_URL", "")
 RENDER_POSTGRE_URL = os.environ.get("RENDER_POSTGRE_URL", "")
 DATABASE_URL = os.environ.get("DATABASE_URL_DO", "")
-LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
+LOGGER_PATH = "logs/main_logger.log"
 
 USER_AGENTS = [
 		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
@@ -42,11 +42,18 @@ USER_AGENTS = [
 """ LOAD THE ENVIRONMENT VARIABLES """
 
 """ Loggers """
-log_format = '%(asctime)s %(levelname)s: \n%(message)s\n'
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
-logging.basicConfig(filename=LOGGER_PATH,
-					level=logging.INFO,
-					format=log_format)
+logging_file_path = os.path.join(current_dir, LOGGER_PATH)
+
+def setup_main_logger(file: str = logging_file_path) -> None:
+    logging.basicConfig(
+        filename=file,
+        level=logging.INFO,
+        force=True,
+        filemode="a",
+        format="%(asctime)s - %(levelname)s - %(message)s",
+    )
 
 """ POSTGRE FUNCTIONS """
 def to_managed_prod_postgre(df: pd.DataFrame) -> None:

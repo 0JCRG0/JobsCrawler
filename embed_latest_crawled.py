@@ -12,6 +12,7 @@ from utils.e5_base_v2_utils import (
     embeddings_e5_base_v2_to_df,
 )
 import json
+from utils.handy import setup_main_logger
 
 load_dotenv(".env")
 DB_URL = os.environ.get("DATABASE_URL_DO")
@@ -19,18 +20,7 @@ LOGGER_PATH = os.environ.get("LOGGER_PATH")
 CONN = psycopg2.connect(DB_URL)
 CURSOR = CONN.cursor()
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-logging_file_path = os.path.join(current_dir, "logs/main_logger.log")
-
-logging.basicConfig(
-    filename=logging_file_path,
-    level=logging.INFO,
-    force=True,
-    filemode="a",
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
-
+setup_main_logger()
 
 def _clean_rows(s):
     if not isinstance(s, str):

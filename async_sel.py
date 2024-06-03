@@ -3,25 +3,18 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException 
-from selenium.common.exceptions import TimeoutException as TimeoutExceptionWebDriver
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from concurrent.futures import ThreadPoolExecutor
 import traceback
-from os import path
 from selenium.webdriver.chrome.service import Service
 import pandas as pd
-import re
 import pretty_errors
-from traceback import format_exc
 import timeit
-from dateutil.parser import parse
 from datetime import date, datetime
 import json
 import logging
 import os
 import asyncio
-import aiohttp
 from utils.FollowLink import *
 from dotenv import load_dotenv
 from utils.sel_utils import clean_postgre_sel

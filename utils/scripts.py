@@ -1,11 +1,35 @@
 import psycopg2
 import os
 from dotenv import load_dotenv
+import logging
 
 load_dotenv(".env")
 DB_URL = os.environ.get("DATABASE_URL_DO")
 CONN = psycopg2.connect(DB_URL)
 CURSOR = CONN.cursor()
+LOGGER_PATH = os.environ.get("LOGGER_PATH")
+
+
+
+
+def clear_logging_handlers() -> None:
+    for handler in logging.getLogger().handlers[:]:
+        logging.getLogger().removeHandler(handler)
+    logging.shutdown()
+
+def setup_logging_to_file(file: str | None) -> None:
+    logging.basicConfig(
+        filename=file,
+        level=logging.INFO,
+    )
+
+clear_logging_handlers()
+
+#setup_logging_to_file("/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/logs/main_logger.log")
+
+#logging.info("aaa")
+exit()
+
 
 def _insert_timestamp(id_value: int, embedding_model_value: str, timestamp_value: str, table: str = "last_embedding"):
     create_table_query = f""" 

@@ -177,7 +177,7 @@ def to_embeddings_e5_base_v2(
     }
 
     logging.info(
-        f"PostgreSQL Report: -------\n{json.dumps(postgre_report_dict, indent=4)}"
+        f"{json.dumps(postgre_report_dict, indent=4)}"
     )
 
     conn.commit()

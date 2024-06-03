@@ -13,8 +13,6 @@ from utils.e5_base_v2_utils import (
 )
 import json
 
-# TODO: Write the max id in the db if the operation is successful. Get the max from embeddings table and write that.
-
 load_dotenv(".env")
 DB_URL = os.environ.get("DATABASE_URL_DO")
 LOGGER_PATH = os.environ.get("LOGGER_PATH")
@@ -29,7 +27,7 @@ logging.basicConfig(
     filename=logging_file_path,
     level=logging.INFO,
     force=True,
-    filemode="w",
+    filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
@@ -153,14 +151,13 @@ def _get_max_timestamp(table: str = "last_embedding") -> str:
 
     return max_timestamp
 
-
 def _insert_max_timestamp(
     embedding_model: str,
     source_table: str = "embeddings_e5_base_v2",
     target_table: str = "last_embedding",
 ) -> None:
     CURSOR.execute(
-        f"SELECT id, MAX(timestamp) FROM {source_table} ORDER BY timestamp DESC LIMIT 1;"
+        f"SELECT id, timestamp FROM {source_table} ORDER BY timestamp DESC LIMIT 1;"
     )
 
     result = CURSOR.fetchone()
@@ -168,16 +165,15 @@ def _insert_max_timestamp(
     if not result:
         raise ValueError(f"There are no entries in {source_table}")
 
-    max_id = [row[0] for row in result]
-    max_timestamp = [row[1] for row in result]
+    max_id, max_timestamp = result
 
     insert_query = f"""
-		INSERT INTO {target_table} (id, timestamp, embedding_model)
-		VALUES (%s, %s, %s)
-		ON CONFLICT (id) DO UPDATE 
-		SET timestamp = EXCLUDED.timestamp,
-			embedding_model = EXCLUDED.embedding_model;
-	"""
+        INSERT INTO {target_table} (id, timestamp, embedding_model)
+        VALUES (%s, %s, %s)
+        ON CONFLICT (id) DO UPDATE 
+        SET timestamp = EXCLUDED.timestamp,
+            embedding_model = EXCLUDED.embedding_model;
+    """
 
     CURSOR.execute(insert_query, (max_id, max_timestamp, embedding_model))
 
@@ -223,4 +219,4 @@ def embed_latest_crawled(embedding_model: str, test: bool = False):
 
 
 if __name__ == "__main__":
-    embed_latest_crawled(embedding_model="e5_base_v2", test=True)
+    embed_latest_crawled(embedding_model="e5_base_v2", test=False)

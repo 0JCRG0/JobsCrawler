@@ -20,7 +20,6 @@ download/:
 /.cfg
 __pycache__/
 utils/__pycache__
-*.json
 ~/.aws
 archive
 tools

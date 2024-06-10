@@ -43,7 +43,7 @@ USER_AGENTS = [
 
 """ Loggers """
 
-def setup_main_logger(file: str) -> None:
+def setup_root_logger(file: str) -> None:
     logging.basicConfig(
         filename=file,
         level=logging.INFO,

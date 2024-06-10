@@ -4,16 +4,24 @@ import logging
 import timeit
 import asyncio
 import traceback
-from crawlers.async_rss import async_rss_template
-from crawlers.async_api import async_api_template
-from crawlers.async_bs4 import async_bs4_template
-from embeddings.embed_latest_crawled import embed_latest_crawled
-#from async_indeed import async_indeed_template
-#from utils.handy import send_email
+import os
+from src.crawlers.async_rss import async_rss_template
+from src.crawlers.async_api import async_api_template
+from src.crawlers.async_bs4 import async_bs4_template
+from src.embeddings.embed_latest_crawled import embed_latest_crawled
+from src.utils.handy import setup_root_logger
+from dotenv import load_dotenv
 
-#SET UP LOGGING
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+load_dotenv()
+
+LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
+
+""" SET UP LOGGING FILE """
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+logging_file_path = os.path.join(current_dir, LOGGER_PATH)
+
+setup_root_logger(logging_file_path)
 
 """
 In this script, safe_call() calls the provided functions 

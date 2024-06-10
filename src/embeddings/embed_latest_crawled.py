@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
 import logging
 import re
-from utils.e5_base_v2_utils import (
+from src.embeddings.e5_base_v2_utils import (
     query_e5_format,
     to_embeddings_e5_base_v2,
     num_tokens,
@@ -12,7 +12,6 @@ from utils.e5_base_v2_utils import (
     embeddings_e5_base_v2_to_df,
 )
 import json
-from utils.handy import setup_main_logger
 
 load_dotenv(".env")
 DB_URL = os.environ.get("DATABASE_URL_DO")
@@ -20,11 +19,8 @@ LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
 CONN = psycopg2.connect(DB_URL)
 CURSOR = CONN.cursor()
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-logging_file_path = os.path.join(current_dir, LOGGER_PATH)
-
-setup_main_logger(logging_file_path)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 def _clean_rows(s):
     if not isinstance(s, str):

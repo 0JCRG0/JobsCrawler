@@ -1,0 +1,24 @@
+[
+    {
+        "urls": [
+            {
+                "name": "https://4dayweek.io",
+                "url": "https://4dayweek.io/remote-jobs/fully-remote/anywhere?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".wrapper .content-wrapper.full-width .main-container-wrapper .job-page .row.job-content-wrapper .job-listing.row .row.job-content .col-sm-8.cols.hero-left .row.job-description-text",
+                "elements_path": [
+                        {
+                        "jobs_path": ".row.jobs-list .job-tile-wrapper",
+                        "title_path": ".row.job-tile .job-tile-left.col-sm-9 .row.job-tile-title",
+                        "link_path": ".row.job-tile .job-tile-left.col-sm-9 .row.job-tile-title h3 .btn.btn-link.dark.btn-lg",
+                        "location_path": ".row.job-tile .job-tile-left.col-sm-9 .job-tile-tags",
+                        "description_path": ".row.job-tile .job-tile-left.col-sm-9 .job-tile-tags"
+                    }
+                ]
+            }
+        ]
+    }
+]

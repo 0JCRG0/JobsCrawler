@@ -1,0 +1,42 @@
+[
+    {
+        "urls": [
+            {
+                "name": "REMOTESOME",
+                "url": "https://app.remotesome.com/jobs/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "main",
+                "follow_link": "yes",
+                "inner_link_tag": ".u-ph.u-relative .container.u-pt40.u-pt16\\:sm .row.u-flex--center .col-8\\:md.u-pb40.u-pl0\\:xs.u-pr0\\:xs.u-pt24\\:xs .u-pt24\\:sm.u-pb24\\:sm.u-pl16\\:sm.u-pr16\\:sm.u-pt40.u-pl32.u-pr32.u-pb32 .u-pb40.c-content.u-color--gray-75",
+                "elements_path": [
+                    {
+                        "jobs_path": ".col-8\\:md article",
+                        "title_path": ".u-pl16 h4",
+                        "link_path": "a",
+                        "description_path": ".u-flex.u-pt8.u-flex--middle",
+                        "location_path": ".u-flex.u-relative div[style=\"width: 128px;\"]"
+                    }
+                ]
+            },
+            {
+                "name": "https://www.remoteimpact.io",
+                "url": "https://www.remoteimpact.io/?page=",
+                "pages_to_crawl": 1,
+                "start_point": 1,
+                "strategy": "container",
+                "follow_link": "yes",
+                "inner_link_tag": "body",
+                "elements_path": [
+                        {
+                        "jobs_path": ".bg-gray-100.overflow-hidden.min-h-screen.flex.flex-col.relative .container.mx-auto.pt-4.mb-12.false div main",
+                        "title_path": "a div div div .lg\\:text-lg.font-bold.pr-2.line-clamp-1",
+                        "link_path": "a",
+                        "location_path": "a div div div div .text-slate-700.line-clamp-1",
+                        "description_path": "a div div div .text-lg"
+                    }
+                ]
+            }
+        ]
+    }
+]

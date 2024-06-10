@@ -9,9 +9,9 @@ from datetime import date, datetime
 from dotenv import load_dotenv
 import logging
 import psycopg2
-from utils.rss_utils import clean_postgre_rss
-from utils.handy import link_exists_in_db, test_or_prod, setup_main_logger
-from utils.FollowLink import async_follow_link
+from src.utils.rss_utils import clean_postgre_rss
+from src.utils.handy import link_exists_in_db, setup_main_logger
+from src.utils.FollowLink import async_follow_link
 import asyncio
 import aiohttp
 

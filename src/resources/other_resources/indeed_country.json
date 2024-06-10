@@ -1,0 +1,12 @@
+[
+  {
+    "code": "MX",
+    "url_1": "https://mx.indeed.com/jobs?q=",
+    "url_2": "&sc=0kf%3Aattr%28DSQF7%29%3B&sort=date&fromage=1&filter=0&start="
+  },
+  {
+    "code": "USA",
+    "url_1": "https://indeed.com/jobs?q=",
+    "url_2": "&sc=0kf%3Aattr%28DSQF7%29%3B&rbl=Remote&jlid=aaa2b906602aa8f5&sort=date&fromage=1&filter=0&start="
+  }
+]

@@ -8,8 +8,8 @@ import logging
 import os
 import psycopg2
 from dotenv import load_dotenv
-from utils.handy import USER_AGENTS, setup_main_logger, crawled_df_to_db
-from utils.bs4_utils import (
+from src.utils.handy import USER_AGENTS, crawled_df_to_db
+from src.utils.bs4_utils import (
     async_container_strategy_bs4,
     async_main_strategy_bs4,
     async_occ_mundial,
@@ -26,14 +26,10 @@ JSON_PROD = os.environ.get("JSON_PROD_BS4", "")
 LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
 URL_DB = os.environ.get("DATABASE_URL_DO", "")
 
+""" SETUP NAMED LOGGER """
 
-""" SET UP LOGGING FILE """
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-logging_file_path = os.path.join(current_dir, LOGGER_PATH)
-
-setup_main_logger(logging_file_path)
-
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 """ CONNECTION & DATA """
 

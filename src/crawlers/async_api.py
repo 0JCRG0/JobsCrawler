@@ -10,7 +10,7 @@ import logging
 from datetime import date
 from datetime import datetime
 from dotenv import load_dotenv
-from src.utils.handy import link_exists_in_db, setup_main_logger, USER_AGENTS
+from src.utils.handy import link_exists_in_db, USER_AGENTS
 from src.utils.api_utils import clean_postgre_api, class_json_strategy
 from src.utils.FollowLink import AsyncFollowLinkEchoJobs, async_follow_link
 import asyncio

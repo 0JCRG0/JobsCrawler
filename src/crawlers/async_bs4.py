@@ -1,12 +1,12 @@
 #!/usr/local/bin/python3
 
-import bs4
+from bs4 import BeautifulSoup
 import pandas as pd
-import pretty_errors  # noqa: F401
 import json
 import logging
 import os
 import psycopg2
+from psycopg2.extensions import cursor, connection
 from dotenv import load_dotenv
 from src.utils.handy import USER_AGENTS, crawled_df_to_db
 from src.utils.bs4_utils import (
@@ -18,212 +18,126 @@ from src.utils.bs4_utils import (
 import asyncio
 import random
 import aiohttp
+from src.models import Bs4Element
 
-""" LOAD THE ENVIRONMENT VARIABLES """
+# Load the environment variables
 load_dotenv()
 
-JSON_PROD = os.environ.get("JSON_PROD_BS4", "")
-LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
-URL_DB = os.environ.get("DATABASE_URL_DO", "")
+URL_DB = os.getenv("DATABASE_URL_DO", "")
 
-""" SETUP NAMED LOGGER """
+api_resources_dir = os.path.join('src', 'resources', 'bs4_resources')
+JSON_PROD = os.path.abspath(os.path.join(api_resources_dir, 'bs4_main.json'))
+JSON_TEST = os.path.abspath(os.path.join(api_resources_dir, 'bs4_test.json'))
 
+
+LOGGER_PATH = os.path.join('logs', 'main_logger.log')
+
+logging.basicConfig(
+    filename=LOGGER_PATH,
+    level=logging.DEBUG,
+    force=True,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+# Set up named logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-""" CONNECTION & DATA """
 
-JSON = os.path.join(current_dir, JSON_PROD)
-CONN = psycopg2.connect(URL_DB)
-CUR = CONN.cursor()
+class AsyncCrawlerBS4:
+    def __init__(self, url_db=URL_DB):
+        self.url_db = url_db
+        self.conn: connection | None = None
+        self.cur: cursor | None  = None
 
-#TODO: Each site to crawl should be a data class or pylance base class.
-#: dict[str, str | list[dict[str, str]]]
+    async def __load_urls(self, json_data_path: str) -> list[Bs4Element]:
+        with open(json_data_path) as f:
+            data = json.load(f)
+        return [
+            Bs4Element(**url)
+            for url in data[0]["urls"]
+        ]
 
-"""
-Instead of passing this. You can pass the class:
+    async def __fetch(self, url: str, session: aiohttp.ClientSession) -> str:
+        random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
+        async with session.get(url, headers=random_user_agent) as response:
+            logger.debug(f"random_header: {random_user_agent}")
+            return await response.text()
 
-elements_path,
-name,
-inner_link_tag,
-follow_link,
-"""
+    async def __crawling_strategy(self, session: aiohttp.ClientSession, bs4_element: Bs4Element, soup, test) -> dict[str, list[str]] | None:
+        strategy_map = {
+            "main": async_main_strategy_bs4,
+            "container": async_container_strategy_bs4,
+            "occ": async_occ_mundial,
+        }
+        func_strategy = strategy_map.get(bs4_element.strategy)
+        if not func_strategy:
+            raise ValueError("Unrecognized strategy.")
 
+        try:
+            return await func_strategy(self.cur, session, bs4_element, soup, test)
+        except Exception as e:
+            logger.error(f"{type(e).__name__} using {bs4_element.strategy} strategy while crawling {bs4_element.url}.\n{e}", exc_info=True)
 
-async def fetch(url: str, session: aiohttp.ClientSession) -> str:
-    random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
-    async with session.get(url, headers=random_user_agent) as response:
-        response_text = response.text
-        logging.debug(
-            f"random_header: {random_user_agent}\nresponse_text: {response_text}"
-        )
-        return await response.text()
+    async def _async_bs4_crawler(self, session: aiohttp.ClientSession, bs4_element: Bs4Element, test: bool = False) -> dict[str, list[str]]:
+        rows = {key: [] for key in ["title", "link", "description", "pubdate", "location", "timestamp"]}
 
-async def async_bs4_crawler(session: aiohttp.ClientSession, url_obj, test: bool = False) -> dict[str, list[str]]:
-    rows = {
-        "title": [],
-        "link": [],
-        "description": [],
-        "pubdate": [],
-        "location": [],
-        "timestamp": [],
-    }
+        logger.info(f"{bs4_element.name} has started")
+        logger.debug(f"All parameters for {bs4_element.name}:\n{bs4_element}")
 
-    name = url_obj["name"]
-    url_prefix = url_obj["url"]
-    elements_path = url_obj["elements_path"][0]
-    pages = url_obj["pages_to_crawl"]
-    start_point = url_obj["start_point"]
-    strategy = url_obj["strategy"]
-    follow_link = url_obj["follow_link"]
-    inner_link_tag = url_obj["inner_link_tag"]
-
-    logging.info(f"{name} has started")
-    logging.debug(f"All parameters for {name}:\n{url_obj}")
-
-    async with aiohttp.ClientSession() as session:
-        for i in range(start_point, pages + 1):
-            url = url_prefix + str(i)
+        for i in range(bs4_element.start_point, bs4_element.pages_to_crawl + 1):
+            url = bs4_element.url + str(i)
 
             try:
-                html = await fetch(url, session)
-                soup = bs4.BeautifulSoup(html, "lxml")
-                logging.info(f"Crawling {url} with {strategy} strategy")
+                html = await self.__fetch(url, session)
+                soup = BeautifulSoup(html, "lxml")
+                logger.debug(f"Crawling {url} with {bs4_element.strategy} strategy")
 
-                if strategy == "main":
-                    try:
-                        new_rows = await async_main_strategy_bs4(
-                            CUR,
-                            session,
-                            elements_path,
-                            name,
-                            inner_link_tag,
-                            follow_link,
-                            soup,
-                            test
-                        )
-                    except Exception as e:
-                        error_message = f"{type(e).__name__} in **async_main_strategy_bs4()** while crawling {url}.\n\n{e}"
-                        logging.error(f"{error_message}\n", exc_info=True)
-                        continue
-
-                elif strategy == "container":
-                    try:
-                        new_rows = await async_container_strategy_bs4(
-                            CUR,
-                            session,
-                            elements_path,
-                            name,
-                            inner_link_tag,
-                            follow_link,
-                            soup,
-                            test
-                        )
-                    except Exception as e:
-                        error_message = f"{type(e).__name__} in **async_container_strategy_bs4()** while crawling {url}.\n\n{e}"
-                        logging.error(f"{error_message}\n", exc_info=True)
-                        continue
-                elif strategy == "occ":
-                    try:
-                        new_rows = await async_occ_mundial(
-                            CUR,
-                            session,
-                            elements_path,
-                            name,
-                            inner_link_tag,
-                            follow_link,
-                            soup,
-                            test
-                        )
-                    except Exception as e:
-                        error_message = f"{type(e).__name__} in **async_occ_mundial()** while crawling {url}.\n\n{e}"
-                        logging.error(f"{error_message}\n", exc_info=True)
-                        continue
-                for key in rows:
-                    rows[key].extend(new_rows.get(key, []))
+                new_rows = await self.__crawling_strategy(session, bs4_element, soup, test)
+                if new_rows:
+                    for key in rows:
+                        rows[key].extend(new_rows.get(key, []))
 
             except Exception as e:
-                error_message = f"{type(e).__name__} occured before deploying crawling strategy on {url}.\n\n{e}"
-                logging.error(f"{error_message}\n", exc_info=True)
+                logger.error(f"{type(e).__name__} occurred before deploying crawling strategy on {url}.\n\n{e}", exc_info=True)
                 continue
-    return rows
+        return rows
 
-async def gather_json_loads_bs4(session: aiohttp.ClientSession, json_data_path: str, test: bool = False) -> None:
-    with open(json_data_path) as f:
-        data = json.load(f)
-        urls = data[0]["urls"]
+    async def _gather_json_loads_bs4(self, session: aiohttp.ClientSession, test: bool = False) -> None:
+        json_data_path = JSON_TEST if test else JSON_PROD
+        bs4_elements = await self.__load_urls(json_data_path)
 
-    tasks = [async_bs4_crawler(session, url_obj, test) for url_obj in urls]
-    results = await asyncio.gather(*tasks)
+        tasks = [self._async_bs4_crawler(session, bs4_element, test) for bs4_element in bs4_elements]
+        results = await asyncio.gather(*tasks)
 
-    combined_data = {
-        "title": [],
-        "link": [],
-        "description": [],
-        "pubdate": [],
-        "location": [],
-        "timestamp": [],
-    }
-    for result in results:
-        for key in combined_data:
-            combined_data[key].extend(result[key])
+        combined_data = {key: [] for key in ["title", "link", "description", "pubdate", "location", "timestamp"]}
+        for result in results:
+            for key in combined_data:
+                combined_data[key].extend(result[key])
 
-    title_len = len(combined_data["title"])
-    link_len = len(combined_data["link"])
-    description_len = len(combined_data["description"])
-    pubdate_len = len(combined_data["pubdate"])
-    location_len = len(combined_data["location"])
-    timestamp_len = len(combined_data["timestamp"])
+        lengths = {key: len(value) for key, value in combined_data.items()}
+        if len(set(lengths.values())) == 1:
+            df = clean_postgre_bs4(pd.DataFrame(combined_data))
+            crawled_df_to_db(df, self.cur, test)
+        else:
+            logger.error(f"ERROR ON ASYNC BS4. LISTS DO NOT HAVE SAME LENGTH. FIX {lengths}")
 
-    lengths_info = """
-        Titles: {}
-        Links: {}
-        Descriptions: {}
-        Pubdates: {}
-        Locations: {}
-        Timestamps: {}
-        """.format(
-        title_len,
-        link_len,
-        description_len,
-        pubdate_len,
-        location_len,
-        timestamp_len,
-    )
+    async def run(self, test: bool = False) -> None:
+        start_time = asyncio.get_event_loop().time()
 
-    if (
-        title_len
-        == link_len
-        == description_len
-        == pubdate_len
-        == location_len
-        == timestamp_len
-    ):
-        clean_postgre_bs4(
-            df=pd.DataFrame(combined_data),
-            function_postgre=crawled_df_to_db,
-        )
-    else:
-        logging.error(
-            f"ERROR ON ASYNC BS4. LISTS DO NOT HAVE SAME LENGHT. FIX {lengths_info}"
-        )
-        pass
+        self.conn = psycopg2.connect(self.url_db)
+        self.cur = self.conn.cursor()
 
-async def async_bs4_template(json_data_path: str = JSON, test: bool = False):
-    start_time = asyncio.get_event_loop().time()
+        async with aiohttp.ClientSession() as session:
+            await self._gather_json_loads_bs4(session, test)
+
+        self.conn.commit()
+        self.cur.close()
+        self.conn.close()
+
+        elapsed_time = asyncio.get_event_loop().time() - start_time
+        logger.info(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.")
 
 
-    async with aiohttp.ClientSession() as session:
-        await gather_json_loads_bs4(session, json_data_path, test)
-
-    elapsed_time = asyncio.get_event_loop().time() - start_time
-    logging.info(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.")
-
-    CONN.commit()
-    CUR.close()
-    CONN.close()
-
-
-async def main():
-    await async_bs4_template()
 

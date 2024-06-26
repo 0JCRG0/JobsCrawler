@@ -43,17 +43,17 @@ USER_AGENTS = [
 
 """ Loggers """
 
-def setup_root_logger(file: str) -> None:
+def setup_root_logger(file: str,) -> None:
     logging.basicConfig(
         filename=file,
-        level=logging.INFO,
+        level=logging.DEBUG,
         force=True,
         filemode="a",
         format="%(asctime)s - %(levelname)s - %(message)s",
     )
 
 
-def crawled_df_to_db(df: pd.DataFrame, cur: cursor, test: bool = False) -> None:
+def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -> None:
 
 	if test:
 		table = "test"
@@ -62,6 +62,9 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor, test: bool = False) -> None:
 	initial_count_query = f'''
 		SELECT COUNT(*) FROM {table}
 	'''
+	if not cur:
+		raise ValueError("Cursos cannot be None.")
+	
 	cur.execute(initial_count_query)
 	initial_count_result = cur.fetchone()
 	

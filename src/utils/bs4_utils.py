@@ -1,200 +1,131 @@
-from typing import Callable
 from psycopg2.extensions import cursor
 import bs4
 import pandas as pd
 import pretty_errors  # noqa: F401
 from datetime import date, datetime
 import logging
-from utils.FollowLink import async_follow_link, async_follow_link_title_description
-from utils.handy import link_exists_in_db
+from src.utils.FollowLink import async_follow_link, async_follow_link_title_description
+from src.utils.handy import link_exists_in_db
 import aiohttp
-
+from src.models import Bs4Element
 
 async def async_main_strategy_bs4(
-    cur: cursor,
+    cur,
     session: aiohttp.ClientSession,
-    elements_path: dict,
-    name: str,
-    inner_link_tag: str,
-    follow_link: str,
+    bs4_element: Bs4Element,
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):
-    total_links = []
-    total_titles = []
-    total_pubdates = []
-    total_locations = []
-    total_descriptions = []
-    total_timestamps = []
-
-    jobs = soup.select(elements_path["jobs_path"])
-    assert (
-        jobs is not None
-    ), "No elements found for 'jobs' in async_main_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
-    for job in jobs:
-        job_data = {}
-
-        title_element = job.select_one(elements_path["title_path"])
-        assert (
-            title_element is not None
-        ), "No elements found for 'title_element' in main_strategy_bs4(). Check 'elements_path[\"title_path\"]'"
-        job_data["title"] = title_element.text if title_element else "NaN"
-
-        link_element = job.select_one(elements_path["link_path"])
-        assert (
-            link_element is not None
-        ), "No elements found for 'link_element' in main_strategy_bs4(). Check 'elements_path[\"link_path\"]'"
-        job_data["link"] = name + str(link_element["href"]) if link_element else "NaN"
-
-        """ WHETHER THE LINK IS IN THE DB """
-        if await link_exists_in_db(link=job_data["link"], cur=cur, test=test):
-            logging.debug(
-                f"""Link {job_data["link"]} already found in the db. Skipping... """
-            )
-            continue
-        else:
-            """WHETHER TO FOLLOW LINK"""
-            description_default = job.select_one(elements_path["description_path"])
-            default = description_default.text if description_default else "NaN"
-            if follow_link == "yes":
-                job_data["description"] = ""
-                job_data["description"] = await async_follow_link(
-                    session=session,
-                    followed_link=job_data["link"],
-                    description_final=job_data["description"],
-                    inner_link_tag=inner_link_tag,
-                    default=default,
-                )
-            else:
-                job_data["description"] = default
-
-            today = date.today()
-            job_data["pubdate"] = today
-
-            location_element = job.select_one(elements_path["location_path"])
-            job_data["location"] = location_element.text if location_element else "NaN"
-
-            timestamp = datetime.now()
-            job_data["timestamp"] = timestamp
-
-            total_links.append(job_data["link"])
-            total_titles.append(job_data["title"])
-            total_pubdates.append(job_data["pubdate"])
-            total_locations.append(job_data["location"])
-            total_timestamps.append(job_data["timestamp"])
-            total_descriptions.append(job_data["description"])
-
-    return {
-        "title": total_titles,
-        "link": total_links,
-        "description": total_descriptions,
-        "pubdate": total_pubdates,
-        "location": total_locations,
-        "timestamp": total_timestamps,
+    total_jobs_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
     }
 
+    jobs = soup.select(bs4_element.elements_path.jobs_path)
+    if not jobs:
+        raise ValueError(f"No jobs were found using this selector {bs4_element.elements_path.jobs_path}")
+
+    for job in jobs:
+        title_element = job.select_one(bs4_element.elements_path.title_path)
+        if not title_element:
+            raise ValueError(f"No titles were found using this selector {bs4_element.elements_path.title_path}")
+
+        link_element = job.select_one(bs4_element.elements_path.link_path)
+        if not link_element:
+            raise ValueError(f"No links were found using this selector {bs4_element.elements_path.link_path}")
+
+        link = bs4_element.name + str(link_element["href"])
+
+        if await link_exists_in_db(link=link, cur=cur, test=test):
+            logging.debug(f"Link {link} already found in the db. Skipping...")
+            continue
+
+        description_element = job.select_one(bs4_element.elements_path.description_path)
+        description = description_element.text if description_element else "NaN"
+        if bs4_element.follow_link == "yes":
+            description = await async_follow_link(
+                session=session,
+                followed_link=link,
+                description_final="",
+                inner_link_tag=bs4_element.inner_link_tag,
+                default=description,
+            )
+
+        today = date.today()
+        location_element = job.select_one(bs4_element.elements_path.location_path)
+        location = location_element.text if location_element else "NaN"
+
+        timestamp = datetime.now()
+
+        for key, value in zip(total_jobs_data.keys(), [title_element.text, link, description, today, location, timestamp]):
+            total_jobs_data[key].append(value)
+
+    return total_jobs_data
 
 async def async_container_strategy_bs4(
     cur: cursor,
     session: aiohttp.ClientSession,
-    elements_path: dict,
-    name: str,
-    inner_link_tag: str,
-    follow_link: str,
+    bs4_element: Bs4Element,
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):
-    total_links = []
-    total_titles = []
-    total_pubdates = []
-    total_locations = []
-    total_descriptions = []
-    total_timestamps = []
-
-    # Identify the container with all the jobs
-    container = soup.select_one(elements_path["jobs_path"])
-    assert (
-        container is not None
-    ), "No elements found for 'container' in async_container_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
-
-    titles = container.select(elements_path["title_path"])
-    assert (
-        titles is not None
-    ), "No elements found for 'titles' in async_container_strategy_bs4(). Check 'elements_path[\"title_path\"]'"
-
-    links = container.select(elements_path["link_path"])
-    assert (
-        links is not None
-    ), "No elements found for 'links' in async_container_strategy_bs4(). Check 'elements_path[\"link_path\"]'"
-
-    descriptions = container.select(elements_path["description_path"])
-    assert (
-        descriptions is not None
-    ), "No elements found for 'descriptions' in async_container_strategy_bs4(). Check 'elements_path[\"description_path\"]'"
-
-    locations = container.select(elements_path["location_path"])
-    assert (
-        locations is not None
-    ), "No elements found for 'locations' in async_container_strategy_bs4(). Check 'elements_path[\"location_path\"]'"
-
-    # Identify the elements for each job
-    job_elements = list(
-        zip(
-            titles,
-            links,
-            descriptions,
-            locations,
-        )
-    )
-
-    assert all(
-        len(element) == len(job_elements[0]) for element in job_elements
-    ), "Not all elements have the same length in async_container_strategy_bs4()"
-
-    for (
-        title_element,
-        link_element,
-        description_element,
-        location_element,
-    ) in job_elements:
-        title = title_element.get_text(strip=True) if title_element else "NaN"
-        link = name + str(link_element.get("href")) if link_element else "NaN"
-        description_default = (
-            description_element.get_text(strip=True) if description_element else "NaN"
-        )
-        location = location_element.get_text(strip=True) if location_element else "NaN"
-
-        # Check if the link exists in the database
-        if await link_exists_in_db(link=link, cur=cur, test=test):
-            logging.info(f"""Link {link} already found in the db. Skipping... """)
-            continue
-
-        # Follow the link if specified
-        description = ""
-        if follow_link == "yes":
-            description = await async_follow_link(
-                session, link, description, inner_link_tag, description_default
-            )
-
-        # add the data for the current job to the rows list
-        total_titles.append(title)
-        total_links.append(link)
-        total_descriptions.append(description)
-        total_locations.append(location)
-        total_pubdates.append(date.today())
-        total_timestamps.append(datetime.now())
-
-    return {
-        "title": total_titles,
-        "link": total_links,
-        "description": total_descriptions,
-        "pubdate": total_pubdates,
-        "location": total_locations,
-        "timestamp": total_timestamps,
+    paths = bs4_element.elements_path
+    total_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
     }
 
+    container = soup.select_one(paths.jobs_path)
+    if not container:
+        raise ValueError(f"No elements found for 'container'. Check '{paths.jobs_path}'")
 
-def clean_postgre_bs4(df: pd.DataFrame, function_postgre: Callable):
+    elements = {
+        "title": container.select(paths.title_path),
+        "link": container.select(paths.link_path),
+        "description": container.select(paths.description_path),
+        "location": container.select(paths.location_path),
+    }
+
+    for key, value in elements.items():
+        if not value:
+            raise ValueError(f"No elements found for '{key}'. Check 'elements_path[\"{key}_path\"]'")
+
+    job_elements = zip(*elements.values())
+
+    for title_element, link_element, description_element, location_element in job_elements:
+        title = title_element.get_text(strip=True) or "NaN"
+        link = bs4_element.name + (link_element.get("href") or "NaN")
+        description_default = description_element.get_text(strip=True) or "NaN"
+        location = location_element.get_text(strip=True) or "NaN"
+
+        if await link_exists_in_db(link=link, cur=cur, test=test):
+            logging.debug(f"Link {link} already found in the db. Skipping...")
+            continue
+
+        description = await async_follow_link(
+            session, link, description_default, bs4_element.inner_link_tag
+        ) if bs4_element.follow_link == "yes" else description_default
+
+        now = datetime.now()
+        total_data["title"].append(title)
+        total_data["link"].append(link)
+        total_data["description"].append(description)
+        total_data["pubdate"].append(date.today())
+        total_data["location"].append(location)
+        total_data["timestamp"].append(now)
+
+    return total_data
+
+
+def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
     df = df.drop_duplicates()
 
     for col in df.columns:
@@ -233,85 +164,58 @@ def clean_postgre_bs4(df: pd.DataFrame, function_postgre: Callable):
 
     logging.info("Finished bs4 crawlers. Results below ⬇︎")
 
-    function_postgre(df)
+    return df
 
 
 async def async_occ_mundial(
     cur: cursor,
     session: aiohttp.ClientSession,
-    elements_path: dict,
-    name: str,
-    inner_link_tag: str,
-    follow_link: str,
+    element: Bs4Element, 
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):
-    total_links = []
-    total_titles = []
-    total_pubdates = []
-    total_locations = []
-    total_descriptions = []
-    total_timestamps = []
+    # TODO: NOT TESTED.
+    total_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
+    }
 
-    # Identify the container with all the jobs
-    container = soup.select_one(elements_path["jobs_path"])
-    assert (
-        container is not None
-    ), "No elements found for 'container' in async_container_strategy_bs4(). Check 'elements_path[\"jobs_path\"]'"
+    container = soup.select_one(element.elements_path.jobs_path)
+    if not container:
+        raise AssertionError("No elements found for 'container'. Check 'elements_path[\"jobs_path\"]'")
 
-    # titles = container.select(elements_path["title_path"])
-    # assert titles is not None, "No elements found for 'titles' in async_container_strategy_bs4(). Check 'elements_path[\"title_path\"]'"
+    links = container.select(element.elements_path.link_path)
+    if not links:
+        raise AssertionError("No elements found for 'links'. Check 'elements_path[\"link_path\"]'")
 
-    links = container.select(elements_path["link_path"])
-    assert (
-        links is not None
-    ), "No elements found for 'links' in async_container_strategy_bs4(). Check 'elements_path[\"link_path\"]'"
+    print(f"Number of job elements: {len(links)}")
 
-    # Identify the elements for each job
-    job_elements = list(links)
-
-    print(len(job_elements))
-
-    # assert all(len(element) == len(job_elements[0]) for element in job_elements), "Not all elements have the same length in async_container_strategy_bs4()"
-
-    for link_element in job_elements:
-        # Process the elements for the current job
-        # title = title_element.get_text(strip=True) if title_element else "NaN"
-        link = name + str(link_element.get("href")) if link_element else "NaN"
-        # TODO: Regex on link to only iunclude this: https://www.occ.com.mx/empleo/oferta/17987183-mulesoft-developer/
-        # link = re.search(r'https://www\.occ\.com\.mx/empleo/oferta/\d+[^/?]+', link).group()
-
-        # Check if the link exists in the database
+    for link_element in links:
+        link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"
+        
         if await link_exists_in_db(link=link, cur=cur, test=test):
-            logging.info(f"""Link {link} already found in the db. Skipping... """)
+            logging.info(f"Link {link} already found in the db. Skipping...")
             continue
 
-        # Follow the link if specified
-        title = ""
-        description = ""
-        if follow_link == "yes":
+        title, description = ("", "")
+        if element.follow_link == "yes":
             title, description = await async_follow_link_title_description(
                 session,
                 link,
                 description,
-                inner_link_tag,
-                elements_path["title_path"],
+                element.inner_link_tag,
+                element.elements_path.title_path,
                 "NaN",
             )
 
-        # add the data for the current job to the rows list
-        total_titles.append(title)
-        total_links.append(link)
-        total_descriptions.append(description)
-        total_locations.append("MX")
-        total_pubdates.append(date.today())
-        total_timestamps.append(datetime.now())
+        today = date.today()
+        now = datetime.now()
+        for key, value in zip(["link", "title", "description", "location", "pubdate", "timestamp"],
+                            [link, title, description, "MX", today, now]):
+            total_data[key].append(value)
 
-    return {
-        "title": total_titles,
-        "link": total_links,
-        "description": total_descriptions,
-        "pubdate": total_pubdates,
-        "location": total_locations,
-        "timestamp": total_timestamps,
-    }
+    return total_data

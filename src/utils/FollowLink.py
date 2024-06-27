@@ -1,8 +1,3 @@
-from httpcore import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
 import bs4
 import traceback
 import aiohttp
@@ -25,12 +20,10 @@ async def async_follow_link(session: aiohttp.ClientSession, followed_link: str, 
 				description_final = 'NaN'
 				return description_final
 		elif link_res.status == 403:
-			print(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""", "\n")
 			logging.warning(f"""CONNECTION PROHIBITED WITH BS4 ON {followed_link}. STATUS CODE: "{link_res.status}". TRYING WITH SELENIUM""")
 			description_final = 'NaN'
 			return description_final
 		else:
-			print(f"""CONNECTION FAILED ON {followed_link}. STATUS CODE: "{link_res.status}". Getting the description from default.""", "\n")
 			logging.warning(f"""CONNECTION FAILED ON {followed_link}. STATUS CODE: "{link_res.status}". Getting the description from default.""")
 			description_final = default
 			return description_final
@@ -59,10 +52,10 @@ async def async_follow_link_title_description(session: aiohttp.ClientSession, fo
 			description_final = default
 			return description_final
 
+"""
 async def async_follow_link_sel(followed_link, inner_link_tag, driver, fetch_sel, default):
 	try:
 		await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
-		print(f"""CONNECTION ESTABLISHED ON {followed_link}""", "\n")
 		try:
 			# Set up a WebDriverWait instance with a timeout of 10 seconds
 			wait = WebDriverWait(driver, 10)
@@ -84,7 +77,6 @@ async def async_follow_link_sel(followed_link, inner_link_tag, driver, fetch_sel
 async def async_follow_link_indeed(followed_link, inner_link_tag, driver, fetch_sel, default):
 	try:
 		await fetch_sel(followed_link, driver)  # Replaced driver.get with await fetch_sel
-		print(f"""CONNECTION ESTABLISHED ON {followed_link}""", "\n")
 		try:
 			# Set up a WebDriverWait instance with a timeout of 10 seconds
 			wait = WebDriverWait(driver, 10)
@@ -109,8 +101,9 @@ async def async_follow_link_indeed(followed_link, inner_link_tag, driver, fetch_
 			print(error_message)
 			logging.error(f"{error_message}\n")
 			return default
+"""
 
-async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow: str, selector: str, default: str):
+async def async_follow_link_echojobs(session: aiohttp.ClientSession, url_to_follow: str, selector: str, default: str):
 
 	async with session.get(url_to_follow) as r:
 		try:

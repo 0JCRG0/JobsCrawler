@@ -1,18 +1,17 @@
 from psycopg2.extensions import cursor
 import bs4
 import pandas as pd
-import pretty_errors  # noqa: F401
 from datetime import date, datetime
 import logging
 from src.utils.FollowLink import async_follow_link, async_follow_link_title_description
 from src.utils.handy import link_exists_in_db
 import aiohttp
-from src.models import Bs4Element
+from src.models import Bs4Config
 
 async def async_main_strategy_bs4(
     cur,
     session: aiohttp.ClientSession,
-    bs4_element: Bs4Element,
+    bs4_element: Bs4Config,
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):
@@ -69,7 +68,7 @@ async def async_main_strategy_bs4(
 async def async_container_strategy_bs4(
     cur: cursor,
     session: aiohttp.ClientSession,
-    bs4_element: Bs4Element,
+    bs4_element: Bs4Config,
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):
@@ -170,7 +169,7 @@ def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
 async def async_occ_mundial(
     cur: cursor,
     session: aiohttp.ClientSession,
-    element: Bs4Element, 
+    element: Bs4Config, 
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):

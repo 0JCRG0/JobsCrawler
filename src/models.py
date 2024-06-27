@@ -10,7 +10,7 @@ class Bs4ElementPath:
     description_path: str
 
 @dataclass
-class Bs4Element:
+class Bs4Config:
     name: str
     url: str
     pages_to_crawl: int
@@ -19,3 +19,22 @@ class Bs4Element:
     follow_link: str
     inner_link_tag: str
     elements_path: Bs4ElementPath
+
+@dataclass
+class ApiElementPath:
+    dict_tag: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    pubdate_tag: str
+    location_tag: str
+    location_default: str
+
+@dataclass
+class ApiConfig:
+    name: str
+    api: str
+    class_json: int
+    follow_link: str
+    inner_link_tag: str
+    elements_path: ApiElementPath

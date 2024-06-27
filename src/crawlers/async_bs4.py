@@ -18,7 +18,7 @@ from src.utils.bs4_utils import (
 import asyncio
 import random
 import aiohttp
-from src.models import Bs4Element
+from src.models import Bs4Config
 
 # Load the environment variables
 load_dotenv()
@@ -51,11 +51,11 @@ class AsyncCrawlerBS4:
         self.conn: connection | None = None
         self.cur: cursor | None  = None
 
-    async def __load_urls(self, json_data_path: str) -> list[Bs4Element]:
+    async def __load_urls(self, json_data_path: str) -> list[Bs4Config]:
         with open(json_data_path) as f:
             data = json.load(f)
         return [
-            Bs4Element(**url)
+            Bs4Config(**url)
             for url in data[0]["urls"]
         ]
 
@@ -65,7 +65,7 @@ class AsyncCrawlerBS4:
             logger.debug(f"random_header: {random_user_agent}")
             return await response.text()
 
-    async def __crawling_strategy(self, session: aiohttp.ClientSession, bs4_element: Bs4Element, soup, test) -> dict[str, list[str]] | None:
+    async def __crawling_strategy(self, session: aiohttp.ClientSession, bs4_element: Bs4Config, soup, test) -> dict[str, list[str]] | None:
         strategy_map = {
             "main": async_main_strategy_bs4,
             "container": async_container_strategy_bs4,
@@ -80,7 +80,7 @@ class AsyncCrawlerBS4:
         except Exception as e:
             logger.error(f"{type(e).__name__} using {bs4_element.strategy} strategy while crawling {bs4_element.url}.\n{e}", exc_info=True)
 
-    async def _async_bs4_crawler(self, session: aiohttp.ClientSession, bs4_element: Bs4Element, test: bool = False) -> dict[str, list[str]]:
+    async def _async_bs4_crawler(self, session: aiohttp.ClientSession, bs4_element: Bs4Config, test: bool = False) -> dict[str, list[str]]:
         rows = {key: [] for key in ["title", "link", "description", "pubdate", "location", "timestamp"]}
 
         logger.info(f"{bs4_element.name} has started")

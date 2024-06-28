@@ -56,7 +56,7 @@ class AsyncCrawlerBS4:
             data = json.load(f)
         return [
             Bs4Config(**url)
-            for url in data[0]["urls"]
+            for url in data
         ]
 
     async def __fetch(self, url: str, session: aiohttp.ClientSession) -> str:

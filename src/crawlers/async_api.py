@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-class AsyncCrawlerBS4:
+class AsyncApiRequests:
     def __init__(self, url_db=URL_DB):
         self.url_db = url_db
         self.conn: connection | None = None
@@ -42,7 +42,7 @@ class AsyncCrawlerBS4:
             data = json.load(f)
         return [
             ApiConfig(**api)
-            for api in data[0]["apis"]
+            for api in data
         ]
 
     async def __fetch(self, api_config: ApiConfig, session: aiohttp.ClientSession) -> str:

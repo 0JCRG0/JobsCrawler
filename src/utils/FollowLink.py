@@ -1,9 +1,6 @@
 import bs4
-import traceback
 import aiohttp
-import time
 import logging
-import random
 
 async def async_follow_link(session: aiohttp.ClientSession, followed_link: str, description_final: str, inner_link_tag: str, default: str = "NaN"):
 

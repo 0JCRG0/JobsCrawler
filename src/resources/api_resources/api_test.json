@@ -1,23 +1,19 @@
 [
     {
-        "apis": [
+        "name": "HimalayasApp",
+        "api": "https://himalayas.app/jobs/api",
+        "class_json": "dict",
+        "follow_link": "no", 
+        "inner_link_tag": "",
+        "elements_path": [
             {
-                "name": "HimalayasApp",
-                "api": "https://himalayas.app/jobs/api",
-                "class_json": "dict",
-                "follow_link": "no", 
-                "inner_link_tag": "",
-                "elements_path": [
-                    {
-                        "dict_tag": "jobs",
-                        "title_tag": "title",
-                        "link_tag": "applicationLink",
-                        "description_tag": "description",
-                        "pubdate_tag": "pubDate",
-                        "location_tag": "locationRestrictions",
-                        "location_default": "Worldwide"
-                    }
-                ]
+                "dict_tag": "jobs",
+                "title_tag": "title",
+                "link_tag": "applicationLink",
+                "description_tag": "description",
+                "pubdate_tag": "pubDate",
+                "location_tag": "locationRestrictions",
+                "location_default": "Worldwide"
             }
         ]
     }

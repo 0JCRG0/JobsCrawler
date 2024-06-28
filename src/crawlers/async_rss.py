@@ -3,33 +3,31 @@
 import feedparser
 import os
 import json
-import pretty_errors  # noqa: F401
 import pandas as pd
 from datetime import date, datetime
 from dotenv import load_dotenv
 import logging
 import psycopg2
 from src.utils.rss_utils import clean_postgre_rss
-from src.utils.handy import link_exists_in_db, setup_main_logger
+from src.utils.handy import link_exists_in_db
 from src.utils.FollowLink import async_follow_link
 import asyncio
 import aiohttp
 
-""" LOAD THE ENVIRONMENT VARIABLES """
 
 load_dotenv()
 
-JSON_PROD = os.environ.get('JSON_PROD_RSS_READER')
-JSON_TEST = os.environ.get('JSON_TEST_RSS_READER')
-SAVE_PATH = os.environ.get('SAVE_PATH_RSS_READER', '')
-LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
+URL_DB = os.getenv("DATABASE_URL_DO", "")
 
-""" SET UP LOGGING FILE """
-current_dir = os.path.dirname(os.path.abspath(__file__))
+api_resources_dir = os.path.join('src', 'resources', 'bs4_resources')
+JSON_PROD = os.path.abspath(os.path.join(api_resources_dir, 'bs4_main.json'))
+JSON_TEST = os.path.abspath(os.path.join(api_resources_dir, 'bs4_test.json'))
 
-logging_file_path = os.path.join(current_dir, LOGGER_PATH)
+# Set up named logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
-setup_main_logger(logging_file_path)
+class AsyncRssFeedparser:
 
 
 async def async_rss_template(pipeline):

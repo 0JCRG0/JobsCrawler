@@ -1,6 +1,5 @@
 import logging
 import pandas as pd
-from typing import Callable
 from src.models import ApiConfig
 from datetime import date, datetime
 from src.utils.handy import link_exists_in_db

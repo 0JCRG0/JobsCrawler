@@ -38,3 +38,13 @@ class ApiConfig:
     follow_link: str
     inner_link_tag: str
     elements_path: ApiElementPath
+
+@dataclass
+class RssConfig:
+    url: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    location_tag: str
+    follow_link: str
+    inner_link_tag: str

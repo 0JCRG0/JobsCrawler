@@ -1,112 +1,108 @@
 [
     {
-        "apis": [
+        "name": "CareerVault",
+        "api": "https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1",
+        "class_json": "dict",
+        "follow_link": "no", 
+        "inner_link_tag": "",
+        "elements_path": [
             {
-                "name": "CareerVault",
-                "api": "https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1",
-                "class_json": "dict",
-                "follow_link": "no", 
-                "inner_link_tag": "",
-                "elements_path": [
-                    {
-                        "dict_tag": "data",
-                        "title_tag": "JobTitle",
-                        "link_tag": "Url",
-                        "description_tag": "Description",
-                        "pubdate_tag": "DatePosted",
-                        "location_tag": "Location",
-                        "location_default": "NaN"
-                    }
-                ]
-            },
+                "dict_tag": "data",
+                "title_tag": "JobTitle",
+                "link_tag": "Url",
+                "description_tag": "Description",
+                "pubdate_tag": "DatePosted",
+                "location_tag": "Location",
+                "location_default": "NaN"
+            }
+        ]
+    },
+    {
+        "name": "echojobs.io",
+        "api": "https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest",
+        "class_json": "dict",
+        "follow_link": "yes",
+        "inner_link_tag": "job-detail mb-4",
+        "elements_path": [
             {
-                "name": "echojobs.io",
-                "api": "https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest",
-                "class_json": "dict",
-                "follow_link": "yes",
-                "inner_link_tag": "job-detail mb-4",
-                "elements_path": [
-                    {
-                        "dict_tag": "result",
-                        "title_tag": "title",
-                        "link_tag": "url",
-                        "description_tag": "skills",
-                        "pubdate_tag": "created_at",
-                        "location_tag": "locations",
-                        "location_default": "NaN"
-                    }
-                ]
-            },
+                "dict_tag": "result",
+                "title_tag": "title",
+                "link_tag": "url",
+                "description_tag": "skills",
+                "pubdate_tag": "created_at",
+                "location_tag": "locations",
+                "location_default": "NaN"
+            }
+        ]
+    },
+    {
+        "name": "www.workingnomads.com",
+        "api": "https://www.workingnomads.com/api/exposed_jobs/",
+        "class_json": "list",
+        "follow_link": "no",
+        "inner_link_tag": "",
+        "elements_path": [
             {
-                "name": "www.workingnomads.com",
-                "api": "https://www.workingnomads.com/api/exposed_jobs/",
-                "class_json": "list",
-                "follow_link": "no",
-                "inner_link_tag": "",
-                "elements_path": [
-                    {
-                        "dict_tag": "",
-                        "title_tag": "title",
-                        "link_tag": "url",
-                        "description_tag": "description",
-                        "pubdate_tag": "pub_date",
-                        "location_tag": "location",
-                        "location_default": "NaN"
-                    }
-                ]
-            },
+                "dict_tag": "",
+                "title_tag": "title",
+                "link_tag": "url",
+                "description_tag": "description",
+                "pubdate_tag": "pub_date",
+                "location_tag": "location",
+                "location_default": "NaN"
+            }
+        ]
+    },
+    {
+        "name": "remoteok.api",
+        "api": "https://remoteok.com/api?api=1",
+        "class_json": "list",
+        "follow_link": "no",
+        "inner_link_tag": "",
+        "elements_path": [
             {
-                "name": "remoteok.api",
-                "api": "https://remoteok.com/api?api=1",
-                "class_json": "list",
-                "follow_link": "no",
-                "inner_link_tag": "",
-                "elements_path": [
-                    {
-                        "dict_tag": "",
-                        "title_tag": "position",
-                        "link_tag": "url",
-                        "description_tag": "description",
-                        "pubdate_tag": "date",
-                        "location_tag": "location",
-                        "location_default": "NaN"
-                    }
-                ]
-            },
+                "dict_tag": "",
+                "title_tag": "position",
+                "link_tag": "url",
+                "description_tag": "description",
+                "pubdate_tag": "date",
+                "location_tag": "location",
+                "location_default": "NaN"
+            }
+        ]
+    },
+    {
+        "name": "remotive.com",
+        "api": "https://remotive.com/api/remote-jobs?limit=50",
+        "class_json": "dict",
+        "follow_link": "no",
+        "inner_link_tag": "",
+        "elements_path": [
             {
-                "name": "remotive.com",
-                "api": "https://remotive.com/api/remote-jobs?limit=50",
-                "class_json": "dict",
-                "follow_link": "no",
-                "inner_link_tag": "",
-                "elements_path": [
-                    {
-                        "dict_tag": "jobs",
-                        "title_tag": "title",
-                        "link_tag": "url",
-                        "description_tag": "description",
-                        "location_tag": "candidate_required_location",
-                        "location_default": "NaN"
-                    }
-                ]
-            },
+                "dict_tag": "jobs",
+                "title_tag": "title",
+                "link_tag": "url",
+                "description_tag": "description",
+                "location_tag": "candidate_required_location",
+                "location_default": "NaN"
+            }
+        ]
+    },
+    {
+        "name": "HimalayasApp",
+        "api": "https://himalayas.app/jobs/api",
+        "class_json": "dict",
+        "follow_link": "no", 
+        "inner_link_tag": "",
+        "elements_path": [
             {
-                "name": "HimalayasApp",
-                "api": "https://himalayas.app/jobs/api",
-                "class_json": "dict",
-                "follow_link": "no", 
-                "inner_link_tag": "",
-                "elements_path": [
-                    {
-                        "dict_tag": "jobs",
-                        "title_tag": "title",
-                        "link_tag": "applicationLink",
-                        "description_tag": "description",
-                        "pubdate_tag": "pubDate",
-                        "location_tag": "locationRestrictions",
-                        "location_default": "Worldwide"
-                    }
-                ]
+                "dict_tag": "jobs",
+                "title_tag": "title",
+                "link_tag": "applicationLink",
+                "description_tag": "description",
+                "pubdate_tag": "pubDate",
+                "location_tag": "locationRestrictions",
+                "location_default": "Worldwide"
             }
         ]
     }

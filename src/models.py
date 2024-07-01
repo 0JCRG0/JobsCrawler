@@ -1,5 +1,6 @@
 # src/models.py
 from dataclasses import dataclass
+from typing import Any
 import psycopg2
 from psycopg2.extensions import cursor, connection
 import aiohttp
@@ -10,12 +11,13 @@ import os
 from dotenv import load_dotenv
 import random
 import pandas as pd
-from collections.abc import Callable
+from collections.abc import Callable, Coroutine
 from src.utils.bs4_utils import clean_postgre_bs4
 from src.utils.rss_utils import clean_postgre_rss
 from src.utils.api_utils import clean_postgre_api
 from src.utils.handy import USER_AGENTS, crawled_df_to_db
 from src.crawlers.async_bs4 import async_bs4_crawl
+from src.crawlers.async_api import async_api_requests
 
 load_dotenv()
 
@@ -59,15 +61,6 @@ class Bs4Config:
     inner_link_tag: str
     elements_path: Bs4ElementPath
 
-@dataclass
-class Bs4Args:
-    config: type[Bs4Config] = Bs4Config
-    custom_crawl_func: Callable = async_bs4_crawl
-    test: bool = False
-    json_prod_path: str = bs4_json_prod
-    json_test_path: str = bs4_json_test
-    url_db: str = URL_DB
-
 
 @dataclass
 class ApiElementPath:
@@ -89,14 +82,6 @@ class ApiConfig:
     inner_link_tag: str
     elements_path: ApiElementPath
 
-@dataclass
-class ApiArgs:
-    config: type[ApiConfig] = ApiConfig
-    custom_crawl_func: Callable = async_api_crawl
-    test: bool = False
-    json_prod_path: str = api_json_prod
-    json_test_path: str = api_json_test
-    url_db: str = URL_DB
 
 @dataclass
 class RssConfig:
@@ -109,9 +94,54 @@ class RssConfig:
     inner_link_tag: str
 
 @dataclass
+class Bs4Args:
+    config: type[Bs4Config] = Bs4Config
+    custom_crawl_func: Callable[
+        [
+            Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
+            aiohttp.ClientSession,
+            Bs4Config,
+            cursor,
+            bool,
+        ],
+        Coroutine[Any, Any, dict[str, list[str]]],
+    ] = async_bs4_crawl 
+    test: bool = False
+    json_prod_path: str = bs4_json_prod
+    json_test_path: str = bs4_json_test
+    url_db: str = URL_DB
+
+@dataclass
+class ApiArgs:
+    config: type[ApiConfig] = ApiConfig
+    custom_crawl_func: Callable[
+        [
+            Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
+            aiohttp.ClientSession,
+            ApiConfig,
+            cursor,
+            bool,
+        ],
+        Coroutine[Any, Any, dict[str, list[str]]],
+    ] = async_api_requests
+    test: bool = False
+    json_prod_path: str = api_json_prod
+    json_test_path: str = api_json_test
+    url_db: str = URL_DB
+
+@dataclass
 class RssArgs:
     config: type[RssConfig] = RssConfig
-    custom_crawl_func: Callable = async_rss_crawl
+    custom_crawl_func: Callable[
+        [
+            Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
+            aiohttp.ClientSession,
+            ApiConfig,
+            cursor,
+            bool,
+        ],
+        Coroutine[Any, Any, dict[str, list[str]]],
+    ] = async_rss_crawl
     test: bool = False
     json_prod_path: str = rss_json_prod
     json_test_path: str = rss_json_test
@@ -119,24 +149,23 @@ class RssArgs:
 
 
 class AsyncBaseCrawl:
-    def __init__(
-        self, args: Bs4Args | ApiArgs | RssArgs) -> None:
+    def __init__(self, args: Bs4Args | ApiArgs | RssArgs) -> None:
         self.config: type[Bs4Config] | type[ApiConfig] | type[RssConfig] = args.config
         self.test: bool = args.test
-        self.json_data_path: str = args.json_test_path if self.test else args.json_prod_path
+        self.json_data_path: str = (
+            args.json_test_path if self.test else args.json_prod_path
+        )
         self.custom_crawl_func: Callable = args.custom_crawl_func
         self.url_db: str = args.url_db
         self.conn: connection | None = None
         self.cur: cursor | None = None
 
-    async def __load_urls(self) -> list[Bs4Config | RssConfig | ApiConfig]:
+    async def __load_configs(self) -> list[Bs4Config | RssConfig | ApiConfig]:
         with open(self.json_data_path) as f:
             data = json.load(f)
         return [self.config(**url) for url in data]
 
-    async def __fetch(
-        self, session: aiohttp.ClientSession
-    ) -> str:
+    async def __fetch(self, session: aiohttp.ClientSession) -> Coroutine[Any, Any, str]:
         random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
         async with session.get(self.config.url, headers=random_user_agent) as response:
             if response.status != 200:
@@ -145,7 +174,7 @@ class AsyncBaseCrawl:
                 )
                 pass
             logger.debug(f"random_header: {random_user_agent}")
-            return await response.text()
+            return response.text()
 
     async def __gather_json_loads(
         self,
@@ -160,11 +189,13 @@ class AsyncBaseCrawl:
         if not func_cleaning:
             raise ValueError("Unrecognized cleaning function.")
 
-        crawling_configs = await self.__load_urls()
+        configs = await self.__load_configs()
 
         tasks = [
-            self.custom_crawl_func(self.__fetch, session, crawling_config, self.test, self.cur)
-            for crawling_config in crawling_configs
+            self.custom_crawl_func(
+                self.__fetch, session, config, self.test, self.cur
+            )
+            for config in configs
         ]
         results = await asyncio.gather(*tasks)
 

@@ -1,27 +1,15 @@
 #!/usr/local/bin/python3
 
 import feedparser
-import os
-import json
-import pandas as pd
+from feedparser import FeedParserDict
 from datetime import date, datetime
-from dotenv import load_dotenv
 import logging
 import psycopg2
-from src.utils.rss_utils import clean_postgre_rss
 from src.utils.handy import link_exists_in_db
 from src.utils.FollowLink import async_follow_link
 import asyncio
 import aiohttp
 
-
-load_dotenv()
-
-URL_DB = os.getenv("DATABASE_URL_DO", "")
-
-api_resources_dir = os.path.join('src', 'resources', 'bs4_resources')
-JSON_PROD = os.path.abspath(os.path.join(api_resources_dir, 'bs4_main.json'))
-JSON_TEST = os.path.abspath(os.path.join(api_resources_dir, 'bs4_test.json'))
 
 # Set up named logger
 logger = logging.getLogger(__name__)
@@ -38,28 +26,10 @@ async def async_rss_template(pipeline):
 	cur = conn.cursor()
 
 	async def async_rss_reader(session, url_obj):
-		total_pubdates = []
-		total_titles = []
-		total_links = []
-		total_locations = []
-		total_descriptions = []
-		total_timestamps=[]
-		rows = {"title": total_titles,
-				"link": total_links,
-				"description": total_descriptions,
-				"pubdate": total_pubdates,
-				"location": total_locations,
-				"timestamp": total_timestamps}
-
-		""" LOAD THE VARIABLES """
-
-		url = url_obj['url']
-		title_tag =  url_obj["title_tag"]
-		link_tag = url_obj["link_tag"]
-		description_tag = url_obj["description_tag"]
-		loc_tag = url_obj['location_tag']
-		follow_link = url_obj['follow_link']
-		inner_link_tag = url_obj['inner_link_tag']
+		rows = {
+        key: []
+        for key in ["title", "link", "description", "pubdate", "location", "timestamp"]
+		}
 		
 		try:
 			async with aiohttp.ClientSession() as session:
@@ -102,70 +72,11 @@ async def async_rss_template(pipeline):
 						print(f"""PARSING FAILED ON {url}. Response: {response}. SKIPPING...""", "\n")
 						logging.error(f"""PARSING FAILED ON {url}. Response: {response}. SKIPPING...""")
 						pass
-		except aiohttp.ClientError as e:
-			print(f"An error occurred: {e}. Skipping URL {url}")
-			logging.error(f"An error occurred: {e}. Skipping URL {url}")
+		except Exception as e:
+			logger.error(
+				f"{type(e).__name__} occurred before deploying crawling strategy on {url}.\n\n{e}",
+				exc_info=True,
+			)
 			pass
 		return rows
 	
-	async def gather_json_loads_rss(session):
-		with open(JSON) as f:
-			data = json.load(f)
-			urls = data[0]["urls"]
-
-		tasks = [async_rss_reader(session, url_obj) for url_obj in urls]
-		results = await asyncio.gather(*tasks)
-
-		combined_data = {
-			"title": [],
-			"link": [],
-			"description": [],
-			"pubdate": [],
-			"location": [],
-			"timestamp": [],
-		}
-		for result in results:
-			for key in combined_data:
-				combined_data[key].extend(result[key])
-		
-		title_len = len(combined_data["title"])
-		link_len = len(combined_data["link"])
-		description_len = len(combined_data["description"])
-		pubdate_len = len(combined_data["pubdate"])
-		location_len = len(combined_data["location"])
-		timestamp_len = len(combined_data["timestamp"])
-
-		lengths_info = """
-			Titles: {}
-			Links: {}
-			Descriptions: {}
-			Pubdates: {}
-			Locations: {}
-			Timestamps: {}
-			""".format(
-				title_len,
-				link_len,
-				description_len,
-				pubdate_len,
-				location_len,
-				timestamp_len
-			)
-		if title_len == link_len == description_len == pubdate_len == location_len == timestamp_len:
-			logging.info("async_rss: LISTS HAVE THE SAME LENGHT. SENDING TO POSTGRE")
-			clean_postgre_rss(df=pd.DataFrame(combined_data), save_path=SAVE_PATH, function_postgre=POSTGRESQL)
-		else:
-			logging.error(f"ERROR ON async_rss. LISTS DO NOT HAVE SAME LENGHT. FIX: \n {lengths_info}")
-			pass
-
-	async with aiohttp.ClientSession() as session:
-		await gather_json_loads_rss(session)
-
-	elapsed_time = asyncio.get_event_loop().time() - start_time
-	print(f"Async RSS readers finished! all in: {elapsed_time:.2f} seconds.", "\n")
-	logging.info(f"Async RSS readers finished! all in: {elapsed_time:.2f} seconds.")
-
-async def main():
-	await async_rss_template("TEST")
-
-if __name__ == "__main__":
-	asyncio.run(main())

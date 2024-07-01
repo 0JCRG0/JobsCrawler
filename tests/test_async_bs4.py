@@ -1,8 +1,11 @@
-#from src.crawlers.async_bs4 import AsyncCrawlerBS4
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+print(os.path.dirname(__file__), '..')
 import asyncio
 import logging
-import os
 from src.models import AsyncBaseCrawl, Bs4Args
+
 
 Bs4Args()
 # Set up named logger
@@ -11,8 +14,5 @@ logger.setLevel(logging.DEBUG)
 
 bs4_crawler = AsyncBaseCrawl(Bs4Args())
 
-asyncio.run(bs4_crawler.run())
-
-
-
-
+if __name__ == "__main__":
+    asyncio.run(bs4_crawler.run())

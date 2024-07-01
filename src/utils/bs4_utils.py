@@ -6,12 +6,13 @@ import logging
 from src.utils.FollowLink import async_follow_link, async_follow_link_title_description
 from src.utils.handy import link_exists_in_db
 import aiohttp
-from src.models import Bs4Config
+#from src.models import Bs4Config
+
 
 async def async_main_strategy_bs4(
     cur,
     session: aiohttp.ClientSession,
-    bs4_element: Bs4Config,
+    bs4_element: 'Bs4Config',
     soup: bs4.BeautifulSoup,
     test: bool = False
 ):

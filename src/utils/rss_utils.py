@@ -1,7 +1,40 @@
 import logging
-from utils.handy import *
 from typing import Callable
 import pandas as pd
+from feedparser import FeedParserDict
+
+async def async_get_feed_entries(feed: FeedParserDict):
+	for entry in feed.entries:
+		job_data = {}
+
+		job_data["title"] = getattr(entry, title_tag) if hasattr(entry, loc_tag) else "NaN"
+
+		job_data["link"] = getattr(entry, link_tag) if hasattr(entry, loc_tag) else "NaN"
+		
+		if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+			continue
+		else:
+			default = getattr(entry, description_tag) if hasattr(entry, loc_tag) else "NaN"
+			if follow_link == 'yes':
+				job_data["description"] = ""
+				job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
+			else:
+				job_data["description"] = default
+			
+			today = date.today()
+			job_data["pubdate"] = today
+
+			job_data["location"] = getattr(entry, loc_tag) if hasattr(entry, loc_tag) else "NaN"
+
+			timestamp = datetime.now()
+			job_data["timestamp"] = timestamp
+			
+			total_links.append(job_data["link"])
+			total_titles.append(job_data["title"])
+			total_pubdates.append(job_data["pubdate"])
+			total_locations.append(job_data["location"])
+			total_timestamps.append(job_data["timestamp"])
+			total_descriptions.append(job_data["description"])
 
 def clean_postgre_rss(df: pd.DataFrame, save_path: str, function_postgre: Callable):
 	#Cleaning columns

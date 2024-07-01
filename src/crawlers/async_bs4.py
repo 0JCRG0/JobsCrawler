@@ -4,9 +4,7 @@ from collections.abc import Callable, Coroutine
 from typing import Any
 from bs4 import BeautifulSoup
 import logging
-import os
 from psycopg2.extensions import cursor
-from dotenv import load_dotenv
 from src.utils.bs4_utils import (
     async_container_strategy_bs4,
     async_main_strategy_bs4,
@@ -14,26 +12,6 @@ from src.utils.bs4_utils import (
 )
 import aiohttp
 from src.models import Bs4Config
-
-# Load the environment variables
-load_dotenv()
-
-URL_DB = os.getenv("DATABASE_URL_DO", "")
-
-api_resources_dir = os.path.join("src", "resources", "bs4_resources")
-JSON_PROD = os.path.abspath(os.path.join(api_resources_dir, "bs4_main.json"))
-JSON_TEST = os.path.abspath(os.path.join(api_resources_dir, "bs4_test.json"))
-
-
-LOGGER_PATH = os.path.join("logs", "main_logger.log")
-
-logging.basicConfig(
-    filename=LOGGER_PATH,
-    level=logging.DEBUG,
-    force=True,
-    filemode="a",
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
 
 # Set up named logger
 logger = logging.getLogger(__name__)

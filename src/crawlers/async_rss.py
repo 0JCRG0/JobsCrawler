@@ -33,18 +33,6 @@ class AsyncRssFeedparser:
 async def async_rss_template(pipeline):
 	start_time = asyncio.get_event_loop().time()
 
-	JSON = None
-	POSTGRESQL = None
-
-	if JSON_PROD and JSON_TEST:
-		JSON, POSTGRESQL, URL_DB = test_or_prod(pipeline=pipeline, json_prod=JSON_PROD, json_test=JSON_TEST)
-
-	if JSON is None or POSTGRESQL is None or URL_DB is None:
-		logging.error("Error: JSON and POSTGRESQL and URL_DB must be assigned valid values.")
-		return
-
-	print("\n", "Crawler launched on RSS Feeds.")
-	logging.info("Async RSS crawler deployed!")
 
 	conn = psycopg2.connect(URL_DB)
 	cur = conn.cursor()

@@ -1,7 +1,7 @@
 [
     {
         "name": "HimalayasApp",
-        "api": "https://himalayas.app/jobs/api",
+        "url": "https://himalayas.app/jobs/api",
         "class_json": "dict",
         "follow_link": "no", 
         "inner_link_tag": "",

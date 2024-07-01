@@ -47,11 +47,12 @@ class AsyncApiRequests:
 
     async def __fetch(self, api_config: ApiConfig, session: aiohttp.ClientSession) -> str:
         random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
-        async with session.get(api_config.api, headers=random_user_agent) as response:
+        async with session.get(api_config.url, headers=random_user_agent) as response:
             if response.status != 200:
                 logging.warning(
-                    f"Received non-200 response ({response.status}) for API: {api_config.api}. Skipping..."
+                    f"Received non-200 response ({response.status}) for API: {api_config.url}. Skipping..."
                 )
+                pass
             logger.debug(f"random_header: {random_user_agent}")
             return await response.text()
         
@@ -63,7 +64,7 @@ class AsyncApiRequests:
 
         try:
             response = await self.__fetch(api_config, session)
-            logger.debug(f"Successful request on {api_config.api}")
+            logger.debug(f"Successful request on {api_config.url}")
             data = json.loads(response)
             jobs = class_json_strategy(data, api_config)
 
@@ -74,7 +75,7 @@ class AsyncApiRequests:
                     rows[key].extend(new_rows.get(key, []))
         # TODO: This exception should be better in the helper function
         except Exception as e:
-            logger.error(f"{type(e).__name__} occurred before deploying crawling strategy on {api_config.api}.\n\n{e}", exc_info=True)
+            logger.error(f"{type(e).__name__} occurred before deploying crawling strategy on {api_config.url}.\n\n{e}", exc_info=True)
             pass
         return rows
     

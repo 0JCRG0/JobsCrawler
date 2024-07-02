@@ -1,9 +1,21 @@
 import logging
 from typing import Callable
 import pandas as pd
+from datetime import date, datetime
+from src.utils.handy import link_exists_in_db
+from src.utils.FollowLink import async_follow_link
 from feedparser import FeedParserDict
+from extensions import RssConfig
+import aiohttp
+from psycopg2.extensions import cursor
 
-async def async_get_feed_entries(feed: FeedParserDict):
+
+async def async_get_feed_entries(feed: FeedParserDict,
+    cur: cursor,
+    session: aiohttp.ClientSession,
+    rss_config: 'RssConfig',
+    test: bool = False
+):
 	for entry in feed.entries:
 		job_data = {}
 
@@ -36,7 +48,8 @@ async def async_get_feed_entries(feed: FeedParserDict):
 			total_timestamps.append(job_data["timestamp"])
 			total_descriptions.append(job_data["description"])
 
-def clean_postgre_rss(df: pd.DataFrame, save_path: str, function_postgre: Callable):
+def clean_postgre_rss(df: pd.DataFrame) -> pd.DataFrame:
+	df = df.drop_duplicates()
 	#Cleaning columns
 	for col in df.columns:
 		if col == 'description':
@@ -57,12 +70,8 @@ def clean_postgre_rss(df: pd.DataFrame, save_path: str, function_postgre: Callab
 				df[col] = df[col].str.replace(pattern, 'Worldwide', regex=True)
 				df[col] = df[col].replace('(?i)^remote$', 'Worldwide', regex=True) # Replace 
 				df[col] = df[col].str.strip()  # Remove trailing white space
-	
-	#Save it in local machine
-	df.to_csv(save_path, index=False)
 
 	#Log it 
 	logging.info('Finished RSS Reader. Results below ⬇︎')
 	
-	# SEND IT TO TO PostgreSQL    
-	function_postgre(df)
+	return df

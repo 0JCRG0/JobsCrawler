@@ -8,127 +8,126 @@ import aiohttp
 
 
 def class_json_strategy(data, api_config: ApiConfig) -> list | dict:
-	"""
+    """
 
-	Given that some JSON requests are either
-	dict or list we need to access the 1st dict if
-	needed.
+    Given that some JSON requests are either
+    dict or list we need to access the 1st dict if
+    needed.
 
-	"""
-	if api_config.class_json == "dict":
-		jobs = data[api_config.elements_path.dict_tag]
-		return jobs
-	elif api_config.class_json == "list":
-		return data
-	else:
-		raise ValueError("The class json is unknown.")
+    """
+    if api_config.class_json == "dict":
+        jobs = data[api_config.elements_path.dict_tag]
+        return jobs
+    elif api_config.class_json == "list":
+        return data
+    else:
+        raise ValueError("The class json is unknown.")
 
 
 async def get_jobs_data(
-	cur,
-	jobs: dict | list,
-	session: aiohttp.ClientSession,
-	api_config: ApiConfig,
-	test: bool = False,
+    cur,
+    jobs: dict | list,
+    session: aiohttp.ClientSession,
+    api_config: ApiConfig,
+    test: bool = False,
 ):
-	total_jobs_data = {
-		"title": [],
-		"link": [],
-		"description": [],
-		"pubdate": [],
-		"location": [],
-		"timestamp": [],
-	}
+    total_jobs_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
+    }
 
-	for job in jobs:
-		element_path = api_config.elements_path
+    for job in jobs:
+        element_path = api_config.elements_path
 
-		title_element = job.get(element_path.title_tag, "NaN")
+        title_element = job.get(element_path.title_tag, "NaN")
 
-		link = job.get(element_path.link_tag, "NaN")
+        link = job.get(element_path.link_tag, "NaN")
 
-		if await link_exists_in_db(
-			link=api_config.elements_path.link_tag, cur=cur, test=test
-		):
-			logging.debug(
-				f"Link {element_path.link_tag} already found in the db. Skipping..."
-			)
-			continue
+        if await link_exists_in_db(
+            link=api_config.elements_path.link_tag, cur=cur, test=test
+        ):
+            logging.debug(
+                f"Link {element_path.link_tag} already found in the db. Skipping..."
+            )
+            continue
 
-		default = job.get(element_path.description_tag, "NaN")
-		description = ""
-		if api_config.follow_link == "yes":
-			if api_config.name == "echojobs.io":
-				description = await async_follow_link_echojobs(
-					session=session,
-					url_to_follow=link,
-					selector=api_config.inner_link_tag,
-					default=default,
-				)
-			else:
-				description = await async_follow_link(
-					session=session,
-					followed_link=link,
-					description_final=description,
-					inner_link_tag=api_config.inner_link_tag,
-					default=default,
-				)
-		else:
-			description = default
+        default = job.get(element_path.description_tag, "NaN")
+        description = ""
+        if api_config.follow_link == "yes":
+            if api_config.name == "echojobs.io":
+                description = await async_follow_link_echojobs(
+                    session=session,
+                    url_to_follow=link,
+                    selector=api_config.inner_link_tag,
+                    default=default,
+                )
+            else:
+                description = await async_follow_link(
+                    session=session,
+                    followed_link=link,
+                    description_final=description,
+                    inner_link_tag=api_config.inner_link_tag,
+                    default=default,
+                )
+        else:
+            description = default
 
-		today = date.today()
+        today = date.today()
 
-		location = (
-			job.get(element_path.location_tag, "NaN") or element_path.location_default
-		)
+        location = (
+            job.get(element_path.location_tag, "NaN") or element_path.location_default
+        )
 
-		timestamp = datetime.now()
+        timestamp = datetime.now()
 
-		for key, value in zip(
-			total_jobs_data.keys(),
-			[title_element.text, link, description, today, location, timestamp],
-		):
-			total_jobs_data[key].append(value)
+        for key, value in zip(
+            total_jobs_data.keys(),
+            [title_element.text, link, description, today, location, timestamp],
+        ):
+            total_jobs_data[key].append(value)
 
-	return total_jobs_data
+    return total_jobs_data
 
 
-def clean_postgre_api(
-	df: pd.DataFrame) -> pd.DataFrame:
-	for col in df.columns:
-		if col == "description":
-			if not df[col].empty:  # Check if the column has any rows
-				df[col] = df[col].astype(str)  # Convert the entire column to string
-				df[col] = df[col].str.replace(
-					r'<.*?>|[{}[\]\'",]', "", regex=True
-				)  # Remove html tags & other characters
-		elif col == "location":
-			if not df[col].empty:  # Check if the column has any rows
-				df[col] = df[col].astype(str)  # Convert the entire column to string
-				df[col] = df[col].str.replace(
-					r'<.*?>|[{}[\]\'",]', "", regex=True
-				)  # Remove html tags & other characters
-				# df[col] = df[col].str.replace(r'[{}[\]\'",]', '', regex=True)
-				df[col] = df[col].str.replace(
-					r"\b(\w+)\s+\1\b", r"\1", regex=True
-				)  # Removes repeated words
-				df[col] = df[col].str.replace(
-					r"\d{4}-\d{2}-\d{2}", "", regex=True
-				)  # Remove dates in the format "YYYY-MM-DD"
-				df[col] = df[col].str.replace(
-					r"(USD|GBP)\d+-\d+/yr", "", regex=True
-				)  # Remove USD\d+-\d+/yr or GBP\d+-\d+/yr.
-				df[col] = df[col].str.replace("[-/]", " ", regex=True)  # Remove -
-				df[col] = df[col].str.replace(
-					r"(?<=[a-z])(?=[A-Z])", " ", regex=True
-				)  # Insert space between lowercase and uppercase letters
-				pattern = r"(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b"  # Define a regex patter for all outliers that use remote
-				df[col] = df[col].str.replace(pattern, "Worldwide", regex=True)
-				df[col] = df[col].replace(
-					"(?i)^remote$", "Worldwide", regex=True
-				)  # Replace
-				df[col] = df[col].str.strip()  # Remove trailing white space
+def clean_postgre_api(df: pd.DataFrame) -> pd.DataFrame:
+    for col in df.columns:
+        if col == "description":
+            if not df[col].empty:  # Check if the column has any rows
+                df[col] = df[col].astype(str)  # Convert the entire column to string
+                df[col] = df[col].str.replace(
+                    r'<.*?>|[{}[\]\'",]', "", regex=True
+                )  # Remove html tags & other characters
+        elif col == "location":
+            if not df[col].empty:  # Check if the column has any rows
+                df[col] = df[col].astype(str)  # Convert the entire column to string
+                df[col] = df[col].str.replace(
+                    r'<.*?>|[{}[\]\'",]', "", regex=True
+                )  # Remove html tags & other characters
+                # df[col] = df[col].str.replace(r'[{}[\]\'",]', '', regex=True)
+                df[col] = df[col].str.replace(
+                    r"\b(\w+)\s+\1\b", r"\1", regex=True
+                )  # Removes repeated words
+                df[col] = df[col].str.replace(
+                    r"\d{4}-\d{2}-\d{2}", "", regex=True
+                )  # Remove dates in the format "YYYY-MM-DD"
+                df[col] = df[col].str.replace(
+                    r"(USD|GBP)\d+-\d+/yr", "", regex=True
+                )  # Remove USD\d+-\d+/yr or GBP\d+-\d+/yr.
+                df[col] = df[col].str.replace("[-/]", " ", regex=True)  # Remove -
+                df[col] = df[col].str.replace(
+                    r"(?<=[a-z])(?=[A-Z])", " ", regex=True
+                )  # Insert space between lowercase and uppercase letters
+                pattern = r"(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b"  # Define a regex patter for all outliers that use remote
+                df[col] = df[col].str.replace(pattern, "Worldwide", regex=True)
+                df[col] = df[col].replace(
+                    "(?i)^remote$", "Worldwide", regex=True
+                )  # Replace
+                df[col] = df[col].str.strip()  # Remove trailing white space
 
-	logging.info("Finished API crawlers. Results below ⬇︎")
-	
-	return df
+    logging.info("Finished API crawlers. Results below ⬇︎")
+
+    return df

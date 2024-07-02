@@ -23,7 +23,7 @@ async def __crawling_strategy(
     bs4_config: Bs4Config,
     soup: BeautifulSoup,
     test: bool,
-    cur: cursor
+    cur: cursor,
 ) -> dict[str, list[str]] | None:
     strategy_map = {
         "main": async_main_strategy_bs4,

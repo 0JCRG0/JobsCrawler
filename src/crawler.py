@@ -26,17 +26,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
-
-logging.basicConfig(
-    filename=LOGGER_PATH,
-    level=logging.DEBUG,
-    force=True,
-    filemode="a",
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
-
-# Get paths to JSON files
-
+# Get the paths of the JSON files
 bs4_resources_dir = os.path.join("src", "resources", "bs4_resources")
 api_resources_dir = os.path.join("src", "resources", "api_resources")
 rss_resources_dir = os.path.join("src", "resources", "rss_resources")

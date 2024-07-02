@@ -1,11 +1,12 @@
 #!/usr/local/bin/python3
-from collections.abc import Callable
+from collections.abc import Callable, Coroutine
 import json
 import os
 import logging
+from typing import Any
 from psycopg2.extensions import cursor
 from dotenv import load_dotenv
-from src.models import ApiConfig
+from src.extensions import ApiConfig
 from src.utils.api_utils import class_json_strategy, get_jobs_data
 import aiohttp
 
@@ -28,7 +29,7 @@ logger.setLevel(logging.DEBUG)
 
 
 async def async_api_requests(
-    fetch_func: Callable[[aiohttp.ClientSession]],
+    fetch_func: Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
     session: aiohttp.ClientSession,
     api_config: ApiConfig,
     cur: cursor,

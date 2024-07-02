@@ -20,7 +20,7 @@ logger.setLevel(logging.DEBUG)
 
 async def __crawling_strategy(
     session: aiohttp.ClientSession,
-    bs4_config: 'Bs4Config',
+    bs4_config: Bs4Config,
     soup: BeautifulSoup,
     test: bool,
     cur: cursor

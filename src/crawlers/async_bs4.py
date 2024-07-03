@@ -5,7 +5,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 import logging
 from psycopg2.extensions import cursor
-from src.extensions import Bs4Config
+from types import Bs4Config
 from src.utils.bs4_utils import (
     async_container_strategy_bs4,
     async_main_strategy_bs4,

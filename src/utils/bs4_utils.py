@@ -6,7 +6,7 @@ import logging
 from src.utils.FollowLink import async_follow_link, async_follow_link_title_description
 from src.utils.handy import link_exists_in_db
 import aiohttp
-from src.extensions import Bs4Config
+from types import Bs4Config
 
 
 async def async_main_strategy_bs4(

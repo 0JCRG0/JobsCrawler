@@ -1,6 +1,6 @@
 import logging
 import pandas as pd
-from src.extensions import ApiConfig
+from types import ApiConfig
 from datetime import date, datetime
 from src.utils.handy import link_exists_in_db
 from src.utils.FollowLink import async_follow_link, async_follow_link_echojobs

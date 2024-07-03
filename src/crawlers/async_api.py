@@ -6,7 +6,7 @@ import logging
 from typing import Any
 from psycopg2.extensions import cursor
 from dotenv import load_dotenv
-from src.extensions import ApiConfig
+from types import ApiConfig
 from src.utils.api_utils import class_json_strategy, get_jobs_data
 import aiohttp
 

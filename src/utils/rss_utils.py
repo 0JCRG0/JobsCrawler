@@ -5,48 +5,53 @@ from datetime import date, datetime
 from src.utils.handy import link_exists_in_db
 from src.utils.FollowLink import async_follow_link
 from feedparser import FeedParserDict
-from extensions import RssConfig
+from types import RssConfig
 import aiohttp
 from psycopg2.extensions import cursor
 
 
 async def async_get_feed_entries(feed: FeedParserDict,
-    cur: cursor,
-    session: aiohttp.ClientSession,
-    rss_config: 'RssConfig',
-    test: bool = False
+	cur: cursor,
+	session: aiohttp.ClientSession,
+	rss_config: 'RssConfig',
+	test: bool = False
 ):
+	total_jobs_data = {
+		"title": [],
+		"link": [],
+		"description": [],
+		"pubdate": [],
+		"location": [],
+		"timestamp": [],
+	}
+
 	for entry in feed.entries:
-		job_data = {}
 
-		job_data["title"] = getattr(entry, title_tag) if hasattr(entry, loc_tag) else "NaN"
+		title = getattr(entry, rss_config.title_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
 
-		job_data["link"] = getattr(entry, link_tag) if hasattr(entry, loc_tag) else "NaN"
+		link = getattr(entry, rss_config.link_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
 		
-		if await link_exists_in_db(link=job_data["link"], cur=cur, pipeline=pipeline):
+		if await link_exists_in_db(link=link, cur=cur, test=test):
+			logging.debug(
+				f"Link {rss_config.link_tag} already found in the db. Skipping..."
+			)
 			continue
+		
+		default = getattr(entry, description_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
+		if follow_link == 'yes':
+			job_data["description"] = ""
+			job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
 		else:
-			default = getattr(entry, description_tag) if hasattr(entry, loc_tag) else "NaN"
-			if follow_link == 'yes':
-				job_data["description"] = ""
-				job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
-			else:
-				job_data["description"] = default
-			
-			today = date.today()
-			job_data["pubdate"] = today
+			job_data["description"] = default
+		
+		today = date.today()
+		job_data["pubdate"] = today
 
-			job_data["location"] = getattr(entry, loc_tag) if hasattr(entry, loc_tag) else "NaN"
+		job_data["location"] = getattr(entry, rss_config.location_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
 
-			timestamp = datetime.now()
-			job_data["timestamp"] = timestamp
-			
-			total_links.append(job_data["link"])
-			total_titles.append(job_data["title"])
-			total_pubdates.append(job_data["pubdate"])
-			total_locations.append(job_data["location"])
-			total_timestamps.append(job_data["timestamp"])
-			total_descriptions.append(job_data["description"])
+		timestamp = datetime.now()
+		job_data["timestamp"] = timestamp
+		
 
 def clean_postgre_rss(df: pd.DataFrame) -> pd.DataFrame:
 	df = df.drop_duplicates()

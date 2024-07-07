@@ -1,13 +1,12 @@
 import logging
+from typing import Any
 import pandas as pd
-from types import ApiConfig
 from datetime import date, datetime
 from src.utils.handy import link_exists_in_db
 from src.utils.FollowLink import async_follow_link, async_follow_link_echojobs
 import aiohttp
 
-
-def class_json_strategy(data, api_config: ApiConfig) -> list | dict:
+def class_json_strategy(data, api_config: Any) -> list | dict:
     """
 
     Given that some JSON requests are either
@@ -28,7 +27,7 @@ async def get_jobs_data(
     cur,
     jobs: dict | list,
     session: aiohttp.ClientSession,
-    api_config: ApiConfig,
+    api_config: Any,
     test: bool = False,
 ):
     total_jobs_data = {

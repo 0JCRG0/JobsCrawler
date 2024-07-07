@@ -5,7 +5,7 @@ from datetime import date, datetime
 from src.utils.handy import link_exists_in_db
 from src.utils.FollowLink import async_follow_link
 from feedparser import FeedParserDict
-from types import RssConfig
+from types_definitions import RssConfig
 import aiohttp
 from psycopg2.extensions import cursor
 
@@ -13,7 +13,7 @@ from psycopg2.extensions import cursor
 async def async_get_feed_entries(feed: FeedParserDict,
 	cur: cursor,
 	session: aiohttp.ClientSession,
-	rss_config: 'RssConfig',
+	rss_config: RssConfig,
 	test: bool = False
 ):
 	total_jobs_data = {
@@ -37,8 +37,8 @@ async def async_get_feed_entries(feed: FeedParserDict,
 			)
 			continue
 		
-		default = getattr(entry, description_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
-		if follow_link == 'yes':
+		default = getattr(entry, rss_config.description_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
+		if rss_config.follow_link == 'yes':
 			job_data["description"] = ""
 			job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
 		else:

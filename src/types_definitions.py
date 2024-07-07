@@ -1,9 +1,9 @@
-from typing import Protocol, TypedDict, Callable, Coroutine, Any
+from typing import Protocol, Callable, Coroutine, Any, runtime_checkable
 from aiohttp import ClientSession
 from psycopg2.extensions import cursor
 
 
-class Bs4ElementPath(TypedDict):
+class Bs4ElementPath(Protocol):
     jobs_path: str
     title_path: str
     link_path: str
@@ -11,7 +11,17 @@ class Bs4ElementPath(TypedDict):
     description_path: str
 
 
-class Bs4Config(TypedDict):
+class ApiElementPath(Protocol):
+    dict_tag: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    pubdate_tag: str
+    location_tag: str
+    location_default: str
+
+@runtime_checkable
+class Bs4Config(Protocol):
     name: str
     url: str
     pages_to_crawl: int
@@ -21,18 +31,8 @@ class Bs4Config(TypedDict):
     inner_link_tag: str
     elements_path: Bs4ElementPath
 
-
-class ApiElementPath(TypedDict):
-    dict_tag: str
-    title_tag: str
-    link_tag: str
-    description_tag: str
-    pubdate_tag: str
-    location_tag: str
-    location_default: str
-
-
-class ApiConfig(TypedDict):
+@runtime_checkable
+class ApiConfig(Protocol):
     name: str
     url: str
     class_json: int
@@ -40,8 +40,8 @@ class ApiConfig(TypedDict):
     inner_link_tag: str
     elements_path: ApiElementPath
 
-
-class RssConfig(TypedDict):
+@runtime_checkable
+class RssConfig(Protocol):
     url: str
     title_tag: str
     link_tag: str
@@ -49,57 +49,3 @@ class RssConfig(TypedDict):
     location_tag: str
     follow_link: str
     inner_link_tag: str
-
-
-class Bs4ArgsProtocol(Protocol):
-    config: type[Bs4Config]
-    custom_crawl_func: Callable[
-        [
-            Callable[[ClientSession], Coroutine[Any, Any, str]],
-            ClientSession,
-            Bs4Config,
-            cursor,
-            bool,
-        ],
-        Coroutine[Any, Any, dict[str, list[str]]],
-    ]
-    test: bool
-    json_prod_path: str
-    json_test_path: str
-    url_db: str
-
-
-class ApiArgsProtocol(Protocol):
-    config: type[ApiConfig]
-    custom_crawl_func: Callable[
-        [
-            Callable[[ClientSession], Coroutine[Any, Any, str]],
-            ClientSession,
-            ApiConfig,
-            cursor,
-            bool,
-        ],
-        Coroutine[Any, Any, dict[str, list[str]]],
-    ]
-    test: bool
-    json_prod_path: str
-    json_test_path: str
-    url_db: str
-
-
-class RssArgsProtocol(Protocol):
-    config: type[RssConfig]
-    custom_crawl_func: Callable[
-        [
-            Callable[[ClientSession], Coroutine[Any, Any, str]],
-            ClientSession,
-            RssConfig,
-            cursor,
-            bool,
-        ],
-        Coroutine[Any, Any, dict[str, list[str]]],
-    ]
-    test: bool
-    json_prod_path: str
-    json_test_path: str
-    url_db: str

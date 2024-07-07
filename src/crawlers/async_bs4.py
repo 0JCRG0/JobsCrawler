@@ -5,7 +5,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 import logging
 from psycopg2.extensions import cursor
-from types import Bs4Config
+from types_definitions import Bs4Config
 from src.utils.bs4_utils import (
     async_container_strategy_bs4,
     async_main_strategy_bs4,
@@ -57,6 +57,10 @@ async def async_bs4_crawl(
 
     logger.info(f"{bs4_config.name} has started")
     logger.debug(f"All parameters for {bs4_config.name}:\n{bs4_config}")
+    if not isinstance(bs4_config, Bs4Config):
+        error_msg = f"The provided config does not have the expected type. Expected: {Bs4Config}. Received: {bs4_config}."
+        logger.error(error_msg)
+        raise ValueError(error_msg)
 
     for i in range(bs4_config.start_point, bs4_config.pages_to_crawl + 1):
         url = bs4_config.url + str(i)

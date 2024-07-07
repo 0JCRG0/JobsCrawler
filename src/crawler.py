@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, TypeAlias
 import aiohttp
 import logging
 import os
@@ -97,70 +97,67 @@ class RssConfig:
     follow_link: str
     inner_link_tag: str
 
-@dataclass
-class Bs4Args:
-    config: type[Bs4Config] = Bs4Config
-    custom_crawl_func: Callable[
-        [
-            Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
-            aiohttp.ClientSession,
-            Bs4Config,
-            cursor,
-            bool,
+
+CustomCrawlFuncType: TypeAlias = Callable[
+    [
+        Callable[
+            [aiohttp.ClientSession], Coroutine[Any, Any, Coroutine[Any, Any, str]]
         ],
-        Coroutine[Any, Any, dict[str, list[str]]],
-    ] = async_bs4_crawl 
+        aiohttp.ClientSession,
+        Bs4Config | ApiConfig | RssConfig,
+        cursor | None,
+        bool,
+    ],
+    Coroutine[Any, Any, dict[str, list[str]]],
+]
+
+
+@dataclass
+class BaseArgs:
+    config: type
+    custom_crawl_func: CustomCrawlFuncType
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame]
     test: bool = False
+    url_db: str = URL_DB
+    json_prod_path: str = ""
+    json_test_path: str = ""
+
+
+@dataclass
+class Bs4Args(BaseArgs):
+    config: type[Bs4Config] = Bs4Config
+    custom_crawl_func: CustomCrawlFuncType = async_bs4_crawl
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_bs4
     json_prod_path: str = bs4_json_prod
     json_test_path: str = bs4_json_test
-    url_db: str = URL_DB
+
 
 @dataclass
-class ApiArgs:
+class ApiArgs(BaseArgs):
     config: type[ApiConfig] = ApiConfig
-    custom_crawl_func: Callable[
-        [
-            Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
-            aiohttp.ClientSession,
-            ApiConfig,
-            cursor,
-            bool,
-        ],
-        Coroutine[Any, Any, dict[str, list[str]]],
-    ] = async_api_requests
-    test: bool = False
+    custom_crawl_func: CustomCrawlFuncType = async_api_requests
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_api
     json_prod_path: str = api_json_prod
     json_test_path: str = api_json_test
-    url_db: str = URL_DB
+
 
 @dataclass
-class RssArgs:
+class RssArgs(BaseArgs):
     config: type[RssConfig] = RssConfig
-    custom_crawl_func: Callable[
-        [
-            Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
-            aiohttp.ClientSession,
-            RssConfig,
-            cursor,
-            bool,
-        ],
-        Coroutine[Any, Any, dict[str, list[str]]],
-    ] = async_rss_crawl
-    test: bool = False
+    custom_crawl_func: CustomCrawlFuncType = async_rss_crawl
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_rss
     json_prod_path: str = rss_json_prod
     json_test_path: str = rss_json_test
-    url_db: str = URL_DB
 
 
 class AsyncCrawlerEngine:
-    def __init__(self, args: Bs4Args | ApiArgs | RssArgs) -> None:
-        self.config: type[Bs4Config] | type[ApiConfig] | type[RssConfig] = args.config
-        self.test: bool = args.test
-        self.json_data_path: str = (
-            args.json_test_path if self.test else args.json_prod_path
-        )
-        self.custom_crawl_func: Callable = args.custom_crawl_func
-        self.url_db: str = args.url_db
+    def __init__(self, args: BaseArgs) -> None:
+        self.config = args.config
+        self.test = args.test
+        self.json_data_path = args.json_test_path if self.test else args.json_prod_path
+        self.custom_crawl_func = args.custom_crawl_func
+        self.custom_clean_func = args.custom_clean_func
+        self.url_db = args.url_db
         self.conn: connection | None = None
         self.cur: cursor | None = None
 
@@ -184,20 +181,16 @@ class AsyncCrawlerEngine:
         self,
         session: aiohttp.ClientSession,
     ) -> None:
-        cleaning_map = {
-            "Bs4Config": clean_postgre_bs4,
-            "ApiConfig": clean_postgre_api,
-            "RssConfig": clean_postgre_rss,
-        }
-        func_cleaning = cleaning_map.get(type(self.config).__name__)
-        if not func_cleaning:
-            raise ValueError("Unrecognized cleaning function.")
 
         configs = await self.__load_configs()
 
         tasks = [
             self.custom_crawl_func(
-                self.__fetch, session, config, self.test, self.cur
+                self.__fetch,
+                session,
+                config,
+                self.cur,
+                self.test,
             )
             for config in configs
         ]
@@ -220,7 +213,7 @@ class AsyncCrawlerEngine:
 
         lengths = {key: len(value) for key, value in combined_data.items()}
         if len(set(lengths.values())) == 1:
-            df = func_cleaning(pd.DataFrame(combined_data))
+            df = self.custom_clean_func(pd.DataFrame(combined_data))
             crawled_df_to_db(df, self.cur, self.test)
         else:
             logger.error(

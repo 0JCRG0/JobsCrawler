@@ -1,24 +1,17 @@
 #!/usr/local/bin/python3
 from collections.abc import Callable, Coroutine
 import json
-import os
 import logging
 from typing import Any
 from psycopg2.extensions import cursor
 from dotenv import load_dotenv
-from types import ApiConfig
+from types_definitions import ApiConfig
 from src.utils.api_utils import class_json_strategy, get_jobs_data
 import aiohttp
 
 
 # Load the environment variables
 load_dotenv()
-
-URL_DB = os.getenv("DATABASE_URL_DO", "")
-
-api_resources_dir = os.path.join("src", "resources", "api_resources")
-JSON_PROD = os.path.abspath(os.path.join(api_resources_dir, "api_main.json"))
-JSON_TEST = os.path.abspath(os.path.join(api_resources_dir, "api_test.json"))
 
 """ SET UP LOGGING FILE """
 
@@ -42,6 +35,10 @@ async def async_api_requests(
 
     logger.info(f"{api_config.name} has started")
     logger.debug(f"All parameters for {api_config.name}:\n{api_config}")
+    if not isinstance(api_config, ApiConfig):
+        error_msg = f"The provided config does not have the expected type. Expected: {ApiConfig}. Received: {api_config}."
+        logger.error(error_msg)
+        raise ValueError(error_msg)
 
     try:
         response = await fetch_func(session)

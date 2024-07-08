@@ -1,0 +1,558 @@
+I have a class that is meant to be the engine of various scrapping strategies. Each startegy has its configuration and arguments to load. As of now, there are various issues with circular imports. I need your help to fix the structure of this project so there are not any circular imports. The goal is to be able to create instances of each strategy and call them asyncronously. This has to be done in the tests directory (path: tests) and in main (path: src/main.py). All the strategies are in the crawlers directory and their utils in its repository. How should I modify the structure of the code so there are no circular imports?
+
+crawler (path: src/crawler.py)
+```
+from dataclasses import dataclass
+from typing import Any, TypeAlias
+import aiohttp
+import logging
+import os
+from collections.abc import Callable, Coroutine
+import psycopg2
+from psycopg2.extensions import cursor, connection
+import asyncio
+import json
+import random
+import pandas as pd
+from src.utils.bs4_utils import clean_postgre_bs4
+from src.utils.rss_utils import clean_postgre_rss
+from src.utils.api_utils import clean_postgre_api
+from src.crawlers.async_bs4 import async_bs4_crawl
+from src.crawlers.async_api import async_api_requests
+from src.utils.handy import crawled_df_to_db
+from src.constants import LOGGER_PATH, USER_AGENTS, URL_DB
+
+logging.basicConfig(
+    filename=LOGGER_PATH,
+    level=logging.DEBUG,
+    force=True,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+# Get the paths of the JSON files
+bs4_resources_dir = os.path.join("src", "resources", "bs4_resources")
+api_resources_dir = os.path.join("src", "resources", "api_resources")
+rss_resources_dir = os.path.join("src", "resources", "rss_resources")
+
+bs4_json_prod = os.path.abspath(os.path.join(bs4_resources_dir, "bs4_main.json"))
+bs4_json_test = os.path.abspath(os.path.join(bs4_resources_dir, "bs4_test.json"))
+
+api_json_prod = os.path.abspath(os.path.join(api_resources_dir, "api_main.json"))
+api_json_test = os.path.abspath(os.path.join(api_resources_dir, "api_test.json"))
+
+rss_json_prod = os.path.abspath(os.path.join(rss_resources_dir, "api_main.json"))
+rss_json_test = os.path.abspath(os.path.join(rss_resources_dir, "api_test.json"))
+
+# Set up named logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+
+@dataclass
+class Bs4ElementPath:
+    jobs_path: str
+    title_path: str
+    link_path: str
+    location_path: str
+    description_path: str
+
+
+@dataclass
+class Bs4Config:
+    name: str
+    url: str
+    pages_to_crawl: int
+    start_point: int
+    strategy: str
+    follow_link: str
+    inner_link_tag: str
+    elements_path: Bs4ElementPath
+
+
+@dataclass
+class ApiElementPath:
+    dict_tag: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    pubdate_tag: str
+    location_tag: str
+    location_default: str
+
+
+@dataclass
+class ApiConfig:
+    name: str
+    url: str
+    class_json: int
+    follow_link: str
+    inner_link_tag: str
+    elements_path: ApiElementPath
+
+
+@dataclass
+class RssConfig:
+    url: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    location_tag: str
+    follow_link: str
+    inner_link_tag: str
+
+
+CustomCrawlFuncType: TypeAlias = Callable[
+    [
+        Callable[
+            [aiohttp.ClientSession], Coroutine[Any, Any, Coroutine[Any, Any, str]]
+        ],
+        aiohttp.ClientSession,
+        Bs4Config | ApiConfig | RssConfig,
+        cursor | None,
+        bool,
+    ],
+    Coroutine[Any, Any, dict[str, list[str]]],
+]
+
+
+@dataclass
+class BaseArgs:
+    config: type
+    custom_crawl_func: CustomCrawlFuncType
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame]
+    test: bool = False
+    url_db: str = URL_DB
+    json_prod_path: str = ""
+    json_test_path: str = ""
+
+
+@dataclass
+class Bs4Args(BaseArgs):
+    config: type[Bs4Config] = Bs4Config
+    custom_crawl_func: CustomCrawlFuncType = async_bs4_crawl
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_bs4
+    json_prod_path: str = bs4_json_prod
+    json_test_path: str = bs4_json_test
+
+
+@dataclass
+class ApiArgs(BaseArgs):
+    config: type[ApiConfig] = ApiConfig
+    custom_crawl_func: CustomCrawlFuncType = async_api_requests
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_api
+    json_prod_path: str = api_json_prod
+    json_test_path: str = api_json_test
+
+
+@dataclass
+class RssArgs(BaseArgs):
+    config: type[RssConfig] = RssConfig
+    custom_crawl_func: CustomCrawlFuncType = async_rss_crawl
+    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_rss
+    json_prod_path: str = rss_json_prod
+    json_test_path: str = rss_json_test
+
+
+class AsyncCrawlerEngine:
+    def __init__(self, args: BaseArgs) -> None:
+        self.config = args.config
+        self.test = args.test
+        self.json_data_path = args.json_test_path if self.test else args.json_prod_path
+        self.custom_crawl_func = args.custom_crawl_func
+        self.custom_clean_func = args.custom_clean_func
+        self.url_db = args.url_db
+        self.conn: connection | None = None
+        self.cur: cursor | None = None
+
+    async def __load_configs(self) -> list[Bs4Config | RssConfig | ApiConfig]:
+        with open(self.json_data_path) as f:
+            data = json.load(f)
+        return [self.config(**url) for url in data]
+
+    async def __fetch(self, session: aiohttp.ClientSession) -> Coroutine[Any, Any, str]:
+        random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
+        async with session.get(self.config.url, headers=random_user_agent) as response:
+            if response.status != 200:
+                logging.warning(
+                    f"Received non-200 response ({response.status}) for API: {self.config.url}. Skipping..."
+                )
+                pass
+            logger.debug(f"random_header: {random_user_agent}")
+            return response.text()
+
+    async def __gather_json_loads(
+        self,
+        session: aiohttp.ClientSession,
+    ) -> None:
+
+        configs = await self.__load_configs()
+
+        tasks = [
+            self.custom_crawl_func(
+                self.__fetch,
+                session,
+                config,
+                self.cur,
+                self.test,
+            )
+            for config in configs
+        ]
+        results = await asyncio.gather(*tasks)
+
+        combined_data = {
+            key: []
+            for key in [
+                "title",
+                "link",
+                "description",
+                "pubdate",
+                "location",
+                "timestamp",
+            ]
+        }
+        for result in results:
+            for key in combined_data:
+                combined_data[key].extend(result[key])
+
+        lengths = {key: len(value) for key, value in combined_data.items()}
+        if len(set(lengths.values())) == 1:
+            df = self.custom_clean_func(pd.DataFrame(combined_data))
+            crawled_df_to_db(df, self.cur, self.test)
+        else:
+            logger.error(
+                f"ERROR ON {type(self.config).__name__}. LISTS DO NOT HAVE SAME LENGTH. FIX {lengths}"
+            )
+
+    async def run(self) -> None:
+        start_time = asyncio.get_event_loop().time()
+
+        self.conn = psycopg2.connect(self.url_db)
+        self.cur = self.conn.cursor()
+
+        async with aiohttp.ClientSession() as session:
+            await self.__gather_json_loads(session)
+
+        self.conn.commit()
+        self.cur.close()
+        self.conn.close()
+
+        elapsed_time = asyncio.get_event_loop().time() - start_time
+        logger.info(f"Async BS4 crawlers finished! all in: {elapsed_time:.2f} seconds.")
+```
+
+async_bs4.py (path: src/crawlers/async_bs4.py): 
+
+```
+#!/usr/local/bin/python3
+
+from collections.abc import Callable, Coroutine
+from typing import Any
+from bs4 import BeautifulSoup
+import logging
+from psycopg2.extensions import cursor
+from types_definitions import Bs4Config
+from src.utils.bs4_utils import (
+    async_container_strategy_bs4,
+    async_main_strategy_bs4,
+    async_occ_mundial,
+)
+import aiohttp
+
+# Set up named logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+
+async def __crawling_strategy(
+    session: aiohttp.ClientSession,
+    bs4_config: Bs4Config,
+    soup: BeautifulSoup,
+    test: bool,
+    cur: cursor,
+) -> dict[str, list[str]] | None:
+    strategy_map = {
+        "main": async_main_strategy_bs4,
+        "container": async_container_strategy_bs4,
+        "occ": async_occ_mundial,
+    }
+    func_strategy = strategy_map.get(bs4_config.strategy)
+    if not func_strategy:
+        raise ValueError("Unrecognized strategy.")
+
+    try:
+        return await func_strategy(cur, session, bs4_config, soup, test)
+    except Exception as e:
+        logger.error(
+            f"{type(e).__name__} using {bs4_config.strategy} strategy while crawling {bs4_config.url}.\n{e}",
+            exc_info=True,
+        )
+
+
+async def async_bs4_crawl(
+    fetch_func: Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
+    session: aiohttp.ClientSession,
+    bs4_config: Bs4Config,
+    cur: cursor,
+    test: bool = False,
+) -> dict[str, list[str]]:
+    rows = {
+        key: []
+        for key in ["title", "link", "description", "pubdate", "location", "timestamp"]
+    }
+
+    logger.info(f"{bs4_config.name} has started")
+    logger.debug(f"All parameters for {bs4_config.name}:\n{bs4_config}")
+    if not isinstance(bs4_config, Bs4Config):
+        error_msg = f"The provided config does not have the expected type. Expected: {Bs4Config}. Received: {bs4_config}."
+        logger.error(error_msg)
+        raise ValueError(error_msg)
+
+    for i in range(bs4_config.start_point, bs4_config.pages_to_crawl + 1):
+        url = bs4_config.url + str(i)
+
+        try:
+            html = await fetch_func(session)
+            soup = BeautifulSoup(html, "lxml")
+            logger.debug(f"Crawling {url} with {bs4_config.strategy} strategy")
+
+            new_rows = await __crawling_strategy(session, bs4_config, soup, test, cur)
+            if new_rows:
+                for key in rows:
+                    rows[key].extend(str(new_rows.get(key, [])))
+
+        except Exception as e:
+            logger.error(
+                f"{type(e).__name__} occurred before deploying crawling strategy on {url}.\n\n{e}",
+                exc_info=True,
+            )
+            continue
+    return rows
+
+```
+
+async_api_utils.py (path: src/utils/bs4_utils.py)
+
+```
+from typing import Any
+from psycopg2.extensions import cursor
+import bs4
+import pandas as pd
+from datetime import date, datetime
+import logging
+from src.utils.FollowLink import async_follow_link, async_follow_link_title_description
+from src.utils.handy import link_exists_in_db
+import aiohttp
+
+
+async def async_main_strategy_bs4(
+    cur: cursor,
+    session: aiohttp.ClientSession,
+    bs4_element: Any,
+    soup: bs4.BeautifulSoup,
+    test: bool = False
+):
+    total_jobs_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
+    }
+
+    jobs = soup.select(bs4_element.elements_path.jobs_path)
+    if not jobs:
+        raise ValueError(f"No jobs were found using this selector {bs4_element.elements_path.jobs_path}")
+
+    for job in jobs:
+        title_element = job.select_one(bs4_element.elements_path.title_path)
+        if not title_element:
+            raise ValueError(f"No titles were found using this selector {bs4_element.elements_path.title_path}")
+
+        link_element = job.select_one(bs4_element.elements_path.link_path)
+        if not link_element:
+            raise ValueError(f"No links were found using this selector {bs4_element.elements_path.link_path}")
+
+        link = bs4_element.name + str(link_element["href"])
+
+        if await link_exists_in_db(link=link, cur=cur, test=test):
+            logging.debug(f"Link {link} already found in the db. Skipping...")
+            continue
+
+        description_element = job.select_one(bs4_element.elements_path.description_path)
+        description = description_element.text if description_element else "NaN"
+        if bs4_element.follow_link == "yes":
+            description = await async_follow_link(
+                session=session,
+                followed_link=link,
+                description_final="",
+                inner_link_tag=bs4_element.inner_link_tag,
+                default=description,
+            )
+
+        today = date.today()
+        location_element = job.select_one(bs4_element.elements_path.location_path)
+        location = location_element.text if location_element else "NaN"
+
+        timestamp = datetime.now()
+
+        for key, value in zip(total_jobs_data.keys(), [title_element.text, link, description, today, location, timestamp]):
+            total_jobs_data[key].append(value)
+
+    return total_jobs_data
+
+async def async_container_strategy_bs4(
+    cur: cursor,
+    session: aiohttp.ClientSession,
+    bs4_element: Any,
+    soup: bs4.BeautifulSoup,
+    test: bool = False
+):
+    paths = bs4_element.elements_path
+    total_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
+    }
+
+    container = soup.select_one(paths.jobs_path)
+    if not container:
+        raise ValueError(f"No elements found for 'container'. Check '{paths.jobs_path}'")
+
+    elements = {
+        "title": container.select(paths.title_path),
+        "link": container.select(paths.link_path),
+        "description": container.select(paths.description_path),
+        "location": container.select(paths.location_path),
+    }
+
+    for key, value in elements.items():
+        if not value:
+            raise ValueError(f"No elements found for '{key}'. Check 'elements_path[\"{key}_path\"]'")
+
+    job_elements = zip(*elements.values())
+
+    for title_element, link_element, description_element, location_element in job_elements:
+        title = title_element.get_text(strip=True) or "NaN"
+        link = bs4_element.name + (link_element.get("href") or "NaN")
+        description_default = description_element.get_text(strip=True) or "NaN"
+        location = location_element.get_text(strip=True) or "NaN"
+
+        if await link_exists_in_db(link=link, cur=cur, test=test):
+            logging.debug(f"Link {link} already found in the db. Skipping...")
+            continue
+
+        description = await async_follow_link(
+            session, link, description_default, bs4_element.inner_link_tag
+        ) if bs4_element.follow_link == "yes" else description_default
+
+        now = datetime.now()
+        total_data["title"].append(title)
+        total_data["link"].append(link)
+        total_data["description"].append(description)
+        total_data["pubdate"].append(date.today())
+        total_data["location"].append(location)
+        total_data["timestamp"].append(now)
+
+    return total_data
+
+
+def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.drop_duplicates()
+
+    for col in df.columns:
+        if col == "title" or col == "description":
+            if not df[col].empty:  # Check if the column has any rows
+                df[col] = df[col].astype(str)  # Convert the entire column to string
+                df[col] = df[col].str.replace(
+                    r'<.*?>|[{}[\]\'",]', "", regex=True
+                )  # Remove html tags & other characters
+        elif col == "location":
+            if not df[col].empty:  # Check if the column has any rows
+                df[col] = df[col].astype(str)  # Convert the entire column to string
+                df[col] = df[col].str.replace(
+                    r'<.*?>|[{}[\]\'",]', "", regex=True
+                )  # Remove html tags & other characters
+                # df[col] = df[col].str.replace(r'[{}[\]\'",]', '', regex=True)
+                df[col] = df[col].str.replace(
+                    r"\b(\w+)\s+\1\b", r"\1", regex=True
+                )  # Removes repeated words
+                df[col] = df[col].str.replace(
+                    r"\d{4}-\d{2}-\d{2}", "", regex=True
+                )  # Remove dates in the format "YYYY-MM-DD"
+                df[col] = df[col].str.replace(
+                    r"(USD|GBP)\d+-\d+/yr", "", regex=True
+                )  # Remove USD\d+-\d+/yr or GBP\d+-\d+/yr.
+                df[col] = df[col].str.replace("[-/]", " ", regex=True)  # Remove -
+                df[col] = df[col].str.replace(
+                    r"(?<=[a-z])(?=[A-Z])", " ", regex=True
+                )  # Insert space between lowercase and uppercase letters
+                pattern = r"(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b"  # Define a regex patter for all outliers that use remote
+                df[col] = df[col].str.replace(pattern, "Worldwide", regex=True)
+                df[col] = df[col].replace(
+                    "(?i)^remote$", "Worldwide", regex=True
+                )  # Replace
+                df[col] = df[col].str.strip()  # Remove trailing white space
+
+    logging.info("Finished bs4 crawlers. Results below ⬇︎")
+
+    return df
+
+
+async def async_occ_mundial(
+    cur: cursor,
+    session: aiohttp.ClientSession,
+    element: Any, 
+    soup: bs4.BeautifulSoup,
+    test: bool = False
+):
+    # TODO: NOT TESTED.
+    total_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
+    }
+
+    container = soup.select_one(element.elements_path.jobs_path)
+    if not container:
+        raise AssertionError("No elements found for 'container'. Check 'elements_path[\"jobs_path\"]'")
+
+    links = container.select(element.elements_path.link_path)
+    if not links:
+        raise AssertionError("No elements found for 'links'. Check 'elements_path[\"link_path\"]'")
+
+    print(f"Number of job elements: {len(links)}")
+
+    for link_element in links:
+        link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"
+        
+        if await link_exists_in_db(link=link, cur=cur, test=test):
+            logging.info(f"Link {link} already found in the db. Skipping...")
+            continue
+
+        title, description = ("", "")
+        if element.follow_link == "yes":
+            title, description = await async_follow_link_title_description(
+                session,
+                link,
+                description,
+                element.inner_link_tag,
+                element.elements_path.title_path,
+                "NaN",
+            )
+
+        today = date.today()
+        now = datetime.now()
+        for key, value in zip(["link", "title", "description", "location", "pubdate", "timestamp"],
+                            [link, title, description, "MX", today, now]):
+            total_data[key].append(value)
+
+    return total_data
+```

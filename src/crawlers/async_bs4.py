@@ -203,7 +203,7 @@ async def __async_occ_mundial(
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
-    # TODO: NOT TESTED.
+    # NOT TESTED.
     total_data = {
         "title": [],
         "link": [],

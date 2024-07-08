@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 #url_to_follow = "https://www.occ.com.mx/empleos/de-home-office/trabajo-en-tecnologias-de-la-informacion-sistemas/?tm=14&page=1"
 
 url_to_follow ="https://bj.scjn.gob.mx/api/buscador/documento/tesis/T_dvMHYBN_4klb4Hg8R3"
-#TODO: You want to get the description and other 
+# You want to get the description and other 
 """container_selector = '.col-0-2-176.md5-0-2-285.jobCardContainer-0-2-536'
 title_selector = '.card-0-2-520.flat-0-2-522 .conFluid-0-2-61.gridContainer-0-2-568 .row-0-2-175.cardContent-0-2-562 .col-0-2-176.xs12-0-2-445.formatCol-0-2-569'
 location_selector = '.col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 span'

@@ -31,7 +31,7 @@ JSON_PROD = os.environ.get('JSON_PROD_INDEED', "")
 JSON_TEST = os.environ.get('JSON_TEST_INDEED', "")
 SAVE_PATH = os.environ.get('SAVE_PATH_INDEED', "")
 
-#TODO Needs a lot of fixes. Mainly headless browser & that all arrays must be the same lenght. Also, it does not respect the follow link
+# Needs a lot of fixes. Mainly headless browser & that all arrays must be the same lenght. Also, it does not respect the follow link
 
 async def async_indeed_template(SCHEME, KEYWORD, pipeline):
 	start_time = timeit.default_timer()

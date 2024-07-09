@@ -11,7 +11,7 @@ from src.crawlers.async_api import async_api_requests, clean_postgre_api
 from src.crawlers.async_rss import async_rss_reader, clean_postgre_rss
 from dotenv import load_dotenv
 
-#TODO: Fix rss. Check types for each crawling function.
+#TODO: Check types for each crawling function.
 
 load_dotenv()
 
@@ -93,12 +93,10 @@ class RssConfig:
 
 CustomCrawlFuncType: TypeAlias = Callable[
     [
-        Callable[
-            [aiohttp.ClientSession], Coroutine[Any, Any, Coroutine[Any, Any, str]]
-        ],
+        Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
         aiohttp.ClientSession,
         Bs4Config | ApiConfig | RssConfig,
-        cursor | None,
+        cursor,
         bool,
     ],
     Coroutine[Any, Any, dict[str, list[str]]],

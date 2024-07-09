@@ -5,7 +5,6 @@ from typing import Any
 import feedparser
 import logging
 from psycopg2.extensions import cursor
-from models import ApiConfig
 import aiohttp
 import pandas as pd
 from datetime import date, datetime
@@ -38,26 +37,39 @@ async def __async_get_feed_entries(feed: FeedParserDict,
 
 		link = getattr(entry, rss_config.link_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
 		
-		if await link_exists_in_db(link=link, cur=cur, test=test):
+		if await link_exists_in_db(
+			link=rss_config.link_tag, cur=cur, test=test
+		):
 			logging.debug(
 				f"Link {rss_config.link_tag} already found in the db. Skipping..."
 			)
 			continue
 		
 		default = getattr(entry, rss_config.description_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
+		description = ""
 		if rss_config.follow_link == 'yes':
-			job_data["description"] = ""
-			job_data["description"] = await async_follow_link(session=session, followed_link=job_data['link'], description_final=job_data["description"], inner_link_tag=inner_link_tag, default=default) # type: ignore
+			description = await async_follow_link(
+					session=session,
+					followed_link=link,
+					description_final=description,
+					inner_link_tag=rss_config.inner_link_tag,
+					default=default,
+				)
 		else:
-			job_data["description"] = default
+			description = default
 		
 		today = date.today()
-		job_data["pubdate"] = today
 
-		job_data["location"] = getattr(entry, rss_config.location_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
+		location = getattr(entry, rss_config.location_tag) if hasattr(entry, rss_config.location_tag) else "NaN"
 
 		timestamp = datetime.now()
-		job_data["timestamp"] = timestamp
+		for key, value in zip(
+			total_jobs_data.keys(),
+			[title, link, description, today, location, timestamp],
+		):
+			total_jobs_data[key].append(value)
+
+	return total_jobs_data
 		
 
 def clean_postgre_rss(df: pd.DataFrame) -> pd.DataFrame:
@@ -90,33 +102,33 @@ def clean_postgre_rss(df: pd.DataFrame) -> pd.DataFrame:
 
 
 async def async_rss_reader(
-    fetch_func: Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
-    session: aiohttp.ClientSession,
-    api_config: ApiConfig,
-    cur: cursor,
-    test: bool = False,
+	fetch_func: Callable[[aiohttp.ClientSession], Coroutine[Any, Any, str]],
+	session: aiohttp.ClientSession,
+	rss_config: Any,
+	cur: cursor,
+	test: bool = False,
 ) -> dict[str, list[str]]:
-    rows = {
-        key: []
-        for key in ["title", "link", "description", "pubdate", "location", "timestamp"]
-    }
+	rows = {
+		key: []
+		for key in ["title", "link", "description", "pubdate", "location", "timestamp"]
+	}
 
-    logger.info(f"{api_config.name} has started")
-    logger.debug(f"All parameters for {api_config.name}:\n{api_config}")
+	logger.info(f"{rss_config.name} has started")
+	logger.debug(f"All parameters for {rss_config.name}:\n{rss_config}")
 
-    try:
-        response = await fetch_func(session)
-        logger.debug(f"Successful request on {api_config.url}")
-        feed = feedparser.parse(response)
+	try:
+		response = await fetch_func(session)
+		logger.debug(f"Successful request on {rss_config.url}")
+		feed = feedparser.parse(response)
 
-        new_rows = await __async_get_feed_entries(cur, jobs, session, api_config, test)
-        if new_rows:
-            for key in rows:
-                rows[key].extend(new_rows.get(key, []))
-    except Exception as e:
-        logger.error(
-            f"{type(e).__name__} occurred before deploying crawling strategy on {api_config.url}.\n\n{e}",
-            exc_info=True,
-        )
-        pass
-    return rows
+		new_rows = await __async_get_feed_entries(feed, cur, session, rss_config, test)
+		if new_rows:
+			for key in rows:
+				rows[key].extend(new_rows.get(key, []))
+	except Exception as e:
+		logger.error(
+			f"{type(e).__name__} occurred before deploying crawling strategy on {rss_config.url}.\n\n{e}",
+			exc_info=True,
+		)
+		pass
+	return rows

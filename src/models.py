@@ -11,11 +11,9 @@ from src.crawlers.async_api import async_api_requests, clean_postgre_api
 from src.crawlers.async_rss import async_rss_reader, clean_postgre_rss
 from dotenv import load_dotenv
 
-#TODO: Check types for each crawling function.
-
 load_dotenv()
 
-URL_DB = os.environ.get("URL_DB", "")
+URL_DB = os.environ.get("DATABASE_URL_DO", "")
 
 # Set up named logger
 logger = logging.getLogger(__name__)
@@ -103,39 +101,35 @@ CustomCrawlFuncType: TypeAlias = Callable[
 ]
 
 
-@dataclass
-class BaseArgs:
-    config: type
-    custom_crawl_func: CustomCrawlFuncType
-    custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame]
-    test: bool = False
-    url_db: str = URL_DB
-    json_prod_path: str = ""
-    json_test_path: str = ""
-
 
 @dataclass
-class Bs4Args(BaseArgs):
+class Bs4Args():
     config: type[Bs4Config] = Bs4Config
     custom_crawl_func: CustomCrawlFuncType = async_bs4_crawl
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_bs4
+    test: bool = False
+    url_db: str = URL_DB
     json_prod_path: str = bs4_json_prod
     json_test_path: str = bs4_json_test
 
 
 @dataclass
-class ApiArgs(BaseArgs):
+class ApiArgs():
     config: type[ApiConfig] = ApiConfig
     custom_crawl_func: CustomCrawlFuncType = async_api_requests
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_api
+    test: bool = False
+    url_db: str = URL_DB
     json_prod_path: str = api_json_prod
     json_test_path: str = api_json_test
 
 
 @dataclass
-class RssArgs(BaseArgs):
+class RssArgs():
     config: type[RssConfig] = RssConfig
     custom_crawl_func: CustomCrawlFuncType = async_rss_reader
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_rss
+    test: bool = False
+    url_db: str = URL_DB
     json_prod_path: str = rss_json_prod
     json_test_path: str = rss_json_test

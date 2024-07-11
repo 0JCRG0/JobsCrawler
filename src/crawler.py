@@ -98,6 +98,8 @@ class AsyncCrawlerEngine:
 
     async def __fetch(self, session: aiohttp.ClientSession) -> Coroutine[Any, Any, str]:
         random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
+        #TODO: CANNOT ACCESS THE OBJECT OF EACH CONFIG.
+        print(self.config.url)
         async with session.get(self.config.url, headers=random_user_agent) as response:
             if response.status != 200:
                 logging.warning(

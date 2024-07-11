@@ -1,16 +1,3 @@
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-URL_DB = os.environ.get("DATABASE_URL_DO", "")
-LOGGER_PATH = os.path.join("logs", "main_logger.log")
-(
-    os.makedirs(os.path.dirname(LOGGER_PATH), exist_ok=True)
-    if not os.path.exists(LOGGER_PATH)
-    else None
-)
-open(LOGGER_PATH, "a").close() if not os.path.exists(LOGGER_PATH) else None
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",

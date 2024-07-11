@@ -17,68 +17,69 @@ logger.setLevel(logging.DEBUG)
 
 def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -> None:
 
-	if test:
-		table = "test"
-	table = "main_jobs"
+    if test:
+        table = "test"
+    table = "main_jobs"
 
-	initial_count_query = f"""
+    initial_count_query = f"""
 		SELECT COUNT(*) FROM {table}
 	"""
-	if not cur:
-		raise ValueError("Cursos cannot be None.")
+    if not cur:
+        raise ValueError("Cursos cannot be None.")
 
-	cur.execute(initial_count_query)
-	initial_count_result = cur.fetchone()
+    cur.execute(initial_count_query)
+    initial_count_result = cur.fetchone()
 
-	""" IF THERE IS A DUPLICATE LINK IT SKIPS THAT ROW & DOES NOT INSERTS IT
+    """ IF THERE IS A DUPLICATE LINK IT SKIPS THAT ROW & DOES NOT INSERTS IT
 		IDs ARE ENSURED TO BE UNIQUE BCOS OF THE SERIAL ID THAT POSTGRE MANAGES AUTOMATICALLY
 	"""
-	jobs_added = []
-	for _, row in df.iterrows():
-		insert_query = f"""
+    jobs_added = []
+    for _, row in df.iterrows():
+        insert_query = f"""
 			INSERT INTO {table} (title, link, description, pubdate, location, timestamp)
 			VALUES (%s, %s, %s, %s, %s, %s)
 			ON CONFLICT (link) DO NOTHING
 			RETURNING *
 		"""
-		values = (
-			row["title"],
-			row["link"],
-			row["description"],
-			row["pubdate"],
-			row["location"],
-			row["timestamp"],
-		)
-		cur.execute(insert_query, values)
-		affected_rows = cur.rowcount
-		if affected_rows > 0:
-			jobs_added.append(cur.fetchone())
+        values = (
+            row["title"],
+            row["link"],
+            row["description"],
+            row["pubdate"],
+            row["location"],
+            row["timestamp"],
+        )
+        cur.execute(insert_query, values)
+        affected_rows = cur.rowcount
+        if affected_rows > 0:
+            jobs_added.append(cur.fetchone())
 
-	""" LOGGING/PRINTING RESULTS"""
+    """ LOGGING/PRINTING RESULTS"""
 
-	final_count_query = f"""
+    final_count_query = f"""
 		SELECT COUNT(*) FROM {table}
 	"""
-	cur.execute(final_count_query)
-	final_count_result = cur.fetchone()
+    cur.execute(final_count_query)
+    final_count_result = cur.fetchone()
 
-	if initial_count_result is not None:
-		initial_count = initial_count_result[0]
-	else:
-		initial_count = 0
-	jobs_added_count = len(jobs_added)
-	if final_count_result is not None:
-		final_count = final_count_result[0]
-	else:
-		final_count = 0
+    if initial_count_result is not None:
+        initial_count = initial_count_result[0]
+    else:
+        initial_count = 0
+    jobs_added_count = len(jobs_added)
+    if final_count_result is not None:
+        final_count = final_count_result[0]
+    else:
+        final_count = 0
 
-	postgre_report = {
-		"Total count of jobs before crawling": initial_count,
-		"Total number of unique jobs": jobs_added_count,
-		"Current total count of jobs in PostgreSQL": final_count,
-	}
+    postgre_report = {
+        "Total count of jobs before crawling": initial_count,
+        "Total number of unique jobs": jobs_added_count,
+        "Current total count of jobs in PostgreSQL": final_count,
+    }
 
-	logging.info(json.dumps(postgre_report))
+    logging.info(json.dumps(postgre_report))
+
 
 class AsyncCrawlerEngine:
     def __init__(self, args: Any) -> None:
@@ -96,11 +97,14 @@ class AsyncCrawlerEngine:
             data = json.load(f)
         return [self.config(**url) for url in data]
 
-    async def __fetch(self, session: aiohttp.ClientSession) -> Coroutine[Any, Any, str]:
+    async def __fetch(
+        self, session: aiohttp.ClientSession, config_instance: Any
+    ) -> Coroutine[Any, Any, str]:
         random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
-        #TODO: CANNOT ACCESS THE OBJECT OF EACH CONFIG.
-        print(self.config.url)
-        async with session.get(self.config.url, headers=random_user_agent) as response:
+        print(config_instance.url)
+        async with session.get(
+            config_instance.url, headers=random_user_agent
+        ) as response:
             if response.status != 200:
                 logging.warning(
                     f"Received non-200 response ({response.status}) for API: {self.config.url}. Skipping..."
@@ -109,16 +113,12 @@ class AsyncCrawlerEngine:
             logger.debug(f"random_header: {random_user_agent}")
             return response.text()
 
-    async def __gather_json_loads(
-        self,
-        session: aiohttp.ClientSession,
-    ) -> None:
-
+    async def __gather_json_loads(self, session: aiohttp.ClientSession) -> None:
         configs = await self.__load_configs()
 
         tasks = [
             self.custom_crawl_func(
-                self.__fetch,
+                lambda session, config=config: self.__fetch(session, config),
                 session,
                 config,
                 self.cur,

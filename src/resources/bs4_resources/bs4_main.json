@@ -105,10 +105,10 @@
         "inner_link_tag": "#job-description",
         "elements_path": {
                 "jobs_path": ".list-group.list-group-flush.mb-4",
-                "title_path": ".col.pt-2.pb-3 .h5.mb-2.text-body-emphasis",
+                "title_path": ".col.pt-2.pb-3 .h5.text-body-emphasis.text-break.mt-1",
                 "link_path": ".col.pt-2.pb-3",
-                "location_path": ".col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break",
-                "description_path": ".col.pt-2.pb-3 .badge.rounded-pill.text-bg-light"
+                "location_path": ".col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break.mb-1",
+                "description_path": ".col.pt-2.pb-3"
             }
     }
 ]

@@ -99,9 +99,8 @@ class AsyncCrawlerEngine:
 
     async def __fetch(
         self, session: aiohttp.ClientSession, config_instance: Any
-    ) -> Coroutine[Any, Any, str]:
+    ) -> str:
         random_user_agent = {"User-Agent": random.choice(USER_AGENTS)}
-        print(config_instance.url)
         async with session.get(
             config_instance.url, headers=random_user_agent
         ) as response:
@@ -111,7 +110,7 @@ class AsyncCrawlerEngine:
                 )
                 pass
             logger.debug(f"random_header: {random_user_agent}")
-            return response.text()
+            return await response.text()
 
     async def __gather_json_loads(self, session: aiohttp.ClientSession) -> None:
         configs = await self.__load_configs()
@@ -149,7 +148,7 @@ class AsyncCrawlerEngine:
             crawled_df_to_db(df, self.cur, self.test)
         else:
             logger.error(
-                f"ERROR ON {type(self.config).__name__}. LISTS DO NOT HAVE SAME LENGTH. FIX {lengths}"
+                f"Error while calling {self.custom_crawl_func}. Data has uneven entries. Exiting to avoid data corruption. Data lengths: {lengths}"
             )
 
     async def run(self) -> None:

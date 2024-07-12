@@ -2,6 +2,7 @@
 
 from collections.abc import Callable, Coroutine
 from typing import Any
+from dataclasses import dataclass
 from bs4 import BeautifulSoup
 import logging
 from psycopg2.extensions import cursor
@@ -15,6 +16,15 @@ from src.utils.handy import link_exists_in_db
 # Set up named logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
+
+@dataclass
+class Bs4ElementPath():
+    jobs_path: str
+    title_path: str
+    link_path: str
+    location_path: str
+    description_path: str
+
 
 def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
     df = df.drop_duplicates()
@@ -73,23 +83,25 @@ async def __async_main_strategy_bs4(
         "timestamp": [],
     }
 
-    jobs = soup.select(bs4_element.elements_path.jobs_path)
+    bs4_element_path = Bs4ElementPath(**bs4_element.elements_path)
+
+    jobs = soup.select(bs4_element_path.jobs_path)
     if not jobs:
         raise ValueError(
-            f"No jobs were found using this selector {bs4_element.elements_path.jobs_path}"
+            f"No jobs were found using this selector {bs4_element_path.jobs_path}"
         )
 
     for job in jobs:
-        title_element = job.select_one(bs4_element.elements_path.title_path)
+        title_element = job.select_one(bs4_element_path.title_path)
         if not title_element:
             raise ValueError(
-                f"No titles were found using this selector {bs4_element.elements_path.title_path}"
+                f"No titles were found using this selector {bs4_element_path.title_path}"
             )
 
-        link_element = job.select_one(bs4_element.elements_path.link_path)
+        link_element = job.select_one(bs4_element_path.link_path)
         if not link_element:
             raise ValueError(
-                f"No links were found using this selector {bs4_element.elements_path.link_path}"
+                f"No links were found using this selector {bs4_element_path.link_path}"
             )
 
         link = bs4_element.name + str(link_element["href"])
@@ -98,7 +110,7 @@ async def __async_main_strategy_bs4(
             logging.debug(f"Link {link} already found in the db. Skipping...")
             continue
 
-        description_element = job.select_one(bs4_element.elements_path.description_path)
+        description_element = job.select_one(bs4_element_path.description_path)
         description = description_element.text if description_element else "NaN"
         if bs4_element.follow_link == "yes":
             description = await async_follow_link(
@@ -110,7 +122,7 @@ async def __async_main_strategy_bs4(
             )
 
         today = date.today()
-        location_element = job.select_one(bs4_element.elements_path.location_path)
+        location_element = job.select_one(bs4_element_path.location_path)
         location = location_element.text if location_element else "NaN"
 
         timestamp = datetime.now()
@@ -120,7 +132,7 @@ async def __async_main_strategy_bs4(
             [title_element.text, link, description, today, location, timestamp],
         ):
             total_jobs_data[key].append(value)
-
+    logging.info(f"{bs4_element.url}: \n{total_jobs_data} \n\n")
     return total_jobs_data
 
 
@@ -131,7 +143,8 @@ async def __async_container_strategy_bs4(
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
-    paths = bs4_element.elements_path
+    bs4_element_path = Bs4ElementPath(**bs4_element.elements_path)
+
     total_data = {
         "title": [],
         "link": [],
@@ -141,17 +154,17 @@ async def __async_container_strategy_bs4(
         "timestamp": [],
     }
 
-    container = soup.select_one(paths.jobs_path)
+    container = soup.select_one(bs4_element_path.jobs_path)
     if not container:
         raise ValueError(
-            f"No elements found for 'container'. Check '{paths.jobs_path}'"
+            f"No elements found for 'container'. Check '{bs4_element_path.jobs_path}'"
         )
 
     elements = {
-        "title": container.select(paths.title_path),
-        "link": container.select(paths.link_path),
-        "description": container.select(paths.description_path),
-        "location": container.select(paths.location_path),
+        "title": container.select(bs4_element_path.title_path),
+        "link": container.select(bs4_element_path.link_path),
+        "description": container.select(bs4_element_path.description_path),
+        "location": container.select(bs4_element_path.location_path),
     }
 
     for key, value in elements.items():
@@ -192,7 +205,9 @@ async def __async_container_strategy_bs4(
         total_data["pubdate"].append(date.today())
         total_data["location"].append(location)
         total_data["timestamp"].append(now)
-
+    
+    #TODO: THE DICTIONARY IS EMPTY. DUNNO IF IT IS BECAUSE THE DATA IS ALREADY IN THE DB OR AN ISSUE WITH THE FUNCTION.
+    logging.info(f"{bs4_element.url}: \n{total_data} \n\n")
     return total_data
 
 
@@ -203,7 +218,7 @@ async def __async_occ_mundial(
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
-    # NOT TESTED.
+    # NOT TESTED. NOT CURRENTLY USING.
     total_data = {
         "title": [],
         "link": [],
@@ -302,8 +317,8 @@ async def async_bs4_crawl(
         try:
             html = await fetch_func(session)
             soup = BeautifulSoup(html, "lxml")
+            
             logger.debug(f"Crawling {url} with {bs4_config.strategy} strategy")
-
             new_rows = await _crawling_strategy(session, bs4_config, soup, test, cur)
             if new_rows:
                 for key in rows:

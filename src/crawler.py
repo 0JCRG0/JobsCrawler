@@ -141,8 +141,15 @@ class AsyncCrawlerEngine:
         for result in results:
             for key in combined_data:
                 combined_data[key].extend(result[key])
+        # TODO: I think that it is taking the len of all the entries, whereas I need to know the total number of entries:
 
+        """
+        Data has uneven entries. Exiting to avoid data corruption. Data lengths: {'title': 2609, 'link': 4404, 'description': 305150, 'pubdate': 1690, 'location': 1570, 'timestamp': 3039}
+
+        That just does not make sense as there were like 100 jobs crawled.
+        """
         lengths = {key: len(value) for key, value in combined_data.items()}
+        
         if len(set(lengths.values())) == 1:
             df = self.custom_clean_func(pd.DataFrame(combined_data))
             crawled_df_to_db(df, self.cur, self.test)

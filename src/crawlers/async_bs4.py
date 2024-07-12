@@ -185,7 +185,7 @@ async def __async_container_strategy_bs4(
         link = bs4_element.name + (link_element.get("href") or "NaN")
         description_default = description_element.get_text(strip=True) or "NaN"
         location = location_element.get_text(strip=True) or "NaN"
-
+        # TODO: IS IT SENDING THE DATA TO THE TEST DB? WHAT IS THE VALUE OF TEST?
         if await link_exists_in_db(link=link, cur=cur, test=test):
             logging.debug(f"Link {link} already found in the db. Skipping...")
             continue

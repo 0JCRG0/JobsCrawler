@@ -31,8 +31,8 @@ bs4_json_test = os.path.abspath(os.path.join(bs4_resources_dir, "bs4_test.json")
 api_json_prod = os.path.abspath(os.path.join(api_resources_dir, "api_main.json"))
 api_json_test = os.path.abspath(os.path.join(api_resources_dir, "api_test.json"))
 
-rss_json_prod = os.path.abspath(os.path.join(rss_resources_dir, "api_main.json"))
-rss_json_test = os.path.abspath(os.path.join(rss_resources_dir, "api_test.json"))
+rss_json_prod = os.path.abspath(os.path.join(rss_resources_dir, "rss_main.json"))
+rss_json_test = os.path.abspath(os.path.join(rss_resources_dir, "rss_test.json"))
 
 
 

@@ -191,7 +191,6 @@ async def __async_main_strategy_bs4(
             [title_element.text, link, description, today, location, timestamp],
         ):
             total_jobs_data[key].append(value)
-    logging.info(f"{bs4_element.url}: \n{total_jobs_data} \n\n")
     return total_jobs_data
 
 
@@ -264,7 +263,6 @@ async def __async_container_strategy_bs4(
         total_data["location"].append(location)
         total_data["timestamp"].append(now)
     
-    logging.info(f"{bs4_element.url}: \n{total_data} \n\n")
     return total_data
 
 

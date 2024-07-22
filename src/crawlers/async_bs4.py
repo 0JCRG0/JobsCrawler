@@ -67,6 +67,65 @@ def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+async def __async_occ_mundial(
+    cur: cursor,
+    session: aiohttp.ClientSession,
+    element: Any,
+    soup: bs4.BeautifulSoup,
+    test: bool = False,
+):
+    # NOT TESTED. NOT CURRENTLY USING.
+    total_data = {
+        "title": [],
+        "link": [],
+        "description": [],
+        "pubdate": [],
+        "location": [],
+        "timestamp": [],
+    }
+
+    container = soup.select_one(element.elements_path.jobs_path)
+    if not container:
+        raise AssertionError(
+            "No elements found for 'container'. Check 'elements_path[\"jobs_path\"]'"
+        )
+
+    links = container.select(element.elements_path.link_path)
+    if not links:
+        raise AssertionError(
+            "No elements found for 'links'. Check 'elements_path[\"link_path\"]'"
+        )
+
+    print(f"Number of job elements: {len(links)}")
+
+    for link_element in links:
+        link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"
+
+        if await link_exists_in_db(link=link, cur=cur, test=test):
+            logging.info(f"Link {link} already found in the db. Skipping...")
+            continue
+
+        title, description = ("", "")
+        if element.follow_link == "yes":
+            title, description = await async_follow_link_title_description(
+                session,
+                link,
+                description,
+                element.inner_link_tag,
+                element.elements_path.title_path,
+                "NaN",
+            )
+
+        today = date.today()
+        now = datetime.now()
+        for key, value in zip(
+            ["link", "title", "description", "location", "pubdate", "timestamp"],
+            [link, title, description, "MX", today, now],
+        ):
+            total_data[key].append(value)
+
+    return total_data
+
 async def __async_main_strategy_bs4(
     cur: cursor,
     session: aiohttp.ClientSession,
@@ -185,7 +244,6 @@ async def __async_container_strategy_bs4(
         link = bs4_element.name + (link_element.get("href") or "NaN")
         description_default = description_element.get_text(strip=True) or "NaN"
         location = location_element.get_text(strip=True) or "NaN"
-        # TODO: IS IT SENDING THE DATA TO THE TEST DB? WHAT IS THE VALUE OF TEST?
         if await link_exists_in_db(link=link, cur=cur, test=test):
             logging.debug(f"Link {link} already found in the db. Skipping...")
             continue
@@ -206,68 +264,7 @@ async def __async_container_strategy_bs4(
         total_data["location"].append(location)
         total_data["timestamp"].append(now)
     
-    #TODO: THE DICTIONARY IS EMPTY. DUNNO IF IT IS BECAUSE THE DATA IS ALREADY IN THE DB OR AN ISSUE WITH THE FUNCTION.
     logging.info(f"{bs4_element.url}: \n{total_data} \n\n")
-    return total_data
-
-
-async def __async_occ_mundial(
-    cur: cursor,
-    session: aiohttp.ClientSession,
-    element: Any,
-    soup: bs4.BeautifulSoup,
-    test: bool = False,
-):
-    # NOT TESTED. NOT CURRENTLY USING.
-    total_data = {
-        "title": [],
-        "link": [],
-        "description": [],
-        "pubdate": [],
-        "location": [],
-        "timestamp": [],
-    }
-
-    container = soup.select_one(element.elements_path.jobs_path)
-    if not container:
-        raise AssertionError(
-            "No elements found for 'container'. Check 'elements_path[\"jobs_path\"]'"
-        )
-
-    links = container.select(element.elements_path.link_path)
-    if not links:
-        raise AssertionError(
-            "No elements found for 'links'. Check 'elements_path[\"link_path\"]'"
-        )
-
-    print(f"Number of job elements: {len(links)}")
-
-    for link_element in links:
-        link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"
-
-        if await link_exists_in_db(link=link, cur=cur, test=test):
-            logging.info(f"Link {link} already found in the db. Skipping...")
-            continue
-
-        title, description = ("", "")
-        if element.follow_link == "yes":
-            title, description = await async_follow_link_title_description(
-                session,
-                link,
-                description,
-                element.inner_link_tag,
-                element.elements_path.title_path,
-                "NaN",
-            )
-
-        today = date.today()
-        now = datetime.now()
-        for key, value in zip(
-            ["link", "title", "description", "location", "pubdate", "timestamp"],
-            [link, title, description, "MX", today, now],
-        ):
-            total_data[key].append(value)
-
     return total_data
 
 
@@ -322,7 +319,7 @@ async def async_bs4_crawl(
             new_rows = await _crawling_strategy(session, bs4_config, soup, test, cur)
             if new_rows:
                 for key in rows:
-                    rows[key].extend(str(new_rows.get(key, [])))
+                    rows[key].extend(new_rows.get(key, []))
 
         except Exception as e:
             logger.error(

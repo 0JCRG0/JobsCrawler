@@ -8,9 +8,10 @@ from psycopg2.extensions import cursor
 """ LOAD THE ENVIRONMENT VARIABLES """
 
 async def link_exists_in_db(link: str, cur: cursor, test: bool = False) -> str | None:
+	table = "main_jobs"
+
 	if test:
 		table = "test"
-	table = "main_jobs"
 
 	query = sql.SQL(f"SELECT EXISTS(SELECT 1 FROM {table} WHERE link=%s)")
 	cur.execute(query, (link,))

@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-URL_DB = os.environ.get("DATABASE_URL_DO", "")
+URL_DB = os.environ.get("URL_DB", "")
 
 # Set up named logger
 logger = logging.getLogger(__name__)

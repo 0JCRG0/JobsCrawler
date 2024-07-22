@@ -1,7 +1,6 @@
 from typing import Any
 import aiohttp
 import logging
-from collections.abc import Coroutine
 import psycopg2
 from psycopg2.extensions import cursor, connection
 import asyncio
@@ -17,15 +16,16 @@ logger.setLevel(logging.DEBUG)
 
 def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -> None:
 
+    table = "main_jobs"
+
     if test:
         table = "test"
-    table = "main_jobs"
 
     initial_count_query = f"""
 		SELECT COUNT(*) FROM {table}
 	"""
     if not cur:
-        raise ValueError("Cursos cannot be None.")
+        raise ValueError("Cursor cannot be None.")
 
     cur.execute(initial_count_query)
     initial_count_result = cur.fetchone()
@@ -73,6 +73,7 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
         final_count = 0
 
     postgre_report = {
+        "Table": table,
         "Total count of jobs before crawling": initial_count,
         "Total number of unique jobs": jobs_added_count,
         "Current total count of jobs in PostgreSQL": final_count,
@@ -111,7 +112,6 @@ class AsyncCrawlerEngine:
                 pass
             logger.debug(f"random_header: {random_user_agent}")
             return await response.text()
-
     async def __gather_json_loads(self, session: aiohttp.ClientSession) -> None:
         configs = await self.__load_configs()
 
@@ -138,16 +138,11 @@ class AsyncCrawlerEngine:
                 "timestamp",
             ]
         }
+        
         for result in results:
             for key in combined_data:
-                combined_data[key].extend(result[key])
-        # TODO: I think that it is taking the len of all the entries, whereas I need to know the total number of entries:
+                combined_data[key].extend(result.get(key, []))
 
-        """
-        Data has uneven entries. Exiting to avoid data corruption. Data lengths: {'title': 2609, 'link': 4404, 'description': 305150, 'pubdate': 1690, 'location': 1570, 'timestamp': 3039}
-
-        That just does not make sense as there were like 100 jobs crawled.
-        """
         lengths = {key: len(value) for key, value in combined_data.items()}
         
         if len(set(lengths.values())) == 1:
@@ -155,7 +150,8 @@ class AsyncCrawlerEngine:
             crawled_df_to_db(df, self.cur, self.test)
         else:
             logger.error(
-                f"Error while calling {self.custom_crawl_func}. Data has uneven entries. Exiting to avoid data corruption. Data lengths: {lengths}"
+                f"Error while calling {self.custom_crawl_func}. Data has uneven entries. "
+                f"Exiting to avoid data corruption. Data lengths: {lengths}"
             )
 
     async def run(self) -> None:

@@ -113,8 +113,8 @@ async def async_rss_reader(
 		for key in ["title", "link", "description", "pubdate", "location", "timestamp"]
 	}
 
-	logger.info(f"{rss_config.name} has started")
-	logger.debug(f"All parameters for {rss_config.name}:\n{rss_config}")
+	logger.info(f"{rss_config.url} has started")
+	logger.debug(f"All parameters for {rss_config.url}:\n{rss_config}")
 
 	try:
 		response = await fetch_func(session)

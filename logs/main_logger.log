@@ -1,2 +1,422 @@
 2024-07-22 21:17:32,256 - DEBUG - Using selector: KqueueSelector
 2024-07-22 21:19:50,550 - DEBUG - Using selector: KqueueSelector
+2024-07-22 21:23:10,045 - DEBUG - Using selector: KqueueSelector
+2024-07-22 21:25:02,547 - DEBUG - Using selector: KqueueSelector
+2024-07-22 21:25:03,976 - INFO - https://tryremotely.com/feeds/remote-jobs.rss has started
+2024-07-22 21:25:03,976 - DEBUG - All parameters for https://tryremotely.com/feeds/remote-jobs.rss:
+RssConfig(url='https://tryremotely.com/feeds/remote-jobs.rss', title_tag='title', link_tag='link', description_tag='description', location_tag='location', follow_link='yes', inner_link_tag='.grow .md\\:grow .space-y-8 #job_detail')
+2024-07-22 21:25:03,996 - INFO - https://weworkremotely.com/remote-jobs.rss has started
+2024-07-22 21:25:03,996 - DEBUG - All parameters for https://weworkremotely.com/remote-jobs.rss:
+RssConfig(url='https://weworkremotely.com/remote-jobs.rss', title_tag='title', link_tag='link', description_tag='description', location_tag='region', follow_link='yes', inner_link_tag='.perma .content .job .listing-container')
+2024-07-22 21:25:03,996 - INFO - https://api.cryptojobslist.com/rss/remote.xml has started
+2024-07-22 21:25:03,996 - DEBUG - All parameters for https://api.cryptojobslist.com/rss/remote.xml:
+RssConfig(url='https://api.cryptojobslist.com/rss/remote.xml', title_tag='title', link_tag='link', description_tag='summary', location_tag='media_location', follow_link='no', inner_link_tag=' ')
+2024-07-22 21:25:04,240 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0'}
+2024-07-22 21:25:04,250 - DEBUG - Successful request on https://api.cryptojobslist.com/rss/remote.xml
+2024-07-22 21:25:22,704 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'}
+2024-07-22 21:25:22,706 - DEBUG - Successful request on https://weworkremotely.com/remote-jobs.rss
+2024-07-22 21:25:23,597 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/porkbun-technical-support-representative-full-time-requires-weekend-sat-sun-early-standard-and
+
+2024-07-22 21:25:24,215 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/globe-life-ao-customer-service-manager-remote-position
+
+2024-07-22 21:25:24,615 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134'}
+2024-07-22 21:25:24,808 - DEBUG - Successful request on https://tryremotely.com/feeds/remote-jobs.rss
+2024-07-22 21:25:26,023 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/growthx-labs-senior-seo-ai-content-strategist-usd-800-1500-mo
+
+2024-07-22 21:25:26,232 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/binance-senior-product-manager-derivatives-finance-products-futures-839581. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:26,513 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/binance-lifecycle-manager-brazil-839580. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:26,691 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/timezest-senior-fullstack-engineer-ruby-rails-2
+
+2024-07-22 21:25:26,994 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/ltk-team-lead-insights-analytics-839579. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:27,181 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/clipboardhealth-customer-support-agent
+
+2024-07-22 21:25:27,489 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/ltk-paralegal-839491. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:27,769 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/cred-senior-backend-developer-wealth-839403. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:27,954 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/customs-info-tech-lead
+
+2024-07-22 21:25:28,261 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/h1-manager-business-development-839402. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:28,442 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/nogigiddy-entry-level-account-manager
+
+2024-07-22 21:25:28,724 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/h1-senior-data-engineer-839401. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:29,010 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/butternutbox-online-marketing-stage-839400. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:29,195 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/commercebuild-technical-customer-success-engineer-1
+
+2024-07-22 21:25:29,471 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/butternutbox-events-operations-coordinator-in-quereinsteiger-willkommen-839225. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:29,765 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/cision-global-people-partner-839224. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:29,946 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/zuub-senior-software-engineer
+
+2024-07-22 21:25:30,265 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/truv-product-analytics-engineer-role-838875. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:30,471 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/constructive-freelance-ux-designer-for-social-impact-design-agency-remote-usa-only
+
+2024-07-22 21:25:30,538 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/smarsh-senior-platform-engineer-838874. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:31,039 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/smarsh-principal-platform-engineer-838873. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:31,215 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/constructive-freelance-digital-strategist-for-social-impact-design-agency-remote-usa-only
+
+2024-07-22 21:25:31,498 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/smarsh-senior-developer-838872. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:31,769 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/hellochakra-llc-senior-project-manager-kajabi-clickfunnel-experience
+
+2024-07-22 21:25:31,797 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/smarsh-devops-838871. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:32,281 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pelmorex-team-lead-ai-software-engineering-remote-838783. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:32,466 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/onthegosystems-full-stack-developer-2
+
+2024-07-22 21:25:32,758 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/anchorage-digital-institutional-sales-representative-asia-838782. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:33,036 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-principal-solutions-architect-838694. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:33,215 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/apex-hosting-llc-full-stack-software-developer
+
+2024-07-22 21:25:33,535 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/farfetch-sales-assistant-838693. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:33,726 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/onthegosystems-ruby-on-rails-developer-5
+
+2024-07-22 21:25:34,021 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/farfetch-customer-service-advisor-sportswear-brand-french-speaker-838692. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:34,297 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/farfetch-customer-service-advisor-sportswear-brand-english-speaker-late-shift-838343. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:34,477 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/codingjobz-ai-trainer-job-for-coders-programmers
+
+2024-07-22 21:25:34,773 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/stone-interaction-platfotm-software-engineer-iii-mobile-destinada-a-pcd-838342. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:35,022 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/we-work-remotely-marketing-coordinator
+
+2024-07-22 21:25:35,071 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/stone-gerente-de-relacionamento-franquias-presencial-837906. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:35,569 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hudl-senior-firmware-engineer-837905. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:35,760 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/saucal-account-manager
+
+2024-07-22 21:25:36,063 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hudl-lead-firmware-engineer-837904. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:36,335 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/alan-enterprise-account-executive-belgium-dutch-speaking-837816. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:36,514 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/socialhub-senior-product-manager
+
+2024-07-22 21:25:36,823 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/alan-customer-success-manager-belgium-french-speaker-837815. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:37,039 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/on-the-map-wordpress-developer-wanted
+
+2024-07-22 21:25:37,105 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/nisum-scrum-master-w6317-837553. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:37,596 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/cloudflare-capacity-planning-program-manager-837117. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:37,830 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/listening-to-the-other-side-wanted-world-class-executive-assistant-for-overloaded-entrepreneur-london
+
+2024-07-22 21:25:37,885 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/navisite-jdedwards-functional-lead-finance-836855. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:38,378 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pennylane-team-lead-associate-small-business-836854. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:38,577 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/komoot-knowledge-manager
+
+2024-07-22 21:25:38,866 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pennylane-community-manager-junior-stage-836592. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:39,151 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/contra-part-time-full-stack-engineer-1
+
+2024-07-22 21:25:39,158 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/vivenu-content-marketing-manager-836069. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:39,654 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/smartlyio-partnership-development-lead-google-835720. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:39,834 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/contra-part-time-ugc-content-creator-1
+
+2024-07-22 21:25:40,218 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/ontic-ios-developer-sr-ios-developer-835545. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:40,512 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hostinger-junior-accountant-835544. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:40,690 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/contra-part-time-product-designer-2
+
+2024-07-22 21:25:40,988 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/bisnow-marketing-coordinator-835282. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:41,179 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/product-hunt-community-manager-3-days-a-week-one-weekday-weekends
+
+2024-07-22 21:25:41,467 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/controlup-security-operations-analyst-835281. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:41,747 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/controlup-security-engineer-835106. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:41,934 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/relay-commerce-customer-success-manager
+
+2024-07-22 21:25:42,359 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/xero-head-of-regional-product-marketing-835017. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:42,578 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/manifold-senior-software-engineer-front-end
+
+2024-07-22 21:25:42,644 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/paytm-transaction-monitoring-aml-assistant-manager-834844. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:43,119 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/veepee-senior-tech-recruiter-permanent-831919. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:43,331 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/speechify-inc-senior-software-engineer-platform
+
+2024-07-22 21:25:43,395 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/openphone-senior-director-seo-and-content-831918. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:43,927 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/openphone-engineering-manager-productivity-and-ai-831229. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:44,135 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/starbridge-senior-backend-engineer-java-kotlin
+
+2024-07-22 21:25:44,219 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/similarweb-customer-success-manager-smb-831228. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:44,694 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/similarweb-customer-success-manager-languages-french-or-italian-or-german-speaker-831227. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:44,892 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/legalnature-senior-full-stack-engineer-rails-nuxt-100-remote
+
+2024-07-22 21:25:45,205 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/similarweb-customer-success-manager-enterprise-831226. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:45,520 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/inaturalist-senior-product-manager
+
+2024-07-22 21:25:45,530 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/similarweb-client-success-strategist-agency-831139. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:46,185 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/flexport-senior-people-operations-manager-830708. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:46,363 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/tiugo-technologies-developer-advocate-ckeditor-team
+
+2024-07-22 21:25:46,730 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/shift4-salesforce-sales-enablement-analyst-830707. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:46,945 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/better-reports-customer-service-representative
+
+2024-07-22 21:25:47,360 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/life360-marketing-analyst-830706. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:47,781 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/baxenergy-senior-backend-developer
+
+2024-07-22 21:25:48,409 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/life360-chief-information-security-officer-830619. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:48,829 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/givebutter-controller
+
+2024-07-22 21:25:49,460 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-transformation-architect-sled-830532. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:49,682 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/we-work-remotely-financial-controller-1
+
+2024-07-22 21:25:50,055 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-senior-sales-engineer-healthcare-830531. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:50,290 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/inaturalist-head-of-engineering
+
+2024-07-22 21:25:50,336 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-senior-sales-engineer-federal-civilian-830530. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:50,866 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-senior-commercial-sales-representative-civilian-830529. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:51,324 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/forest-stewardship-council-us-forest-management-fm-specialist
+
+2024-07-22 21:25:51,555 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-sales-engineer-federal-civilian-830528. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:51,846 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/ce-learning-systems-jr-account-manager-customer-support
+
+2024-07-22 21:25:51,869 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-regional-sales-manager-sled-830527. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:52,456 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-regional-sales-manager-majors-mexico-830526. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:52,720 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/starbridge-ai-founding-frontend-engineer
+
+2024-07-22 21:25:53,035 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-regional-sales-manager-large-enterprise-northern-fl-830439. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:53,239 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/cdata-virtuality-software-support-engineer
+
+2024-07-22 21:25:53,597 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-commercial-sales-representative-brazil-829664. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:53,956 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/grammarly-lead-product-marketing-manager-technical-marketing-829147. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:54,285 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/hostaway-revops-data-analyst-us-europe
+
+2024-07-22 21:25:54,618 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/workato-senior-software-engineer-rust-829038. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:54,844 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/moonrail-limited-finance-accounting-officer
+
+2024-07-22 21:25:55,333 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/qualtekservices-journeyman-electrician-829037. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:55,645 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/axon-senior-director-commercial-controllership-revenue-accounting-829036. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:55,857 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/miniextensions-recruiter-admin-role
+
+2024-07-22 21:25:56,198 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/axon-new-markets-sales-logistics-coordinator-remote-829035. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:56,497 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/semaphore-senior-software-engineer-2
+
+2024-07-22 21:25:56,749 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/axon-director-commercial-controllership-revenue-accounting-829034. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:57,099 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/rapidseedbox-ltd-chief-of-staff
+
+2024-07-22 21:25:57,127 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/veeva-associate-contracts-attorney-vendor-contracts-829033. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:57,789 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/veeva-software-engineer-in-test-829032. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:58,127 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/clepher-frontend-developer-engineer-for-an-ai-tech-chatbot-called-clepher-1
+
+2024-07-22 21:25:58,608 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/veeva-manager-solution-consulting-presales-829031. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:58,803 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/daily-kos-senior-infrastructure-engineer
+
+2024-07-22 21:25:59,279 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hopper-senior-software-engineer-fullstack-international-expansion-e-commerce-platform-829030. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:25:59,561 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/sketchdeck-head-of-digital
+
+2024-07-22 21:25:59,575 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zscaler-escalation-engineer-829027. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:00,053 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/techstars-fund-and-investment-analyst-829026. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:00,296 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/scandiweb-key-account-manager-for-ecommerce-solutions
+
+2024-07-22 21:26:00,331 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pipedrive-compliance-analyst-828962. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:00,814 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/fanatics-vip-account-manager-828953. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:01,015 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/simplyanalytics-senior-frontend-developer
+
+2024-07-22 21:26:01,299 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/paytm-sales-team-lead-828943. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:01,584 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-outbound-sales-development-representative-anz-828873. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:01,763 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/simplyanalytics-senior-linux-aws-devops-engineer
+
+2024-07-22 21:26:02,074 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/peoplestrata-defined-contribution-dc-plan-adminstrator-nppg-828872. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:02,287 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/float-account-executive-emea-1
+
+2024-07-22 21:26:02,354 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/revenuecat-senior-customer-success-manager-828785. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:02,882 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/too-good-to-go-outbound-sales-specialist-madrid-828612. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:03,134 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/float-account-executive-amer-apac
+
+2024-07-22 21:26:03,167 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/kinship-project-management-officer-contract-827579. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:03,673 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/reddit-staff-data-scientist-scaled-enforcement-826718. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:03,855 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/miniextensions-sales-marketing-operations-manager-full-time-contract-40-hr-wk
+
+2024-07-22 21:26:04,250 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/checkr-staff-product-manager-monetization-826717. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:04,564 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/passionrichstudio-tiktok-social-media-manager
+
+2024-07-22 21:26:04,597 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/checkr-senior-analyst-revenue-operations-825168. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:05,186 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/guidepoint-security-security-architect-northeast-region-remote-in-boston-or-new-york-metro-825167. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:05,432 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/leadsimple-inc-account-executive-1
+
+2024-07-22 21:26:05,464 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/guidepoint-security-resource-management-intern-823532. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:05,980 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/nearsure-695-semi-senior-fullstack-developer-823445. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:06,190 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/rapidseedbox-ltd-php-backend-developer-with-whmcs-experience
+
+2024-07-22 21:26:06,326 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/cie-senior-backend-developer-822584. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:06,949 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/bitgo-senior-full-stack-software-engineer-height-zero-821293. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:07,180 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/a-team-senior-independent-product-manager-product-designer-90-170-hr
+
+2024-07-22 21:26:07,470 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hims-hers-certified-pharmacy-technician-compounding-overnight-820260. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:07,761 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/a-team-senior-independent-software-developer-90-170-hr
+
+2024-07-22 21:26:07,900 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/rackspace-senior-aws-cloud-engineer-817937. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:08,454 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/craft-sr-data-engineer-817850. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:08,634 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/toggl-senior-frontend-engineer-2
+
+2024-07-22 21:26:09,003 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/quince-logistics-vendor-manager-816559. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:09,279 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/netguru-s-a-senior-product-owner-manager-with-arabic
+
+2024-07-22 21:26:09,578 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zoox-systems-engineering-processes-and-tools-lead-816439. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:09,843 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/close-director-of-product-1
+
+2024-07-22 21:26:09,993 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/mable-technical-trainer-816205. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:10,557 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/transcarent-analyst-816191. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:10,735 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/metalabel-product-design-engineer
+
+2024-07-22 21:26:11,103 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/cognite-customer-success-director-816187. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:11,396 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/toggl-senior-product-manager-2
+
+2024-07-22 21:26:11,928 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/taskrabbit-software-engineer-816137. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:12,196 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/getlabs-mobile-phlebotomist-pt-816136. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:12,426 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/leadsimple-inc-senior-product-manager-ii
+
+2024-07-22 21:26:12,723 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/getlabs-mobile-phlebotomist-prn-as-needed-816135. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:12,946 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/ae-virtual-class-s-a-german-mandarin-online-teachers
+
+2024-07-22 21:26:13,228 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/getlabs-mobile-phlebotomist-815862. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:13,521 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/close-senior-staff-software-engineer-backend-python-usa-100-remote-3
+
+2024-07-22 21:26:13,664 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zenogroup-vice-president-earned-media-815861. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:14,300 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zenogroup-account-executive-consumer-815774. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:14,525 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/sticker-mule-software-engineer-backend-2
+
+2024-07-22 21:26:14,811 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/zenogroup-intern-designer-815601. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:15,125 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/quickmail-mid-senior-ruby-on-rails-developer
+
+2024-07-22 21:26:15,136 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/palantir-technologies-commercial-communications-strategist-815428. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:15,771 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/scribd-principal-data-engineer-815341. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:15,947 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/sitepoint-newsletter-writer-almost-500k-developers
+
+2024-07-22 21:26:16,330 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/olo-senior-devops-engineer-815168. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:16,511 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/donable-donable-agent
+
+2024-07-22 21:26:16,860 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/bazaarvoice-content-analyst-native-spanish-speaker-814651. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:17,144 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/teamworks-principal-java-software-engineer
+
+2024-07-22 21:26:17,208 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/turing-program-manager-814134. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:17,859 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/stone-software-engineer-senior-net-c-813961. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:18,034 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/bbe-marketing-inc-graphic-designer
+
+2024-07-22 21:26:18,421 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/getlabs-lpn-mobile-phlebotomist-prn-813960. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:18,750 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-devops-engineer-azure-aws-gcp
+
+2024-07-22 21:26:18,794 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/getlabs-lpn-mobile-phlebotomist-part-time-813959. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:19,432 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/getlabs-lpn-mobile-phlebotomist-full-time-813786. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:19,612 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-frontend-developer-react-js-next-js
+
+2024-07-22 21:26:19,956 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/aspire-product-intern-treasury-813699. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:20,152 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/files-com-ui-ux-designer
+
+2024-07-22 21:26:20,836 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/guidewire-software-engineer-ii-cloud-data-platform-813613. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:21,118 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/wpromote-senior-director-demand-generation-813612. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:21,340 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/elite-software-automation-business-analyst
+
+2024-07-22 21:26:21,636 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/aircall-senior-data-analyst-sf-813611. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:21,904 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/designfiles-full-stack-ruby-on-rails-developer-4
+
+2024-07-22 21:26:21,962 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/aircall-senior-data-analyst-paris-813525. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:22,485 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/aircall-support-operations-technical-specialist-remonte-india-813524. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:22,700 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/dexifier-web-developer
+
+2024-07-22 21:26:22,975 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/aircall-support-operations-technical-specialist-remonte-from-portugal-813523. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:23,262 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/simple-senior-android-developer-813522. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:23,444 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/great-good-venture-studio-sales-client-manager-for-relocation-agency-thailand-based-role
+
+2024-07-22 21:26:23,736 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/simple-product-marketing-manager-813521. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:23,984 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/swarm-foundation-senior-go-developer-distributed-system-blockchain
+
+2024-07-22 21:26:24,054 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/simple-financial-controller-813520. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:24,529 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/emburse-commercial-counsel-remote-813519. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:24,732 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/the-ward-law-group-virtual-assistants-with-customer-service-and-sales-experience
+
+2024-07-22 21:26:24,797 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/berkadia-director-people-business-partner-813433. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:25,291 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/ltk-data-analyst-product-analytics-813347. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:25,492 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/sanctuary-computer-experienced-full-stack-developer
+
+2024-07-22 21:26:25,567 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/logicmanager-customer-advocate-new-business-sales-813261. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:26,037 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/bonusly-senior-manager-of-customer-support-813260. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:26,272 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/flag-theory-client-onboarding-for-corporate-services-bank-accounts-department
+
+2024-07-22 21:26:26,324 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/brightwheel-staff-software-backend-engineer-813174. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:26,820 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/attentive-people-coordinator-contract-813088. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:27,040 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/medusa-senior-software-engineer-ecommerce-dev-tool-startup
+
+2024-07-22 21:26:27,115 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/moonpig-change-operations-manager-813087. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:27,634 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-senior-data-product-manager-813086. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:27,819 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/speechify-inc-senior-software-engineer-web
+
+2024-07-22 21:26:28,125 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-senior-campaign-manager-813085. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:28,418 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/coalfire-principal-defensive-services-remote-us-812999. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:28,594 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/report-owl-llc-remote-inside-sales
+
+2024-07-22 21:26:28,906 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-engineering-director-platform-812998. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:29,155 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/data-annotation-professional-freelance-writer
+
+2024-07-22 21:26:29,190 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-engineering-director-812997. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:29,691 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-data-loss-prevention-analyst-812996. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:29,936 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/new-law-business-model-marketing-automation-saas-services-line-of-business-owner
+
+2024-07-22 21:26:29,973 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-corporate-development-and-strategy-lead-812995. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:30,331 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/dunnhumby-campaign-management-associate-812229. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:30,618 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-ta-operations-specialist-latam-812228. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:30,900 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-strategic-channel-manager-emea-812227. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:31,178 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-software-architect-l6-812226. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:31,460 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/vonage-key-account-manager-812225. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:31,743 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-sales-development-representative-812224. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:32,031 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-product-operations-manager-812223. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:32,305 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-privacy-specialist-812222. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:32,587 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twilio-head-of-emea-alliances-812051. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:32,863 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-staff-software-engineer-incident-management-812050. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:33,137 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-staff-software-engineer-incident-management-812049. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:33,414 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-staff-software-engineer-incident-management-812048. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:33,690 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-sr-solutions-consultant-us-public-sector-812047. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:33,962 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-senior-workplace-experience-specialist-812046. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:34,239 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-manager-business-applications-812045. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:34,510 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/pagerduty-manager-business-applications-811959. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:34,780 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/algolia-senior-product-manager-optimisation-811958. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:35,058 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/airbase-head-of-design-811872. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:35,349 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/clickup-cx-operations-analyst-811871. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:35,625 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/twitch-senior-data-engineer-community-discovery-ml-811785. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:35,917 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/whoop-technical-recruiter-811784. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:36,207 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/whoop-it-support-specialist-811783. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:36,491 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/vimeo-it-engineer-iii-811697. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:36,783 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/trendyol-asset-security-and-data-protection-professionals-811696. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:37,060 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/trendyol-trendyol-express-planning-professionals-811610. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:37,349 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/anaplan-payroll-analyst-811524. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:37,637 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/narvar-technical-support-lead-emea-811523. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:37,912 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/smartsheet-inside-partner-account-manager-french-or-german-speaking-811437. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:38,203 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/oyster-senior-payroll-specialist-811436. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:38,474 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/oyster-customer-support-specialist-811435. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:38,756 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/tempus-marketing-associate-811349. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:39,032 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/goodnotes-product-designer-goodnotes-for-desktop-811263. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:39,312 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/billiontoone-prenatal-account-manager-orlando-east-n-port-orange-deland-s-lakewood-park-w-kissimmee-811177. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:39,590 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/invitae-client-service-support-iii-811176. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:39,869 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/veeva-consultant-rtsm-811175. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:40,144 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/allworthfinancial-sr-financial-analyst-811004. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:40,442 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hudl-customer-success-manager-korean-speaking-811003. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:40,730 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hudl-customer-success-manager-811002. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:41,012 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/hudl-customer-success-manager-810916. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:41,299 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/cloudflare-partner-solutions-engineer-latam-810575. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:41,572 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/angi-temporary-senior-financial-analyst-810574. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:41,946 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/angi-temporary-company-success-specialist-810573. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:42,234 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/angi-temporary-company-success-specialist-810572. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:42,542 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/angi-senior-financial-analyst-810571. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:42,965 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/angi-manager-financial-reporting-810570. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:43,261 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/angi-manager-financial-reporting-810399. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:43,583 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-senior-sales-training-manager-810398. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:43,860 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-senior-sales-training-manager-810397. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:44,208 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-senior-sales-training-manager-810396. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:44,762 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-senior-sales-training-manager-810395. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:45,133 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-senior-account-manager-mid-market-810394. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:45,415 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-regional-marketing-manager-australia-810308. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:45,776 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-director-revenue-systems-processes-810307. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:46,142 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-director-revenue-systems-processes-810306. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:46,436 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-director-revenue-systems-processes-810305. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:46,825 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-director-revenue-systems-processes-810304. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:47,226 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-customer-collections-associate-810303. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:47,514 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-account-executive-switzerland-810302. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:47,873 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-account-executive-germany-810301. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:48,243 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-account-executive-emea-810300. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:48,530 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/remote-com-account-executive-amer-eor-810214. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:48,832 - WARNING - CONNECTION PROHIBITED WITH BS4 ON https://empllo.com/jobs/view/thumbtack-senior-ios-engineer-homecare-810213. STATUS CODE: "403". TRYING WITH SELENIUM
+2024-07-22 21:26:48,909 - INFO - Finished RSS Reader. Results below ⬇︎
+2024-07-22 21:28:00,580 - INFO - {"Table": "test", "Total count of jobs before crawling": 316, "Total number of unique jobs": 391, "Current total count of jobs in PostgreSQL": 707}
+2024-07-22 21:28:00,782 - INFO - Async BS4 crawlers finished! all in: 178.23 seconds.
+2024-07-22 21:44:29,945 - DEBUG - Using selector: KqueueSelector
+2024-07-22 21:44:31,348 - INFO - HimalayasApp has started
+2024-07-22 21:44:31,349 - DEBUG - All parameters for HimalayasApp:
+ApiConfig(name='HimalayasApp', url='https://himalayas.app/jobs/api', class_json='dict', follow_link='no', inner_link_tag='', elements_path=[{'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'applicationLink', 'description_tag': 'description', 'pubdate_tag': 'pubDate', 'location_tag': 'locationRestrictions', 'location_default': 'Worldwide'}])
+2024-07-22 21:44:32,057 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'}
+2024-07-22 21:44:32,383 - DEBUG - Successful request on https://himalayas.app/jobs/api
+2024-07-22 21:44:32,389 - ERROR - AttributeError occurred before deploying crawling strategy on https://himalayas.app/jobs/api.
+
+'list' object has no attribute 'dict_tag'
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 161, in async_api_requests
+    jobs = __class_json_strategy(data, api_config)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 65, in __class_json_strategy
+    jobs = data[api_config.elements_path.dict_tag]
+AttributeError: 'list' object has no attribute 'dict_tag'
+2024-07-22 21:44:32,395 - INFO - Finished API crawlers. Results below ⬇︎
+2024-07-22 21:44:32,931 - INFO - {"Table": "test", "Total count of jobs before crawling": 707, "Total number of unique jobs": 0, "Current total count of jobs in PostgreSQL": 707}
+2024-07-22 21:44:33,112 - INFO - Async BS4 crawlers finished! all in: 3.17 seconds.

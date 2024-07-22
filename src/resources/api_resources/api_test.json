@@ -5,8 +5,7 @@
         "class_json": "dict",
         "follow_link": "no", 
         "inner_link_tag": "",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "jobs",
                 "title_tag": "title",
                 "link_tag": "applicationLink",
@@ -14,7 +13,6 @@
                 "pubdate_tag": "pubDate",
                 "location_tag": "locationRestrictions",
                 "location_default": "Worldwide"
-            }
-        ]
+        }
     }
 ]

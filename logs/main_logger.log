@@ -420,3 +420,48 @@ AttributeError: 'list' object has no attribute 'dict_tag'
 2024-07-22 21:44:32,395 - INFO - Finished API crawlers. Results below ⬇︎
 2024-07-22 21:44:32,931 - INFO - {"Table": "test", "Total count of jobs before crawling": 707, "Total number of unique jobs": 0, "Current total count of jobs in PostgreSQL": 707}
 2024-07-22 21:44:33,112 - INFO - Async BS4 crawlers finished! all in: 3.17 seconds.
+2024-07-22 22:02:48,242 - DEBUG - Using selector: KqueueSelector
+2024-07-22 22:02:49,617 - INFO - HimalayasApp has started
+2024-07-22 22:02:49,617 - DEBUG - All parameters for HimalayasApp:
+ApiConfig(name='HimalayasApp', url='https://himalayas.app/jobs/api', class_json='dict', follow_link='no', inner_link_tag='', elements_path=[{'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'applicationLink', 'description_tag': 'description', 'pubdate_tag': 'pubDate', 'location_tag': 'locationRestrictions', 'location_default': 'Worldwide'}])
+2024-07-22 22:02:50,335 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}
+2024-07-22 22:02:50,733 - DEBUG - Successful request on https://himalayas.app/jobs/api
+2024-07-22 22:02:50,741 - ERROR - TypeError occurred before deploying crawling strategy on https://himalayas.app/jobs/api.
+
+src.crawlers.async_api.ApiElementPath() argument after ** must be a mapping, not list
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 177, in async_api_requests
+    jobs = __class_json_strategy(data, api_config)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 77, in __class_json_strategy
+    element_path = ApiElementPath(**api_config.elements_path)
+TypeError: src.crawlers.async_api.ApiElementPath() argument after ** must be a mapping, not list
+2024-07-22 22:02:50,746 - INFO - Finished API crawlers. Results below ⬇︎
+2024-07-22 22:02:51,273 - INFO - {"Table": "test", "Total count of jobs before crawling": 707, "Total number of unique jobs": 0, "Current total count of jobs in PostgreSQL": 707}
+2024-07-22 22:02:51,449 - INFO - Async BS4 crawlers finished! all in: 3.21 seconds.
+2024-07-22 22:08:29,538 - DEBUG - Using selector: KqueueSelector
+2024-07-22 22:08:30,920 - INFO - HimalayasApp has started
+2024-07-22 22:08:30,920 - DEBUG - All parameters for HimalayasApp:
+ApiConfig(name='HimalayasApp', url='https://himalayas.app/jobs/api', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'applicationLink', 'description_tag': 'description', 'pubdate_tag': 'pubDate', 'location_tag': 'locationRestrictions', 'location_default': 'Worldwide'})
+2024-07-22 22:08:48,427 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+2024-07-22 22:08:48,679 - DEBUG - Successful request on https://himalayas.app/jobs/api
+2024-07-22 22:08:49,045 - ERROR - AttributeError occurred before deploying crawling strategy on https://himalayas.app/jobs/api.
+
+'str' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 179, in async_api_requests
+    new_rows = await __get_jobs_data(cur, jobs, session, api_config, test)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 151, in __get_jobs_data
+    [title_element.text, link, description, today, location, timestamp],
+AttributeError: 'str' object has no attribute 'text'
+2024-07-22 22:08:49,054 - INFO - Finished API crawlers. Results below ⬇︎
+2024-07-22 22:08:49,409 - INFO - {"Table": "test", "Total count of jobs before crawling": 707, "Total number of unique jobs": 0, "Current total count of jobs in PostgreSQL": 707}
+2024-07-22 22:08:49,586 - INFO - Async BS4 crawlers finished! all in: 20.05 seconds.
+2024-07-22 22:10:29,809 - DEBUG - Using selector: KqueueSelector
+2024-07-22 22:10:31,141 - INFO - HimalayasApp has started
+2024-07-22 22:10:31,141 - DEBUG - All parameters for HimalayasApp:
+ApiConfig(name='HimalayasApp', url='https://himalayas.app/jobs/api', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'applicationLink', 'description_tag': 'description', 'pubdate_tag': 'pubDate', 'location_tag': 'locationRestrictions', 'location_default': 'Worldwide'})
+2024-07-22 22:10:31,830 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'}
+2024-07-22 22:10:32,110 - DEBUG - Successful request on https://himalayas.app/jobs/api
+2024-07-22 22:11:07,507 - INFO - Finished API crawlers. Results below ⬇︎
+2024-07-22 22:11:43,695 - INFO - {"Table": "test", "Total count of jobs before crawling": 707, "Total number of unique jobs": 200, "Current total count of jobs in PostgreSQL": 907}
+2024-07-22 22:11:43,878 - INFO - Async BS4 crawlers finished! all in: 74.07 seconds.

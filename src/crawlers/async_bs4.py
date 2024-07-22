@@ -129,7 +129,7 @@ async def __async_occ_mundial(
 async def __async_main_strategy_bs4(
     cur: cursor,
     session: aiohttp.ClientSession,
-    bs4_element: Any,
+    bs4_config: Any,
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
@@ -142,7 +142,7 @@ async def __async_main_strategy_bs4(
         "timestamp": [],
     }
 
-    bs4_element_path = Bs4ElementPath(**bs4_element.elements_path)
+    bs4_element_path = Bs4ElementPath(**bs4_config.elements_path)
 
     jobs = soup.select(bs4_element_path.jobs_path)
     if not jobs:
@@ -163,7 +163,7 @@ async def __async_main_strategy_bs4(
                 f"No links were found using this selector {bs4_element_path.link_path}"
             )
 
-        link = bs4_element.name + str(link_element["href"])
+        link = bs4_config.name + str(link_element["href"])
 
         if await link_exists_in_db(link=link, cur=cur, test=test):
             logging.debug(f"Link {link} already found in the db. Skipping...")
@@ -171,12 +171,12 @@ async def __async_main_strategy_bs4(
 
         description_element = job.select_one(bs4_element_path.description_path)
         description = description_element.text if description_element else "NaN"
-        if bs4_element.follow_link == "yes":
+        if bs4_config.follow_link == "yes":
             description = await async_follow_link(
                 session=session,
                 followed_link=link,
                 description_final="",
-                inner_link_tag=bs4_element.inner_link_tag,
+                inner_link_tag=bs4_config.inner_link_tag,
                 default=description,
             )
 
@@ -197,11 +197,11 @@ async def __async_main_strategy_bs4(
 async def __async_container_strategy_bs4(
     cur: cursor,
     session: aiohttp.ClientSession,
-    bs4_element: Any,
+    bs4_config: Any,
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
-    bs4_element_path = Bs4ElementPath(**bs4_element.elements_path)
+    bs4_element_path = Bs4ElementPath(**bs4_config.elements_path)
 
     total_data = {
         "title": [],
@@ -240,7 +240,7 @@ async def __async_container_strategy_bs4(
         location_element,
     ) in job_elements:
         title = title_element.get_text(strip=True) or "NaN"
-        link = bs4_element.name + (link_element.get("href") or "NaN")
+        link = bs4_config.name + (link_element.get("href") or "NaN")
         description_default = description_element.get_text(strip=True) or "NaN"
         location = location_element.get_text(strip=True) or "NaN"
         if await link_exists_in_db(link=link, cur=cur, test=test):
@@ -249,9 +249,9 @@ async def __async_container_strategy_bs4(
 
         description = (
             await async_follow_link(
-                session, link, description_default, bs4_element.inner_link_tag
+                session, link, description_default, bs4_config.inner_link_tag
             )
-            if bs4_element.follow_link == "yes"
+            if bs4_config.follow_link == "yes"
             else description_default
         )
 

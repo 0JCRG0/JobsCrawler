@@ -72,7 +72,7 @@ class ApiElementPath:
 class ApiConfig:
     name: str
     url: str
-    class_json: int
+    class_json: str
     follow_link: str
     inner_link_tag: str
     elements_path: ApiElementPath

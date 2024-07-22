@@ -2,6 +2,7 @@
 from collections.abc import Callable, Coroutine
 import json
 import logging
+from dataclasses import dataclass
 from typing import Any
 from psycopg2.extensions import cursor
 import aiohttp
@@ -13,6 +14,17 @@ from src.utils.FollowLink import async_follow_link, async_follow_link_echojobs
 # Set up named logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
+
+@dataclass
+class ApiElementPath:
+    dict_tag: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    pubdate_tag: str
+    location_tag: str
+    location_default: str
+
 
 def clean_postgre_api(df: pd.DataFrame) -> pd.DataFrame:
     for col in df.columns:
@@ -62,7 +74,8 @@ def __class_json_strategy(data, api_config: Any) -> list | dict:
 
     """
     if api_config.class_json == "dict":
-        jobs = data[api_config.elements_path.dict_tag]
+        element_path = ApiElementPath(**api_config.elements_path)
+        jobs = data[element_path.dict_tag]
         return jobs
     elif api_config.class_json == "list":
         return data
@@ -86,15 +99,16 @@ async def __get_jobs_data(
         "timestamp": [],
     }
 
+    element_path = ApiElementPath(**api_config.elements_path)
+
     for job in jobs:
-        element_path = api_config.elements_path
 
         title_element = job.get(element_path.title_tag, "NaN")
 
         link = job.get(element_path.link_tag, "NaN")
 
         if await link_exists_in_db(
-            link=api_config.elements_path.link_tag, cur=cur, test=test
+            link=link, cur=cur, test=test
         ):
             logging.debug(
                 f"Link {element_path.link_tag} already found in the db. Skipping..."
@@ -132,7 +146,7 @@ async def __get_jobs_data(
 
         for key, value in zip(
             total_jobs_data.keys(),
-            [title_element.text, link, description, today, location, timestamp],
+            [title_element, link, description, today, location, timestamp],
         ):
             total_jobs_data[key].append(value)
 

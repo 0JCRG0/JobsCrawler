@@ -29,7 +29,7 @@ async def run_strategy(args: RssArgs | ApiArgs | Bs4Args) -> Coroutine[Any, Any,
 
 async def run_crawlers(is_test: bool) -> Coroutine[Any, Any, None] | None:
     if not is_test:
-        raise ValueError("The 'is_test' argument must be False as this is a test.")
+        raise ValueError("The 'is_test' argument must be True as this is a test.")
     start_time = asyncio.get_event_loop().time()
 
     strategies = [
@@ -48,8 +48,5 @@ async def run_crawlers(is_test: bool) -> Coroutine[Any, Any, None] | None:
     elapsed_time = asyncio.get_event_loop().time() - start_time
     logging.info(f"All strategies completed in {elapsed_time:.2f} seconds")
 
-async def main():
-	await run_crawlers(True)
-
 if __name__ == "__main__":
-	asyncio.run(main())
+	asyncio.run(run_crawlers(True))

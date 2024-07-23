@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv(".env")
-DB_URL = os.environ.get("DATABASE_URL_DO")
+DB_URL = os.environ.get("URL_DB")
 CONN = psycopg2.connect(DB_URL)
 CURSOR = CONN.cursor()
 LOGGER_PATH = os.environ.get("LOGGER_PATH")
@@ -33,4 +33,4 @@ def _insert_timestamp(id_value: int, embedding_model_value: str, timestamp_value
     
     CONN.commit()
 
-_insert_timestamp(id_value=66456, embedding_model_value="e5_base_v2", timestamp_value="2024-05-30 16:10:57.648627")
+_insert_timestamp(id_value=3560, embedding_model_value="e5_base_v2", timestamp_value="2024-07-23 20:56:43.834562")

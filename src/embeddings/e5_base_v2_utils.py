@@ -14,7 +14,6 @@ from tenacity import (
     before_sleep_log,
     stop_after_attempt,
 )
-import os
 from torch import Tensor, no_grad
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
@@ -23,8 +22,6 @@ import timeit
 import numpy as np
 
 load_dotenv()
-LOGGER_MAIN = os.getenv("LOGGER_MAIN")
-DATABASE_URL = os.environ.get("DATABASE_URL_DO")
 
 PROD_TABLE = "embeddings_e5_base_v2"
 TEST_TABLE = "test_embeddings"

@@ -1,10 +1,12 @@
 import psycopg2
+import sys
 import os
 from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
 import logging
 import re
-from src.embeddings.e5_base_v2_utils import (
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from e5_base_v2_utils import (
     query_e5_format,
     to_embeddings_e5_base_v2,
     num_tokens,
@@ -14,7 +16,7 @@ from src.embeddings.e5_base_v2_utils import (
 import json
 
 load_dotenv(".env")
-DB_URL = os.environ.get("DATABASE_URL_DO")
+DB_URL = os.environ.get("URL_DB")
 LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
 CONN = psycopg2.connect(DB_URL)
 CURSOR = CONN.cursor()
@@ -36,6 +38,8 @@ def _clean_rows(s):
 def _fetch_postgre_rows(
     timestamp: str, table: str = "main_jobs"
 ) -> tuple[list[str], list[str], list[str], list[str], list[str]]:
+    # TODO: Need to add a test argument here so it reads the jobs from test not main_jobs.
+    ## TODO Make sure that the same as above is done.
     CURSOR.execute(
         f"SELECT id, title, description, location, timestamp FROM {table} WHERE timestamp > '{timestamp}'"
     )
@@ -169,7 +173,9 @@ def _insert_max_timestamp(
 
 
 def embed_latest_crawled(embedding_model: str, test: bool = False):
+
     max_timestamp = _get_max_timestamp()
+    print(max_timestamp)
 
     ids, titles, locations, descriptions, timestamps = _fetch_postgre_rows(
         timestamp=max_timestamp
@@ -209,4 +215,4 @@ def embed_latest_crawled(embedding_model: str, test: bool = False):
 
 
 if __name__ == "__main__":
-    embed_latest_crawled(embedding_model="e5_base_v2", test=False)
+    embed_latest_crawled(embedding_model="e5_base_v2", test=True)

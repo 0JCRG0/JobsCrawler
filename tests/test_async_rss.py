@@ -25,7 +25,7 @@ logging.basicConfig(
 
 async def main(is_test: bool = True):
     if not is_test:
-        raise ValueError("The 'is_test' argument must be False as this is a test.")
+        raise ValueError("The 'is_test' argument must be True as this is a test.")
     rss_engine = AsyncCrawlerEngine(RssArgs(test=True))
     await rss_engine.run()
 

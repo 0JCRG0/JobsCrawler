@@ -5,7 +5,6 @@ import logging
 from typing import Any, Coroutine
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.crawler import AsyncCrawlerEngine
-from src.embeddings.embed_latest_crawled import embed_latest_crawled
 from src.models import RssArgs, ApiArgs, Bs4Args
 LOGGER_PATH = os.path.join("logs", "main_logger.log")
 (
@@ -18,7 +17,7 @@ open(LOGGER_PATH, "a").close() if not os.path.exists(LOGGER_PATH) else None
 
 logging.basicConfig(
     filename=LOGGER_PATH,
-    level=logging.INFO,
+    level=logging.DEBUG,
     force=True,
     filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -28,7 +27,9 @@ async def run_strategy(args: RssArgs | ApiArgs | Bs4Args) -> Coroutine[Any, Any,
     engine = AsyncCrawlerEngine(args)
     await engine.run()
 
-async def run_crawlers(is_test: bool = False) -> Coroutine[Any, Any, None] | None:
+async def run_crawlers(is_test: bool) -> Coroutine[Any, Any, None] | None:
+    if not is_test:
+        raise ValueError("The 'is_test' argument must be False as this is a test.")
     start_time = asyncio.get_event_loop().time()
 
     strategies = [
@@ -48,8 +49,7 @@ async def run_crawlers(is_test: bool = False) -> Coroutine[Any, Any, None] | Non
     logging.info(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 async def main():
-	await run_crawlers()
-	await asyncio.to_thread(embed_latest_crawled, embedding_model="e5_base_v2")
+	await run_crawlers(True)
 
 if __name__ == "__main__":
 	asyncio.run(main())

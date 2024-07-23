@@ -128,7 +128,7 @@ async def async_follow_link_echojobs(
     async with session.get(url_to_follow) as r:
         try:
             if r.status == 200:
-                print(
+                logging.debug(
                     f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()\n"""
                 )
 

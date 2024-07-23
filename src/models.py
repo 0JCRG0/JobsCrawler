@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, TypeAlias
+from typing import Any, TypeAlias, TypedDict
 import aiohttp
 import logging
 import os
@@ -36,13 +36,21 @@ rss_json_test = os.path.abspath(os.path.join(rss_resources_dir, "rss_test.json")
 
 
 
-@dataclass
-class Bs4ElementPath:
+class Bs4ElementPath(TypedDict):
     jobs_path: str
     title_path: str
     link_path: str
     location_path: str
     description_path: str
+
+class ApiElementPath(TypedDict):
+    dict_tag: str
+    title_tag: str
+    link_tag: str
+    description_tag: str
+    pubdate_tag: str
+    location_tag: str
+    location_default: str
 
 
 @dataclass
@@ -55,17 +63,6 @@ class Bs4Config:
     follow_link: str
     inner_link_tag: str
     elements_path: Bs4ElementPath
-
-
-@dataclass
-class ApiElementPath:
-    dict_tag: str
-    title_tag: str
-    link_tag: str
-    description_tag: str
-    pubdate_tag: str
-    location_tag: str
-    location_default: str
 
 
 @dataclass
@@ -99,8 +96,6 @@ CustomCrawlFuncType: TypeAlias = Callable[
     ],
     Coroutine[Any, Any, dict[str, list[str]]],
 ]
-
-
 
 @dataclass
 class Bs4Args():

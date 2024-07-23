@@ -96,7 +96,6 @@ async def __async_occ_mundial(
             "No elements found for 'links'. Check 'elements_path[\"link_path\"]'"
         )
 
-    print(f"Number of job elements: {len(links)}")
 
     for link_element in links:
         link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"

@@ -1,68 +1,54 @@
-#!/usr/local/bin/python3
-
-import logging
-import timeit
-import asyncio
-import traceback
+import sys
 import os
-from src.crawlers.async_rss import async_rss_template
-from src.crawlers.async_api import async_api_template
-from src.crawlers.async_bs4 import async_bs4_template
+import asyncio
+import logging
+from typing import Any, Coroutine
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.crawler import AsyncCrawlerEngine
 from src.embeddings.embed_latest_crawled import embed_latest_crawled
-from src.utils.handy import setup_root_logger
-from dotenv import load_dotenv
+from src.models import RssArgs, ApiArgs, Bs4Args
+LOGGER_PATH = os.path.join("logs", "main_logger.log")
+(
+    os.makedirs(os.path.dirname(LOGGER_PATH), exist_ok=True)
+    if not os.path.exists(LOGGER_PATH)
+    else None
+)
+open(LOGGER_PATH, "a").close() if not os.path.exists(LOGGER_PATH) else None
 
-load_dotenv()
 
-LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
+logging.basicConfig(
+    filename=LOGGER_PATH,
+    level=logging.DEBUG,
+    force=True,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
-""" SET UP LOGGING FILE """
-current_dir = os.path.dirname(os.path.abspath(__file__))
+async def run_strategy(args: RssArgs | ApiArgs | Bs4Args) -> Coroutine[Any, Any, None] | None:
+    engine = AsyncCrawlerEngine(args)
+    await engine.run()
 
-logging_file_path = os.path.join(current_dir, LOGGER_PATH)
+async def run_crawlers(is_test: bool) -> Coroutine[Any, Any, None] | None:
+    start_time = asyncio.get_event_loop().time()
 
-setup_root_logger(logging_file_path)
+    strategies = [
+        (RssArgs(test=is_test)),
+        (ApiArgs(test=is_test)),
+        (Bs4Args(test=is_test)),
+    ]
 
-"""
-In this script, safe_call() calls the provided functions 
-with their respective arguments and catches any 
-exceptions that occur. It then returns the result 
-(or the exception) along with the function name.
-This way, when an exception occurs, you can log the 
-function name along with the exception details.
-"""
+    tasks = [run_strategy(args) for args in strategies]
 
-async def async_main(pipeline):
-	master_start_time = timeit.default_timer()
+    try:
+        await asyncio.gather(*tasks)
+    except Exception as e:
+        logging.error(f"An error occurred: {str(e)}")
 
-	logging.info('ALL CRAWLERS DEPLOYED!')
-
-	async def safe_call(func, name, *args, **kwargs):
-		try:
-			return await func(*args, **kwargs), name
-		except Exception as e:
-			return e, name
-
-	results = await asyncio.gather(
-		safe_call(async_api_template, 'async_api_template', pipeline),
-		safe_call(async_rss_template, 'async_rss_template', pipeline),
-		safe_call(async_bs4_template, 'async_bs4_template', pipeline),
-		#safe_call(async_selenium_template, 'async_selenium_template', pipeline),
-		#safe_call(async_indeed_template, 'async_indeed_template', "MX", "", pipeline)
-	)
-
-	for result, func_name in results:
-		if isinstance(result, Exception):
-			logging.error(f"Exception occurred in function {func_name}: {type(result).__name__} in {result}\n{traceback.format_exc()}", exc_info=True)
-			continue
-
-	elapsed_time = asyncio.get_event_loop().time() - master_start_time
-	min_elapsed_time = elapsed_time / 60
-	print(f"ALL ASYNC CRAWLERS FINISHED IN: {min_elapsed_time:.2f} minutes.", "\n")
-	logging.info(f"ALL ASYNC CRAWLERS FINISHED IN: {min_elapsed_time:.2f} minutes.")
+    elapsed_time = asyncio.get_event_loop().time() - start_time
+    logging.info(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 async def main():
-	await async_main("PROD")
+	await run_crawlers(False)
 	await asyncio.to_thread(embed_latest_crawled, embedding_model="e5_base_v2")
 
 if __name__ == "__main__":

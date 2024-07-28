@@ -34,4 +34,4 @@ def _insert_timestamp(id_value: int, embedding_model_value: str, timestamp_value
     
     CONN.commit()
 
-_insert_timestamp(id_value=3560, embedding_model_value="e5_base_v2", timestamp_value="2024-07-23 20:56:43.834562", test=True)
+_insert_timestamp(id_value=57168, embedding_model_value="e5_base_v2", timestamp_value="2024-05-16 15:11:41.372762", test=False)

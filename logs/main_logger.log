@@ -567,3 +567,1075 @@ TypeError: ApiElementPath.__init__() missing 1 required positional argument: 'pu
     "Total number of unique jobs": 0,
     "Current total count of jobs in PostgreSQL": 9
 }
+2024-07-28 15:35:22,582 - INFO - {"TOTAL NUMBER OF BATCHES": 9, "TOTAL NUMBER OF TOKENS": 9048, "MAX TOKENS PER BATCH": 1000, "NUMBER OF TRUNCATIONS": 5, "AVERAGE NUMBER OF TOKENS PER BATCH": 1005.33, "APPROXIMATE COST OF EMBEDDING": "$0 USD"}
+2024-07-28 15:35:27,160 - INFO - embeddings_e5_base_v2_to_df() done! Elapsed time: 0.08 minutes.
+2024-07-28 15:35:30,584 - INFO - {
+    "Table": "test_embeddings_e5_base_v2",
+    "Total count of jobs before crawling": 9,
+    "Total number of unique jobs": 0,
+    "Current total count of jobs in PostgreSQL": 9
+}
+2024-07-28 15:53:45,089 - ERROR - No new rows. Be sure crawler is populating main_jobs. Aborting execution.
+2024-07-28 19:43:04,244 - DEBUG - Using selector: KqueueSelector
+2024-07-28 19:43:08,379 - INFO - https://tryremotely.com/feeds/remote-jobs.rss has started
+2024-07-28 19:43:08,379 - DEBUG - All parameters for https://tryremotely.com/feeds/remote-jobs.rss:
+RssConfig(url='https://tryremotely.com/feeds/remote-jobs.rss', title_tag='title', link_tag='link', description_tag='description', location_tag='location', follow_link='yes', inner_link_tag='.grow .md\\:grow .space-y-8 #job_detail')
+2024-07-28 19:43:08,388 - INFO - https://weworkremotely.com/remote-jobs.rss has started
+2024-07-28 19:43:08,388 - DEBUG - All parameters for https://weworkremotely.com/remote-jobs.rss:
+RssConfig(url='https://weworkremotely.com/remote-jobs.rss', title_tag='title', link_tag='link', description_tag='description', location_tag='region', follow_link='yes', inner_link_tag='.perma .content .job .listing-container')
+2024-07-28 19:43:08,388 - INFO - https://api.cryptojobslist.com/rss/remote.xml has started
+2024-07-28 19:43:08,388 - DEBUG - All parameters for https://api.cryptojobslist.com/rss/remote.xml:
+RssConfig(url='https://api.cryptojobslist.com/rss/remote.xml', title_tag='title', link_tag='link', description_tag='summary', location_tag='media_location', follow_link='no', inner_link_tag=' ')
+2024-07-28 19:43:08,388 - INFO - CareerVault has started
+2024-07-28 19:43:08,388 - DEBUG - All parameters for CareerVault:
+ApiConfig(name='CareerVault', url='https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'data', 'title_tag': 'JobTitle', 'link_tag': 'Url', 'description_tag': 'Description', 'pubdate_tag': 'DatePosted', 'location_tag': 'Location', 'location_default': 'NaN'})
+2024-07-28 19:43:08,389 - INFO - echojobs.io has started
+2024-07-28 19:43:08,389 - DEBUG - All parameters for echojobs.io:
+ApiConfig(name='echojobs.io', url='https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest', class_json='dict', follow_link='yes', inner_link_tag='job-detail mb-4', elements_path={'dict_tag': 'result', 'title_tag': 'title', 'link_tag': 'url', 'description_tag': 'skills', 'pubdate_tag': 'created_at', 'location_tag': 'locations', 'location_default': 'NaN'})
+2024-07-28 19:43:08,389 - INFO - www.workingnomads.com has started
+2024-07-28 19:43:08,389 - DEBUG - All parameters for www.workingnomads.com:
+ApiConfig(name='www.workingnomads.com', url='https://www.workingnomads.com/api/exposed_jobs/', class_json='list', follow_link='no', inner_link_tag='', elements_path={'dict_tag': '', 'title_tag': 'title', 'link_tag': 'url', 'description_tag': 'description', 'pubdate_tag': 'pub_date', 'location_tag': 'location', 'location_default': 'NaN'})
+2024-07-28 19:43:08,389 - INFO - remoteok.api has started
+2024-07-28 19:43:08,389 - DEBUG - All parameters for remoteok.api:
+ApiConfig(name='remoteok.api', url='https://remoteok.com/api?api=1', class_json='list', follow_link='no', inner_link_tag='', elements_path={'dict_tag': '', 'title_tag': 'position', 'link_tag': 'url', 'description_tag': 'description', 'pubdate_tag': 'date', 'location_tag': 'location', 'location_default': 'NaN'})
+2024-07-28 19:43:08,389 - INFO - remotive.com has started
+2024-07-28 19:43:08,389 - DEBUG - All parameters for remotive.com:
+ApiConfig(name='remotive.com', url='https://remotive.com/api/remote-jobs?limit=50', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'url', 'description_tag': 'description', 'location_tag': 'candidate_required_location', 'location_default': 'NaN'})
+2024-07-28 19:43:08,390 - INFO - HimalayasApp has started
+2024-07-28 19:43:08,390 - DEBUG - All parameters for HimalayasApp:
+ApiConfig(name='HimalayasApp', url='https://himalayas.app/jobs/api', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'applicationLink', 'description_tag': 'description', 'pubdate_tag': 'pubDate', 'location_tag': 'locationRestrictions', 'location_default': 'Worldwide'})
+2024-07-28 19:43:08,390 - INFO - https://dribbble.com has started
+2024-07-28 19:43:08,390 - DEBUG - All parameters for https://dribbble.com:
+Bs4Config(name='https://dribbble.com', url='https://dribbble.com/jobs?anywhere=true&keyword=&page=', pages_to_crawl=1, start_point=1, strategy='main', follow_link='yes', inner_link_tag='.flushed .container-small.job-details-page-container .main-content-container .margin-t-16.job-details-description', elements_path={'jobs_path': '.job-list-item', 'title_path': '.job-details-container .job-title-company-container .job-title.job-board-job-title', 'link_path': '.job-link', 'location_path': '.job-additional-details-container .job-details .location-container.job-board-job-location', 'description_path': '.job-details-container .job-title-company-container .job-role'})
+2024-07-28 19:43:08,390 - INFO - https://www.python.org has started
+2024-07-28 19:43:08,390 - DEBUG - All parameters for https://www.python.org:
+Bs4Config(name='https://www.python.org', url='https://www.python.org/jobs/?page=', pages_to_crawl=1, start_point=1, strategy='main', follow_link='yes', inner_link_tag='.content-wrapper .container .main-content.with-right-sidebar .text .job-description', elements_path={'jobs_path': '.list-recent-jobs.list-row-container.menu li', 'title_path': '.listing-company-name a', 'link_path': '.listing-company-name a', 'description_path': '.listing-job-type', 'location_path': '.listing-location a'})
+2024-07-28 19:43:08,390 - INFO -  has started
+2024-07-28 19:43:08,390 - DEBUG - All parameters for :
+Bs4Config(name='', url='https://www.fossjobs.net/jobs-worldwide/?page=', pages_to_crawl=1, start_point=1, strategy='main', follow_link='yes', inner_link_tag='.container .columns .column.is-9 .box.content .job-description', elements_path={'jobs_path': '.container .columns .column.is-9 .box.content .post', 'title_path': 'h2 a', 'link_path': 'h2 a', 'location_path': '.media .media-content .content', 'description_path': '.media .media-content .content'})
+2024-07-28 19:43:08,390 - INFO - https://vuejobs.com has started
+2024-07-28 19:43:08,390 - DEBUG - All parameters for https://vuejobs.com:
+Bs4Config(name='https://vuejobs.com', url='https://vuejobs.com/jobs/?page=', pages_to_crawl=1, start_point=1, strategy='container', follow_link='yes', inner_link_tag='.lg\\:pb-12 .py-8.lg\\:py-12 .container .order-2.lg\\:order.lg\\:col-span-5 .prose.max-w-full.mt-6.prose-lg', elements_path={'jobs_path': '.grid.gap-y-4', 'title_path': 'a .flex.flex-col.justify-center.md\\:flex-row.md\\:justify-start.md\\:items-center .flex.items-center .ml-3', 'link_path': 'a', 'location_path': 'a .text-xs.mt-3.flex.gap-x-4.gap-y-1.flex-wrap.items-center.md\\:gap-2', 'description_path': 'a .text-xs.mt-3.flex.gap-x-4.gap-y-1.flex-wrap.items-center.md\\:gap-2'})
+2024-07-28 19:43:08,390 - INFO - https://remote.co has started
+2024-07-28 19:43:08,390 - DEBUG - All parameters for https://remote.co:
+Bs4Config(name='https://remote.co', url='https://remote.co/international-remote-jobs/?page=', pages_to_crawl=1, start_point=1, strategy='container', follow_link='yes', inner_link_tag='.container.pt-4 .row.row-with-sidebar .col .card.mb-2 .card-body.loosen .single_job_listing .job_description', elements_path={'jobs_path': '.card.bg-light.mb-3.rounded-0 .card-body .card.bg-white.m-0 .card-body.p-0', 'title_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0 .font-weight-bold.larger', 'link_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom', 'location_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary', 'description_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary'})
+2024-07-28 19:43:08,391 - INFO - https://4dayweek.io has started
+2024-07-28 19:43:08,391 - DEBUG - All parameters for https://4dayweek.io:
+Bs4Config(name='https://4dayweek.io', url='https://4dayweek.io/remote-jobs/fully-remote/?page=', pages_to_crawl=1, start_point=1, strategy='container', follow_link='yes', inner_link_tag='.row.job-content-wrapper .col-sm-8.cols.hero-left', elements_path={'jobs_path': '.row.jobs-list', 'title_path': '.row.job-tile-title', 'link_path': '.row.job-tile-title h3 a', 'location_path': '.job-tile-tags .remote-country', 'description_path': '.job-tile-tags .tile-salary'})
+2024-07-28 19:43:08,391 - INFO - https://ai-jobs.net has started
+2024-07-28 19:43:08,391 - DEBUG - All parameters for https://ai-jobs.net:
+Bs4Config(name='https://ai-jobs.net', url='https://ai-jobs.net/?reg=', pages_to_crawl=7, start_point=7, strategy='container', follow_link='yes', inner_link_tag='#job-description', elements_path={'jobs_path': '.list-group.list-group-flush.mb-4', 'title_path': '.col.pt-2.pb-3 .h5.text-body-emphasis.text-break.mt-1', 'link_path': '.col.pt-2.pb-3', 'location_path': '.col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break.mb-1', 'description_path': '.col.pt-2.pb-3'})
+2024-07-28 19:43:08,408 - ERROR - ClientConnectorError occurred before deploying crawling strategy on https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1.
+
+Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 172, in async_api_requests
+    response = await fetch_func(session)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawler.py", line 105, in __fetch
+    async with session.get(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [nodename nor servname provided, or not known]
+2024-07-28 19:43:08,497 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134'}
+2024-07-28 19:43:08,501 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'}
+2024-07-28 19:43:08,502 - DEBUG - Successful request on https://api.cryptojobslist.com/rss/remote.xml
+2024-07-28 19:43:26,252 - DEBUG - Successful request on https://remotive.com/api/remote-jobs?limit=50
+2024-07-28 19:43:26,253 - ERROR - TypeError occurred before deploying crawling strategy on https://remotive.com/api/remote-jobs?limit=50.
+
+ApiElementPath.__init__() missing 1 required positional argument: 'pubdate_tag'
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 175, in async_api_requests
+    jobs = __class_json_strategy(data, api_config)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_api.py", line 77, in __class_json_strategy
+    element_path = ApiElementPath(**api_config.elements_path)
+TypeError: ApiElementPath.__init__() missing 1 required positional argument: 'pubdate_tag'
+2024-07-28 19:43:26,261 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'}
+2024-07-28 19:43:26,276 - DEBUG - Crawling https://4dayweek.io/remote-jobs/fully-remote/?page=1 with container strategy
+2024-07-28 19:43:26,333 - ERROR - ValueError using container strategy while crawling https://4dayweek.io/remote-jobs/fully-remote/?page=.
+No elements found for 'title'. Check 'elements_path["title_path"]'
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_bs4.py", line 285, in _crawling_strategy
+    return await func_strategy(cur, session, bs4_config, soup, test)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_bs4.py", line 229, in __async_container_strategy_bs4
+    raise ValueError(
+ValueError: No elements found for 'title'. Check 'elements_path["title_path"]'
+2024-07-28 19:43:26,334 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36'}
+2024-07-28 19:43:26,334 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'}
+2024-07-28 19:43:26,449 - DEBUG - Crawling https://www.python.org/jobs/?page=1 with main strategy
+2024-07-28 19:43:26,805 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'}
+2024-07-28 19:43:26,806 - DEBUG - Successful request on https://weworkremotely.com/remote-jobs.rss
+2024-07-28 19:43:27,143 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1'}
+2024-07-28 19:43:27,143 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+2024-07-28 19:43:27,144 - DEBUG - Successful request on https://remoteok.com/api?api=1
+2024-07-28 19:43:27,507 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:43:38,071 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'}
+2024-07-28 19:43:38,116 - DEBUG - Crawling https://vuejobs.com/jobs/?page=1 with container strategy
+2024-07-28 19:43:38,309 - DEBUG - Link https://vuejobs.com/jobs/trooptravel-front-end-engineer-vue-3 already found in the db. Skipping...
+2024-07-28 19:43:38,485 - DEBUG - Link https://vuejobs.com/jobs/smartcat-frontend-developer already found in the db. Skipping...
+2024-07-28 19:43:38,663 - DEBUG - Link https://vuejobs.com/jobs/csgoempire-vue-js-dev-4-yrs-xp-remote-at-140k-year already found in the db. Skipping...
+2024-07-28 19:43:38,839 - DEBUG - Link https://vuejobs.com/jobs/mach-five-tech-group-senior-front-end-engineer-vue-project-hybrid already found in the db. Skipping...
+2024-07-28 19:43:39,016 - DEBUG - Link https://vuejobs.com/jobs/legalnature-senior-full-stack-engineer-rails-nuxt-100-remote already found in the db. Skipping...
+2024-07-28 19:43:39,190 - DEBUG - Link https://vuejobs.com/jobs/evident-change-2-senior-full-stack-software-developer already found in the db. Skipping...
+2024-07-28 19:43:39,365 - DEBUG - Link https://vuejobs.com/jobs/hennge-k-k-senior-front-end-engineer already found in the db. Skipping...
+2024-07-28 19:43:39,541 - DEBUG - Link https://vuejobs.com/jobs/csgoempire-fe-w-vue-js-min-3-yrs-total-xp-remote-at-60k-year-2 already found in the db. Skipping...
+2024-07-28 19:43:39,717 - DEBUG - Link https://vuejobs.com/jobs/nocode-rebels-ncr-front-end-developer already found in the db. Skipping...
+2024-07-28 19:43:39,894 - DEBUG - Link https://vuejobs.com/jobs/sano-genetics-4-experienced-frontend-developer-vue-js already found in the db. Skipping...
+2024-07-28 19:43:40,071 - DEBUG - Link https://vuejobs.com/jobs/ci-t-mid-level-fullstack-developer-vue-js already found in the db. Skipping...
+2024-07-28 19:43:40,248 - DEBUG - Link https://vuejobs.com/jobs/lmax-group-junior-software-developer already found in the db. Skipping...
+2024-07-28 19:43:40,425 - DEBUG - Link https://vuejobs.com/jobs/bytepitch-software-labs-frontend-software-engineer already found in the db. Skipping...
+2024-07-28 19:43:40,602 - DEBUG - Link https://vuejobs.com/jobs/n8n-2-senior-full-stack-engineer-typescript-berlin-or-europe-remote already found in the db. Skipping...
+2024-07-28 19:43:40,778 - DEBUG - Link https://vuejobs.com/jobs/kong-3-senior-vue-nuxt-frontend-engineer already found in the db. Skipping...
+2024-07-28 19:43:40,956 - DEBUG - Link https://vuejobs.com/jobs/modus-create-full-stack-engineer-node-js-vue-js already found in the db. Skipping...
+2024-07-28 19:43:41,134 - DEBUG - Link https://vuejobs.com/jobs/technologyadvice-software-engineer-ii-laravel-vue already found in the db. Skipping...
+2024-07-28 19:43:41,311 - DEBUG - Link https://vuejobs.com/jobs/netlify-senior-solutions-engineer-emea already found in the db. Skipping...
+2024-07-28 19:43:41,488 - DEBUG - Link https://vuejobs.com/jobs/deepki-front-end-developer-vue-js-f-m-nb already found in the db. Skipping...
+2024-07-28 19:43:41,665 - DEBUG - Link https://vuejobs.com/jobs/the-national-college-full-stack-developer already found in the db. Skipping...
+2024-07-28 19:43:41,842 - DEBUG - Link https://vuejobs.com/jobs/the-national-college-front-end-developer already found in the db. Skipping...
+2024-07-28 19:43:42,019 - DEBUG - Link https://vuejobs.com/jobs/quinstreet-ui-vue-js-developer already found in the db. Skipping...
+2024-07-28 19:43:42,193 - DEBUG - Link https://vuejobs.com/jobs/overwolf-frontend-developer-tebex already found in the db. Skipping...
+2024-07-28 19:43:42,369 - DEBUG - Link https://vuejobs.com/jobs/grid-dynamics-ui-tech-lead-vue-js already found in the db. Skipping...
+2024-07-28 19:43:42,391 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'}
+2024-07-28 19:43:42,405 - DEBUG - Crawling https://www.fossjobs.net/jobs-worldwide/?page=1 with main strategy
+2024-07-28 19:43:42,590 - DEBUG - Link https://www.fossjobs.net/job/11428/wanted-android-developer-to-fight-censorship-at-leap/ already found in the db. Skipping...
+2024-07-28 19:43:42,765 - DEBUG - Link https://www.fossjobs.net/job/11420/freebsd-userland-software-developer-at-the-freebsd-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:42,943 - DEBUG - Link https://www.fossjobs.net/job/11418/security-analyst-at-the-organized-crime-and-corruption-reporting-project-occrp/ already found in the db. Skipping...
+2024-07-28 19:43:43,120 - DEBUG - Link https://www.fossjobs.net/job/11417/kde-goals-project-coordinator-at-kde-ev/ already found in the db. Skipping...
+2024-07-28 19:43:43,296 - DEBUG - Link https://www.fossjobs.net/job/11415/senior-devops-engineer-at-organized-crime-and-corruption-reporting-project/ already found in the db. Skipping...
+2024-07-28 19:43:43,472 - DEBUG - Link https://www.fossjobs.net/job/11408/bind-9-software-engineer-fully-remote-at-internet-system-consortium/ already found in the db. Skipping...
+2024-07-28 19:43:43,646 - DEBUG - Link https://www.fossjobs.net/job/11407/mid-level-software-engineer-at-openssl/ already found in the db. Skipping...
+2024-07-28 19:43:43,821 - DEBUG - Link https://www.fossjobs.net/job/11401/devops-engineer-for-software-heritage-at-software-heritage/ already found in the db. Skipping...
+2024-07-28 19:43:43,998 - DEBUG - Link https://www.fossjobs.net/job/11398/network-health-engineer-at-the-tor-project-inc/ already found in the db. Skipping...
+2024-07-28 19:43:44,175 - DEBUG - Link https://www.fossjobs.net/job/11396/senior-product-manager-mediawiki-integration-interfaces-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:44,352 - DEBUG - Link https://www.fossjobs.net/job/11395/senior-product-manager-mediawiki-core-platform-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:44,528 - DEBUG - Link https://www.fossjobs.net/job/11384/devops-at-whistleblowing-solutions-social-enterprise/ already found in the db. Skipping...
+2024-07-28 19:43:44,704 - DEBUG - Link https://www.fossjobs.net/job/11382/executive-director-at-open-environmental-data-project/ already found in the db. Skipping...
+2024-07-28 19:43:44,882 - DEBUG - Link https://www.fossjobs.net/job/11376/senior-frontend-engineer-abstract-wikipedia-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:45,059 - DEBUG - Link https://www.fossjobs.net/job/11371/software-developer-contractor-dangerzone-at-freedom-of-the-press-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:45,236 - DEBUG - Link https://www.fossjobs.net/job/11370/systems-administrator-at-the-tor-project-inc/ already found in the db. Skipping...
+2024-07-28 19:43:45,418 - DEBUG - Link https://www.fossjobs.net/job/11369/administrative-support-contractor-at-gnome-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:45,981 - DEBUG - Link https://www.fossjobs.net/job/11366/lead-mobile-developer-at-openarchive/ already found in the db. Skipping...
+2024-07-28 19:43:46,157 - DEBUG - Link https://www.fossjobs.net/job/11363/rust-developer-at-tor-project/ already found in the db. Skipping...
+2024-07-28 19:43:46,338 - DEBUG - Link https://www.fossjobs.net/job/11358/software-engineer-trust-and-safety-product-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:46,515 - DEBUG - Link https://www.fossjobs.net/job/11357/react-native-developer-at-digital-democracy/ already found in the db. Skipping...
+2024-07-28 19:43:46,692 - DEBUG - Link https://www.fossjobs.net/job/11355/senior-developer-for-a-desktop-application-react-python-electron-at-open-knowledge-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:46,868 - DEBUG - Link https://www.fossjobs.net/job/11345/storage-engineer-ceph-and-distributed-storage-at-opennebula-systems/ already found in the db. Skipping...
+2024-07-28 19:43:47,044 - DEBUG - Link https://www.fossjobs.net/job/11344/seeking-two-singularities-at-petites-singularites/ already found in the db. Skipping...
+2024-07-28 19:43:47,220 - DEBUG - Link https://www.fossjobs.net/job/11341/baserow-specialist-at-baserow/ already found in the db. Skipping...
+2024-07-28 19:43:47,397 - DEBUG - Link https://www.fossjobs.net/job/11340/senior-full-stack-developer-at-baserow/ already found in the db. Skipping...
+2024-07-28 19:43:47,575 - DEBUG - Link https://www.fossjobs.net/job/11339/senior-full-stack-developer-at-baserow/ already found in the db. Skipping...
+2024-07-28 19:43:47,752 - DEBUG - Link https://www.fossjobs.net/job/11338/senior-software-engineer-future-audiences-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:47,934 - DEBUG - Link https://www.fossjobs.net/job/11333/lead-data-engineer-at-open-earth-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:48,110 - DEBUG - Link https://www.fossjobs.net/job/11329/freebsd-openjdk-porter-at-the-freebsd-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:48,285 - DEBUG - Link https://www.fossjobs.net/job/11326/lead-community-tech-manager-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:48,461 - DEBUG - Link https://www.fossjobs.net/job/11325/senior-big-data-engineer-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:48,638 - DEBUG - Link https://www.fossjobs.net/job/11324/site-reliability-engineer-iii-observability-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:48,815 - DEBUG - Link https://www.fossjobs.net/job/11320/senior-data-scientist-community-growth-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:48,991 - DEBUG - Link https://www.fossjobs.net/job/11317/web-developer-at-organized-crime-and-corruption-reporting-project/ already found in the db. Skipping...
+2024-07-28 19:43:49,167 - DEBUG - Link https://www.fossjobs.net/job/11310/senior-software-engineer-at-prisma/ already found in the db. Skipping...
+2024-07-28 19:43:49,342 - DEBUG - Link https://www.fossjobs.net/job/11306/lead-designer-at-openrefine/ already found in the db. Skipping...
+2024-07-28 19:43:49,520 - DEBUG - Link https://www.fossjobs.net/job/11302/lead-designer-at-openrefine/ already found in the db. Skipping...
+2024-07-28 19:43:49,696 - DEBUG - Link https://www.fossjobs.net/job/11299/privacy-loving-linux-generalist-at-tails/ already found in the db. Skipping...
+2024-07-28 19:43:49,873 - DEBUG - Link https://www.fossjobs.net/job/11294/software-engineer-release-engineering-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:50,049 - DEBUG - Link https://www.fossjobs.net/job/11293/director-of-site-reliability-engineering-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:50,225 - DEBUG - Link https://www.fossjobs.net/job/11291/openssl-community-engagement-leader-evangelist-at-openssl/ already found in the db. Skipping...
+2024-07-28 19:43:50,403 - DEBUG - Link https://www.fossjobs.net/job/11290/system-administrator-devops-engineer-at-openssl/ already found in the db. Skipping...
+2024-07-28 19:43:50,577 - DEBUG - Link https://www.fossjobs.net/job/11289/software-engineer-at-openssl/ already found in the db. Skipping...
+2024-07-28 19:43:50,754 - DEBUG - Link https://www.fossjobs.net/job/11283/senior-full-stack-developer-remoteanywhere-at-collabora/ already found in the db. Skipping...
+2024-07-28 19:43:50,933 - DEBUG - Link https://www.fossjobs.net/job/11282/python-web-developer-remoteanywhere-at-collabora/ already found in the db. Skipping...
+2024-07-28 19:43:51,106 - DEBUG - Link https://www.fossjobs.net/job/11280/senior-software-engineer-features-engineering-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:51,283 - DEBUG - Link https://www.fossjobs.net/job/11279/lead-visual-designer-design-systems-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:51,459 - DEBUG - Link https://www.fossjobs.net/job/11278/contributor-success-specialist-at-artefactual-systems-inc/ already found in the db. Skipping...
+2024-07-28 19:43:51,635 - DEBUG - Link https://www.fossjobs.net/job/11274/research-manager-at-wikimedia-foundation/ already found in the db. Skipping...
+2024-07-28 19:43:51,637 - DEBUG - Successful request on https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest
+2024-07-28 19:43:51,816 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7662/
+
+2024-07-28 19:43:52,011 - DEBUG - Successful request on https://himalayas.app/jobs/api
+2024-07-28 19:44:14,559 - DEBUG - Link applicationLink already found in the db. Skipping...
+2024-07-28 19:44:29,731 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/atlanta-concrete-company-customer-service-representative
+
+2024-07-28 19:44:29,960 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'}
+2024-07-28 19:44:29,961 - DEBUG - Successful request on https://www.workingnomads.com/api/exposed_jobs/
+2024-07-28 19:44:30,497 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:30,678 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:30,860 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:31,044 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:31,225 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:31,406 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:31,589 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:31,770 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:31,946 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:32,126 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:32,306 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:32,483 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:32,663 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:32,843 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:33,026 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:33,206 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:33,387 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:33,566 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:33,744 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:33,924 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:34,104 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:34,279 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:34,457 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:34,637 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:34,818 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:34,997 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:35,177 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:35,354 - DEBUG - Link url already found in the db. Skipping...
+2024-07-28 19:44:35,363 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7661/
+
+2024-07-28 19:44:35,566 - ERROR - ClientConnectorError occurred before deploying crawling strategy on https://dribbble.com/jobs?anywhere=true&keyword=&page=1.
+
+Cannot connect to host dribbble.com:443 ssl:default [Connection reset by peer]
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1089, in create_connection
+    transport, protocol = await self._create_connection_transport(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1119, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 854, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_bs4.py", line 312, in async_bs4_crawl
+    html = await fetch_func(session)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawler.py", line 105, in __fetch
+    async with session.get(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1206, in _create_direct_connection
+    raise last_exc
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1175, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 988, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host dribbble.com:443 ssl:default [Connection reset by peer]
+2024-07-28 19:44:35,614 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/interaction-design-foundation-ixdf-hr-unicorn-with-accounting-experience
+
+2024-07-28 19:44:35,801 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7660/
+
+2024-07-28 19:44:35,984 - DEBUG - Link https://www.python.org/jobs/7657/ already found in the db. Skipping...
+2024-07-28 19:44:36,160 - DEBUG - Link https://www.python.org/jobs/7656/ already found in the db. Skipping...
+2024-07-28 19:44:36,335 - DEBUG - Link https://www.python.org/jobs/7655/ already found in the db. Skipping...
+2024-07-28 19:44:36,512 - DEBUG - Link https://www.python.org/jobs/7654/ already found in the db. Skipping...
+2024-07-28 19:44:36,689 - DEBUG - Link https://www.python.org/jobs/7653/ already found in the db. Skipping...
+2024-07-28 19:44:36,865 - DEBUG - Link https://www.python.org/jobs/7652/ already found in the db. Skipping...
+2024-07-28 19:44:37,042 - DEBUG - Link https://www.python.org/jobs/7619/ already found in the db. Skipping...
+2024-07-28 19:44:37,218 - DEBUG - Link https://www.python.org/jobs/7618/ already found in the db. Skipping...
+2024-07-28 19:44:37,397 - DEBUG - Link https://www.python.org/jobs/7617/ already found in the db. Skipping...
+2024-07-28 19:44:37,595 - DEBUG - Link https://www.python.org/jobs/7613/ already found in the db. Skipping...
+2024-07-28 19:44:37,773 - DEBUG - Link https://www.python.org/jobs/7610/ already found in the db. Skipping...
+2024-07-28 19:44:37,950 - DEBUG - Link https://www.python.org/jobs/7609/ already found in the db. Skipping...
+2024-07-28 19:44:38,126 - DEBUG - Link https://www.python.org/jobs/7608/ already found in the db. Skipping...
+2024-07-28 19:44:38,301 - DEBUG - Link https://www.python.org/jobs/7606/ already found in the db. Skipping...
+2024-07-28 19:44:38,481 - DEBUG - Link https://www.python.org/jobs/7605/ already found in the db. Skipping...
+2024-07-28 19:44:38,658 - DEBUG - Link https://www.python.org/jobs/7604/ already found in the db. Skipping...
+2024-07-28 19:44:38,831 - DEBUG - Link https://www.python.org/jobs/7603/ already found in the db. Skipping...
+2024-07-28 19:44:39,013 - DEBUG - Link https://www.python.org/jobs/7602/ already found in the db. Skipping...
+2024-07-28 19:44:39,188 - DEBUG - Link https://www.python.org/jobs/7598/ already found in the db. Skipping...
+2024-07-28 19:44:39,365 - DEBUG - Link https://www.python.org/jobs/7597/ already found in the db. Skipping...
+2024-07-28 19:44:39,542 - DEBUG - Link https://www.python.org/jobs/7596/ already found in the db. Skipping...
+2024-07-28 19:44:39,718 - DEBUG - Link https://www.python.org/jobs/7595/ already found in the db. Skipping...
+2024-07-28 19:44:39,721 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/atlanta-concrete-company-data-entry-clerk
+
+2024-07-28 19:44:40,109 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'}
+2024-07-28 19:44:40,216 - DEBUG - Crawling https://ai-jobs.net/?reg=7 with container strategy
+2024-07-28 19:44:40,275 - ERROR - ValueError using container strategy while crawling https://ai-jobs.net/?reg=.
+No elements found for 'location'. Check 'elements_path["location_path"]'
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_bs4.py", line 285, in _crawling_strategy
+    return await func_strategy(cur, session, bs4_config, soup, test)
+  File "/Users/juanreyesgarcia/Dev/Python/Crawlers/JobsCrawler/src/crawlers/async_bs4.py", line 229, in __async_container_strategy_bs4
+    raise ValueError(
+ValueError: No elements found for 'location'. Check 'elements_path["location_path"]'
+2024-07-28 19:44:40,276 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/atlanta-concrete-company-executive-secretary
+
+2024-07-28 19:44:40,612 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+2024-07-28 19:44:40,747 - DEBUG - Crawling https://remote.co/international-remote-jobs/?page=1 with container strategy
+2024-07-28 19:44:40,938 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/porkbun-advertising-platform-specialist-full-time-60-000-year-benefits-locations-arizona-california-florida
+
+2024-07-28 19:44:41,122 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/rocket-software-software-engineer-ii-java-backend-dsa-rud71. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:41,312 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/paralegal-legal-assistant-27/
+
+2024-07-28 19:44:41,515 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/scripta-insights-senior-data-engineer
+
+2024-07-28 19:44:41,726 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/online-calculus-tutor-26/
+
+2024-07-28 19:44:41,933 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2024-07-28 19:44:41,935 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/scripta-insights-senior-qa-engineer-1
+
+2024-07-28 19:44:41,936 - DEBUG - Successful request on https://tryremotely.com/feeds/remote-jobs.rss
+2024-07-28 19:44:42,872 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/executive-assistant-amp-strategy-lead-26/
+
+2024-07-28 19:44:43,070 - DEBUG - Link https://remote.co/job/accounts-receivable-specialist-bi-lingual-14/ already found in the db. Skipping...
+2024-07-28 19:44:43,250 - DEBUG - Link https://remote.co/job/senior-engineer-ledger-team-14/ already found in the db. Skipping...
+2024-07-28 19:44:43,426 - DEBUG - Link https://remote.co/job/account-management-lead-14/ already found in the db. Skipping...
+2024-07-28 19:44:43,603 - DEBUG - Link https://remote.co/job/online-algebra-tutor-11/ already found in the db. Skipping...
+2024-07-28 19:44:43,780 - DEBUG - Link https://remote.co/job/tutor-leader-11/ already found in the db. Skipping...
+2024-07-28 19:44:43,957 - DEBUG - Link https://remote.co/job/online-math-tutor-11/ already found in the db. Skipping...
+2024-07-28 19:44:44,135 - DEBUG - Link https://remote.co/job/graphic-designer-10-6/ already found in the db. Skipping...
+2024-07-28 19:44:44,311 - DEBUG - Link https://remote.co/job/ux-designer-10-2/ already found in the db. Skipping...
+2024-07-28 19:44:44,487 - DEBUG - Link https://remote.co/job/video-editor-10-3/ already found in the db. Skipping...
+2024-07-28 19:44:44,664 - DEBUG - Link https://remote.co/job/podcast-producer-9/ already found in the db. Skipping...
+2024-07-28 19:44:44,842 - DEBUG - Link https://remote.co/job/social-media-content-creator-8-2/ already found in the db. Skipping...
+2024-07-28 19:44:45,018 - DEBUG - Link https://remote.co/job/jr-data-entry-specialist-3/ already found in the db. Skipping...
+2024-07-28 19:44:45,195 - DEBUG - Link https://remote.co/job/frontend-developer-3-2/ already found in the db. Skipping...
+2024-07-28 19:44:45,372 - DEBUG - Link https://remote.co/job/senior-react-react-native-developer-2/ already found in the db. Skipping...
+2024-07-28 19:44:45,549 - DEBUG - Link https://remote.co/job/join-our-team-as-a-ghostwriter-2/ already found in the db. Skipping...
+2024-07-28 19:44:45,725 - DEBUG - Link https://remote.co/job/senior-backend-engineer-developer-platform-2/ already found in the db. Skipping...
+2024-07-28 19:44:45,899 - DEBUG - Link https://remote.co/job/ubuntu-linux-kernel-engineer-silicon-enablement-30/ already found in the db. Skipping...
+2024-07-28 19:44:46,073 - DEBUG - Link https://remote.co/job/lead-email-marketing-manager-30/ already found in the db. Skipping...
+2024-07-28 19:44:46,246 - DEBUG - Link https://remote.co/job/senior-qa-engineer-30/ already found in the db. Skipping...
+2024-07-28 19:44:46,424 - DEBUG - Link https://remote.co/job/secondary-education-content-writer-amp-editor-30/ already found in the db. Skipping...
+2024-07-28 19:44:46,425 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/capital-one-senior-engineer-generative-ai-product-engineering-remote-eligible-r2sf7. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:46,679 - INFO - Finished bs4 crawlers. Results below ⬇︎
+2024-07-28 19:44:48,109 - INFO - {"Table": "test", "Total count of jobs before crawling": 1851, "Total number of unique jobs": 6, "Current total count of jobs in PostgreSQL": 1857}
+2024-07-28 19:44:48,111 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cloudflare-systems-engineer-iam-913801. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:48,291 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/tscgcompany-user-researcher
+
+2024-07-28 19:44:48,808 - INFO - Async BS4 crawlers finished! all in: 101.68 seconds.
+2024-07-28 19:44:48,810 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/capital-one-site-reliability-engineer-shopping-xppsd. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:49,006 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/illustrative-mathematics-k-12-math-senior-platform-product-manager
+
+2024-07-28 19:44:49,318 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nearsure-699-senior-salesforce-consultant-913254. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:49,495 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/cloudpepper-devops-engineer
+
+2024-07-28 19:44:49,701 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/capital-one-senior-generative-ai-product-engineer-remote-eligible-fw1i6. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:49,923 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/niceboard-full-stack-developer-2
+
+2024-07-28 19:44:49,961 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/hadrian-technician-recruiting-specialist-913071. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:50,467 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/venafi-infrastructure-engineer-911341. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:50,640 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/welocalize-search-quality-rater
+
+2024-07-28 19:44:50,849 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/capital-one-chief-of-staff-bank-tech-remote-eligible-jl3er. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:51,064 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/madkudu-growth-marketer
+
+2024-07-28 19:44:51,129 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/smartlyio-agency-growth-activation-lead-emea-910157. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:51,494 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/celonis-senior-director-global-partnerships-manager-n16ji. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:51,822 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/royal-moving-storage-inc-office-coordinator
+
+2024-07-28 19:44:52,074 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cision-north-america-overnight-team-lead-customer-content-services-907608. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:52,251 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/automattic-exceptional-generalist
+
+2024-07-28 19:44:52,534 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clair-senior-demand-generation-marketing-manager-907243. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:52,743 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/automattic-senior-product-designer-1
+
+2024-07-28 19:44:52,812 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/ellevest-wealth-management-associate-907060. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:53,291 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/alpaca-senior-data-engineer-906695. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:53,473 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/american-express-senior-engineer-e6130. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:53,677 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/lemon-io-senior-react-react-native-developer-3
+
+2024-07-28 19:44:53,968 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/0x-software-engineer-matcha-full-stack-906694. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:54,148 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/american-express-director-strategic-consulting-tech-strategy-and-business-development-5mj9s. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:54,362 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/everydays-senior-creative-strategist-m-w-d-vollzeit-100-remote
+
+2024-07-28 19:44:54,635 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/0x-senior-software-engineer-growth-matcha-906238. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:54,872 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/the-common-market-customer-support-associate-ii-2
+
+2024-07-28 19:44:55,116 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/coreweave-it-specialist-i-905592. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:55,293 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/rackspace-senior-streaming-engineer-gcp-canada-pdfje. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:55,499 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/automattic-senior-systems-engineer-2
+
+2024-07-28 19:44:55,778 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/reddit-senior-software-engineer-ads-contextual-intelligence-905586. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:55,951 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/used-conex-llc-entry-level-sales-agent-chat-only-side-hustle
+
+2024-07-28 19:44:56,248 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/matillion-senior-enterprise-sales-engineer-905573. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:56,424 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/rackspace-senior-backend-java-ml-engineer-canada-j6qty. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:56,629 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/transwood-inc-tier-ii-customer-service-representative-au-only
+
+2024-07-28 19:44:56,895 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veepee-fullstack-developer-react-net-core-905572. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:57,073 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/paymentology-junior-product-manager
+
+2024-07-28 19:44:57,341 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/morgan-stanley-lead-software-engineer-parametric-8gpyz. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:57,543 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/smarsh-software-engineer-ii-905571. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:57,719 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/idverse-ocr-labs-full-stack-engineer-full-time
+
+2024-07-28 19:44:58,022 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/crypto-rust-engineer-greenfield-project-905570. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:58,197 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/lemon-io-senior-full-stack-react-python-developer
+
+2024-07-28 19:44:58,428 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/morgan-stanley-vice-president-project-program-management-technology-mumbai-6o5ji. USING FollowLinkEchoJobs()
+
+2024-07-28 19:44:58,504 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/contentful-senior-technical-partner-success-manager-905569. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:58,685 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/boese-va-backend-manager-in-a-social-media-marketing-agency
+
+2024-07-28 19:44:59,125 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/dondich-creative-llc-affiliate-marketing-manager
+
+2024-07-28 19:44:59,365 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zoox-software-engineer-prediction-behavior-ml-905568. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:44:59,581 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/simpletiger-content-specialist-u-s-based-remote
+
+2024-07-28 19:44:59,644 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-configuration-consultant-rtsm-905567. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:00,012 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/dentsu-lead-engineer-remote-g39fo. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:00,239 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/aiapply-co-part-time-full-stack-engineer
+
+2024-07-28 19:45:00,312 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/circle-senior-social-media-manager-905566. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:00,689 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/dentsu-associate-director-mobile-app-marketing-shtq2. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:00,962 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/backmarket-tech-people-partner-or-hrbp-5-months-short-term-contract-905565. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:01,140 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/aiapply-co-remote-customer-support-job
+
+2024-07-28 19:45:01,348 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/dentsu-associate-director-mobile-app-marketing-og0rw. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:01,650 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/qwick-business-development-manager-905555. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:01,827 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/mainmatter-webdesigner-contractor
+
+2024-07-28 19:45:02,134 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/octopus-energy-manager-commercial-b2c-f-h-905551. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:02,312 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/returnly-senior-data-engineer-u2v4x. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:02,517 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/chameleon-technical-support-engineer-1
+
+2024-07-28 19:45:02,787 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/axon-vice-president-business-controller-remote-905495. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:03,031 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/porkbun-technical-support-representative-full-time-requires-weekend-sat-sun-early-standard-and
+
+2024-07-28 19:45:03,238 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/farfetch-senior-data-analyst-905492. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:03,417 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/hopper-senior-fullstack-web-engineer-fintech-remote-2m5f4. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:03,618 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/globe-life-ao-customer-service-manager-remote-position
+
+2024-07-28 19:45:04,001 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/reddit-senior-software-engineer-ads-contextual-intelligence-905402. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:04,176 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/veeva-lead-ds-ml-engineer-bkum9. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:04,383 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/timezest-senior-fullstack-engineer-ruby-rails-2
+
+2024-07-28 19:45:04,659 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/bigid-rvp-europe-904946. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:04,836 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/clipboardhealth-customer-support-agent
+
+2024-07-28 19:45:04,869 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/veeva-lead-ds-ml-engineer-58tte. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:05,291 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/customs-info-tech-lead
+
+2024-07-28 19:45:05,318 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/canonical-product-marketing-manager-ai-904763. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:05,813 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/tapcart-director-of-customer-solutions-904762. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:05,992 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/constructive-freelance-ux-designer-for-social-impact-design-agency-remote-usa-only
+
+2024-07-28 19:45:06,209 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/veeva-lead-ds-ml-engineer-v8mja. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:06,429 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/onthegosystems-full-stack-developer-2
+
+2024-07-28 19:45:06,657 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/opengov-director-talent-acquisition-904761. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:06,829 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/onthegosystems-ruby-on-rails-developer-5
+
+2024-07-28 19:45:07,184 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/veeva-ds-ml-engineer-di9df. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:07,413 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/socialhub-senior-product-manager
+
+2024-07-28 19:45:07,611 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/opengov-product-marketing-manager-904760. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:07,843 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/komoot-knowledge-manager
+
+2024-07-28 19:45:07,879 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/opengov-software-engineer-iii-904668. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:08,261 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/veeva-ds-ml-engineer-kbczy. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:08,467 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/contra-part-time-ugc-content-creator-1
+
+2024-07-28 19:45:08,720 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/loopreturns-senior-data-engineer-904576. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:08,890 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/contra-part-time-product-designer-2
+
+2024-07-28 19:45:09,191 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/webflow-senior-lifecycle-marketing-manager-enterprise-904484. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:09,367 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/manifold-senior-software-engineer-front-end
+
+2024-07-28 19:45:09,570 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/veeva-ds-ml-engineer-kebvr. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:10,013 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/starbridge-senior-backend-engineer-java-kotlin
+
+2024-07-28 19:45:10,434 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/inaturalist-senior-product-manager
+
+2024-07-28 19:45:10,759 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/pinterest-manager-ii-cloud-architecture-78bbp. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:10,954 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/tiugo-technologies-developer-advocate-ckeditor-team
+
+2024-07-28 19:45:11,228 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/octopus-energy-plumbing-and-heating-trainer-904483. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:11,466 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/baxenergy-senior-backend-developer
+
+2024-07-28 19:45:11,513 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/octopus-energy-lead-apprenticeship-trainer-low-carbon-904118. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:11,890 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/new-relic-mid-level-software-engineer-frontend-javascript-remote-5msiq. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:12,095 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/givebutter-controller
+
+2024-07-28 19:45:12,171 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/1password-backend-developer-904117. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:12,645 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/1password-manager-marketing-analytics-903934. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:12,843 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/we-work-remotely-financial-controller-1
+
+2024-07-28 19:45:13,065 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/spot-ai-sr-systems-software-engineer-firmware-engineering-erjbu. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:13,269 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/praxent-latam-senior-qa-analyst-903842. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:13,442 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/inaturalist-head-of-engineering
+
+2024-07-28 19:45:13,707 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/hubspot-software-engineer-usa-v9tdk. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:13,904 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/teamshares-accountant-903750. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:14,077 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/ce-learning-systems-jr-account-manager-customer-support
+
+2024-07-28 19:45:14,373 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/findem-customer-success-manager-csm-903749. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:14,550 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/starbridge-ai-founding-frontend-engineer
+
+2024-07-28 19:45:14,771 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/hubspot-software-engineer-uk-5iv1i. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:15,007 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/cdata-virtuality-software-support-engineer
+
+2024-07-28 19:45:15,059 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/oxio-sales-operations-manager-903566. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:15,533 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/hubspot-software-engineer-ireland-bxqmw. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:15,536 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veepee-account-manager-marketplace-secteur-fashion-f-h-x-cdi-903383. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:15,905 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/hostaway-revops-data-analyst-us-europe
+
+2024-07-28 19:45:16,350 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/carbonhealth-medical-assistant-per-diem-903290. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:16,526 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/moonrail-limited-finance-accounting-officer
+
+2024-07-28 19:45:16,761 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/hubspot-senior-software-engineer-i-data-warehouse-infrastructure-backend-80z0q. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:16,983 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/miniextensions-recruiter-admin-role
+
+2024-07-28 19:45:17,023 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/gusto-sales-enablement-learning-development-partner-903289. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:17,501 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/hyperiondev-social-media-associate-902828. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:17,675 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/semaphore-senior-software-engineer-2
+
+2024-07-28 19:45:17,887 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/hubspot-backend-engineering-manager-framework-data-ntxzv. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:18,108 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/rapidseedbox-ltd-chief-of-staff
+
+2024-07-28 19:45:18,190 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/calmcom-mid-market-account-executive-mid-atlantic-902275. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:18,573 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/square-senior-engineering-manager-web-platform-ubaqo. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:18,851 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zscaler-senior-engineering-manager-cloud-browser-isolation-902182. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:19,032 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/clepher-frontend-developer-engineer-for-an-ai-tech-chatbot-called-clepher-1
+
+2024-07-28 19:45:19,301 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/alpaca-senior-data-engineer-cq92t. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:19,653 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zscaler-regional-sales-manager-enterprise-bfsi-902181. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:19,829 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/umbrella-scents-influencer-marketing-specialist-2
+
+2024-07-28 19:45:20,244 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/olsson-associates-senior-electrical-engineer-arc-flash-data-center-remote-6ojao. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:20,471 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/saviynt-deal-desk-manager-india-902180. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:20,647 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/plazas-senior-developer
+
+2024-07-28 19:45:20,880 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/olsson-associates-senior-electrical-engineer-arc-flash-data-center-remote-khzl2. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:21,272 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/century-property-tax-consultants-customer-representative
+
+2024-07-28 19:45:21,463 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/saviynt-iam-technical-architect-professional-services-902179. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:21,680 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/leadsimple-inc-senior-support-manager-1
+
+2024-07-28 19:45:21,997 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zscaler-cybersecurity-data-researcher-avalor-902178. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:22,174 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/olsson-associates-senior-mechanical-engineer-data-center-bfdyi. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:22,378 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/a-team-senior-independent-product-manager-product-designer-90-170-hr
+
+2024-07-28 19:45:22,666 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zscaler-architect-engineering-zpa-control-plane-902085. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:24,472 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/netguru-s-a-senior-product-owner-manager-with-arabic
+
+2024-07-28 19:45:24,669 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/olsson-associates-senior-mechanical-engineer-data-center-mttik. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:24,940 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/deliveroo-privacy-operations-analyst-902084. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:25,115 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/close-director-of-product-1
+
+2024-07-28 19:45:25,298 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/olsson-associates-senior-electrical-engineer-data-center-l0zsk. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:25,504 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/metalabel-product-design-engineer
+
+2024-07-28 19:45:25,565 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/deliveroo-lead-enterprise-architect-901991. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:26,037 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/leantaas-senior-data-engineer-inpatient-flow-usa-remote-901990. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:26,214 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/leadsimple-inc-business-development-representative-3
+
+2024-07-28 19:45:26,448 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/fullscript-staff-engineer-identity-access-management-0tpeq. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:26,634 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/deliveroo-crm-lifecycle-manager-ftc-901989. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:26,807 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/codesignal-course-development-engineer
+
+2024-07-28 19:45:27,088 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/leantaas-digital-marketing-and-demand-generation-manager-us-remote-901896. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:27,265 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/delta-defense-llc-contact-center-sales-and-service-advisor-phones-remote-optional
+
+2024-07-28 19:45:27,528 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/palantir-technologies-proposal-writer-federal-civilian-and-federal-health-agencies-901895. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:27,699 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/adobe-value-engineering-lead-o7nlv. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:27,714 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/close-senior-staff-software-engineer-backend-python-usa-100-remote-3
+
+2024-07-28 19:45:28,099 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sophos-senior-threat-researcher-behavioural-901894. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:28,322 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/sticker-mule-software-engineer-backend-2
+
+2024-07-28 19:45:28,553 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sophos-ui-architect-901893. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:28,730 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/autodesk-senior-software-development-engineer-tc0s8. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:28,923 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/quickmail-mid-senior-ruby-on-rails-developer
+
+2024-07-28 19:45:29,188 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sophos-ui-architect-901892. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:29,370 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/teamworks-principal-java-software-engineer
+
+2024-07-28 19:45:29,370 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/jobber-manager-salesforce-engineering-90d73. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:29,866 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sophos-network-engineer-901891. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:30,086 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/bbe-marketing-inc-graphic-designer
+
+2024-07-28 19:45:30,274 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sophos-senior-product-manager-secops-901890. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:30,448 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/when-i-work-senior-engineering-manager-o2e8n. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:30,635 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-ms-power-bi-developer
+
+2024-07-28 19:45:30,893 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sophos-senior-product-manager-secops-901705. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:31,065 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-mobile-cross-platform-developer-firebase
+
+2024-07-28 19:45:31,334 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/spotify-analyst-payments-fraud-901704. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:31,558 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-devops-engineer-azure-aws-gcp
+
+2024-07-28 19:45:31,558 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/when-i-work-senior-engineering-manager-w7h5k. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:31,950 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/spotify-head-of-enterprise-sales-canada-901611. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:32,164 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-frontend-developer-react-js-next-js
+
+2024-07-28 19:45:32,230 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/floqast-senior-alliance-manager-aws-901518. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:32,594 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/when-i-work-engineering-manager-ub8ac. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:32,808 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-ruby-on-rails-developer
+
+2024-07-28 19:45:33,097 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/softrams-proposal-manager-federal-healthcare-901517. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:33,275 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/when-i-work-engineering-manager-m97zj. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:33,484 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-data-scientist
+
+2024-07-28 19:45:33,761 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/adcouncil-director-brand-communications-contract-employee-901424. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:33,940 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-fullstack-developer-next-js-react-js
+
+2024-07-28 19:45:34,237 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/fluence-lead-systems-engineer-m-f-d-901239. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:34,412 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/match-group-developer-support-engineer-ii-mwt3b. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:34,645 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-next-js-developer
+
+2024-07-28 19:45:34,869 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/viseven-account-executive-901146. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:35,046 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-wordpress-developer-1
+
+2024-07-28 19:45:35,329 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/granicus-senior-financial-analyst-901145. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:35,508 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/enterra-solutions-data-architect-platform-93jvf. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:35,698 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/proxify-ab-senior-flutter-developer-1
+
+2024-07-28 19:45:36,093 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/granicus-financial-reporting-analyst-900960. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:36,323 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/files-com-ui-ux-designer
+
+2024-07-28 19:45:36,517 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/coursera-senior-counsel-manager-900591. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:36,692 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/dynatrace-senior-full-stack-developer-zw5tq. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:36,884 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/elite-software-automation-business-analyst
+
+2024-07-28 19:45:37,175 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clear-senior-software-engineer-android-900406. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:37,350 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/dexifier-web-developer
+
+2024-07-28 19:45:37,603 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/luxury-presence-sr-software-engineer-lifecycle-latam-us37b. USING FollowLinkEchoJobs()
+
+2024-07-28 19:45:37,628 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/oddball-ux-researcher-900129. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:38,003 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/swarm-foundation-senior-go-developer-distributed-system-blockchain
+
+2024-07-28 19:45:38,225 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/boston-scientific-sr-design-assurance-engineer-heredia-13y31. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:38,413 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/medusa-senior-software-engineer-ecommerce-dev-tool-startup
+
+2024-07-28 19:45:38,451 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/spacex-rf-engineer-starshield-900128. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:38,830 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/boston-scientific-senior-manufacturing-engineering-manager-jnuli. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:39,052 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/speechify-inc-senior-software-engineer-web
+
+2024-07-28 19:45:39,250 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/loadsmart-carrier-support-representative-900127. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:39,425 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/boston-scientific-software-verification-engineer-ii-di0sg. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:39,604 - INFO - CONNECTION ESTABLISHED ON https://weworkremotely.com/remote-jobs/xm-ios-developer-cyprus-greece-or-remote-6
+
+2024-07-28 19:45:39,746 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cred-zonal-lead-field-collections-900034. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:39,916 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/arctic-wolf-software-developer-s2cx-sia8e. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:40,200 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/h1-product-manager-899941. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:40,375 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/airbnb-senior-software-engineer-marketing-technology-0ddb2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:40,658 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/spacex-it-services-technician-899848. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:40,833 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/seso-project-manager-support-uzech. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:41,116 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/stuart-territory-manager-899847. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:41,291 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/clio-staff-database-engineer-zqseb. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:41,578 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/lendbuzz-dealership-account-manager-fort-lauderdale-fl-899846. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:41,753 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/extreme-networks-sr-director-front-office-application-wkqpr. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:42,029 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/spacex-environmental-engineer-nepa-899753. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:42,200 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/herself-data-analyst-kyobp. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:42,465 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/spacex-characterization-lab-r-d-technician-materials-and-process-lab-899752. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:42,641 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/global-healthcare-exchange-technical-data-analyst-ii-data-governance-hp9dw. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:42,921 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nisum-java-technical-lead-a6403-899751. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:43,097 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/brain-corp-senior-software-engineer-cloud-remote-eligible-vsxn3. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:43,380 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nisum-aem-developer-a6389-899750. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:43,555 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/insider-front-end-developer-react-js-02a9h. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:43,828 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nisum-qa-lead-a6404-899749. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:44,012 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/insider-front-end-developer-vue-js-remote-fd6mv. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:44,279 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/provectus-senior-data-engineer-899564. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:44,454 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/empower-software-engineer-java-g373g. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:44,736 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/braze-senior-software-engineer-channels-899563. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:44,913 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/natera-associate-director-data-science-h35k8. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:45,197 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/braze-senior-software-engineer-channels-899562. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:45,368 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/eightfold-ai-engineering-leader-product-security-fs4wj. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:45,648 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/aircall-senior-manager-of-customer-success-apac-899561. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:45,823 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/cloudflare-systems-engineer-iam-jred7. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:46,100 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/braze-network-engineer-ii-899560. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:46,276 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/atlan-staff-engineer-atlan-marketplace-9sf2z. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:46,568 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/braze-lead-av-engineer-899559. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:46,744 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/atlan-senior-software-engineer-atlan-marketplace-m34a0. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:47,037 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/braze-business-development-representative-enterprise-899466. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:47,206 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/keeper-security-systems-support-engineer-qwtct. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:47,482 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-revenue-manager-899465. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:47,657 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/campspot-contract-devops-engineer-763xr. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:47,938 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-revenue-manager-899464. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:48,112 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/spring-health-senior-manager-credentialing-and-network-compliance-zs0ir. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:48,392 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-revenue-manager-899463. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:48,570 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/spring-health-senior-data-analyst-provider-operations-vx2te. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:48,868 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-global-payroll-manager-899462. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:49,045 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/splash-financial-senior-product-manager-data-engineering-0s6mk. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:49,332 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-global-payroll-manager-899461. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:49,509 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/splash-financial-senior-data-scientist-zfp5m. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:49,914 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/splash-financial-senior-clojure-engineer-6psfo. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:50,095 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-global-payroll-manager-899460. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:50,322 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/splash-financial-data-analytics-engineer-7jrd6. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:50,554 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/clickhouse-account-executive-germany-899459. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:50,839 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/axon-senior-financial-analyst-commissions-remote-899366. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:51,008 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/hypori-senior-site-reliability-engineer-yj1g5. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:51,289 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/extreme-networks-sr-director-front-office-application-899365. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:51,464 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/hypori-senior-cloud-platform-engineer-3r63h. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:51,754 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/axon-field-deployment-engineer-fleet-remote-899364. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:51,932 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/hypori-senior-cloud-network-engineer-ea807. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:52,214 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/axon-director-new-ventures-global-consolidation-monthly-close-remote-899363. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:52,386 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/transunion-junior-data-scientist-fraud-risk-gk947. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:52,664 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/axon-account-executive-mid-city-ohio-899270. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:52,839 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-senior-software-engineer-y1dbm. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:53,117 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/attentive-senior-data-scientist-applied-scientist-finance-revenue-899269. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:53,290 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-manager-software-development-2-feu8b. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:53,571 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/attentive-program-manager-899268. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:53,748 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-na8s0. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:54,061 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/angellist-sales-operations-899175. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:54,238 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-dck6k. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:54,530 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/glide-benefits-specialist-899174. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:54,703 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-65w6b. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:54,982 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/o-p-e-n-events-crew-off-site-899173. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:55,156 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-dapuf. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:55,446 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sunshinesachs-senior-account-director-csr-social-good-issues-advocacy-899080. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:55,620 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-ahl5c. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:55,904 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sylvera-cdr-partnerships-manager-899079. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:56,079 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-mts-1-data-engineer-lly4u. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:56,345 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/stem-artist-label-relations-representative-bilingual-english-spanish-898986. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:56,522 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-data-scientist-2-leqw1. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:56,802 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/wpromote-associate-director-amazon-898985. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:56,977 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-3-ho90a. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:57,246 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/hopper-local-service-delivery-manager-898984. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:57,421 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/paypal-software-engineer-3-js731. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:57,686 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/hopper-pricing-analyst-virtual-interlining-remote-898983. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:57,862 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/assystem-junior-project-manager-mqdvn. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:58,143 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/hopper-pricing-analyst-virtual-interlining-remote-898890. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:58,323 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/lume-deodorant-senior-software-engineer-ag00x. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:58,611 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/blacksky-staff-accountant-898889. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:58,789 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/cleo-senior-software-engineer-ii-8lhho. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:59,076 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/astropay-risk-fraud-analyst-898704. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:59,252 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/cleo-project-manager-j4tce. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:59,517 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/robinhood-chief-compliance-officer-money-898611. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:45:59,698 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/flexe-senior-site-reliability-engineer-ymdlm. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:45:59,984 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/intercom-senior-product-marketer-core-product-898518. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:00,161 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/nova-credit-mid-senior-software-engineer-api-integration-latam-yicfa. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:00,431 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/gumgum-programmatic-ad-operations-specialist-898517. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:00,607 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/zenput-senior-software-engineer-labor-management-r74zl. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:00,883 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/caribou-controller-898332. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:01,059 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/zenput-senior-software-engineer-labor-management-1rkhj. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:01,350 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/anaplan-technical-business-analyst-data-engineering-analytics-process-improvement-project-management-898331. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:01,901 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/zenput-senior-software-engineer-rydjo. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:02,175 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/anaplan-order-management-provisioning-specialist-898238. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:02,348 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/zenput-senior-software-engineer-z6mq5. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:02,624 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/anaplan-director-supply-chain-solutions-apac-897961. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:02,800 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/nitrogen-senior-data-engineer-eyfud. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:03,085 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/oci-part-time-executive-partner-897960. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:03,261 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/geico-staff-engineer-68q7m. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:03,527 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/oci-director-of-communications-strategic-partnerships-897867. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:03,704 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/geico-senior-staff-engineer-ekvp5. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:03,985 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/crypto-growth-campaign-specialist-897866. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:04,160 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/geico-senior-engineer-iaas-containers-os-and-language-runtimes-j9pyc. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:04,505 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/crypto-growth-campaign-specialist-897865. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:04,677 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/geico-senior-staff-engineering-manager-software-development-microservices-remote-q1cp8. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:04,946 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/crypto-growth-campaign-specialist-897772. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:05,122 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/orbital-sidekick-senior-software-engineer-cloud-5rwhf. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:05,390 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zeta-manager-data-privacy-897679. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:05,562 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/orbital-sidekick-senior-geospatial-software-engineer-i8bsy. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:06,238 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/zeta-lead-software-development-engineer-897586. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:06,415 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/orkes-software-engineer-infrastructure-services-gn9sx. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:06,697 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/knix-store-manager-north-toronto-897585. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:06,868 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/zoominfo-principal-data-scientist-entity-id-resolution-recommender-systems-ejm9g. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:07,137 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/knix-sales-associate-north-toronto-897584. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:07,314 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/swirlds-labs-staff-vm-software-engineer-o7scc. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:07,619 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/knix-part-time-key-lead-north-toronto-897583. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:07,794 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/swirlds-labs-staff-smart-contract-engineer-ir28u. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:08,070 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/knix-full-time-key-lead-north-toronto-897582. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:08,240 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/swirlds-labs-senior-product-security-engineer-0hhfl. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:08,506 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/knix-assistant-store-manager-north-toronto-897581. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:08,676 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/swirlds-labs-senior-devops-engineer-ux8au. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:08,958 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/whoop-senior-product-manager-business-systems-897580. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:09,135 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/swirlds-labs-product-security-engineer-4lht2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:09,406 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/backmarket-internal-care-ereputation-specialist-us-market-897579. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:09,584 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/cision-staff-site-reliability-engineer-sre-remote-india-0oeou. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:09,874 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/backmarket-internal-care-ereputation-specialist-uk-market-897578. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:10,136 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-staff-software-engineer-full-stack-jk7vd. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:10,317 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/supportninja-service-quality-supervisor-897485. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:10,546 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-senior-software-engineer-full-stack-biz3d. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:10,764 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/supportninja-service-delivery-manager-897484. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:10,961 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-senior-product-manager-healthcare-data-a0gsg. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:11,221 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/singlestore-senior-professional-services-architect-897391. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:11,398 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-senior-data-engineer-vbt0q. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:11,681 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/sonatype-office-manager-executive-assistant-fulton-md-897114. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:11,856 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-senior-data-analyst-lo0lm. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:12,128 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-lead-ds-ml-engineer-897113. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:12,303 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-manager-of-data-engineering-nlmx3. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:12,590 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-lead-ds-ml-engineer-897112. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:12,766 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-engineering-manager-0vgay. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:13,050 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-lead-ds-ml-engineer-897111. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:13,227 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/smarterdx-data-scientist-llf7i. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:13,519 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-ds-ml-engineer-897110. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:13,698 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/palo-alto-networks-sr-software-engineer-xpanse-remote-u3pn6. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:13,985 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-ds-ml-engineer-897109. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:14,161 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/bolt-staff-software-engineer-ios-aeod7. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:14,428 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-ds-ml-engineer-897108. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:14,600 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/vouch-insurance-lead-software-engineer-bspn9. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:15,001 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/runway-sr-product-manager-ml-research-8hatz. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:15,182 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-account-partner-uk-i-897107. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:15,406 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/runway-engineering-manager-machine-learning-hnmon. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:15,631 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-account-partner-poland-897014. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:15,808 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/gradient-ai-engineering-manager-wyfl4. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:16,084 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/veeva-account-partner-dach-896921. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:16,260 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/dbt-labs-senior-project-manager-data-team-pcwae. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:16,536 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/parcellab-customer-engineer-896920. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:16,712 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/dbt-labs-senior-full-stack-engineer-marketplace-zseqd. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:16,993 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nordsec-product-manager-enterprise-squad-896919. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:17,170 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/assemblyai-software-engineer-fullstack-frontend-ukpum. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:17,444 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nordsec-senior-content-project-manager-copywriter-896918. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:17,618 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/assemblyai-senior-software-engineer-data-ls872. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:17,890 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nordsec-accounting-intern-896733. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:18,066 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/assemblyai-senior-platform-engineer-t5mh2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:18,341 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/icertis-integration-architect-sap-896640. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:18,517 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/teamsnap-senior-site-reliability-engineer-o7ybd. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:18,789 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/trendyol-compliance-professionals-896639. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:18,967 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/pallet-implementation-project-manager-remote-los8p. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:19,295 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/trendyol-seller-operations-charge-cargo-management-professionals-896638. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:19,475 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/pallet-implementation-project-manager-enterprise-remote-k34zy. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:19,753 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/trendyol-retail-operations-planning-professionals-896637. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:19,930 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/zelis-lead-infrastructure-engineer-yuqrh. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:20,208 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/trendyol-trendyol-express-sube-lideri-ankara-896636. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:20,385 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/oscar-health-analytics-engineer-ii-financial-data-2qyvn. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:20,667 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/stoneridgesoftware-dynamics-365-f-o-principal-consultant-support-896543. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:20,840 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/yugabyte-project-manager-customer-success-emea-xlv3b. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:21,121 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/alma-support-operations-manager-customer-experience-896450. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:21,299 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-sr-data-scientist-email-platform-cxm6i. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:21,596 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/conductor-senior-software-data-platform-engineer-ii-java-m-f-d-895989. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:21,768 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-senior-devsecops-engineer-bc4xs. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:22,050 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/olipop-vice-president-creative-communications-895988. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:22,238 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-software-engineering-manager-senior-manager-hyderabad-xdzuj. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:22,518 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/craft-sr-software-engineer-full-stack-us-895987. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:22,692 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-senior-manager-production-support-engineering-gto65. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:22,958 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nova-credit-manager-finance-accounting-895986. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:23,135 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-lead-ml-engineer-feature-store-and-integration-5m8vf. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:23,417 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/nova-credit-mid-senior-software-engineer-api-integration-latam-895893. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:23,594 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-software-engineering-lmts-851j4. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:23,876 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/raven-data-analyst-895892. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:24,052 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-senior-software-engineer-marketing-lw99o. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:24,333 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/raven-business-consultant-mexico-895891. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:24,509 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-senior-director-customer-success-product-management-ptl2w. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:24,795 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/ro-director-practice-operations-895890. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:24,973 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/salesforce-threat-management-devsecops-engineer-4fh2c. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:25,248 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/ro-associate-practice-operations-895889. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:25,423 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/constructor-data-engineer-retail-media-remote-iidaf. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:25,830 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/outreach-senior-staff-software-engineer-frontend-ciquc. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:26,012 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/aleph-sr-client-partner-895888. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:26,236 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/breeze-airways-application-security-engineer-ysyxu. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:26,465 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/aleph-client-partner-manager-895887. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:26,641 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/fiserv-specialist-client-tech-support-engineering-y7etc. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:26,923 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/aleph-client-partner-lead-895886. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:27,098 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/emi-labs-implementation-project-manager-mdofn. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:27,393 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/aleph-associate-account-executive-895793. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:27,577 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-pataz. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:27,857 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/finn-senior-people-manager-895792. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:28,029 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-tvs8d. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:28,302 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/finn-head-of-talent-acquisition-w-m-d-895791. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:28,478 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-s4ppb. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:28,749 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/janeapp-senior-product-manager-charting-united-states-895698. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:28,924 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-041f1. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:29,206 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/klearnow-software-engg-3-technical-lead-backend-895605. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:29,382 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-stda2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:29,668 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cloudwalk-data-analyst-graphs-895512. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:29,843 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-6jvrd. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:30,119 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/calstart-workplace-ev-charging-intern-895419. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:30,295 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-staff-machine-learning-engineer-er4qy. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:30,562 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/swordhealth-qa-analyst-algorithms-895418. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:30,741 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-software-engineer-p848s. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:31,024 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/swordhealth-algorithms-software-engineer-bloom-895417. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:31,202 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-senior-software-engineer-gf9q7. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:31,581 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/swordhealth-manager-of-ai-internal-ops-portugal-based-remote-hybrid-894864. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:31,758 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-engineering-manager-nows4. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:32,035 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/lime-anaplan-junior-model-builder-894863. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:32,227 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-director-data-science-machine-learning-qaee1. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:32,508 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/lime-lead-mechanic-894770. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:32,684 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-director-data-science-machine-learning-ruycr. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:32,974 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/scopear-strategic-customer-success-manager-enterprise-894769. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:33,151 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/angi-director-data-science-machine-learning-6x3xo. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:33,425 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cyara-senior-scrum-master-894768. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:33,601 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/discord-software-engineer-ads-me90r. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:33,877 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/prosper-customer-experience-agent-894675. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:34,052 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/discord-senior-software-engineer-payments-jodpe. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:34,329 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cision-ux-designer-894582. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:34,506 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/discord-senior-software-engineer-ads-demand-css6i. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:34,782 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/cision-customer-support-spec-i-894581. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:34,958 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/discord-senior-software-engineer-ads-fyv1t. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:35,232 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/restaurant365-payroll-tax-compliance-analyst-894580. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:35,407 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/convertkit-senior-software-engineer-platform-xwpk1. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:46:35,698 - WARNING - CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: https://empllo.com/jobs/view/restaurant365-support-specialist-workforce-894579. STATUS CODE: "403". SETTING DESCRIPTION TO DEFAULT.
+2024-07-28 19:46:35,941 - INFO - Finished RSS Reader. Results below ⬇︎
+2024-07-28 19:47:50,335 - INFO - {"Table": "test", "Total count of jobs before crawling": 1857, "Total number of unique jobs": 266, "Current total count of jobs in PostgreSQL": 2123}
+2024-07-28 19:47:50,547 - INFO - Async BS4 crawlers finished! all in: 286.31 seconds.
+2024-07-28 19:47:50,561 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/dropbox-backend-product-software-engineer-sync-tmoyp. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:47:51,546 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/dropbox-backend-product-software-engineer-sync-lk9m5. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:52,284 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-senior-devops-engineer-apac-g8dw9. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:53,001 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-senior-devops-engineer-amer-v88vu. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:53,845 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-preconfirmations-senior-engineer-5ieh4. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:54,865 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-full-stack-tech-lead-apac-jwejw. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:55,591 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-distributed-systems-engineer-1lpu2. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:56,392 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-application-security-engineer-1eqg6. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:57,040 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/nethermind-ai-ml-engineer-bmpgk. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:57,711 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/insightsoftware-director-solutions-engineering-7352h. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:58,728 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/experian-senior-product-manager-ai-data-visualization-wertv. USING FollowLinkEchoJobs()
+
+2024-07-28 19:47:59,378 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/experian-staff-software-engineer-mof1q. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:00,419 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/cloudwalk-data-analyst-graphs-aoax6. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:01,523 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/magnet-forensics-senior-software-engineer-in-test-uy7e6. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:02,157 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/protenus-senior-ui-engineer-pqy7a. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:03,263 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/circle-senior-software-engineer-v5yp8. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:04,390 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/circle-senior-software-engineer-qmi82. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:05,477 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/circle-senior-software-engineer-9y8dj. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:06,457 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/circle-senior-software-engineer-ed2uq. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:07,461 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/splunk-devops-engineer-release-engineering-pe26h. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:08,123 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/splunk-cloud-software-engineer-us-remote-da2df. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:08,810 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/splunk-backend-principal-software-engineer-observability-vv9jo. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:09,926 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/splunk-backend-principal-software-engineer-mission-control-uv25w. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:10,657 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/playstation-sr-security-incident-response-engineer-dcw8f. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:11,322 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/stack-av-senior-staff-software-engineer-ml-acceleration-lead-fsymr. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:12,490 - DEBUG - CONNECTION ESTABLISHED ON https://echojobs.io/job/stack-av-senior-staff-software-engineer-ai-data-infra-lead-d2t2f. USING FollowLinkEchoJobs()
+
+2024-07-28 19:48:12,913 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-i7cdj. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:13,317 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-ag1c5. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:13,728 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-nekdp. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:14,136 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-99tm9. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:14,541 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-akqd1. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:14,947 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-ddu7l. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:15,445 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-niff2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:15,854 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-kgpye. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:16,264 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-ud2oc. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:16,671 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-q2gbo. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:17,073 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/varsity-tutors-staff-frontend-software-engineer-south-america-w7rsb. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:17,477 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/tyler-technologies-data-engineer-h04b2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:17,883 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/thoughtspot-senior-principal-product-manager-ow5os. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:18,287 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/pipe-infrastructure-engineer-jtxpi. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:18,691 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/defense-unicorns-engineering-manager-multiple-positions-no93v. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:19,105 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/goto-meeting-software-developer-6cah4. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:19,506 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/trimble-senior-data-analyst-5ahng. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:19,910 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/trimble-software-engineer-xxwo6. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:20,318 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/trimble-software-engineering-lead-dotnet-3qwgj. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:20,726 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/trimble-senior-software-licensing-manager-l0lhh. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:21,162 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/humana-senior-enterprise-architect-ml-ai-remote-virtual-cbczq. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:21,566 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/galileo-financial-technologies-data-engineer-u786y. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:21,972 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/galileo-financial-technologies-data-engineer-tvlxp. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:22,378 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/gretel-senior-engineer-customer-solutions-post-sales-h4o63. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:22,782 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/invisible-senior-software-engineer-platform-453s2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:23,189 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/invisible-engineering-manager-platform-r9tqk. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:23,593 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/business-decision-sa-data-analyst-h-f-d8ar1. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:24,006 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/business-decision-sa-lead-tech-data-h-f-gyko8. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:24,415 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/business-decision-sa-lead-tech-data-f-h-z9pp7. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:24,821 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/twilio-software-engineer-new-graduate-2v5df. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:25,223 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/sysdig-sr-cloud-solutions-architect-6kgo6. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:25,625 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/easypost-principal-software-engineer-o9pvn. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:26,029 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/flywire-sr-software-engineer-i-rvpzy. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:26,433 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/flywire-sr-software-engineer-ii-van4i. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:26,840 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/affinity-senior-software-engineer-ii-p7kv5. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:27,243 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/affinity-senior-software-engineer-i-gm6lz. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:27,649 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-senior-software-engineer-ide-dev-tools-wxsd5. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:28,053 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-senior-data-engineer-74yy2. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:28,458 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-senior-application-architect-hd56l. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:29,007 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-senior-application-architect-iwa49. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:29,409 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-senior-android-engineer-olvv7. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:29,814 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-lead-software-engineer-ide-dev-tools-5u602. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:30,218 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-lead-devops-engineer-mobile-automation-platforms-hgkz7. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:30,622 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-full-stack-engineer-frontend-focus-e2pk3. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:31,042 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-distinguished-engineer-enterprise-data-yh12a. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:31,443 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-devops-engineer-mobile-automation-platforms-edy1u. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:31,845 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-devops-engineer-pfzij. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:32,249 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/kunai-back-end-engineer-wypnm. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:32,653 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/underdog-fantasy-senior-data-infrastructure-engineer-zxtb9. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:33,058 - WARNING - CONNECTION FAILED ON https://echojobs.io/job/1password-backend-developer-x4ywv. STATUS CODE: "429". Setting description to default.
+2024-07-28 19:48:33,150 - INFO - Finished API crawlers. Results below ⬇︎
+2024-07-28 19:50:19,505 - INFO - {"Table": "test", "Total count of jobs before crawling": 2123, "Total number of unique jobs": 510, "Current total count of jobs in PostgreSQL": 2633}
+2024-07-28 19:50:19,716 - INFO - Async BS4 crawlers finished! all in: 433.87 seconds.
+2024-07-28 19:50:19,720 - INFO - All strategies completed in 435.49 seconds
+2024-07-28 19:50:22,551 - INFO - {"TOTAL NUMBER OF BATCHES": 782, "TOTAL NUMBER OF TOKENS": 519596, "MAX TOKENS PER BATCH": 1000, "NUMBER OF TRUNCATIONS": 187, "AVERAGE NUMBER OF TOKENS PER BATCH": 664.45, "APPROXIMATE COST OF EMBEDDING": "$0 USD"}
+2024-07-28 19:52:42,441 - INFO - embeddings_e5_base_v2_to_df() done! Elapsed time: 2.33 minutes.
+2024-07-28 19:56:49,307 - INFO - {
+    "Table": "test_embeddings_e5_base_v2",
+    "Total count of jobs before crawling": 9,
+    "Total number of unique jobs": 782,
+    "Current total count of jobs in PostgreSQL": 791
+}

@@ -50,7 +50,7 @@ def truncated_string(
         )
     return truncated_string
 
-
+# THIS IS MADE FOR GPT MODELS I DO NOT THINK THAT IT TOKENIZES THE SAME AS FOR THE E5 MODEL
 def num_tokens(text: str, model: str = "gpt-3.5-turbo") -> int:
     encoding = tiktoken.encoding_for_model(model)
     return len(encoding.encode(text))

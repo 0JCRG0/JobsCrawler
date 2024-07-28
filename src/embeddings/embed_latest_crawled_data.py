@@ -1,12 +1,10 @@
 import psycopg2
-import sys
 import os
 from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
 import logging
 import re
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from e5_base_v2_utils import (
+from src.embeddings.e5_base_v2_utils import (
     query_e5_format,
     to_embeddings_e5_base_v2,
     num_tokens,
@@ -185,7 +183,7 @@ def embed_data(embedding_model: str, test: bool = False) -> None:
 
     if not len(ids) > 1:
         error_msg = (
-            "No new rows. Be sure crawler is populating main_jobs. Aborting execution."
+            "No new rows. Aborting execution."
         )
         logging.error(error_msg)
         raise ValueError(error_msg)

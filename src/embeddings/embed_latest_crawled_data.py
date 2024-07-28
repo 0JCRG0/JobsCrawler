@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
 import logging
 import re
-
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from e5_base_v2_utils import (
     query_e5_format,
@@ -177,7 +176,7 @@ def _insert_max_timestamp(
     CURSOR.execute(insert_query, (max_id, max_timestamp, embedding_model, test))
 
 
-def embed_latest_crawled(embedding_model: str, test: bool = False) -> None:
+def embed_data(embedding_model: str, test: bool = False) -> None:
     max_timestamp = _get_max_timestamp(test=test)
 
     ids, titles, locations, descriptions, timestamps = _fetch_postgre_rows(
@@ -220,4 +219,4 @@ def embed_latest_crawled(embedding_model: str, test: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    embed_latest_crawled(embedding_model="e5_base_v2", test=True)
+    embed_data(embedding_model="e5_base_v2", test=True)

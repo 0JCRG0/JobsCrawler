@@ -5,7 +5,7 @@ import logging
 from typing import Any, Coroutine
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.crawler import AsyncCrawlerEngine
-from src.embeddings.embed_latest_crawled import embed_latest_crawled
+from src.embeddings.embed_latest_crawled_data import embed_data
 from src.models import RssArgs, ApiArgs, Bs4Args
 LOGGER_PATH = os.path.join("logs", "main_logger.log")
 (
@@ -52,7 +52,7 @@ async def run_crawlers(is_test: bool = True) -> Coroutine[Any, Any, None] | None
 
 async def main():
 	await run_crawlers(True)
-	await asyncio.to_thread(embed_latest_crawled, embedding_model="e5_base_v2", test=True)
+	await asyncio.to_thread(embed_data, embedding_model="e5_base_v2", test=True)
 
 if __name__ == "__main__":
 	asyncio.run(main())

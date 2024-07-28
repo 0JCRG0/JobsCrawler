@@ -559,3 +559,11 @@ TypeError: ApiElementPath.__init__() missing 1 required positional argument: 'pu
 2024-07-23 20:27:13,035 - INFO - Finished API crawlers. Results below ⬇︎
 2024-07-23 20:28:51,432 - INFO - {"Table": "test", "Total count of jobs before crawling": 972, "Total number of unique jobs": 539, "Current total count of jobs in PostgreSQL": 1511}
 2024-07-23 20:28:51,649 - INFO - Async BS4 crawlers finished! all in: 303.47 seconds.
+2024-07-28 15:17:08,111 - INFO - {"TOTAL NUMBER OF BATCHES": 9, "TOTAL NUMBER OF TOKENS": 9048, "MAX TOKENS PER BATCH": 1000, "NUMBER OF TRUNCATIONS": 5, "AVERAGE NUMBER OF TOKENS PER BATCH": 1005.3333333333334, "APPROXIMATE COST OF EMBEDDING": "$0 USD"}
+2024-07-28 15:17:12,723 - INFO - embeddings_e5_base_v2_to_df() done! Elapsed time: 0.08 minutes.
+2024-07-28 15:17:16,084 - INFO - {
+    "Table": "test_embeddings_e5_base_v2",
+    "Total count of jobs before crawling": 9,
+    "Total number of unique jobs": 0,
+    "Current total count of jobs in PostgreSQL": 9
+}

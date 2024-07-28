@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
 import logging
 import re
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from e5_base_v2_utils import (
     query_e5_format,
     to_embeddings_e5_base_v2,
@@ -17,12 +18,9 @@ import json
 
 load_dotenv(".env")
 DB_URL = os.environ.get("URL_DB")
-LOGGER_PATH = os.environ.get("LOGGER_PATH", "")
 CONN = psycopg2.connect(DB_URL)
 CURSOR = CONN.cursor()
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 def _clean_rows(s):
     if not isinstance(s, str):
@@ -36,10 +34,13 @@ def _clean_rows(s):
 
 
 def _fetch_postgre_rows(
-    timestamp: str, table: str = "main_jobs"
+    timestamp: str, test: bool = False
 ) -> tuple[list[str], list[str], list[str], list[str], list[str]]:
-    # TODO: Need to add a test argument here so it reads the jobs from test not main_jobs.
-    ## TODO Make sure that the same as above is done.
+    table = "main_jobs"
+
+    if test:
+        table = "test"
+
     CURSOR.execute(
         f"SELECT id, title, description, location, timestamp FROM {table} WHERE timestamp > '{timestamp}'"
     )
@@ -97,7 +98,7 @@ def _raw_descriptions_to_batches(
             batches.append(text)
         else:
             job_truncated = truncated_string(
-                text, model="gpt-3.5-turbo", max_tokens=max_tokens
+                text, model="gpt-3.5-turbo", max_tokens=max_tokens, print_warning=True
             )
             batches.append(job_truncated)
             truncation_counter += 1
@@ -107,7 +108,7 @@ def _raw_descriptions_to_batches(
     if embedding_model == "e5_base_v2":
         approximate_cost = 0
 
-    average_tokens_per_batch = total_tokens / len(batches)
+    average_tokens_per_batch = round(total_tokens / len(batches), 2)
     batch_info = {
         "TOTAL NUMBER OF BATCHES": len(batches),
         "TOTAL NUMBER OF TOKENS": total_tokens,
@@ -131,8 +132,9 @@ def _raw_descriptions_to_batches(
     return batches
 
 
-def _get_max_timestamp(table: str = "last_embedding") -> str:
-    query = f"SELECT MAX(timestamp) FROM {table};"
+def _get_max_timestamp(table: str = "last_embedding", test: bool = False) -> str:
+    where_clause = "WHERE test = TRUE" if test else "WHERE test = FALSE"
+    query = f"SELECT MAX(timestamp) FROM {table} {where_clause};"
 
     CURSOR.execute(query)
 
@@ -141,15 +143,18 @@ def _get_max_timestamp(table: str = "last_embedding") -> str:
     max_timestamp = result[0] if result else None
 
     if not max_timestamp:
-        raise ValueError("The max timestamp must be present.")
+        raise ValueError(f"The timestamp could not be found in {table}, where test is equal to {test}. No rows?")
 
     return max_timestamp
 
+
 def _insert_max_timestamp(
-    embedding_model: str,
-    source_table: str = "embeddings_e5_base_v2",
-    target_table: str = "last_embedding",
+    embedding_model: str, target_table: str = "last_embedding", test: bool = False
 ) -> None:
+    source_table = f"embeddings_{embedding_model}"
+    if test:
+        source_table = f"test_embeddings_{embedding_model}"
+
     CURSOR.execute(
         f"SELECT id, timestamp FROM {source_table} ORDER BY timestamp DESC LIMIT 1;"
     )
@@ -162,23 +167,21 @@ def _insert_max_timestamp(
     max_id, max_timestamp = result
 
     insert_query = f"""
-        INSERT INTO {target_table} (id, timestamp, embedding_model)
-        VALUES (%s, %s, %s)
+        INSERT INTO {target_table} (id, timestamp, embedding_model, test)
+        VALUES (%s, %s, %s, %s)
         ON CONFLICT (id) DO UPDATE 
         SET timestamp = EXCLUDED.timestamp,
             embedding_model = EXCLUDED.embedding_model;
     """
 
-    CURSOR.execute(insert_query, (max_id, max_timestamp, embedding_model))
+    CURSOR.execute(insert_query, (max_id, max_timestamp, embedding_model, test))
 
 
-def embed_latest_crawled(embedding_model: str, test: bool = False):
-
-    max_timestamp = _get_max_timestamp()
-    print(max_timestamp)
+def embed_latest_crawled(embedding_model: str, test: bool = False) -> None:
+    max_timestamp = _get_max_timestamp(test=test)
 
     ids, titles, locations, descriptions, timestamps = _fetch_postgre_rows(
-        timestamp=max_timestamp
+        timestamp=max_timestamp, test=test
     )
 
     if not len(ids) > 1:
@@ -193,19 +196,21 @@ def embed_latest_crawled(embedding_model: str, test: bool = False):
     jobs_info_batches = _raw_descriptions_to_batches(jobs_info, embedding_model)
 
     if embedding_model == "e5_base_v2":
-        e5_query_batches = query_e5_format(jobs_info_batches)
+        try:
+            e5_query_batches = query_e5_format(jobs_info_batches)
 
-        df = embeddings_e5_base_v2_to_df(
-            batches_to_embed=e5_query_batches,
-            jobs_info=jobs_info_batches,
-            batches_ids=ids,
-            batches_timestamps=timestamps,
-        )
-        to_embeddings_e5_base_v2(df=df, cursor=CURSOR, conn=CONN, test=test)
+            df = embeddings_e5_base_v2_to_df(
+                batches_to_embed=e5_query_batches,
+                jobs_info=jobs_info_batches,
+                batches_ids=ids,
+                batches_timestamps=timestamps,
+            )
+            to_embeddings_e5_base_v2(df=df, cursor=CURSOR, conn=CONN, test=test)
 
-        if not test:
-            _insert_max_timestamp(embedding_model)
-
+            _insert_max_timestamp(embedding_model, test=test)
+        except Exception as e:
+            logging.error(e)
+            raise e
     else:
         raise ValueError("The only supported embedding model is 'e5_base_v2'")
 

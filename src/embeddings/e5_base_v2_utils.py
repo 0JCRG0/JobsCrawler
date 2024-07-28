@@ -24,7 +24,7 @@ import numpy as np
 load_dotenv()
 
 PROD_TABLE = "embeddings_e5_base_v2"
-TEST_TABLE = "test_embeddings"
+TEST_TABLE = "test_embeddings_e5_base_v2"
 CHUNK_SIZE = 15
 MAX_LENGTH = 512
 TOKENIZER = AutoTokenizer.from_pretrained("intfloat/e5-base-v2")
@@ -105,9 +105,10 @@ def query_e5_format(raw_descriptions: list) -> list:
 def to_embeddings_e5_base_v2(
     df: pd.DataFrame, cursor: cursor, conn: connection, test: bool
 ):
+    table = PROD_TABLE
+
     if test:
         table = TEST_TABLE
-    table = PROD_TABLE
 
     cursor.execute("CREATE EXTENSION IF NOT EXISTS vector")
 
@@ -160,7 +161,7 @@ def to_embeddings_e5_base_v2(
     else:
         initial_count = 0
     jobs_added_count = len(jobs_added)
-    
+
     if final_count_result:
         final_count = final_count_result[0]
     else:
@@ -173,9 +174,7 @@ def to_embeddings_e5_base_v2(
         "Current total count of jobs in PostgreSQL": final_count,
     }
 
-    logging.info(
-        f"{json.dumps(postgre_report_dict, indent=4)}"
-    )
+    logging.info(f"{json.dumps(postgre_report_dict, indent=4)}")
 
     conn.commit()
 
@@ -207,7 +206,11 @@ def embeddings_e5_base_v2_to_df(
 
     def collate_fn(batch, tokenizer):
         batch_dict = tokenizer(
-            batch, max_length=MAX_LENGTH, padding=True, truncation=True, return_tensors="pt"
+            batch,
+            max_length=MAX_LENGTH,
+            padding=True,
+            truncation=True,
+            return_tensors="pt",
         )
         return batch_dict
 

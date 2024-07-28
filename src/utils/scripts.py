@@ -10,27 +10,28 @@ LOGGER_PATH = os.environ.get("LOGGER_PATH")
 
 
 
-def _insert_timestamp(id_value: int, embedding_model_value: str, timestamp_value: str, table: str = "last_embedding"):
+def _insert_timestamp(id_value: int, embedding_model_value: str, timestamp_value: str, table: str = "last_embedding", test: bool = False):
     create_table_query = f""" 
         CREATE TABLE IF NOT EXISTS {table} (
         id integer UNIQUE,
         timestamp TIMESTAMP,
-        embedding_model VARCHAR(100)
+        embedding_model VARCHAR(100),
+        test BOOLEAN
         );"""
     
     CURSOR.execute(create_table_query)
     
     insert_query = f"""
-        INSERT INTO {table} (id, timestamp, embedding_model)
-        VALUES (%s, %s, %s)
+        INSERT INTO {table} (id, timestamp, embedding_model, test)
+        VALUES (%s, %s, %s, %s)
         ON CONFLICT (id) DO UPDATE 
         SET timestamp = EXCLUDED.timestamp,
             embedding_model = EXCLUDED.embedding_model;
     """
     
 
-    CURSOR.execute(insert_query, (id_value, timestamp_value, embedding_model_value))
+    CURSOR.execute(insert_query, (id_value, timestamp_value, embedding_model_value, test))
     
     CONN.commit()
 
-_insert_timestamp(id_value=3560, embedding_model_value="e5_base_v2", timestamp_value="2024-07-23 20:56:43.834562")
+_insert_timestamp(id_value=3560, embedding_model_value="e5_base_v2", timestamp_value="2024-07-23 20:56:43.834562", test=True)

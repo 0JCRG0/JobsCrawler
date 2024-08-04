@@ -3,7 +3,7 @@ __pycache__/
 .env
 .vscode/
 
-logs/
+*.logs
 geckodriver.log
 .pytest_cache/
 *.out
@@ -20,9 +20,7 @@ download/:
 /.cfg
 __pycache__/
 utils/__pycache__
-*.json
 ~/.aws
 archive
 tools
-embeddings/
 *.csv

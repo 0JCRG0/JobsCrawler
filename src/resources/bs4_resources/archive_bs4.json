@@ -1,0 +1,18 @@
+[
+    {
+        "name": "https://www.occ.com.mx",
+        "url": "https://www.occ.com.mx/empleos/de-home-office/trabajo-en-tecnologias-de-la-informacion-sistemas/?tm=14&sort=2&page=",
+        "pages_to_crawl": 2,
+        "start_point": 1,
+        "strategy": "occ",
+        "follow_link": "yes",
+        "inner_link_tag": "#jobbody",
+        "elements_path": {
+                "jobs_path": ".col-0-2-176.md5-0-2-285.jobCardContainer-0-2-536",
+                "title_path": ".flex-0-2-5.jbetween-0-2-17.astart-0-2-20.titleRow-0-2-516 p",
+                "link_path": ".card-0-2-520.flat-0-2-522.card-0-2-558.standout-0-2-559 .jobcard-0-2-563",
+                "location_path": "",
+                "description_path": ""
+            }
+    }
+]

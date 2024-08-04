@@ -1,0 +1,29 @@
+[
+    {
+        "url": "https://tryremotely.com/feeds/remote-jobs.rss",
+        "title_tag": "title",
+        "link_tag": "link",
+        "description_tag": "description", 
+        "location_tag": "location",
+        "follow_link": "yes",
+        "inner_link_tag": ".grow .md\\:grow .space-y-8 #job_detail"
+    },
+    {
+        "url": "https://weworkremotely.com/remote-jobs.rss",
+        "title_tag": "title",
+        "link_tag": "link",
+        "description_tag": "description",
+        "location_tag": "region",
+        "follow_link": "yes",
+        "inner_link_tag": ".perma .content .job .listing-container"
+    },
+    {
+        "url": "https://api.cryptojobslist.com/rss/remote.xml",
+        "title_tag": "title",
+        "link_tag": "link",
+        "description_tag": "summary",
+        "location_tag": "media_location",
+        "follow_link": "no",
+        "inner_link_tag": " "
+    }
+]

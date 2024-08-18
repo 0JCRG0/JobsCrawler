@@ -74,6 +74,7 @@
                 "title_tag": "title",
                 "link_tag": "url",
                 "description_tag": "description",
+                "pubdate_tag": "publication_date",
                 "location_tag": "candidate_required_location",
                 "location_default": "NaN"
             }

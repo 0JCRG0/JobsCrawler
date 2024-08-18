@@ -107,7 +107,7 @@ class AsyncCrawlerEngine:
         ) as response:
             if response.status != 200:
                 logging.warning(
-                    f"Received non-200 response ({response.status}) for API: {self.config.url}. Skipping..."
+                    f"Received non-200 response ({response.status}) requesting: {config_instance.url}. Skipping..."
                 )
                 pass
             logger.debug(f"random_header: {random_user_agent}")

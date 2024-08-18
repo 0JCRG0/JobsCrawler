@@ -5,8 +5,7 @@
         "class_json": "dict",
         "follow_link": "no", 
         "inner_link_tag": "",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "data",
                 "title_tag": "JobTitle",
                 "link_tag": "Url",
@@ -15,7 +14,6 @@
                 "location_tag": "Location",
                 "location_default": "NaN"
             }
-        ]
     },
     {
         "name": "echojobs.io",
@@ -23,8 +21,7 @@
         "class_json": "dict",
         "follow_link": "yes",
         "inner_link_tag": "job-detail mb-4",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "result",
                 "title_tag": "title",
                 "link_tag": "url",
@@ -33,7 +30,6 @@
                 "location_tag": "locations",
                 "location_default": "NaN"
             }
-        ]
     },
     {
         "name": "www.workingnomads.com",
@@ -41,8 +37,7 @@
         "class_json": "list",
         "follow_link": "no",
         "inner_link_tag": "",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "",
                 "title_tag": "title",
                 "link_tag": "url",
@@ -51,7 +46,6 @@
                 "location_tag": "location",
                 "location_default": "NaN"
             }
-        ]
     },
     {
         "name": "remoteok.api",
@@ -59,8 +53,7 @@
         "class_json": "list",
         "follow_link": "no",
         "inner_link_tag": "",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "",
                 "title_tag": "position",
                 "link_tag": "url",
@@ -69,7 +62,6 @@
                 "location_tag": "location",
                 "location_default": "NaN"
             }
-        ]
     },
     {
         "name": "remotive.com",
@@ -77,16 +69,15 @@
         "class_json": "dict",
         "follow_link": "no",
         "inner_link_tag": "",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "jobs",
                 "title_tag": "title",
                 "link_tag": "url",
                 "description_tag": "description",
+                "pubdate_tag": "publication_date",
                 "location_tag": "candidate_required_location",
                 "location_default": "NaN"
             }
-        ]
     },
     {
         "name": "HimalayasApp",
@@ -94,8 +85,7 @@
         "class_json": "dict",
         "follow_link": "no", 
         "inner_link_tag": "",
-        "elements_path": [
-            {
+        "elements_path": {
                 "dict_tag": "jobs",
                 "title_tag": "title",
                 "link_tag": "applicationLink",
@@ -103,7 +93,6 @@
                 "pubdate_tag": "pubDate",
                 "location_tag": "locationRestrictions",
                 "location_default": "Worldwide"
-            }
-        ]
+        }
     }
 ]

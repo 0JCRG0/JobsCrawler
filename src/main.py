@@ -46,6 +46,7 @@ async def run_crawlers(is_test: bool = False) -> Coroutine[Any, Any, None] | Non
 
     elapsed_time = asyncio.get_event_loop().time() - start_time
     logging.info(f"All strategies completed in {elapsed_time:.2f} seconds")
+    print(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 async def main():
 	await run_crawlers()

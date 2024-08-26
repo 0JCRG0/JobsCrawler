@@ -3,10 +3,17 @@ import os
 import asyncio
 import logging
 from typing import Any, Coroutine
+from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.crawler import AsyncCrawlerEngine
 from src.embeddings.embed_latest_crawled_data import embed_data
 from src.models import RssArgs, ApiArgs, Bs4Args
+DB_URL = os.environ.get("URL_DB")
+if not DB_URL:
+    error_msg = "The environmental variable DB_URL is empty."
+    logging.error(error_msg)
+    raise ValueError(error_msg)
+
 LOGGER_PATH = os.path.join("logs", "main_logger.log")
 (
     os.makedirs(os.path.dirname(LOGGER_PATH), exist_ok=True)
@@ -49,8 +56,14 @@ async def run_crawlers(is_test: bool = False) -> Coroutine[Any, Any, None] | Non
     print(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 async def main():
-	await run_crawlers()
-	await asyncio.to_thread(embed_data, embedding_model="e5_base_v2")
+    # Run crawlers and wait for them to complete
+    await run_crawlers()
+    
+    # Now run embed_data in a separate thread
+    loop = asyncio.get_running_loop()
+    with ThreadPoolExecutor() as pool:
+        await loop.run_in_executor(pool, embed_data, "e5_base_v2")
+
 
 if __name__ == "__main__":
 	asyncio.run(main())

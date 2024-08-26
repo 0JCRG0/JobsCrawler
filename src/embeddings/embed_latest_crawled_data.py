@@ -183,7 +183,7 @@ def embed_data(embedding_model: str, test: bool = False) -> None:
 
     if not len(ids) > 1:
         error_msg = (
-            "No new rows. Aborting execution."
+            f"No new rows. Obtained max_timestamp: {max_timestamp}. "
         )
         logging.error(error_msg)
         raise ValueError(error_msg)

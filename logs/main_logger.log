@@ -6682,3 +6682,358 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host ai-jobs.n
     "Total number of unique jobs": 580,
     "Current total count of jobs in PostgreSQL": 57581
 }
+2024-08-25 21:31:15,743 - INFO - https://tryremotely.com/feeds/remote-jobs.rss has started
+2024-08-25 21:31:15,743 - DEBUG - All parameters for https://tryremotely.com/feeds/remote-jobs.rss:
+RssConfig(url='https://tryremotely.com/feeds/remote-jobs.rss', title_tag='title', link_tag='link', description_tag='description', location_tag='location', follow_link='yes', inner_link_tag='.grow .md\\:grow .space-y-8 #job_detail')
+2024-08-25 21:31:15,744 - INFO - https://weworkremotely.com/remote-jobs.rss has started
+2024-08-25 21:31:15,744 - DEBUG - All parameters for https://weworkremotely.com/remote-jobs.rss:
+RssConfig(url='https://weworkremotely.com/remote-jobs.rss', title_tag='title', link_tag='link', description_tag='description', location_tag='region', follow_link='yes', inner_link_tag='.perma .content .job .listing-container')
+2024-08-25 21:31:15,745 - INFO - https://api.cryptojobslist.com/rss/remote.xml has started
+2024-08-25 21:31:15,745 - DEBUG - All parameters for https://api.cryptojobslist.com/rss/remote.xml:
+RssConfig(url='https://api.cryptojobslist.com/rss/remote.xml', title_tag='title', link_tag='link', description_tag='summary', location_tag='media_location', follow_link='no', inner_link_tag=' ')
+2024-08-25 21:31:15,745 - INFO - CareerVault has started
+2024-08-25 21:31:15,745 - DEBUG - All parameters for CareerVault:
+ApiConfig(name='CareerVault', url='https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'data', 'title_tag': 'JobTitle', 'link_tag': 'Url', 'description_tag': 'Description', 'pubdate_tag': 'DatePosted', 'location_tag': 'Location', 'location_default': 'NaN'})
+2024-08-25 21:31:15,746 - INFO - echojobs.io has started
+2024-08-25 21:31:15,746 - DEBUG - All parameters for echojobs.io:
+ApiConfig(name='echojobs.io', url='https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest', class_json='dict', follow_link='yes', inner_link_tag='job-detail mb-4', elements_path={'dict_tag': 'result', 'title_tag': 'title', 'link_tag': 'url', 'description_tag': 'skills', 'pubdate_tag': 'created_at', 'location_tag': 'locations', 'location_default': 'NaN'})
+2024-08-25 21:31:15,747 - INFO - www.workingnomads.com has started
+2024-08-25 21:31:15,747 - DEBUG - All parameters for www.workingnomads.com:
+ApiConfig(name='www.workingnomads.com', url='https://www.workingnomads.com/api/exposed_jobs/', class_json='list', follow_link='no', inner_link_tag='', elements_path={'dict_tag': '', 'title_tag': 'title', 'link_tag': 'url', 'description_tag': 'description', 'pubdate_tag': 'pub_date', 'location_tag': 'location', 'location_default': 'NaN'})
+2024-08-25 21:31:15,747 - INFO - remoteok.api has started
+2024-08-25 21:31:15,747 - DEBUG - All parameters for remoteok.api:
+ApiConfig(name='remoteok.api', url='https://remoteok.com/api?api=1', class_json='list', follow_link='no', inner_link_tag='', elements_path={'dict_tag': '', 'title_tag': 'position', 'link_tag': 'url', 'description_tag': 'description', 'pubdate_tag': 'date', 'location_tag': 'location', 'location_default': 'NaN'})
+2024-08-25 21:31:15,748 - INFO - remotive.com has started
+2024-08-25 21:31:15,748 - DEBUG - All parameters for remotive.com:
+ApiConfig(name='remotive.com', url='https://remotive.com/api/remote-jobs?limit=50', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'url', 'description_tag': 'description', 'pubdate_tag': 'publication_date', 'location_tag': 'candidate_required_location', 'location_default': 'NaN'})
+2024-08-25 21:31:15,748 - INFO - HimalayasApp has started
+2024-08-25 21:31:15,748 - DEBUG - All parameters for HimalayasApp:
+ApiConfig(name='HimalayasApp', url='https://himalayas.app/jobs/api', class_json='dict', follow_link='no', inner_link_tag='', elements_path={'dict_tag': 'jobs', 'title_tag': 'title', 'link_tag': 'applicationLink', 'description_tag': 'description', 'pubdate_tag': 'pubDate', 'location_tag': 'locationRestrictions', 'location_default': 'Worldwide'})
+2024-08-25 21:31:15,748 - INFO - https://dribbble.com has started
+2024-08-25 21:31:15,749 - DEBUG - All parameters for https://dribbble.com:
+Bs4Config(name='https://dribbble.com', url='https://dribbble.com/jobs?anywhere=true&keyword=&page=', pages_to_crawl=1, start_point=1, strategy='main', follow_link='yes', inner_link_tag='.flushed .container-small.job-details-page-container .main-content-container .margin-t-16.job-details-description', elements_path={'jobs_path': '.job-list-item', 'title_path': '.job-details-container .job-title-company-container .job-title.job-board-job-title', 'link_path': '.job-link', 'location_path': '.job-additional-details-container .job-details .location-container.job-board-job-location', 'description_path': '.job-details-container .job-title-company-container .job-role'})
+2024-08-25 21:31:15,749 - INFO - https://www.python.org has started
+2024-08-25 21:31:15,749 - DEBUG - All parameters for https://www.python.org:
+Bs4Config(name='https://www.python.org', url='https://www.python.org/jobs/?page=', pages_to_crawl=1, start_point=1, strategy='main', follow_link='yes', inner_link_tag='.content-wrapper .container .main-content.with-right-sidebar .text .job-description', elements_path={'jobs_path': '.list-recent-jobs.list-row-container.menu li', 'title_path': '.listing-company-name a', 'link_path': '.listing-company-name a', 'description_path': '.listing-job-type', 'location_path': '.listing-location a'})
+2024-08-25 21:31:15,749 - INFO -  has started
+2024-08-25 21:31:15,749 - DEBUG - All parameters for :
+Bs4Config(name='', url='https://www.fossjobs.net/jobs-worldwide/?page=', pages_to_crawl=1, start_point=1, strategy='main', follow_link='yes', inner_link_tag='.container .columns .column.is-9 .box.content .job-description', elements_path={'jobs_path': '.container .columns .column.is-9 .box.content .post', 'title_path': 'h2 a', 'link_path': 'h2 a', 'location_path': '.media .media-content .content', 'description_path': '.media .media-content .content'})
+2024-08-25 21:31:15,750 - INFO - https://vuejobs.com has started
+2024-08-25 21:31:15,750 - DEBUG - All parameters for https://vuejobs.com:
+Bs4Config(name='https://vuejobs.com', url='https://vuejobs.com/jobs/?page=', pages_to_crawl=1, start_point=1, strategy='container', follow_link='yes', inner_link_tag='.lg\\:pb-12 .py-8.lg\\:py-12 .container .order-2.lg\\:order.lg\\:col-span-5 .prose.max-w-full.mt-6.prose-lg', elements_path={'jobs_path': '.grid.gap-y-4', 'title_path': 'a .flex.flex-col.justify-center.md\\:flex-row.md\\:justify-start.md\\:items-center .flex.items-center .ml-3', 'link_path': 'a', 'location_path': 'a .text-xs.mt-3.flex.gap-x-4.gap-y-1.flex-wrap.items-center.md\\:gap-2', 'description_path': 'a .text-xs.mt-3.flex.gap-x-4.gap-y-1.flex-wrap.items-center.md\\:gap-2'})
+2024-08-25 21:31:15,750 - INFO - https://remote.co has started
+2024-08-25 21:31:15,750 - DEBUG - All parameters for https://remote.co:
+Bs4Config(name='https://remote.co', url='https://remote.co/international-remote-jobs/?page=', pages_to_crawl=1, start_point=1, strategy='container', follow_link='yes', inner_link_tag='.container.pt-4 .row.row-with-sidebar .col .card.mb-2 .card-body.loosen .single_job_listing .job_description', elements_path={'jobs_path': '.card.bg-light.mb-3.rounded-0 .card-body .card.bg-white.m-0 .card-body.p-0', 'title_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0 .font-weight-bold.larger', 'link_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom', 'location_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary', 'description_path': '.card.m-0.border-left-0.border-right-0.border-top-0.border-bottom .card.border-0.p-3.job-card.bg-white .row.no-gutters.align-items-center .col.position-static .card-body.px-3.py-0.pl-md-0 .m-0.text-secondary'})
+2024-08-25 21:31:15,751 - INFO - https://4dayweek.io has started
+2024-08-25 21:31:15,751 - DEBUG - All parameters for https://4dayweek.io:
+Bs4Config(name='https://4dayweek.io', url='https://4dayweek.io/remote-jobs/fully-remote/?page=', pages_to_crawl=1, start_point=1, strategy='container', follow_link='yes', inner_link_tag='.row.job-content-wrapper .col-sm-8.cols.hero-left', elements_path={'jobs_path': '.row.jobs-list', 'title_path': '.row.job-tile-title', 'link_path': '.row.job-tile-title h3 a', 'location_path': '.job-tile-tags .remote-country', 'description_path': '.job-tile-tags .tile-salary'})
+2024-08-25 21:31:15,751 - INFO - https://ai-jobs.net has started
+2024-08-25 21:31:15,751 - DEBUG - All parameters for https://ai-jobs.net:
+Bs4Config(name='https://ai-jobs.net', url='https://ai-jobs.net/?reg=', pages_to_crawl=7, start_point=7, strategy='container', follow_link='yes', inner_link_tag='#job-description', elements_path={'jobs_path': '.list-group.list-group-flush.mb-4', 'title_path': '.col.pt-2.pb-3 .h5.text-body-emphasis.text-break.mt-1', 'link_path': '.col.pt-2.pb-3', 'location_path': '.col.pt-2.pb-3 .float-end.text-end.text-body.d-inline-block.w-25.ms-2 .d-block.d-md-none.text-break.mb-1', 'description_path': '.col.pt-2.pb-3'})
+2024-08-25 21:31:15,826 - ERROR - ClientConnectorError occurred before deploying crawling strategy on https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1.
+
+Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [Name or service not known]
+Traceback (most recent call last):
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1301, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 911, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 948, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/resolver.py", line 37, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/JobsCrawler/src/crawlers/async_api.py", line 172, in async_api_requests
+    response = await fetch_func(session)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/src/crawler.py", line 105, in __fetch
+    async with session.get(
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1353, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/client.py", line 657, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 564, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 975, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1307, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api-career-vault-sstxk.ondigitalocean.app:443 ssl:default [Name or service not known]
+2024-08-25 21:31:15,871 - WARNING - Received non-200 response (403) requesting: https://weworkremotely.com/remote-jobs.rss. Skipping...
+2024-08-25 21:31:15,871 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'}
+2024-08-25 21:31:15,871 - DEBUG - Successful request on https://weworkremotely.com/remote-jobs.rss
+2024-08-25 21:31:15,914 - WARNING - Received non-200 response (403) requesting: https://remoteok.com/api?api=1. Skipping...
+2024-08-25 21:31:15,914 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'}
+2024-08-25 21:31:15,914 - DEBUG - Successful request on https://remoteok.com/api?api=1
+2024-08-25 21:31:15,914 - ERROR - JSONDecodeError occurred before deploying crawling strategy on https://remoteok.com/api?api=1.
+
+Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/root/JobsCrawler/src/crawlers/async_api.py", line 174, in async_api_requests
+    data = json.loads(response)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-08-25 21:31:15,922 - WARNING - Received non-200 response (403) requesting: https://himalayas.app/jobs/api. Skipping...
+2024-08-25 21:31:15,922 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2024-08-25 21:31:15,922 - DEBUG - Successful request on https://himalayas.app/jobs/api
+2024-08-25 21:31:15,922 - ERROR - JSONDecodeError occurred before deploying crawling strategy on https://himalayas.app/jobs/api.
+
+Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/root/JobsCrawler/src/crawlers/async_api.py", line 174, in async_api_requests
+    data = json.loads(response)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-08-25 21:31:16,047 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2024-08-25 21:31:16,089 - DEBUG - Crawling https://www.fossjobs.net/jobs-worldwide/?page=1 with main strategy
+2024-08-25 21:31:25,269 - WARNING - Received non-200 response (403) requesting: https://tryremotely.com/feeds/remote-jobs.rss. Skipping...
+2024-08-25 21:31:25,269 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0'}
+2024-08-25 21:31:25,269 - DEBUG - Successful request on https://tryremotely.com/feeds/remote-jobs.rss
+2024-08-25 21:31:25,274 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
+2024-08-25 21:31:25,274 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0'}
+2024-08-25 21:31:25,293 - DEBUG - Crawling https://4dayweek.io/remote-jobs/fully-remote/?page=1 with container strategy
+2024-08-25 21:31:25,297 - ERROR - ValueError using container strategy while crawling https://4dayweek.io/remote-jobs/fully-remote/?page=.
+No elements found for 'title'. Check 'elements_path["title_path"]'
+Traceback (most recent call last):
+  File "/root/JobsCrawler/src/crawlers/async_bs4.py", line 285, in _crawling_strategy
+    return await func_strategy(cur, session, bs4_config, soup, test)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/src/crawlers/async_bs4.py", line 229, in __async_container_strategy_bs4
+    raise ValueError(
+ValueError: No elements found for 'title'. Check 'elements_path["title_path"]'
+2024-08-25 21:31:25,298 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2024-08-25 21:31:25,327 - DEBUG - Crawling https://www.python.org/jobs/?page=1 with main strategy
+2024-08-25 21:31:25,515 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134'}
+2024-08-25 21:31:25,516 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'}
+2024-08-25 21:31:25,597 - DEBUG - Crawling https://dribbble.com/jobs?anywhere=true&keyword=&page=1 with main strategy
+2024-08-25 21:31:25,969 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134'}
+2024-08-25 21:31:26,017 - DEBUG - Crawling https://vuejobs.com/jobs/?page=1 with container strategy
+2024-08-25 21:31:26,221 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0'}
+2024-08-25 21:31:26,222 - DEBUG - Successful request on https://remotive.com/api/remote-jobs?limit=50
+2024-08-25 21:31:35,342 - DEBUG - Successful request on https://api.cryptojobslist.com/rss/remote.xml
+2024-08-25 21:31:53,829 - DEBUG - Successful request on https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest
+2024-08-25 21:31:54,019 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7692/
+
+2024-08-25 21:31:54,259 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/263051-Brand-experts-and-ui-experts-for-nuucleo?source=index
+
+2024-08-25 21:31:54,477 - INFO - CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/alegra-3-frontend-developer-vuejs
+
+2024-08-25 21:31:54,759 - INFO - Finished RSS Reader. Results below ⬇︎
+2024-08-25 21:32:13,113 - INFO - {"Table": "main_jobs", "Total count of jobs before crawling": 57652, "Total number of unique jobs": 37, "Current total count of jobs in PostgreSQL": 57689}
+2024-08-25 21:32:13,297 - INFO - Async BS4 crawlers finished! all in: 61.37 seconds.
+2024-08-25 21:32:13,299 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'}
+2024-08-25 21:32:13,299 - DEBUG - Successful request on https://www.workingnomads.com/api/exposed_jobs/
+2024-08-25 21:32:17,945 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7691/
+
+2024-08-25 21:32:18,266 - DEBUG - random_header: {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'}
+2024-08-25 21:32:18,322 - DEBUG - Crawling https://remote.co/international-remote-jobs/?page=1 with container strategy
+2024-08-25 21:32:18,529 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262952-Graphics-Designer-Figma?source=index
+
+2024-08-25 21:32:18,748 - INFO - CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/redfast-inc-senior-vue-engineer-usa
+
+2024-08-25 21:32:19,159 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7690/
+
+2024-08-25 21:32:19,384 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/manager-digital-customer-success-22/
+
+2024-08-25 21:32:19,634 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262820-Motion-Designer-for-ongoing-contract?source=index
+
+2024-08-25 21:32:19,831 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7688/
+
+2024-08-25 21:32:20,045 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/technical-writer-21-4/
+
+2024-08-25 21:32:20,276 - ERROR - ClientConnectorError occurred before deploying crawling strategy on https://ai-jobs.net/?reg=7.
+
+Cannot connect to host aijobs.net:443 ssl:default [None]
+Traceback (most recent call last):
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1080, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/usr/lib/python3.12/asyncio/sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/JobsCrawler/src/crawlers/async_bs4.py", line 312, in async_bs4_crawl
+    html = await fetch_func(session)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/src/crawler.py", line 105, in __fetch
+    async with session.get(
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1353, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/client.py", line 657, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 564, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 975, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1350, in _create_direct_connection
+    raise last_exc
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1319, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/JobsCrawler/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1088, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host aijobs.net:443 ssl:default [None]
+2024-08-25 21:32:20,280 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262689-Website-re-design?source=index
+
+2024-08-25 21:32:21,036 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7687/
+
+2024-08-25 21:32:21,265 - INFO - CONNECTION ESTABLISHED ON https://vuejobs.com/jobs/redfast-inc-mid-level-vue-js-engineer
+
+2024-08-25 21:32:25,087 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/roblox-game-ui-ux-designer-21/
+
+2024-08-25 21:32:25,572 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7686/
+
+2024-08-25 21:32:25,799 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/257046-UI-UX-Designer?source=index
+
+2024-08-25 21:32:26,025 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/graphic-designer-2-6/
+
+2024-08-25 21:32:26,478 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7685/
+
+2024-08-25 21:32:26,709 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/senior-executive-assistant-20-3/
+
+2024-08-25 21:32:26,975 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/256913-Senior-Product-Designer-Profiles?source=index
+
+2024-08-25 21:32:27,199 - INFO - CONNECTION ESTABLISHED ON https://www.python.org/jobs/7684/
+
+2024-08-25 21:32:30,536 - INFO - CONNECTION ESTABLISHED ON https://remote.co/job/staff-accountant-47-20/
+
+2024-08-25 21:32:34,546 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/5408-Freelance-Senior-Designer?source=index
+
+2024-08-25 21:32:35,536 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/263117-Senior-UI-UX-Web-Designer?source=index
+
+2024-08-25 21:32:36,020 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/263084-Digital-Designer?source=index
+
+2024-08-25 21:32:36,655 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/259784-UI-Animator?source=index
+
+2024-08-25 21:32:37,449 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/259718-Founder-Designer?source=index
+
+2024-08-25 21:32:38,138 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262919-UI-UX-Designer?source=index
+
+2024-08-25 21:32:38,963 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262886-UI-UX-Designer?source=index
+
+2024-08-25 21:32:39,443 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262754-UI-UX-Visual-Designer-Hybrid-Remote?source=index
+
+2024-08-25 21:32:40,247 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/256946-Visual-Designer?source=index
+
+2024-08-25 21:32:41,049 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262688-Product-Designer-AI-Copilot-for-Hiring?source=index
+
+2024-08-25 21:32:41,851 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262655-Part-Time-Product-Designer-at-Fintech?source=index
+
+2024-08-25 21:32:42,313 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262622-Lead-Product-Designer?source=index
+
+2024-08-25 21:32:43,094 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262590-3D-Motion-Design?source=index
+
+2024-08-25 21:32:43,616 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262589-2D-Motion-Graphics-Designer?source=index
+
+2024-08-25 21:32:44,460 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/259487-UI-UX-Designer-Branding-Project?source=index
+
+2024-08-25 21:32:45,304 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262556-3D-Motion-Designer?source=index
+
+2024-08-25 21:32:45,782 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262523-Senior-UI-Designer?source=index
+
+2024-08-25 21:32:46,363 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262457-Landing-Page-Designer?source=index
+
+2024-08-25 21:32:47,391 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/262391-Mobile-application-UI-UX-designer?source=index
+
+2024-08-25 21:32:48,197 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/243152-Product-Designer-Contractor?source=index
+
+2024-08-25 21:32:49,031 - INFO - CONNECTION ESTABLISHED ON https://dribbble.com/jobs/259421-Graphic-Designer-Websites?source=index
+
+2024-08-25 21:32:53,027 - INFO - Finished bs4 crawlers. Results below ⬇︎
+Starting script at Mon Aug 26 12:15:01 AM UTC 2024
+Sourced .env
+Activated venv
+All strategies completed in 3.81 seconds
+
+-------------------------------------------------------------------------------
+main.py 71 <module>
+asyncio.run(main())
+
+runners.py 194 run
+return runner.run(main)
+
+runners.py 118 run
+return self._loop.run_until_complete(task)
+
+base_events.py 687 run_until_complete
+return future.result()
+
+main.py 66 main
+await loop.run_in_executor(pool, embed_data, "e5_base_v2")
+
+thread.py 58 run
+result = self.fn(*self.args, **self.kwargs)
+
+embed_latest_crawled_data.py 189 embed_data
+raise ValueError(error_msg)
+
+ValueError:
+No new rows. Obtained max_timestamp: 2024-08-25 21:31:53.290442. 
+Finished script at Mon Aug 26 12:15:10 AM UTC 2024
+Starting script at Mon Aug 26 12:30:01 AM UTC 2024
+Sourced .env
+Activated venv
+
+-------------------------------------------------------------------------------
+embed_latest_crawled_data.py 7 <module>
+from src.embeddings.e5_base_v2_utils import (
+
+ModuleNotFoundError:
+No module named 'src'
+All strategies completed in 3.81 seconds
+Traceback (most recent call last):
+  File "/root/JobsCrawler/src/main.py", line 63, in <module>
+    subprocess.run([sys.executable, "/root/JobsCrawler/src/embeddings/embed_latest_crawled_data.py"], check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/root/JobsCrawler/venv/bin/python', '/root/JobsCrawler/src/embeddings/embed_latest_crawled_data.py']' returned non-zero exit status 1.
+Finished script at Mon Aug 26 12:30:06 AM UTC 2024

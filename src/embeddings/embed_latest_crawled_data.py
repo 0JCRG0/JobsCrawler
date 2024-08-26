@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
 import logging
 import re
-from src.embeddings.e5_base_v2_utils import (
+from embeddings.e5_base_v2_utils import (
     query_e5_format,
     to_embeddings_e5_base_v2,
     num_tokens,
@@ -217,4 +217,4 @@ def embed_data(embedding_model: str, test: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    embed_data(embedding_model="e5_base_v2", test=True)
+    embed_data(embedding_model="e5_base_v2", test=False)

@@ -7,9 +7,8 @@ import asyncio
 import json
 import random
 import pandas as pd
-from src.constants import USER_AGENTS
+from constants import USER_AGENTS
 
-# Set up named logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 

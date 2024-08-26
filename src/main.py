@@ -4,10 +4,9 @@ import asyncio
 import logging
 from typing import Any, Coroutine
 from concurrent.futures import ThreadPoolExecutor
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.crawler import AsyncCrawlerEngine
-from src.embeddings.embed_latest_crawled_data import embed_data
-from src.models import RssArgs, ApiArgs, Bs4Args
+from crawler import AsyncCrawlerEngine
+from embeddings.embed_latest_crawled_data import embed_data
+from models import RssArgs, ApiArgs, Bs4Args
 DB_URL = os.environ.get("URL_DB")
 if not DB_URL:
     error_msg = "The environmental variable DB_URL is empty."

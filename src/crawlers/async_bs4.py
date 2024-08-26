@@ -10,8 +10,8 @@ import aiohttp
 import bs4
 import pandas as pd
 from datetime import date, datetime
-from src.utils.FollowLink import async_follow_link, async_follow_link_title_description
-from src.utils.handy import link_exists_in_db
+from utils.FollowLink import async_follow_link, async_follow_link_title_description
+from utils.handy import link_exists_in_db
 
 # Set up named logger
 logger = logging.getLogger(__name__)

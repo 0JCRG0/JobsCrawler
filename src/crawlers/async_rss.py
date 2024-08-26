@@ -8,8 +8,8 @@ from psycopg2.extensions import cursor
 import aiohttp
 import pandas as pd
 from datetime import date, datetime
-from src.utils.handy import link_exists_in_db
-from src.utils.FollowLink import async_follow_link
+from utils.handy import link_exists_in_db
+from utils.FollowLink import async_follow_link
 from feedparser import FeedParserDict
 
 # Set up named logger

@@ -4,7 +4,6 @@ __pycache__/
 .vscode/
 
 *.logs
-geckodriver.log
 .pytest_cache/
 *.out
 archive/
@@ -24,5 +23,5 @@ utils/__pycache__
 archive
 tools
 *.csv
-/root/JobsCrawler/logs/debug.log
+*.log
 *.egg-info

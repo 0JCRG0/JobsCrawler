@@ -15,10 +15,10 @@ import json
 import logging
 import os
 import asyncio
-from src.utils.FollowLink import *
+from utils.FollowLink import *
 from dotenv import load_dotenv
-from src.utils.sel_utils import clean_postgre_sel
-from src.utils.handy import *
+from utils.sel_utils import clean_postgre_sel
+from utils.handy import *
 
 
 """ LOAD THE ENVIRONMENT VARIABLES """

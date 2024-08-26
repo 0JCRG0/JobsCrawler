@@ -6,9 +6,9 @@ import os
 from collections.abc import Callable, Coroutine
 from psycopg2.extensions import cursor
 import pandas as pd
-from src.crawlers.async_bs4 import async_bs4_crawl, clean_postgre_bs4
-from src.crawlers.async_api import async_api_requests, clean_postgre_api
-from src.crawlers.async_rss import async_rss_reader, clean_postgre_rss
+from crawlers.async_bs4 import async_bs4_crawl, clean_postgre_bs4
+from crawlers.async_api import async_api_requests, clean_postgre_api
+from crawlers.async_rss import async_rss_reader, clean_postgre_rss
 from dotenv import load_dotenv
 
 load_dotenv()

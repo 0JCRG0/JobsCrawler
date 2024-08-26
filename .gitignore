@@ -25,3 +25,4 @@ archive
 tools
 *.csv
 /root/JobsCrawler/logs/debug.log
+*.egg-info

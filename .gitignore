@@ -25,3 +25,4 @@ tools
 *.csv
 *.log
 *.egg-info
+*.json

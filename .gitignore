@@ -14,7 +14,6 @@ venv/
 *.parquet
 *.bin
 *.pkl
-data/
 download/:
 /.cfg
 __pycache__/
@@ -25,4 +24,4 @@ tools
 *.csv
 *.log
 *.egg-info
-*.json
+

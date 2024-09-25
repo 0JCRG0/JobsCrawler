@@ -10,10 +10,15 @@ import pandas as pd
 from constants import USER_AGENTS
 from typing import TypedDict
 import numpy as np
+import os 
+import re
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
+DATA_DIR = os.path.join("src", "resources", "data")
+LOCATIONS_DATA = os.path.abspath(os.path.join(DATA_DIR, "WorldLocations.json"))
+print(LOCATIONS_DATA)
 ############################# ADD LOCATION TAGS #############################
 
 class Countries(TypedDict):
@@ -25,6 +30,10 @@ class WorldLocations(TypedDict):
 	areas: list[str]
 	countries: list[Countries]
 
+def clean_and_split(s):
+	tags = re.findall(r"'([^']*)'", s)
+	return tags
+
 def load_json_file(file_path: str):
 	with open(file_path, 'r') as file:
 		return json.load(file)
@@ -33,7 +42,7 @@ def save_json_file(data: dict, file_path: str) -> None:
 	with open(file_path, 'w') as file:
 		json.dump(data, file, indent=4)
 
-def get_location_tags(word: str, location_data: WorldLocations) -> str:
+def find_tag_in_location_data(word: str, location_data: WorldLocations) -> str:
 	word_upper = word.upper()
 	for continent, countries in location_data.items():
 		
@@ -48,7 +57,7 @@ def get_location_tags(word: str, location_data: WorldLocations) -> str:
 					return country_name
 	return ""
 
-def add_location_tags(df: pd.DataFrame, json_file_path: str) -> pd.DataFrame:
+def get_location_tags(df: pd.DataFrame, json_file_path: str) -> pd.DataFrame:
 	"""
 	Add location tags to a DataFrame using location data from a JSON file.
 
@@ -69,7 +78,7 @@ def add_location_tags(df: pd.DataFrame, json_file_path: str) -> pd.DataFrame:
 		current_word = str(df.iloc[i]["location"])
 		current_original_index = df.loc[i, "original_index"]
 		
-		tag = get_location_tags(current_word, location_data)
+		tag = find_tag_in_location_data(current_word, location_data)
 		
 		if tag:
 			result.append(tag)
@@ -81,7 +90,7 @@ def add_location_tags(df: pd.DataFrame, json_file_path: str) -> pd.DataFrame:
 
 				compound_word = f"{current_word} {next_word}"
 
-				tag = get_location_tags(compound_word, location_data)
+				tag = find_tag_in_location_data(compound_word, location_data)
 				
 				if tag:
 					result.extend([tag, tag])
@@ -98,6 +107,8 @@ def add_location_tags(df: pd.DataFrame, json_file_path: str) -> pd.DataFrame:
 
 
 def add_location_tags_to_df(df: pd.DataFrame) -> pd.DataFrame:
+	original_df = df.copy()
+
 	df['original_index'] = df.index
 
 	df['location'] = df['location'].astype(str)
@@ -105,9 +116,39 @@ def add_location_tags_to_df(df: pd.DataFrame) -> pd.DataFrame:
 	df["location"] = df["location"].str.replace(",", "", regex=False).str.replace(")", "", regex=False).str.replace("(", "", regex=False).str.replace("|", " ", regex=False)
 
 	df["location"] = df["location"].str.strip().str.split()
+	
 	df = df.explode("location").reset_index(drop=True)
+	
+	result_df = get_location_tags(df, LOCATIONS_DATA)
 
+	result_df['location'] = result_df['location'].astype(str)
 
+	result_df['location_tags'] = result_df['location_tags'].fillna('NaN')
+
+	# Group by original_index and aggregate the locations and tags
+	grouped_df = result_df.groupby('original_index').agg({
+		'location': lambda x: ' '.join(x),
+		'location_tags': lambda x: ''.join(str(x.unique()))
+	})
+
+	# Reset the index to make original_index a column again
+	grouped_df = grouped_df.reset_index()
+
+	grouped_df['location'] = grouped_df['location'].apply(lambda x: re.sub(r"[\[\]']", "", x))
+	grouped_df['location_tags'] = grouped_df['location_tags'].apply(clean_and_split)
+
+	# Sort by original_index to maintain the original order
+	grouped_df = grouped_df.sort_values('original_index')
+
+	grouped_df = grouped_df.drop('original_index', axis=1)
+
+	grouped_df = grouped_df.reset_index(drop=True)
+
+	original_df = original_df.drop('location', axis=1)
+	
+	final_df = pd.concat([original_df, grouped_df], axis=1)
+	
+	return final_df
 
 def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -> None:
 
@@ -131,8 +172,8 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
 	jobs_added = []
 	for _, row in df.iterrows():
 		insert_query = f"""
-			INSERT INTO {table} (title, link, description, pubdate, location, timestamp)
-			VALUES (%s, %s, %s, %s, %s, %s)
+			INSERT INTO {table} (title, link, description, pubdate, location, timestamp, location_tags)
+			VALUES (%s, %s, %s, %s, %s, %s, %s)
 			ON CONFLICT (link) DO NOTHING
 			RETURNING *
 		"""
@@ -143,6 +184,7 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
 			row["pubdate"],
 			row["location"],
 			row["timestamp"],
+			row["location_tags"],
 		)
 		cur.execute(insert_query, values)
 		affected_rows = cur.rowcount
@@ -241,9 +283,9 @@ class AsyncCrawlerEngine:
 		lengths = {key: len(value) for key, value in combined_data.items()}
 		
 		if len(set(lengths.values())) == 1:
-			
 			df = self.custom_clean_func(pd.DataFrame(combined_data))
-			crawled_df_to_db(df, self.cur, self.test)
+			final_df = add_location_tags_to_df(df)
+			crawled_df_to_db(final_df, self.cur, self.test)
 		else:
 			logger.error(
 				f"Error while calling {self.custom_crawl_func}. Data has uneven entries. "

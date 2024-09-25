@@ -175,6 +175,33 @@ def _insert_max_timestamp(
 
 
 def embed_data(embedding_model: str, test: bool = False) -> None:
+    """
+    Last Updated 25/09/24
+    
+    Embed new job data using the specified embedding model.
+
+    This function performs the following steps:
+    1. Retrieves the timestamp of the last embedded data.
+    2. Fetches new job entries from the database since the last timestamp.
+    3. Cleans and formats the job data (title, location, description).
+    4. Batches the formatted data, truncating if necessary.
+    5. Generates embeddings using the specified model (currently only 'e5_base_v2').
+    6. Stores the embeddings in the database.
+    7. Updates the timestamp of the last embedded data.
+
+    Args:
+        embedding_model (str): The name of the embedding model to use (currently only 'e5_base_v2' is supported).
+        test (bool, optional): If True, use test tables for database operations. Defaults to False.
+
+    Raises:
+        ValueError: If no new rows are found or if an unsupported embedding model is specified.
+        Exception: For any errors during the embedding process.
+
+    Note:
+        - Uses helper functions like _get_max_timestamp, _fetch_postgre_rows, _rows_to_nested_list, 
+          _raw_descriptions_to_batches, and model-specific embedding functions.
+        - Modifies the database, inserting new embeddings and updating the last embedded timestamp.
+    """
     max_timestamp = _get_max_timestamp(test=test)
 
     ids, titles, locations, descriptions, timestamps = _fetch_postgre_rows(

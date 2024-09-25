@@ -2,6 +2,7 @@ import asyncio
 import logging
 import os
 import sys
+import traceback
 from typing import Any, Coroutine
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -47,7 +48,9 @@ async def run_crawlers(is_test: bool = True) -> Coroutine[Any, Any, None] | None
     try:
         await asyncio.gather(*tasks)
     except Exception as e:
-        logging.error(f"An error occurred: {str(e)}")
+        logging.error(f"An error occurred: {str(e)}. ")
+        logging.error("Full traceback:")
+        logging.error(traceback.format_exc())
 
     elapsed_time = asyncio.get_event_loop().time() - start_time
     logging.info(f"All strategies completed in {elapsed_time:.2f} seconds")

@@ -18,7 +18,7 @@ logger.setLevel(logging.DEBUG)
 
 DATA_DIR = os.path.join("src", "resources", "data")
 LOCATIONS_DATA = os.path.abspath(os.path.join(DATA_DIR, "WorldLocations.json"))
-print(LOCATIONS_DATA)
+
 ############################# ADD LOCATION TAGS #############################
 
 class Countries(TypedDict):
@@ -107,6 +107,19 @@ def get_location_tags(df: pd.DataFrame, json_file_path: str) -> pd.DataFrame:
 
 
 def add_location_tags_to_df(df: pd.DataFrame) -> pd.DataFrame:
+	"""
+	Add location tags to a DataFrame based on location data from a JSON file.
+
+	Args:
+		df (pd.DataFrame): Input DataFrame with a 'location' column.
+
+	Returns:
+		pd.DataFrame: DataFrame with added 'location_tags' column.
+
+	Processes each location entry, checking against JSON data and combining adjacent
+	entries as needed to match locations. Adds the identified location tags to the
+	resulting DataFrame.
+	"""
 	original_df = df.copy()
 
 	df['original_index'] = df.index
@@ -150,8 +163,22 @@ def add_location_tags_to_df(df: pd.DataFrame) -> pd.DataFrame:
 	
 	return final_df
 
-def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -> None:
+############################# CLASS UTILS #############################
 
+
+def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -> None:
+	"""
+	Insert a DataFrame of crawled job data into a PostgreSQL database.
+
+	Args:
+		df (pd.DataFrame): DataFrame containing the crawled job data.
+		cur (psycopg2.extensions.cursor | None): Database cursor object.
+		test (bool, optional): Flag to use 'test' table instead of 'main_jobs'. Defaults to False.
+
+	Inserts the job data into the specified PostgreSQL table, handling duplicate entries.
+	Logs the total count of jobs before and after the insertion, as well as the number
+	of unique jobs added.
+	"""
 	table = "main_jobs"
 
 	if test:
@@ -166,9 +193,6 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
 	cur.execute(initial_count_query)
 	initial_count_result = cur.fetchone()
 
-	""" IF THERE IS A DUPLICATE LINK IT SKIPS THAT ROW & DOES NOT INSERTS IT
-		IDs ARE ENSURED TO BE UNIQUE BCOS OF THE SERIAL ID THAT POSTGRE MANAGES AUTOMATICALLY
-	"""
 	jobs_added = []
 	for _, row in df.iterrows():
 		insert_query = f"""
@@ -190,8 +214,6 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
 		affected_rows = cur.rowcount
 		if affected_rows > 0:
 			jobs_added.append(cur.fetchone())
-
-	""" LOGGING/PRINTING RESULTS"""
 
 	final_count_query = f"""
 		SELECT COUNT(*) FROM {table}
@@ -218,8 +240,49 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
 
 	logging.info(json.dumps(postgre_report))
 
+############################# CRAWLER CLASS  #############################
+
 
 class AsyncCrawlerEngine:
+	"""
+    Asynchronous web crawler engine for various data sources.
+
+    This class is designed to handle different types of web crawling strategies (RSS, API, BS4)
+    in an asynchronous manner. It's initialized with specific arguments for each strategy
+    and is capable of fetching, processing, and storing data from multiple sources concurrently.
+
+    The engine is used as part of a larger crawling system where multiple instances
+    (one for each strategy) are run in parallel.
+
+    Attributes:
+        config: Configuration settings specific to the crawling strategy.
+        test (bool): Flag to indicate whether the crawler is running in test mode.
+        json_data_path (str): Path to the JSON file containing crawl configurations.
+        custom_crawl_func: Custom function for crawling specific to the strategy.
+        custom_clean_func: Custom function for cleaning and processing the crawled data.
+        url_db (str): Database URL for storing the crawled data.
+        conn (connection): Database connection object.
+        cur (cursor): Database cursor object.
+
+    Methods:
+        run(): Executes the crawling process, including database setup, data fetching,
+               processing, and storage. This method is called asynchronously from the main script.
+
+    Usage:
+        This class is instantiated in the main script for each crawling strategy (RSS, API, BS4).
+        The instances are then run concurrently using asyncio.gather().
+
+    Example:
+        engine = AsyncCrawlerEngine(args)
+		
+        await engine.run()
+
+    Note:
+        The class relies on external configuration and custom functions passed through
+        the arguments. It's designed to be flexible and accommodate different crawling
+        strategies within the same asynchronous framework.
+    """
+
 	def __init__(self, args: Any) -> None:
 		self.config = args.config
 		self.test = args.test

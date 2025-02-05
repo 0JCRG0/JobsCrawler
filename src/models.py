@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Any, TypeAlias, TypedDict
 import aiohttp
-import logging
+from utils.logger_helper import get_custom_logger
 import os
 from collections.abc import Callable, Coroutine
 from psycopg2.extensions import cursor
@@ -16,8 +16,8 @@ load_dotenv()
 URL_DB = os.environ.get("URL_DB", "")
 
 # Set up named logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger = get_custom_logger(__name__)
+ 
 
 
 # Get the paths of the JSON files

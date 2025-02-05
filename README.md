@@ -62,8 +62,6 @@ Each module within JobsCrawler is configured with two JSON schemas: `prod` and `
 - To add a new website to the crawler, create a corresponding JSON object with the required parameters. 
 - For common tests, see `tests` to ensure the correct data is being scraped, and save the schema to the appropriate JSON file (e.g., `bs4_test.json`). 
 - Before running any tests, ensure that your environment variables are correctly set up. 
-- For debugging, enable logging as there are numerous log statements placed at common breakpoints.
-
 -------
 
 ## Quickstart - Main Branch

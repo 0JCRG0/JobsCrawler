@@ -2,7 +2,7 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 import pretty_errors  # noqa: F401
-import logging
+from utils.logger_helper import get_custom_logger
 import re
 from embeddings.e5_base_v2_utils import (
     query_e5_format,
@@ -12,6 +12,8 @@ from embeddings.e5_base_v2_utils import (
     embeddings_e5_base_v2_to_df,
 )
 import json
+
+logger = get_custom_logger(__name__)
 
 load_dotenv(".env")
 DB_URL = os.environ.get("URL_DB")
@@ -115,7 +117,7 @@ def _raw_descriptions_to_batches(
         "APPROXIMATE COST OF EMBEDDING": f"${approximate_cost} USD",
     }
 
-    logging.info(json.dumps(batch_info))
+    logger.info(json.dumps(batch_info))
 
     if print_messages:
         for i, batch in enumerate(batches, start=1):
@@ -212,7 +214,7 @@ def embed_data(embedding_model: str, test: bool = False) -> None:
         error_msg = (
             f"No new rows. Obtained max_timestamp: {max_timestamp}. "
         )
-        logging.error(error_msg)
+        logger.error(error_msg)
         raise ValueError(error_msg)
 
     jobs_info = _rows_to_nested_list(titles, locations, descriptions)
@@ -233,7 +235,7 @@ def embed_data(embedding_model: str, test: bool = False) -> None:
 
             _insert_max_timestamp(embedding_model, test=test)
         except Exception as e:
-            logging.error(e)
+            logger.error(e)
             raise e
     else:
         raise ValueError("The only supported embedding model is 'e5_base_v2'")

@@ -1,8 +1,11 @@
 
 import re
 import aiohttp
-import logging
+from utils.logger_helper import get_custom_logger
 import bs4
+
+logger = get_custom_logger(__name__)
+
 
 async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow: str, selector: str) -> str:
 
@@ -10,7 +13,7 @@ async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow:
 		try:
 			if r.status == 200:
 				
-				logging.info(f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()""", "\n")
+				logger.info(f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()""", "\n")
 				# Make a request to the website
 				#r = requests.get(url_to_follow)
 				request = await r.text()
@@ -20,7 +23,7 @@ async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow:
 
 				# Find the 'a' tag under the 'div' with the 'data-qa' attribute of 'btn-apply-bottom'
 				a_tag = soup.select_one(selector)
-				logging.info(f"a_tag: {a_tag}")
+				logger.info(f"a_tag: {a_tag}")
 
 				# Get the value of the 'href' attribute
 				url = a_tag.get('href')
@@ -29,7 +32,7 @@ async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow:
 				target_url = re.sub(r'/apply$', '', url)
 
 				# Print the URL
-				logging.info(f"target_url: {target_url}")
+				logger.info(f"target_url: {target_url}")
 				# Send a GET request to the URL
 				async with session.get(target_url) as r:
 					try:
@@ -44,12 +47,12 @@ async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow:
 							description_text = soup_2.get_text()
 
 							if description_text:
-								logging.info(f"SUCCESS on: {target_url}")
+								logger.info(f"SUCCESS on: {target_url}")
 								return description_text
 							else:
 								description_final = 'NaN'
 								return description_final
 					except Exception as e:
-						logging.info(f"Exception at AsyncFollowLinkEchoJobs() Following {target_url}\n {e}")
+						logger.info(f"Exception at AsyncFollowLinkEchoJobs() Following {target_url}\n {e}")
 		except Exception as e:
-			logging.info(f"Exception at AsyncFollowLinkEchoJobs(). Following {url_to_follow}\n {e}")
+			logger.info(f"Exception at AsyncFollowLinkEchoJobs(). Following {url_to_follow}\n {e}")

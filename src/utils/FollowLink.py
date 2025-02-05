@@ -1,7 +1,8 @@
 import bs4
 import aiohttp
-import logging
+from utils.logger_helper import get_custom_logger
 
+logger = get_custom_logger(__name__)
 
 async def async_follow_link(
     session: aiohttp.ClientSession,
@@ -12,7 +13,7 @@ async def async_follow_link(
 ):
     async with session.get(followed_link) as link_res:
         if link_res.status == 200:
-            logging.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
+            logger.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
             link_text = await link_res.text()
             link_soup = bs4.BeautifulSoup(link_text, "html.parser")
             description_tag = link_soup.select_one(inner_link_tag)
@@ -20,17 +21,17 @@ async def async_follow_link(
                 description_final = description_tag.text
                 return description_final
             else:
-                logging.warning(f"No description tag found by 'async_follow_link()' while following: {followed_link}. Setting the description to default.")
+                logger.warning(f"No description tag found by 'async_follow_link()' while following: {followed_link}. Setting the description to default.")
                 description_final = default
                 return description_final
         elif link_res.status == 403:
-            logging.warning(
+            logger.warning(
                 f"""CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link()'. FOLLOWING: {followed_link}. STATUS CODE: "{link_res.status}". SETTING DESCRIPTION TO DEFAULT."""
             )
             description_final = default
             return description_final
         else:
-            logging.warning(
+            logger.warning(
                 f"""UNEXPECTED STATUS CODE WITH BS4 ON 'async_follow_link()'. FOLLOWING: {followed_link}. STATUS CODE: "{link_res.status}". SETTING DESCRIPTION TO DEFAULT."""
             )
             description_final = default
@@ -47,7 +48,7 @@ async def async_follow_link_title_description(
 ):
     async with session.get(followed_link) as link_res:
         if link_res.status == 200:
-            logging.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
+            logger.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
             link_text = await link_res.text()
             link_soup = bs4.BeautifulSoup(link_text, "html.parser")
             title_tag = link_soup.select_one(title_inner_link_tag)
@@ -57,13 +58,13 @@ async def async_follow_link_title_description(
             return title_final, description_final
 
         elif link_res.status == 403:
-            logging.warning(
+            logger.warning(
                 f"""CONNECTION PROHIBITED WITH BS4 ON 'async_follow_link_title_description()'. FOLLOWING: {followed_link}. STATUS CODE: "{link_res.status}". SETTING DESCRIPTION TO DEFAULT."""
             )
             description_final = "NaN"
             return description_final
         else:
-            logging.warning(
+            logger.warning(
                 f"""UNEXPECTED STATUS CODE WITH BS4 ON 'async_follow_link()'. FOLLOWING: {followed_link}. STATUS CODE: "{link_res.status}". SETTING DESCRIPTION TO DEFAULT."""
             )
             description_final = default
@@ -84,12 +85,12 @@ async def async_follow_link_sel(followed_link, inner_link_tag, driver, fetch_sel
 		except (NoSuchElementException, TimeoutException, Exception) as e:
 			error_message = f"{type(e).__name__} **while** following this link: {followed_link}. {traceback.format_exc()}"
 			print(error_message)
-			logging.error(f"{error_message}\n")
+			logger.error(f"{error_message}\n")
 			return default
 	except (NoSuchElementException, TimeoutException, Exception) as e:
 			error_message = f"{type(e).__name__} **before** following this link: {followed_link}. {traceback.format_exc()}"
 			print(error_message)
-			logging.error(f"{error_message}\n")
+			logger.error(f"{error_message}\n")
 			return default
 
 async def async_follow_link_indeed(followed_link, inner_link_tag, driver, fetch_sel, default):
@@ -112,12 +113,12 @@ async def async_follow_link_indeed(followed_link, inner_link_tag, driver, fetch_
 		except (NoSuchElementException, TimeoutException, Exception) as e:
 			error_message = f"{type(e).__name__} **while** following this link: {followed_link}. {traceback.format_exc()}"
 			print(error_message)
-			logging.error(f"{error_message}\n")
+			logger.error(f"{error_message}\n")
 			return default
 	except (NoSuchElementException, TimeoutException, Exception) as e:
 			error_message = f"{type(e).__name__} **before** following this link: {followed_link}. {traceback.format_exc()}"
 			print(error_message)
-			logging.error(f"{error_message}\n")
+			logger.error(f"{error_message}\n")
 			return default
 """
 
@@ -128,7 +129,7 @@ async def async_follow_link_echojobs(
     async with session.get(url_to_follow) as r:
         try:
             if r.status == 200:
-                logging.debug(
+                logger.debug(
                     f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()\n"""
                 )
 
@@ -142,16 +143,16 @@ async def async_follow_link_echojobs(
                     description_text = div_tag.get_text()
                     return description_text
                 else:
-                    logging.warning(
+                    logger.warning(
                         f"Setting description to default at AsyncFollowLinkEchoJobs().\nFollowing {url_to_follow}\n"
                     )
                     return default
             else:
-                logging.warning(
+                logger.warning(
                     f"""CONNECTION FAILED ON {url_to_follow}. STATUS CODE: "{r.status}". Setting description to default."""
                 )
                 return default
         except Exception as e:
-            logging.warning(
+            logger.warning(
                 f"Exception at AsyncFollowLinkEchoJobs(). Following {url_to_follow}\n {e}"
             )

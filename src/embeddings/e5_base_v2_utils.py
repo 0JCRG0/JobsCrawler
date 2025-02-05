@@ -1,7 +1,7 @@
 from typing import Any
 import tiktoken
 import pandas as pd
-import logging
+from utils.logger_helper import get_custom_logger
 from psycopg2.extensions import cursor, connection
 import json
 from transformers import AutoTokenizer, AutoModel
@@ -30,9 +30,7 @@ MAX_LENGTH = 512
 TOKENIZER = AutoTokenizer.from_pretrained("intfloat/e5-base-v2")
 MODEL = AutoModel.from_pretrained("intfloat/e5-base-v2")
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
+logger = get_custom_logger(__name__)
 
 def truncated_string(
     string: str,
@@ -100,7 +98,7 @@ def query_e5_format(raw_descriptions: list) -> list:
     stop=stop_after_attempt(7),
     wait=wait_exponential(multiplier=1, min=2, max=10),
     retry=retry_if_exception_type(Exception),
-    before_sleep=before_sleep_log(logger, logging.WARNING),
+    before_sleep=before_sleep_log(logger, 1),
 )
 def to_embeddings_e5_base_v2(
     df: pd.DataFrame, cursor: cursor, conn: connection, test: bool
@@ -148,7 +146,7 @@ def to_embeddings_e5_base_v2(
         if affected_rows > 0:
             jobs_added.append(cursor.fetchone())
 
-    """ LOGGING/PRINTING RESULTS"""
+    """ logger/PRINTING RESULTS"""
 
     final_count_query = f"""
 		SELECT COUNT(*) FROM {table}
@@ -174,7 +172,7 @@ def to_embeddings_e5_base_v2(
         "Current total count of jobs in PostgreSQL": final_count,
     }
 
-    logging.info(f"{json.dumps(postgre_report_dict, indent=4)}")
+    logger.info(f"{json.dumps(postgre_report_dict, indent=4)}")
 
     conn.commit()
 
@@ -244,7 +242,7 @@ def embeddings_e5_base_v2_to_df(
     df = pd.DataFrame(df_data)
 
     elapsed_time = (timeit.default_timer() - start_time) / 60
-    logging.info(
+    logger.info(
         f"embeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes."
     )
 

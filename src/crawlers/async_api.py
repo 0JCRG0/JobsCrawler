@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 from collections.abc import Callable, Coroutine
 import json
-import logging
+from utils.logger_helper import get_custom_logger
 from dataclasses import dataclass
 from typing import Any
 from psycopg2.extensions import cursor
@@ -12,8 +12,7 @@ from utils.handy import link_exists_in_db
 from utils.FollowLink import async_follow_link, async_follow_link_echojobs
 
 # Set up named logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger = get_custom_logger(__name__)
 
 @dataclass
 class ApiElementPath:
@@ -61,7 +60,7 @@ def clean_postgre_api(df: pd.DataFrame) -> pd.DataFrame:
                 )  # Replace
                 df[col] = df[col].str.strip()  # Remove trailing white space
 
-    logging.info("Finished API crawlers. Results below ⬇︎")
+    logger.info("Finished API crawlers. Results below ⬇︎")
 
     return df
 
@@ -110,7 +109,7 @@ async def __get_jobs_data(
         if await link_exists_in_db(
             link=link, cur=cur, test=test
         ):
-            logging.debug(
+            logger.debug(
                 f"Link {element_path.link_tag} already found in the db. Skipping..."
             )
             continue

@@ -14,7 +14,7 @@ import timeit
 from dateutil.parser import parse
 from datetime import date, datetime
 import json
-import logging
+from utils.logger_helper import get_custom_logger
 import os
 import asyncio
 import aiohttp

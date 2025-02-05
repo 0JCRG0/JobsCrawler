@@ -1,27 +1,13 @@
 import sys
 import os
 import asyncio
-import logging
+from utils.logger_helper import get_custom_logger
 from typing import Any, Coroutine
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.crawler import AsyncCrawlerEngine
 from src.models import RssArgs, ApiArgs, Bs4Args
-LOGGER_PATH = os.path.join("logs", "main_logger.log")
-(
-    os.makedirs(os.path.dirname(LOGGER_PATH), exist_ok=True)
-    if not os.path.exists(LOGGER_PATH)
-    else None
-)
-open(LOGGER_PATH, "a").close() if not os.path.exists(LOGGER_PATH) else None
 
-
-logging.basicConfig(
-    filename=LOGGER_PATH,
-    level=logging.DEBUG,
-    force=True,
-    filemode="a",
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
+logger = get_custom_logger(__name__)
 
 async def run_strategy(args: RssArgs | ApiArgs | Bs4Args) -> Coroutine[Any, Any, None] | None:
     engine = AsyncCrawlerEngine(args)
@@ -43,10 +29,10 @@ async def run_crawlers(is_test: bool) -> Coroutine[Any, Any, None] | None:
     try:
         await asyncio.gather(*tasks)
     except Exception as e:
-        logging.error(f"An error occurred: {str(e)}")
+        logger.error(f"An error occurred: {str(e)}")
 
     elapsed_time = asyncio.get_event_loop().time() - start_time
-    logging.info(f"All strategies completed in {elapsed_time:.2f} seconds")
+    logger.info(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 if __name__ == "__main__":
 	asyncio.run(run_crawlers(True))

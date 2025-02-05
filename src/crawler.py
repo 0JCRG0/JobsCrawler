@@ -1,6 +1,6 @@
 from typing import Any
 import aiohttp
-import logging
+from utils.logger_helper import get_custom_logger
 import psycopg2
 from psycopg2.extensions import cursor, connection
 import asyncio
@@ -12,9 +12,10 @@ from typing import TypedDict
 import numpy as np
 import os 
 import re
+from utils.logger_helper import get_custom_logger
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger = get_custom_logger(__name__)
+ 
 
 DATA_DIR = os.path.join("src", "resources", "data")
 LOCATIONS_DATA = os.path.abspath(os.path.join(DATA_DIR, "WorldLocations.json"))
@@ -238,7 +239,7 @@ def crawled_df_to_db(df: pd.DataFrame, cur: cursor | None, test: bool = False) -
 		"Current total count of jobs in PostgreSQL": final_count,
 	}
 
-	logging.info(json.dumps(postgre_report))
+	logger.info(json.dumps(postgre_report))
 
 ############################# CRAWLER CLASS  #############################
 
@@ -306,7 +307,7 @@ class AsyncCrawlerEngine:
 			config_instance.url, headers=random_user_agent
 		) as response:
 			if response.status != 200:
-				logging.warning(
+				logger.warning(
 					f"Received non-200 response ({response.status}) requesting: {config_instance.url}. Skipping..."
 				)
 				pass

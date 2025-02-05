@@ -4,7 +4,7 @@ from collections.abc import Callable, Coroutine
 from typing import Any
 from dataclasses import dataclass
 from bs4 import BeautifulSoup
-import logging
+from utils.logger_helper import get_custom_logger
 from psycopg2.extensions import cursor
 import aiohttp
 import bs4
@@ -14,8 +14,8 @@ from utils.FollowLink import async_follow_link, async_follow_link_title_descript
 from utils.handy import link_exists_in_db
 
 # Set up named logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger = get_custom_logger(__name__)
+ 
 
 @dataclass
 class Bs4ElementPath():
@@ -63,7 +63,7 @@ def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
                 )  # Replace
                 df[col] = df[col].str.strip()  # Remove trailing white space
 
-    logging.info("Finished bs4 crawlers. Results below ⬇︎")
+    logger.info("Finished bs4 crawlers. Results below ⬇︎")
 
     return df
 
@@ -101,7 +101,7 @@ async def __async_occ_mundial(
         link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"
 
         if await link_exists_in_db(link=link, cur=cur, test=test):
-            logging.info(f"Link {link} already found in the db. Skipping...")
+            logger.info(f"Link {link} already found in the db. Skipping...")
             continue
 
         title, description = ("", "")
@@ -165,7 +165,7 @@ async def __async_main_strategy_bs4(
         link = bs4_config.name + str(link_element["href"])
 
         if await link_exists_in_db(link=link, cur=cur, test=test):
-            logging.debug(f"Link {link} already found in the db. Skipping...")
+            logger.debug(f"Link {link} already found in the db. Skipping...")
             continue
 
         description_element = job.select_one(bs4_element_path.description_path)
@@ -243,7 +243,7 @@ async def __async_container_strategy_bs4(
         description_default = description_element.get_text(strip=True) or "NaN"
         location = location_element.get_text(strip=True) or "NaN"
         if await link_exists_in_db(link=link, cur=cur, test=test):
-            logging.debug(f"Link {link} already found in the db. Skipping...")
+            logger.debug(f"Link {link} already found in the db. Skipping...")
             continue
 
         description = (

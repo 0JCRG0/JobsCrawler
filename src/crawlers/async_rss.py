@@ -3,7 +3,7 @@
 from collections.abc import Callable, Coroutine
 from typing import Any
 import feedparser
-import logging
+from utils.logger_helper import get_custom_logger
 from psycopg2.extensions import cursor
 import aiohttp
 import pandas as pd
@@ -13,8 +13,8 @@ from utils.FollowLink import async_follow_link
 from feedparser import FeedParserDict
 
 # Set up named logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger = get_custom_logger(__name__)
+ 
 
 async def __async_get_feed_entries(feed: FeedParserDict,
 	cur: cursor,
@@ -40,7 +40,7 @@ async def __async_get_feed_entries(feed: FeedParserDict,
 		if await link_exists_in_db(
 			link=rss_config.link_tag, cur=cur, test=test
 		):
-			logging.debug(
+			logger.debug(
 				f"Link {rss_config.link_tag} already found in the db. Skipping..."
 			)
 			continue
@@ -96,7 +96,7 @@ def clean_postgre_rss(df: pd.DataFrame) -> pd.DataFrame:
 				df[col] = df[col].str.strip()  # Remove trailing white space
 
 	#Log it 
-	logging.info('Finished RSS Reader. Results below ⬇︎')
+	logger.info('Finished RSS Reader. Results below ⬇︎')
 	
 	return df
 

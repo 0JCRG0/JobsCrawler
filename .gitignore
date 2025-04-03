@@ -4,6 +4,7 @@ __pycache__/
 .vscode/
 
 *.logs
+*.log
 .pytest_cache/
 *.out
 archive/

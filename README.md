@@ -69,7 +69,7 @@ To get started with the main branch:
 
 1. Ensure you have Python and pip installed.
 2. Clone the repository and navigate to the project directory.
-3. Install the required dependencies using pip: `pip install -r requirements.txt`
+3. Run `poetry install`
 4. Set up your `.env` file based on the `.env.example` provided.
 
 -------

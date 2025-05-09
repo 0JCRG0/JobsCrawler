@@ -1,8 +1,9 @@
-from psycopg2 import sql
 import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
 from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+
+from psycopg2 import sql
 from psycopg2.extensions import cursor
 
 """ LOAD THE ENVIRONMENT VARIABLES """

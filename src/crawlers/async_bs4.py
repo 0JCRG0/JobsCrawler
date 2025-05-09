@@ -1,24 +1,34 @@
 #!/usr/local/bin/python3
 
 from collections.abc import Callable, Coroutine
-from typing import Any
 from dataclasses import dataclass
-from bs4 import BeautifulSoup
-from utils.logger_helper import get_custom_logger
-from psycopg2.extensions import cursor
+from datetime import date, datetime
+from typing import Any
+
 import aiohttp
 import bs4
 import pandas as pd
-from datetime import date, datetime
-from utils.FollowLink import async_follow_link, async_follow_link_title_description
-from utils.handy import link_exists_in_db
+from bs4 import BeautifulSoup
+from psycopg2.extensions import cursor
 
-# Set up named logger
+from src.utils.FollowLink import async_follow_link
+from src.utils.handy import link_exists_in_db
+from src.utils.logger_helper import get_custom_logger
+
 logger = get_custom_logger(__name__)
- 
 
 @dataclass
-class Bs4ElementPath():
+class Bs4ElementPath:
+    """
+    Dataclass for storing CSS selectors used to extract job information from HTML.
+    
+    Attributes:
+        jobs_path: CSS selector for the job listing container
+        title_path: CSS selector for job title elements
+        link_path: CSS selector for job link elements
+        location_path: CSS selector for job location elements
+        description_path: CSS selector for job description elements
+    """
     jobs_path: str
     title_path: str
     link_path: str
@@ -27,6 +37,22 @@ class Bs4ElementPath():
 
 
 def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Clean and normalize job data before inserting into PostgreSQL database.
+    
+    Performs various text cleaning operations to standardize data format:
+    - Removes duplicates
+    - Strips HTML tags
+    - Normalizes location data
+    - Removes special characters
+    - Standardizes remote work descriptions
+    
+    Args:
+        df: DataFrame containing job listing data
+        
+    Returns:
+        Cleaned DataFrame ready for database insertion
+    """
     df = df.drop_duplicates()
 
     for col in df.columns:
@@ -67,64 +93,6 @@ def clean_postgre_bs4(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-async def __async_occ_mundial(
-    cur: cursor,
-    session: aiohttp.ClientSession,
-    element: Any,
-    soup: bs4.BeautifulSoup,
-    test: bool = False,
-):
-    # NOT TESTED. NOT CURRENTLY USING.
-    total_data = {
-        "title": [],
-        "link": [],
-        "description": [],
-        "pubdate": [],
-        "location": [],
-        "timestamp": [],
-    }
-
-    container = soup.select_one(element.elements_path.jobs_path)
-    if not container:
-        raise AssertionError(
-            "No elements found for 'container'. Check 'elements_path[\"jobs_path\"]'"
-        )
-
-    links = container.select(element.elements_path.link_path)
-    if not links:
-        raise AssertionError(
-            "No elements found for 'links'. Check 'elements_path[\"link_path\"]'"
-        )
-
-
-    for link_element in links:
-        link = f"{element.name}{link_element.get('href')}" if link_element else "NaN"
-
-        if await link_exists_in_db(link=link, cur=cur, test=test):
-            logger.info(f"Link {link} already found in the db. Skipping...")
-            continue
-
-        title, description = ("", "")
-        if element.follow_link == "yes":
-            title, description = await async_follow_link_title_description(
-                session,
-                link,
-                description,
-                element.inner_link_tag,
-                element.elements_path.title_path,
-                "NaN",
-            )
-
-        today = date.today()
-        now = datetime.now()
-        for key, value in zip(
-            ["link", "title", "description", "location", "pubdate", "timestamp"],
-            [link, title, description, "MX", today, now],
-        ):
-            total_data[key].append(value)
-
-    return total_data
-
 async def __async_main_strategy_bs4(
     cur: cursor,
     session: aiohttp.ClientSession,
@@ -132,6 +100,25 @@ async def __async_main_strategy_bs4(
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
+    """
+    Main strategy for extracting job listings from HTML.
+    
+    Selects individual job elements and extracts data from each one.
+    Best for pages where each job listing is a self-contained HTML element.
+    
+    Args:
+        cur: Database cursor for checking existing links
+        session: HTTP session for making requests
+        bs4_config: Configuration object with crawling parameters
+        soup: BeautifulSoup object containing parsed HTML
+        test: Whether running in test mode
+        
+    Returns:
+        Dictionary containing extracted job data
+    
+    Raises:
+        ValueError: If required elements are not found in the HTML
+    """
     total_jobs_data = {
         "title": [],
         "link": [],
@@ -200,6 +187,26 @@ async def __async_container_strategy_bs4(
     soup: bs4.BeautifulSoup,
     test: bool = False,
 ):
+    """
+    Container strategy for extracting job listings from HTML.
+    
+    Selects a single container element and then extracts collections of titles,
+    links, descriptions, and locations, then pairs them together.
+    Best for pages where job attributes are organized in parallel collections.
+    
+    Args:
+        cur: Database cursor for checking existing links
+        session: HTTP session for making requests
+        bs4_config: Configuration object with crawling parameters
+        soup: BeautifulSoup object containing parsed HTML
+        test: Whether running in test mode
+        
+    Returns:
+        Dictionary containing extracted job data
+    
+    Raises:
+        ValueError: If required elements are not found in the HTML
+    """
     bs4_element_path = Bs4ElementPath(**bs4_config.elements_path)
 
     total_data = {
@@ -272,10 +279,28 @@ async def _crawling_strategy(
     test: bool,
     cur: cursor,
 ) -> dict[str, list[str]] | None:
+    """
+    Selects and executes the appropriate crawling strategy based on configuration.
+    
+    Acts as a dispatcher that routes to the correct strategy implementation
+    and handles any errors that occur during crawling.
+    
+    Args:
+        session: HTTP session for making requests
+        bs4_config: Configuration object with crawling parameters and strategy
+        soup: BeautifulSoup object containing parsed HTML
+        test: Whether running in test mode
+        cur: Database cursor for checking existing links
+        
+    Returns:
+        Dictionary containing extracted job data or None if an error occurred
+        
+    Raises:
+        ValueError: If an unrecognized strategy is specified
+    """
     strategy_map = {
         "main": __async_main_strategy_bs4,
         "container": __async_container_strategy_bs4,
-        "occ": __async_occ_mundial,
     }
     func_strategy = strategy_map.get(bs4_config.strategy)
     if not func_strategy:
@@ -297,6 +322,22 @@ async def async_bs4_crawl(
     cur: cursor,
     test: bool = False,
 ) -> dict[str, list[str]]:
+    """
+    Main entry point for asynchronous BeautifulSoup-based web crawling.
+    
+    Crawls multiple pages of a job listing website according to the provided
+    configuration, extracting job details using the specified strategy.
+    
+    Args:
+        fetch_func: Function that fetches HTML content using the provided session
+        session: HTTP session for making requests
+        bs4_config: Configuration object with crawling parameters
+        cur: Database cursor for checking existing links
+        test: Whether running in test mode
+        
+    Returns:
+        Dictionary containing all extracted job data from all crawled pages
+    """
     rows = {
         key: []
         for key in ["title", "link", "description", "pubdate", "location", "timestamp"]

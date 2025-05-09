@@ -12,13 +12,13 @@
 # import timeit
 # from datetime import date, datetime
 # import json
-# from utils.logger_helper import get_custom_logger
+# from src.utils.logger_helper import get_custom_logger
 # import os
 # import asyncio
-# from utils.FollowLink import *
+# from src.utils.FollowLink import *
 # from dotenv import load_dotenv
-# from utils.sel_utils import clean_postgre_sel
-# from utils.handy import *
+# from src.utils.sel_utils import clean_postgre_sel
+# from src.utils.handy import *
 
 
 # """ LOAD THE ENVIRONMENT VARIABLES """

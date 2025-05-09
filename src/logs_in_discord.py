@@ -1,10 +1,11 @@
-import re
-import requests
-import os
 import json
-import time
+import os
 import random
+import re
+import time
 from datetime import datetime, timedelta
+
+import requests
 
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
 LOG_FILE = "logs/script_output.log"
@@ -26,13 +27,13 @@ def _random_sleep():
     return time.sleep(time_to_sleep)
 
 def check_file_size():
-    """Check log file size and take action if it exceeds thresholds"""
+    """Check log file size and take action if it exceeds thresholds."""
     file_size = os.path.getsize(LOG_FILE)
     
     if file_size >= FILE_SIZE_DELETE_THRESHOLD:
         send_to_discord(f"⚠️ **WARNING**: Log file has reached {file_size / (1024 * 1024 * 1024):.2f} GB. Clearing file content now.")
         # Clear file by opening in write mode
-        with open(LOG_FILE, 'w') as f:
+        with open(LOG_FILE, 'w'):
             pass
         return True
     elif file_size >= FILE_SIZE_WARNING_THRESHOLD:
@@ -41,7 +42,7 @@ def check_file_size():
     return False
 
 def parse_timestamp(log_line):
-    """Extract timestamp from log line and return datetime object"""
+    """Extract timestamp from log line and return datetime object."""
     timestamp_match = re.search(r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})', log_line)
     if timestamp_match:
         timestamp_str = timestamp_match.group(1)

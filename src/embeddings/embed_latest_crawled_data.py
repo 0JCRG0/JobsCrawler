@@ -1,17 +1,18 @@
-import psycopg2
+import json
 import os
-from dotenv import load_dotenv
-import pretty_errors  # noqa: F401
-from utils.logger_helper import get_custom_logger
 import re
+
+import psycopg2
+from dotenv import load_dotenv
+
 from embeddings.e5_base_v2_utils import (
+    embeddings_e5_base_v2_to_df,
+    num_tokens,
     query_e5_format,
     to_embeddings_e5_base_v2,
-    num_tokens,
     truncated_string,
-    embeddings_e5_base_v2_to_df,
 )
-import json
+from src.utils.logger_helper import get_custom_logger
 
 logger = get_custom_logger(__name__)
 

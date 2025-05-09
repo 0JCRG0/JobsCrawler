@@ -1,11 +1,14 @@
-import os
 import asyncio
-from utils.logger_helper import get_custom_logger
-from typing import Any, Coroutine
+import os
+from collections.abc import Coroutine
 from concurrent.futures import ThreadPoolExecutor
-from crawler import AsyncCrawlerEngine
-from embeddings.embed_latest_crawled_data import embed_data
-from models import RssArgs, ApiArgs, Bs4Args
+from typing import Any
+
+from src.crawler import AsyncCrawlerEngine
+from src.embeddings.embed_latest_crawled_data import embed_data
+from src.models import ApiArgs, Bs4Args, RssArgs
+from src.utils.logger_helper import get_custom_logger
+
 DB_URL = os.environ.get("URL_DB")
 
 logger = get_custom_logger(__name__)
@@ -37,7 +40,6 @@ async def run_crawlers(is_test: bool = False) -> Coroutine[Any, Any, None] | Non
 
     elapsed_time = asyncio.get_event_loop().time() - start_time
     logger.info(f"All strategies completed in {elapsed_time:.2f} seconds")
-    print(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 async def main():
     # Run crawlers and wait for them to complete

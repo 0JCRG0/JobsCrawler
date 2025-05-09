@@ -1,6 +1,7 @@
-import bs4
 import aiohttp
-from utils.logger_helper import get_custom_logger
+import bs4
+
+from src.utils.logger_helper import get_custom_logger
 
 logger = get_custom_logger(__name__)
 
@@ -10,7 +11,7 @@ async def async_follow_link(
     description_final: str,
     inner_link_tag: str,
     default: str = "NaN",
-):
+) -> str:
     async with session.get(followed_link) as link_res:
         if link_res.status == 200:
             logger.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")

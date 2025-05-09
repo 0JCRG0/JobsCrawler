@@ -1,15 +1,17 @@
 #!/usr/local/bin/python3
-from collections.abc import Callable, Coroutine
 import json
-from utils.logger_helper import get_custom_logger
+from collections.abc import Callable, Coroutine
 from dataclasses import dataclass
+from datetime import date, datetime
 from typing import Any
-from psycopg2.extensions import cursor
+
 import aiohttp
 import pandas as pd
-from datetime import date, datetime
-from utils.handy import link_exists_in_db
-from utils.FollowLink import async_follow_link, async_follow_link_echojobs
+from psycopg2.extensions import cursor
+
+from src.utils.FollowLink import async_follow_link, async_follow_link_echojobs
+from src.utils.handy import link_exists_in_db
+from src.utils.logger_helper import get_custom_logger
 
 # Set up named logger
 logger = get_custom_logger(__name__)

@@ -1,25 +1,25 @@
 #!/bin/bash
 
 # Set PATH
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # Change to the correct directory
-cd /root/JobsCrawler || exit
+# cd /root/JobsCrawler || exit
 
-echo "Starting 'main.py' at $(date)" >> /root/JobsCrawler/logs/main_logger.log
+# Create logs directory if it doesn't exist
+mkdir -p logs
+
+echo "Starting 'main.py' at $(date)" >> logs/main_logger.log
 
 # Load environment variables
 set -a
-source /root/JobsCrawler/.env
+source .env
 set +a
 
 # Activate virtual environment
-source /root/JobsCrawler/venv/bin/activate
+poetry install >> logs/main_logger.log 2>&1
 
 # Run the Python script and redirect its output to a log file
-python /root/JobsCrawler/src/main.py >> /root/JobsCrawler/logs/script_output.log 2>&1
+poetry run python src/main.py >> logs/script_output.log 2>&1
 
-# Deactivate virtual environment
-deactivate
-
-echo "Finished script at $(date)" >> /root/JobsCrawler/logs/main_logger.log
+echo "Finished script at $(date)" >> logs/main_logger.log

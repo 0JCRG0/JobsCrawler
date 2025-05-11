@@ -36,19 +36,19 @@ async def run_crawlers(is_test: bool = False) -> Coroutine[Any, Any, None] | Non
     try:
         await asyncio.gather(*tasks)
     except Exception as e:
-        logger.error(f"An error occurred: {str(e)}")
+        logger.error(f"An error occurred: {str(e)}", exc_info=True)
 
     elapsed_time = asyncio.get_event_loop().time() - start_time
     logger.info(f"All strategies completed in {elapsed_time:.2f} seconds")
 
 async def main():
+    logger.info("Running all the crawlers...")
+
     # Run crawlers and wait for them to complete
     await run_crawlers()
     
     # Now run embed_data in a separate thread
-    loop = asyncio.get_running_loop()
-    with ThreadPoolExecutor() as pool:
-        await loop.run_in_executor(pool, embed_data, "e5_base_v2")
+    await asyncio.to_thread(embed_data, embedding_model="e5_base_v2")
 
 
 if __name__ == "__main__":

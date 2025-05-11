@@ -15,7 +15,7 @@ async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow:
 		try:
 			if r.status == 200:
 				
-				logger.info(f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()""", "\n")
+				logger.debug(f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()""", "\n")
 				# Make a request to the website
 				#r = requests.get(url_to_follow)
 				request = await r.text()

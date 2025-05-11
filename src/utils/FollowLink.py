@@ -49,7 +49,7 @@ async def async_follow_link_title_description(
 ):
     async with session.get(followed_link) as link_res:
         if link_res.status == 200:
-            logger.info(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
+            logger.debug(f"""CONNECTION ESTABLISHED ON {followed_link}\n""")
             link_text = await link_res.text()
             link_soup = bs4.BeautifulSoup(link_text, "html.parser")
             title_tag = link_soup.select_one(title_inner_link_tag)
@@ -70,6 +70,7 @@ async def async_follow_link_title_description(
             )
             description_final = default
             return description_final
+
 
 
 """

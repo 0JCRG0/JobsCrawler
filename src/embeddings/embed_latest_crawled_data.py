@@ -5,7 +5,7 @@ import re
 import psycopg2
 from dotenv import load_dotenv
 
-from embeddings.e5_base_v2_utils import (
+from src.embeddings.e5_base_v2_utils import (
     embeddings_e5_base_v2_to_df,
     num_tokens,
     query_e5_format,
@@ -179,7 +179,7 @@ def _insert_max_timestamp(
 
 def embed_data(embedding_model: str, test: bool = False) -> None:
     """
-    Last Updated 25/09/24
+    Last Updated 25/09/24.
     
     Embed new job data using the specified embedding model.
 
@@ -196,7 +196,8 @@ def embed_data(embedding_model: str, test: bool = False) -> None:
         embedding_model (str): The name of the embedding model to use (currently only 'e5_base_v2' is supported).
         test (bool, optional): If True, use test tables for database operations. Defaults to False.
 
-    Raises:
+    Raises
+    ------
         ValueError: If no new rows are found or if an unsupported embedding model is specified.
         Exception: For any errors during the embedding process.
 

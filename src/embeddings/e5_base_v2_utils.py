@@ -245,7 +245,7 @@ def embeddings_e5_base_v2_to_df(
 
     elapsed_time = (timeit.default_timer() - start_time) / 60
     logger.info(
-        f"embeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes."
+        f"Data was correctly embedded in {elapsed_time:.2f} minutes. Returning df for uploading to the db."
     )
 
     return df

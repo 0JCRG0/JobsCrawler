@@ -1,25 +1,24 @@
 #!/bin/bash
 
-# Set PATH
-# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Get the directory where the script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# Change to the correct directory
-# cd /root/JobsCrawler || exit
+cd $SCRIPT_DIR
 
 # Create logs directory if it doesn't exist
-mkdir -p logs
+mkdir -p "$SCRIPT_DIR/logs"
 
-echo "Starting 'main.py' at $(date)" >> logs/main_logger.log
+echo "Starting 'main.py' at $(date)" >> "$SCRIPT_DIR/logs/main_logger.log"
+
+# Source your zshrc to ensure Poetry & PATH are set correctly
+source /root/.zshrc
 
 # Load environment variables
 set -a
-source .env
+source "$SCRIPT_DIR/.env"
 set +a
 
-# Activate virtual environment
-poetry install >> logs/main_logger.log 2>&1
-
 # Run the Python script and redirect its output to a log file
-poetry run python src/main.py >> logs/script_output.log 2>&1
+poetry run python "$SCRIPT_DIR/src/main.py" >> "$SCRIPT_DIR/logs/script_output.log" 2>&1
 
-echo "Finished script at $(date)" >> logs/main_logger.log
+echo "Finished script at $(date)" >> "$SCRIPT_DIR/logs/main_logger.log"

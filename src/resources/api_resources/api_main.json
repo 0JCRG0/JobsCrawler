@@ -1,21 +1,5 @@
 [
     {
-        "name": "CareerVault",
-        "url": "https://api-career-vault-sstxk.ondigitalocean.app/v1/jobs/remote?page=1&search=&category=Software&role=&hideOnlyUS=1",
-        "class_json": "dict",
-        "follow_link": "no", 
-        "inner_link_tag": "",
-        "elements_path": {
-                "dict_tag": "data",
-                "title_tag": "JobTitle",
-                "link_tag": "Url",
-                "description_tag": "Description",
-                "pubdate_tag": "DatePosted",
-                "location_tag": "Location",
-                "location_default": "NaN"
-            }
-    },
-    {
         "name": "echojobs.io",
         "url": "https://api.echojobs.io/v1/search?locations=Remote&page=1&limit=300&sort_by=newest",
         "class_json": "dict",

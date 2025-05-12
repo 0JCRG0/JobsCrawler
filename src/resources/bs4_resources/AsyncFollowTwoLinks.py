@@ -1,19 +1,21 @@
 
 import re
+
 import aiohttp
-from utils.logger_helper import get_custom_logger
 import bs4
+
+from src.utils.logger_helper import get_custom_logger
 
 logger = get_custom_logger(__name__)
 
 
-async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow: str, selector: str) -> str:
+async def AsyncFollowLinkEchoJobs(session: aiohttp.ClientSession, url_to_follow: str, selector: str) -> str | None:
 
 	async with session.get(url_to_follow) as r:
 		try:
 			if r.status == 200:
 				
-				logger.info(f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()""", "\n")
+				logger.debug(f"""CONNECTION ESTABLISHED ON {url_to_follow}. USING FollowLinkEchoJobs()""", "\n")
 				# Make a request to the website
 				#r = requests.get(url_to_follow)
 				request = await r.text()

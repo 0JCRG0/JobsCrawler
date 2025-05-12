@@ -1,14 +1,12 @@
 import asyncio
-from utils.logger_helper import get_custom_logger
-import os
-import sys
 import traceback
-from typing import Any, Coroutine
+from collections.abc import Coroutine
+from typing import Any
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.crawler import AsyncCrawlerEngine
 from src.embeddings.embed_latest_crawled_data import embed_data
 from src.models import ApiArgs, Bs4Args, RssArgs
+from src.utils.logger_helper import get_custom_logger
 
 logger = get_custom_logger(__name__)
 

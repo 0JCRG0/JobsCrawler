@@ -1,20 +1,20 @@
 #!/usr/local/bin/python3
 
 from collections.abc import Callable, Coroutine
-from typing import Any
-import feedparser
-from utils.logger_helper import get_custom_logger
-from psycopg2.extensions import cursor
-import aiohttp
-import pandas as pd
 from datetime import date, datetime
-from utils.handy import link_exists_in_db
-from utils.FollowLink import async_follow_link
-from feedparser import FeedParserDict
+from typing import Any
 
-# Set up named logger
+import aiohttp
+import feedparser
+import pandas as pd
+from feedparser import FeedParserDict
+from psycopg2.extensions import cursor
+
+from src.utils.FollowLink import async_follow_link
+from src.utils.handy import link_exists_in_db
+from src.utils.logger_helper import get_custom_logger
+
 logger = get_custom_logger(__name__)
- 
 
 async def __async_get_feed_entries(feed: FeedParserDict,
 	cur: cursor,

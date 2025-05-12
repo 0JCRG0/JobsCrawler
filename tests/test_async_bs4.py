@@ -1,10 +1,8 @@
-import sys
-import os
 import asyncio
-from utils.logger_helper import get_custom_logger
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.crawler import AsyncCrawlerEngine
 from src.models import Bs4Args
+from src.utils.logger_helper import get_custom_logger
 
 logger = get_custom_logger(__name__)
 

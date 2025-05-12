@@ -1,23 +1,24 @@
-from dataclasses import dataclass
-from typing import Any, TypeAlias, TypedDict
-import aiohttp
-from utils.logger_helper import get_custom_logger
 import os
 from collections.abc import Callable, Coroutine
-from psycopg2.extensions import cursor
+from dataclasses import dataclass
+from typing import Any, TypeAlias, TypedDict
+
+import aiohttp
 import pandas as pd
-from crawlers.async_bs4 import async_bs4_crawl, clean_postgre_bs4
-from crawlers.async_api import async_api_requests, clean_postgre_api
-from crawlers.async_rss import async_rss_reader, clean_postgre_rss
 from dotenv import load_dotenv
+from psycopg2.extensions import cursor
+
+from src.crawlers.async_api import async_api_requests, clean_postgre_api
+from src.crawlers.async_bs4 import async_bs4_crawl, clean_postgre_bs4
+from src.crawlers.async_rss import async_rss_reader, clean_postgre_rss
+from src.utils.logger_helper import get_custom_logger
 
 load_dotenv()
 
 URL_DB = os.environ.get("URL_DB", "")
 
-# Set up named logger
 logger = get_custom_logger(__name__)
- 
+
 
 
 # Get the paths of the JSON files
@@ -98,7 +99,7 @@ CustomCrawlFuncType: TypeAlias = Callable[
 ]
 
 @dataclass
-class Bs4Args():
+class Bs4Args:
     config: type[Bs4Config] = Bs4Config
     custom_crawl_func: CustomCrawlFuncType = async_bs4_crawl
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_bs4
@@ -109,7 +110,7 @@ class Bs4Args():
 
 
 @dataclass
-class ApiArgs():
+class ApiArgs:
     config: type[ApiConfig] = ApiConfig
     custom_crawl_func: CustomCrawlFuncType = async_api_requests
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_api
@@ -120,7 +121,7 @@ class ApiArgs():
 
 
 @dataclass
-class RssArgs():
+class RssArgs:
     config: type[RssConfig] = RssConfig
     custom_crawl_func: CustomCrawlFuncType = async_rss_reader
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_rss

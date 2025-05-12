@@ -26,3 +26,4 @@ tools
 *.log
 *.egg-info
 
+poetry.lock

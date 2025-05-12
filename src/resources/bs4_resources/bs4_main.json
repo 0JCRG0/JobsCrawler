@@ -1,5 +1,21 @@
 [
     {
+        "name": "https://careervault.io/remote",
+        "url": "https://careervault.io/remote?page=",
+        "pages_to_crawl": 1,
+        "start_point": 1,
+        "strategy": "main",
+        "follow_link": "yes",
+        "inner_link_tag": ".description-container.overflow-x-hidden.font-normal",
+        "elements_path": {
+                "jobs_path": ".jobentry",
+                "title_path": ".line-clamp-2.font-medium",
+                "link_path": ".block",
+                "location_path": ".flex.flex-row.items-center.pr-8 .line-clamp-1",
+                "description_path": ".flex.flex-grow.flex-row.justify-end"
+            }
+    },
+    {
         "name": "https://dribbble.com",
         "url": "https://dribbble.com/jobs?anywhere=true&keyword=&page=",
         "pages_to_crawl": 1,

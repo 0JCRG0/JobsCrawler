@@ -25,5 +25,5 @@ tools
 *.csv
 *.log
 *.egg-info
-
+*.ipynb
 poetry.lock

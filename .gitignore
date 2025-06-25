@@ -27,3 +27,4 @@ tools
 *.egg-info
 *.ipynb
 poetry.lock
+tasks/

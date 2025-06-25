@@ -1,7 +1,0 @@
-{
-    "https://remoteok.com/api?api=1": "Add a VPN",
-    "https://api.cryptojobslist.com/rss/remote.xml": "Not found. The rss for only remote jobs does not exist. There are two options. On eis to use PW to crawl it as it seems that it uses JS to load the data dynamically (for that the link https://cryptojobslist.com/remote?page=2) or the other is to read the rss feed and add a function to filter out certain entries if these do not meet X criteria. I like this option. The rss is this one: https://api.cryptojobslist.com/rss.xml",
-    "https://weworkremotely.com/remote-jobs.rss": "cloudfare detects them. The main issue is that it does not accept requests, it works if we parse the feed but not a direct request. This means that the engine has to be modified to do this: `feedparser.parse(url)`",
-    "https://tryremotely.com/feeds/remote-jobs.rss": "cloudfare detects them. Proably using vimbot_stealth?. Better yet, i found its API: https://empllo.com/api"
-
-}

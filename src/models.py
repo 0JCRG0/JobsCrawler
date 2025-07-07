@@ -100,6 +100,7 @@ CustomCrawlFuncType: TypeAlias = Callable[
 
 @dataclass
 class Bs4Args:
+    name: str = "Bs4Crawler"
     config: type[Bs4Config] = Bs4Config
     custom_crawl_func: CustomCrawlFuncType = async_bs4_crawl
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_bs4
@@ -111,6 +112,7 @@ class Bs4Args:
 
 @dataclass
 class ApiArgs:
+    name: str = "ApiCrawler"
     config: type[ApiConfig] = ApiConfig
     custom_crawl_func: CustomCrawlFuncType = async_api_requests
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_api
@@ -122,6 +124,7 @@ class ApiArgs:
 
 @dataclass
 class RssArgs:
+    name: str = "RssCrawler"
     config: type[RssConfig] = RssConfig
     custom_crawl_func: CustomCrawlFuncType = async_rss_reader
     custom_clean_func: Callable[[pd.DataFrame], pd.DataFrame] = clean_postgre_rss

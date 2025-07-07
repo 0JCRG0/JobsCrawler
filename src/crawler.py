@@ -289,6 +289,7 @@ class AsyncCrawlerEngine:
     """
 
     def __init__(self, args: Any) -> None:
+        self.name = args.name
         self.config = args.config
         self.test = args.test
         self.json_data_path = args.json_test_path if self.test else args.json_prod_path
@@ -353,6 +354,8 @@ class AsyncCrawlerEngine:
         if len(set(lengths.values())) == 1:
             df = self.custom_clean_func(pd.DataFrame(combined_data))
             final_df = add_location_tags_to_df(df)
+            if self.test:
+                final_df.to_csv(DATA_DIR + f"/{self.name}.csv", index=False)
             crawled_df_to_db(final_df, self.cur, self.test)
         else:
             logger.error(

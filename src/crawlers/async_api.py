@@ -55,7 +55,7 @@ def clean_postgre_api(df: pd.DataFrame) -> pd.DataFrame:
                 df[col] = df[col].str.replace(
                     r"(?<=[a-z])(?=[A-Z])", " ", regex=True
                 )  # Insert space between lowercase and uppercase letters
-                pattern = r"(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b"  # Define a regex patter for all outliers that use remote
+                pattern = r"(?i)\bRemote Job\b|\bRemote Work\b|\bRemote Office\b|\bRemote Global\b|\bRemote with frequent travel\b|\bRemote Hybrid Remote\b"  # Define a regex patter for all outliers that use remote
                 df[col] = df[col].str.replace(pattern, "Worldwide", regex=True)
                 df[col] = df[col].replace(
                     "(?i)^remote$", "Worldwide", regex=True

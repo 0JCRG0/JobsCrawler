@@ -32,22 +32,6 @@
             }
     },
     {
-        "name": "remoteok.api",
-        "url": "https://remoteok.com/api?api=1",
-        "class_json": "list",
-        "follow_link": "no",
-        "inner_link_tag": "",
-        "elements_path": {
-                "dict_tag": "",
-                "title_tag": "position",
-                "link_tag": "url",
-                "description_tag": "description",
-                "pubdate_tag": "date",
-                "location_tag": "location",
-                "location_default": "NaN"
-            }
-    },
-    {
         "name": "remotive.com",
         "url": "https://remotive.com/api/remote-jobs?limit=50",
         "class_json": "dict",
